@@ -6,38 +6,21 @@
 # email: sami@theion.de
 
 
+cmake_minimum_required(VERSION 3.5)
 
-cmake_minimum_required(VERSION 3.5.0)
+project(QtTest VERSION 0.1 LANGUAGES CXX)
 
-# project name and version: change project name
-project(<project_name> VERSION "1.0")
+set(CMAKE_INCLUDE_CURRENT_DIR ON)
 
-# set the C++ standard: 20 is set
-set(CMAKE_CXX_STANDARD 20)
+set(CMAKE_AUTOUIC ON)
+set(CMAKE_AUTOMOC ON)
+set(CMAKE_AUTORCC ON)
+
+set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
-set(CMAKE_CXX_EXTENSIONS OFF)
 
+find_package(QT NAMES Qt6 Qt5 REQUIRED COMPONENTS Widgets)
+find_package(Qt${QT_VERSION_MAJOR} REQUIRED COMPONENTS Widgets)
 
-# includes
-include_directories(${PROJECT_SOURCE_DIR}/includes/)
-# dependencies manual includes: change repo name
-include_directories(${PROJECT_SOURCE_DIR}/dependencies/<repo_name>/includes/)
-
-# add all source *.cpp : change repo name
-file(GLOB all_SRCS
-    "${PROJECT_SOURCE_DIR}/src/*.cpp"
-## manual dependencies includes
-    "${PROJECT_SOURCE_DIR}/dependencies/<repo_name>/src/*.cpp"
-
-    )
-
-# make the exec: change project name
-add_executable(<project_name> ${all_SRCS})
-
-# link againt static lib
-target_link_libraries(<project_name> ${PROJECT_SOURCE_DIR}/dependencies/<repo_name>/<static_name>.lib
-
-)
-
-# add child cmake
-add_subdirectory(dependencies/<repo_name>)
+add_subdirectory(src/app)
+#add_subdirectory(src/businesslogic)
