@@ -1,0 +1,6 @@
+C:/Users/SamiDhiab/Theion_Repos/soft_wgm_user_interface_qt_cpp/build/CMakeFiles/INSTALL.dir
+C:/Users/SamiDhiab/Theion_Repos/soft_wgm_user_interface_qt_cpp/build/CMakeFiles/ALL_BUILD.dir
+C:/Users/SamiDhiab/Theion_Repos/soft_wgm_user_interface_qt_cpp/build/CMakeFiles/ZERO_CHECK.dir
+C:/Users/SamiDhiab/Theion_Repos/soft_wgm_user_interface_qt_cpp/build/src/app/CMakeFiles/QtTest.dir
+C:/Users/SamiDhiab/Theion_Repos/soft_wgm_user_interface_qt_cpp/build/src/app/CMakeFiles/INSTALL.dir
+C:/Users/SamiDhiab/Theion_Repos/soft_wgm_user_interface_qt_cpp/build/src/app/CMakeFiles/ALL_BUILD.dir

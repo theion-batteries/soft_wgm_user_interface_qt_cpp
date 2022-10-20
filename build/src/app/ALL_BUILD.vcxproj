@@ -1,0 +1,184 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <PreferredToolArchitecture>x64</PreferredToolArchitecture>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ResolveNugetPackages>false</ResolveNugetPackages>
+  </PropertyGroup>
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="MinSizeRel|x64">
+      <Configuration>MinSizeRel</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="RelWithDebInfo|x64">
+      <Configuration>RelWithDebInfo</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{184F5C31-D35C-3C29-9271-E1A639CAB0FC}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <WindowsTargetPlatformVersion>10.0.19041.0</WindowsTargetPlatformVersion>
+    <Platform>x64</Platform>
+    <ProjectName>ALL_BUILD</ProjectName>
+    <VCProjectUpgraderObjectName>NoUpgrade</VCProjectUpgraderObjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Midl>
+      <AdditionalIncludeDirectories>C:\Users\SamiDhiab\Theion_Repos\soft_wgm_user_interface_qt_cpp\build\src\app;C:\Users\SamiDhiab\Theion_Repos\soft_wgm_user_interface_qt_cpp\src\app;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Midl>
+      <AdditionalIncludeDirectories>C:\Users\SamiDhiab\Theion_Repos\soft_wgm_user_interface_qt_cpp\build\src\app;C:\Users\SamiDhiab\Theion_Repos\soft_wgm_user_interface_qt_cpp\src\app;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">
+    <Midl>
+      <AdditionalIncludeDirectories>C:\Users\SamiDhiab\Theion_Repos\soft_wgm_user_interface_qt_cpp\build\src\app;C:\Users\SamiDhiab\Theion_Repos\soft_wgm_user_interface_qt_cpp\src\app;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">
+    <Midl>
+      <AdditionalIncludeDirectories>C:\Users\SamiDhiab\Theion_Repos\soft_wgm_user_interface_qt_cpp\build\src\app;C:\Users\SamiDhiab\Theion_Repos\soft_wgm_user_interface_qt_cpp\src\app;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\SamiDhiab\Theion_Repos\soft_wgm_user_interface_qt_cpp\src\app\CMakeLists.txt">
+      <UseUtf8Encoding>Always</UseUtf8Encoding>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Building Custom Rule C:/Users/SamiDhiab/Theion_Repos/soft_wgm_user_interface_qt_cpp/src/app/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
+C:\Qt\Tools\CMake_64\bin\cmake.exe -SC:/Users/SamiDhiab/Theion_Repos/soft_wgm_user_interface_qt_cpp -BC:/Users/SamiDhiab/Theion_Repos/soft_wgm_user_interface_qt_cpp/build --check-stamp-file C:/Users/SamiDhiab/Theion_Repos/soft_wgm_user_interface_qt_cpp/build/src/app/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Qt\6.4.0\mingw_64\lib\cmake\Qt6\Qt6Config.cmake;C:\Qt\6.4.0\mingw_64\lib\cmake\Qt6\Qt6ConfigExtras.cmake;C:\Qt\6.4.0\mingw_64\lib\cmake\Qt6\Qt6ConfigVersion.cmake;C:\Qt\6.4.0\mingw_64\lib\cmake\Qt6\Qt6ConfigVersionImpl.cmake;C:\Qt\6.4.0\mingw_64\lib\cmake\Qt6\Qt6Dependencies.cmake;C:\Qt\6.4.0\mingw_64\lib\cmake\Qt6\Qt6Targets.cmake;C:\Qt\6.4.0\mingw_64\lib\cmake\Qt6\Qt6VersionlessTargets.cmake;C:\Qt\6.4.0\mingw_64\lib\cmake\Qt6\QtFeature.cmake;C:\Qt\6.4.0\mingw_64\lib\cmake\Qt6\QtFeatureCommon.cmake;C:\Qt\6.4.0\mingw_64\lib\cmake\Qt6\QtPublicAppleHelpers.cmake;C:\Qt\6.4.0\mingw_64\lib\cmake\Qt6\QtPublicCMakeHelpers.cmake;C:\Qt\6.4.0\mingw_64\lib\cmake\Qt6\QtPublicCMakeVersionHelpers.cmake;C:\Qt\6.4.0\mingw_64\lib\cmake\Qt6\QtPublicDependencyHelpers.cmake;C:\Qt\6.4.0\mingw_64\lib\cmake\Qt6\QtPublicFinalizerHelpers.cmake;C:\Qt\6.4.0\mingw_64\lib\cmake\Qt6\QtPublicFindPackageHelpers.cmake;C:\Qt\6.4.0\mingw_64\lib\cmake\Qt6\QtPublicPluginHelpers.cmake;C:\Qt\6.4.0\mingw_64\lib\cmake\Qt6\QtPublicTargetHelpers.cmake;C:\Qt\6.4.0\mingw_64\lib\cmake\Qt6\QtPublicTestHelpers.cmake;C:\Qt\6.4.0\mingw_64\lib\cmake\Qt6\QtPublicToolHelpers.cmake;C:\Qt\6.4.0\mingw_64\lib\cmake\Qt6\QtPublicWalkLibsHelpers.cmake;C:\Qt\6.4.0\mingw_64\lib\cmake\Qt6Concurrent\Qt6ConcurrentAdditionalTargetInfo.cmake;C:\Qt\6.4.0\mingw_64\lib\cmake\Qt6Concurrent\Qt6ConcurrentConfig.cmake;C:\Qt\6.4.0\mingw_64\lib\cmake\Qt6Concurrent\Qt6ConcurrentConfigVersion.cmake;C:\Qt\6.4.0\mingw_64\lib\cmake\Qt6Concurrent\Qt6ConcurrentConfigVersionImpl.cmake;C:\Qt\6.4.0\mingw_64\lib\cmake\Qt6Concurrent\Qt6ConcurrentDependencies.cmake;C:\Qt\6.4.0\mingw_64\lib\cmake\Qt6Concurrent\Qt6ConcurrentTargets-relwithdebinfo.cmake;C:\Qt\6.4.0\mingw_64\lib\cmake\Qt6Concurrent\Qt6ConcurrentTargets.cmake;C:\Qt\6.4.0\mingw_64\lib\cmake\Qt6Concurrent\Qt6ConcurrentVersionlessTargets.cmake;C:\Qt\Tools\CMake_64\share\cmake-3.23\Modules\CMakeFindDependencyMacro.cmake;C:\Qt\Tools\CMake_64\share\cmake-3.23\Modules\CheckCXXCompilerFlag.cmake;C:\Qt\Tools\CMake_64\share\cmake-3.23\Modules\CheckCXXSourceCompiles.cmake;C:\Qt\Tools\CMake_64\share\cmake-3.23\Modules\CheckIncludeFileCXX.cmake;C:\Qt\Tools\CMake_64\share\cmake-3.23\Modules\CheckLibraryExists.cmake;C:\Qt\Tools\CMake_64\share\cmake-3.23\Modules\FindPackageHandleStandardArgs.cmake;C:\Qt\Tools\CMake_64\share\cmake-3.23\Modules\FindPackageMessage.cmake;C:\Qt\Tools\CMake_64\share\cmake-3.23\Modules\FindThreads.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Users\SamiDhiab\Theion_Repos\soft_wgm_user_interface_qt_cpp\build\src\app\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Building Custom Rule C:/Users/SamiDhiab/Theion_Repos/soft_wgm_user_interface_qt_cpp/src/app/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
+C:\Qt\Tools\CMake_64\bin\cmake.exe -SC:/Users/SamiDhiab/Theion_Repos/soft_wgm_user_interface_qt_cpp -BC:/Users/SamiDhiab/Theion_Repos/soft_wgm_user_interface_qt_cpp/build --check-stamp-file C:/Users/SamiDhiab/Theion_Repos/soft_wgm_user_interface_qt_cpp/build/src/app/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Qt\6.4.0\mingw_64\lib\cmake\Qt6\Qt6Config.cmake;C:\Qt\6.4.0\mingw_64\lib\cmake\Qt6\Qt6ConfigExtras.cmake;C:\Qt\6.4.0\mingw_64\lib\cmake\Qt6\Qt6ConfigVersion.cmake;C:\Qt\6.4.0\mingw_64\lib\cmake\Qt6\Qt6ConfigVersionImpl.cmake;C:\Qt\6.4.0\mingw_64\lib\cmake\Qt6\Qt6Dependencies.cmake;C:\Qt\6.4.0\mingw_64\lib\cmake\Qt6\Qt6Targets.cmake;C:\Qt\6.4.0\mingw_64\lib\cmake\Qt6\Qt6VersionlessTargets.cmake;C:\Qt\6.4.0\mingw_64\lib\cmake\Qt6\QtFeature.cmake;C:\Qt\6.4.0\mingw_64\lib\cmake\Qt6\QtFeatureCommon.cmake;C:\Qt\6.4.0\mingw_64\lib\cmake\Qt6\QtPublicAppleHelpers.cmake;C:\Qt\6.4.0\mingw_64\lib\cmake\Qt6\QtPublicCMakeHelpers.cmake;C:\Qt\6.4.0\mingw_64\lib\cmake\Qt6\QtPublicCMakeVersionHelpers.cmake;C:\Qt\6.4.0\mingw_64\lib\cmake\Qt6\QtPublicDependencyHelpers.cmake;C:\Qt\6.4.0\mingw_64\lib\cmake\Qt6\QtPublicFinalizerHelpers.cmake;C:\Qt\6.4.0\mingw_64\lib\cmake\Qt6\QtPublicFindPackageHelpers.cmake;C:\Qt\6.4.0\mingw_64\lib\cmake\Qt6\QtPublicPluginHelpers.cmake;C:\Qt\6.4.0\mingw_64\lib\cmake\Qt6\QtPublicTargetHelpers.cmake;C:\Qt\6.4.0\mingw_64\lib\cmake\Qt6\QtPublicTestHelpers.cmake;C:\Qt\6.4.0\mingw_64\lib\cmake\Qt6\QtPublicToolHelpers.cmake;C:\Qt\6.4.0\mingw_64\lib\cmake\Qt6\QtPublicWalkLibsHelpers.cmake;C:\Qt\6.4.0\mingw_64\lib\cmake\Qt6Concurrent\Qt6ConcurrentAdditionalTargetInfo.cmake;C:\Qt\6.4.0\mingw_64\lib\cmake\Qt6Concurrent\Qt6ConcurrentConfig.cmake;C:\Qt\6.4.0\mingw_64\lib\cmake\Qt6Concurrent\Qt6ConcurrentConfigVersion.cmake;C:\Qt\6.4.0\mingw_64\lib\cmake\Qt6Concurrent\Qt6ConcurrentConfigVersionImpl.cmake;C:\Qt\6.4.0\mingw_64\lib\cmake\Qt6Concurrent\Qt6ConcurrentDependencies.cmake;C:\Qt\6.4.0\mingw_64\lib\cmake\Qt6Concurrent\Qt6ConcurrentTargets-relwithdebinfo.cmake;C:\Qt\6.4.0\mingw_64\lib\cmake\Qt6Concurrent\Qt6ConcurrentTargets.cmake;C:\Qt\6.4.0\mingw_64\lib\cmake\Qt6Concurrent\Qt6ConcurrentVersionlessTargets.cmake;C:\Qt\Tools\CMake_64\share\cmake-3.23\Modules\CMakeFindDependencyMacro.cmake;C:\Qt\Tools\CMake_64\share\cmake-3.23\Modules\CheckCXXCompilerFlag.cmake;C:\Qt\Tools\CMake_64\share\cmake-3.23\Modules\CheckCXXSourceCompiles.cmake;C:\Qt\Tools\CMake_64\share\cmake-3.23\Modules\CheckIncludeFileCXX.cmake;C:\Qt\Tools\CMake_64\share\cmake-3.23\Modules\CheckLibraryExists.cmake;C:\Qt\Tools\CMake_64\share\cmake-3.23\Modules\FindPackageHandleStandardArgs.cmake;C:\Qt\Tools\CMake_64\share\cmake-3.23\Modules\FindPackageMessage.cmake;C:\Qt\Tools\CMake_64\share\cmake-3.23\Modules\FindThreads.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Users\SamiDhiab\Theion_Repos\soft_wgm_user_interface_qt_cpp\build\src\app\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">Building Custom Rule C:/Users/SamiDhiab/Theion_Repos/soft_wgm_user_interface_qt_cpp/src/app/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">setlocal
+C:\Qt\Tools\CMake_64\bin\cmake.exe -SC:/Users/SamiDhiab/Theion_Repos/soft_wgm_user_interface_qt_cpp -BC:/Users/SamiDhiab/Theion_Repos/soft_wgm_user_interface_qt_cpp/build --check-stamp-file C:/Users/SamiDhiab/Theion_Repos/soft_wgm_user_interface_qt_cpp/build/src/app/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\Qt\6.4.0\mingw_64\lib\cmake\Qt6\Qt6Config.cmake;C:\Qt\6.4.0\mingw_64\lib\cmake\Qt6\Qt6ConfigExtras.cmake;C:\Qt\6.4.0\mingw_64\lib\cmake\Qt6\Qt6ConfigVersion.cmake;C:\Qt\6.4.0\mingw_64\lib\cmake\Qt6\Qt6ConfigVersionImpl.cmake;C:\Qt\6.4.0\mingw_64\lib\cmake\Qt6\Qt6Dependencies.cmake;C:\Qt\6.4.0\mingw_64\lib\cmake\Qt6\Qt6Targets.cmake;C:\Qt\6.4.0\mingw_64\lib\cmake\Qt6\Qt6VersionlessTargets.cmake;C:\Qt\6.4.0\mingw_64\lib\cmake\Qt6\QtFeature.cmake;C:\Qt\6.4.0\mingw_64\lib\cmake\Qt6\QtFeatureCommon.cmake;C:\Qt\6.4.0\mingw_64\lib\cmake\Qt6\QtPublicAppleHelpers.cmake;C:\Qt\6.4.0\mingw_64\lib\cmake\Qt6\QtPublicCMakeHelpers.cmake;C:\Qt\6.4.0\mingw_64\lib\cmake\Qt6\QtPublicCMakeVersionHelpers.cmake;C:\Qt\6.4.0\mingw_64\lib\cmake\Qt6\QtPublicDependencyHelpers.cmake;C:\Qt\6.4.0\mingw_64\lib\cmake\Qt6\QtPublicFinalizerHelpers.cmake;C:\Qt\6.4.0\mingw_64\lib\cmake\Qt6\QtPublicFindPackageHelpers.cmake;C:\Qt\6.4.0\mingw_64\lib\cmake\Qt6\QtPublicPluginHelpers.cmake;C:\Qt\6.4.0\mingw_64\lib\cmake\Qt6\QtPublicTargetHelpers.cmake;C:\Qt\6.4.0\mingw_64\lib\cmake\Qt6\QtPublicTestHelpers.cmake;C:\Qt\6.4.0\mingw_64\lib\cmake\Qt6\QtPublicToolHelpers.cmake;C:\Qt\6.4.0\mingw_64\lib\cmake\Qt6\QtPublicWalkLibsHelpers.cmake;C:\Qt\6.4.0\mingw_64\lib\cmake\Qt6Concurrent\Qt6ConcurrentAdditionalTargetInfo.cmake;C:\Qt\6.4.0\mingw_64\lib\cmake\Qt6Concurrent\Qt6ConcurrentConfig.cmake;C:\Qt\6.4.0\mingw_64\lib\cmake\Qt6Concurrent\Qt6ConcurrentConfigVersion.cmake;C:\Qt\6.4.0\mingw_64\lib\cmake\Qt6Concurrent\Qt6ConcurrentConfigVersionImpl.cmake;C:\Qt\6.4.0\mingw_64\lib\cmake\Qt6Concurrent\Qt6ConcurrentDependencies.cmake;C:\Qt\6.4.0\mingw_64\lib\cmake\Qt6Concurrent\Qt6ConcurrentTargets-relwithdebinfo.cmake;C:\Qt\6.4.0\mingw_64\lib\cmake\Qt6Concurrent\Qt6ConcurrentTargets.cmake;C:\Qt\6.4.0\mingw_64\lib\cmake\Qt6Concurrent\Qt6ConcurrentVersionlessTargets.cmake;C:\Qt\Tools\CMake_64\share\cmake-3.23\Modules\CMakeFindDependencyMacro.cmake;C:\Qt\Tools\CMake_64\share\cmake-3.23\Modules\CheckCXXCompilerFlag.cmake;C:\Qt\Tools\CMake_64\share\cmake-3.23\Modules\CheckCXXSourceCompiles.cmake;C:\Qt\Tools\CMake_64\share\cmake-3.23\Modules\CheckIncludeFileCXX.cmake;C:\Qt\Tools\CMake_64\share\cmake-3.23\Modules\CheckLibraryExists.cmake;C:\Qt\Tools\CMake_64\share\cmake-3.23\Modules\FindPackageHandleStandardArgs.cmake;C:\Qt\Tools\CMake_64\share\cmake-3.23\Modules\FindPackageMessage.cmake;C:\Qt\Tools\CMake_64\share\cmake-3.23\Modules\FindThreads.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\Users\SamiDhiab\Theion_Repos\soft_wgm_user_interface_qt_cpp\build\src\app\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Building Custom Rule C:/Users/SamiDhiab/Theion_Repos/soft_wgm_user_interface_qt_cpp/src/app/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">setlocal
+C:\Qt\Tools\CMake_64\bin\cmake.exe -SC:/Users/SamiDhiab/Theion_Repos/soft_wgm_user_interface_qt_cpp -BC:/Users/SamiDhiab/Theion_Repos/soft_wgm_user_interface_qt_cpp/build --check-stamp-file C:/Users/SamiDhiab/Theion_Repos/soft_wgm_user_interface_qt_cpp/build/src/app/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\Qt\6.4.0\mingw_64\lib\cmake\Qt6\Qt6Config.cmake;C:\Qt\6.4.0\mingw_64\lib\cmake\Qt6\Qt6ConfigExtras.cmake;C:\Qt\6.4.0\mingw_64\lib\cmake\Qt6\Qt6ConfigVersion.cmake;C:\Qt\6.4.0\mingw_64\lib\cmake\Qt6\Qt6ConfigVersionImpl.cmake;C:\Qt\6.4.0\mingw_64\lib\cmake\Qt6\Qt6Dependencies.cmake;C:\Qt\6.4.0\mingw_64\lib\cmake\Qt6\Qt6Targets.cmake;C:\Qt\6.4.0\mingw_64\lib\cmake\Qt6\Qt6VersionlessTargets.cmake;C:\Qt\6.4.0\mingw_64\lib\cmake\Qt6\QtFeature.cmake;C:\Qt\6.4.0\mingw_64\lib\cmake\Qt6\QtFeatureCommon.cmake;C:\Qt\6.4.0\mingw_64\lib\cmake\Qt6\QtPublicAppleHelpers.cmake;C:\Qt\6.4.0\mingw_64\lib\cmake\Qt6\QtPublicCMakeHelpers.cmake;C:\Qt\6.4.0\mingw_64\lib\cmake\Qt6\QtPublicCMakeVersionHelpers.cmake;C:\Qt\6.4.0\mingw_64\lib\cmake\Qt6\QtPublicDependencyHelpers.cmake;C:\Qt\6.4.0\mingw_64\lib\cmake\Qt6\QtPublicFinalizerHelpers.cmake;C:\Qt\6.4.0\mingw_64\lib\cmake\Qt6\QtPublicFindPackageHelpers.cmake;C:\Qt\6.4.0\mingw_64\lib\cmake\Qt6\QtPublicPluginHelpers.cmake;C:\Qt\6.4.0\mingw_64\lib\cmake\Qt6\QtPublicTargetHelpers.cmake;C:\Qt\6.4.0\mingw_64\lib\cmake\Qt6\QtPublicTestHelpers.cmake;C:\Qt\6.4.0\mingw_64\lib\cmake\Qt6\QtPublicToolHelpers.cmake;C:\Qt\6.4.0\mingw_64\lib\cmake\Qt6\QtPublicWalkLibsHelpers.cmake;C:\Qt\6.4.0\mingw_64\lib\cmake\Qt6Concurrent\Qt6ConcurrentAdditionalTargetInfo.cmake;C:\Qt\6.4.0\mingw_64\lib\cmake\Qt6Concurrent\Qt6ConcurrentConfig.cmake;C:\Qt\6.4.0\mingw_64\lib\cmake\Qt6Concurrent\Qt6ConcurrentConfigVersion.cmake;C:\Qt\6.4.0\mingw_64\lib\cmake\Qt6Concurrent\Qt6ConcurrentConfigVersionImpl.cmake;C:\Qt\6.4.0\mingw_64\lib\cmake\Qt6Concurrent\Qt6ConcurrentDependencies.cmake;C:\Qt\6.4.0\mingw_64\lib\cmake\Qt6Concurrent\Qt6ConcurrentTargets-relwithdebinfo.cmake;C:\Qt\6.4.0\mingw_64\lib\cmake\Qt6Concurrent\Qt6ConcurrentTargets.cmake;C:\Qt\6.4.0\mingw_64\lib\cmake\Qt6Concurrent\Qt6ConcurrentVersionlessTargets.cmake;C:\Qt\Tools\CMake_64\share\cmake-3.23\Modules\CMakeFindDependencyMacro.cmake;C:\Qt\Tools\CMake_64\share\cmake-3.23\Modules\CheckCXXCompilerFlag.cmake;C:\Qt\Tools\CMake_64\share\cmake-3.23\Modules\CheckCXXSourceCompiles.cmake;C:\Qt\Tools\CMake_64\share\cmake-3.23\Modules\CheckIncludeFileCXX.cmake;C:\Qt\Tools\CMake_64\share\cmake-3.23\Modules\CheckLibraryExists.cmake;C:\Qt\Tools\CMake_64\share\cmake-3.23\Modules\FindPackageHandleStandardArgs.cmake;C:\Qt\Tools\CMake_64\share\cmake-3.23\Modules\FindPackageMessage.cmake;C:\Qt\Tools\CMake_64\share\cmake-3.23\Modules\FindThreads.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\Users\SamiDhiab\Theion_Repos\soft_wgm_user_interface_qt_cpp\build\src\app\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="C:\Users\SamiDhiab\Theion_Repos\soft_wgm_user_interface_qt_cpp\build\ZERO_CHECK.vcxproj">
+      <Project>{73B946BE-7C4A-317A-B990-FEE4A26222A5}</Project>
+      <Name>ZERO_CHECK</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\SamiDhiab\Theion_Repos\soft_wgm_user_interface_qt_cpp\build\src\app\QtTest.vcxproj">
+      <Project>{E9CD47E1-1B98-3569-AC60-8B7A1CFEC189}</Project>
+      <Name>QtTest</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

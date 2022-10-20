@@ -8,7 +8,7 @@ set(CMAKE_AUTOUIC ON)
 set(CMAKE_AUTOMOC ON)
 set(CMAKE_AUTORCC ON)
 
-set(CMAKE_CXX_STANDARD 17)
+set(CMAKE_CXX_STANDARD 20)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
 find_package(QT NAMES Qt6 Qt5 REQUIRED COMPONENTS Widgets Concurrent )
@@ -67,9 +67,8 @@ if(QT_VERSION_MAJOR EQUAL 6)
     qt_finalize_executable(QtTest)
 endif()
 
-#target_compile_features(QtTest PUBLIC cxx_std_17)
-#if(MSVC)
-#
-#    target_compile_options(QtTest PUBLIC "/Zc:__cplusplus" 
-#    "/permissive-")
-#endif()
+target_compile_features(QtTest PUBLIC cxx_std_17)
+if(MSVC)
+    target_compile_options(QtTest PUBLIC "/Zc:__cplusplus" 
+    "/permissive-")
+endif()
