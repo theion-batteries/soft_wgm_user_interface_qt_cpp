@@ -1,3 +1,4 @@
 [submodule "dependencies/software_wgm_v2_cpp"]
 	path = dependencies/software_wgm_v2_cpp
 	url = https://github.com/theionSami/software_wgm_v2_cpp.git
+	branch = dev_win_api
