@@ -21,10 +21,9 @@ set(CMAKE_AUTOUIC ON)
 set(CMAKE_AUTOMOC ON)
 set(CMAKE_AUTORCC ON)
 
-
-
 find_package(QT NAMES Qt6 Qt5 REQUIRED COMPONENTS Widgets)
 find_package(Qt${QT_VERSION_MAJOR} REQUIRED COMPONENTS Widgets)
 
+add_subdirectory(dependencies/software_wgm_v2_cpp)
+add_subdirectory(src/businesslogic)
 add_subdirectory(src/app)
-#add_subdirectory(src/businesslogic)

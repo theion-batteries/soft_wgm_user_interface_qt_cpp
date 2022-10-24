@@ -84,12 +84,6 @@
 			"MU",
 			"EWIEGA46WW/moc_mainwindow.cpp",
 			null
-		],
-		[
-			"C:/Users/SamiDhiab/Theion_Repos/soft_wgm_user_interface_qt_cpp/src/app/sensor.h",
-			"MU",
-			"EWIEGA46WW/moc_sensor.cpp",
-			null
 		]
 	],
 	"HEADER_EXTENSIONS" : [ "h", "hh", "h++", "hm", "hpp", "hxx", "in", "txx" ],
@@ -141,6 +135,7 @@
 	[
 		"C:/Users/SamiDhiab/Theion_Repos/soft_wgm_user_interface_qt_cpp/build/src/app",
 		"C:/Users/SamiDhiab/Theion_Repos/soft_wgm_user_interface_qt_cpp/src/app",
+		"C:/Users/SamiDhiab/Theion_Repos/soft_wgm_user_interface_qt_cpp/src/businesslogic",
 		"C:/Qt/6.4.0/msvc2019_64/include/QtCore",
 		"C:/Qt/6.4.0/msvc2019_64/include",
 		"C:/Qt/6.4.0/msvc2019_64/mkspecs/win32-msvc",
@@ -187,11 +182,6 @@
 		],
 		[
 			"C:/Users/SamiDhiab/Theion_Repos/soft_wgm_user_interface_qt_cpp/src/app/mainwindow.cpp",
-			"MU",
-			null
-		],
-		[
-			"C:/Users/SamiDhiab/Theion_Repos/soft_wgm_user_interface_qt_cpp/src/app/sensor.cpp",
 			"MU",
 			null
 		]

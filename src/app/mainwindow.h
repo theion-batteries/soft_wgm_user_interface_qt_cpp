@@ -8,7 +8,7 @@
 #include <QThread>
 #include <QThreadPool>
 #include <QTimer>
-#include "sensor.h"
+#include "controller.h"
 #include <QtConcurrent>
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
@@ -22,8 +22,8 @@ public:
     ~MainWindow();
 private:
     Ui::MainWindow *ui;
-    sensor temperature;
-    sensor distance;
+    controller temperature;
+    controller distance;
 
     
 };

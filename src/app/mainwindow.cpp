@@ -13,20 +13,20 @@ MainWindow::MainWindow(QWidget* parent)
         auto value = ui->dial_3->value();
         ui->lcdNumber_3->display(value);
     });
-    connect(&temperature, &sensor::valueChanged, [this](){
+    connect(&temperature, &controller::valueChanged, [this](){
         auto value = temperature.getValue();
-        qInfo() <<"value temperature sensor changed, new value: "<<value;
+        qInfo() <<"value temperature controller changed, new value: "<<value;
         qInfo() << "updating display with thread: " << QThread::currentThread();
         ui->lcdNumber->display(value);
     });
-    connect(&distance, &sensor::valueChanged, [this](){
+    connect(&distance, &controller::valueChanged, [this](){
         auto value = distance.getValue();
-        qInfo() <<"value distance sensor changed, new value: "<<value;
+        qInfo() <<"value distance controller changed, new value: "<<value;
         qInfo() << "updating display with thread: " << QThread::currentThread();
         ui->lcdNumber_3 ->display(value);
     });
-    auto tem = QtConcurrent::run(&sensor::generateValues, &temperature);
-    auto dis = QtConcurrent::run(&sensor::generateValues, &distance);
+    auto tem = QtConcurrent::run(&controller::generateValues, &temperature);
+    auto dis = QtConcurrent::run(&controller::generateValues, &distance);
 
 
 

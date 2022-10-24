@@ -16,10 +16,16 @@ EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "QtTest", "QtTest.vcxproj", "{E9CD47E1-1B98-3569-AC60-8B7A1CFEC189}"
 	ProjectSection(ProjectDependencies) = postProject
 		{73B946BE-7C4A-317A-B990-FEE4A26222A5} = {73B946BE-7C4A-317A-B990-FEE4A26222A5}
+		{F4A732F8-AA09-3EB3-8F49-6829BB5C90DA} = {F4A732F8-AA09-3EB3-8F49-6829BB5C90DA}
 	EndProjectSection
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ZERO_CHECK", "..\..\\ZERO_CHECK.vcxproj", "{73B946BE-7C4A-317A-B990-FEE4A26222A5}"
 	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "controller", "..\businesslogic\controller.vcxproj", "{F4A732F8-AA09-3EB3-8F49-6829BB5C90DA}"
+	ProjectSection(ProjectDependencies) = postProject
+		{73B946BE-7C4A-317A-B990-FEE4A26222A5} = {73B946BE-7C4A-317A-B990-FEE4A26222A5}
 	EndProjectSection
 EndProject
 Global
@@ -58,6 +64,14 @@ Global
 		{73B946BE-7C4A-317A-B990-FEE4A26222A5}.MinSizeRel|x64.Build.0 = MinSizeRel|x64
 		{73B946BE-7C4A-317A-B990-FEE4A26222A5}.RelWithDebInfo|x64.ActiveCfg = RelWithDebInfo|x64
 		{73B946BE-7C4A-317A-B990-FEE4A26222A5}.RelWithDebInfo|x64.Build.0 = RelWithDebInfo|x64
+		{F4A732F8-AA09-3EB3-8F49-6829BB5C90DA}.Debug|x64.ActiveCfg = Debug|x64
+		{F4A732F8-AA09-3EB3-8F49-6829BB5C90DA}.Debug|x64.Build.0 = Debug|x64
+		{F4A732F8-AA09-3EB3-8F49-6829BB5C90DA}.Release|x64.ActiveCfg = Release|x64
+		{F4A732F8-AA09-3EB3-8F49-6829BB5C90DA}.Release|x64.Build.0 = Release|x64
+		{F4A732F8-AA09-3EB3-8F49-6829BB5C90DA}.MinSizeRel|x64.ActiveCfg = MinSizeRel|x64
+		{F4A732F8-AA09-3EB3-8F49-6829BB5C90DA}.MinSizeRel|x64.Build.0 = MinSizeRel|x64
+		{F4A732F8-AA09-3EB3-8F49-6829BB5C90DA}.RelWithDebInfo|x64.ActiveCfg = RelWithDebInfo|x64
+		{F4A732F8-AA09-3EB3-8F49-6829BB5C90DA}.RelWithDebInfo|x64.Build.0 = RelWithDebInfo|x64
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {48AA8BA6-6925-3D6B-B66C-B3F9E32811A1}

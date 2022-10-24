@@ -1,5 +1,6 @@
-add_library(businesslogic STATIC
-    businesslogic.cpp
+add_library(controller STATIC
+    controller.cpp
+    controller.h
 )
-target_link_libraries(businesslogic PRIVATE Qt6::Core)
-target_include_directories(businesslogic INTERFACE ${CMAKE_CURRENT_SOURCE_DIR})
+target_link_libraries(controller PRIVATE Qt6::Core)
+target_include_directories(controller INTERFACE ${CMAKE_CURRENT_SOURCE_DIR})
