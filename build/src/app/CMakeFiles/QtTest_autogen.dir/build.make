@@ -67,7 +67,7 @@ include src/app/CMakeFiles/QtTest_autogen.dir/progress.make
 
 src/app/CMakeFiles/QtTest_autogen:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=C:\Users\SamiDhiab\Theion_Repos\soft_wgm_user_interface_qt_cpp\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Automatic MOC and UIC for target QtTest"
-	cd /d C:\Users\SamiDhiab\Theion_Repos\soft_wgm_user_interface_qt_cpp\build\src\app && C:\Qt\Tools\CMake_64\bin\cmake.exe -E cmake_autogen C:/Users/SamiDhiab/Theion_Repos/soft_wgm_user_interface_qt_cpp/build/src/app/CMakeFiles/QtTest_autogen.dir/AutogenInfo.json Debug
+	cd /d C:\Users\SamiDhiab\Theion_Repos\soft_wgm_user_interface_qt_cpp\build\src\app && C:\Qt\Tools\CMake_64\bin\cmake.exe -E cmake_autogen C:/Users/SamiDhiab/Theion_Repos/soft_wgm_user_interface_qt_cpp/build/src/app/CMakeFiles/QtTest_autogen.dir/AutogenInfo.json ""
 
 QtTest_autogen: src/app/CMakeFiles/QtTest_autogen
 QtTest_autogen: src/app/CMakeFiles/QtTest_autogen.dir/build.make

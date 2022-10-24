@@ -2,17 +2,24 @@ cmake_minimum_required(VERSION 3.5)
 
 project(QtTest VERSION 0.1 LANGUAGES CXX)
 
+set(CMAKE_PREFIX_PATH  "C:/Qt/6.4.0/msvc2019_64/lib/cmake/Qt6")
+
+set(CMAKE_CXX_STANDARD 20)
+set(CMAKE_CXX_STANDARD_REQUIRED ON)
+
+
 set(CMAKE_INCLUDE_CURRENT_DIR ON)
 
 set(CMAKE_AUTOUIC ON)
 set(CMAKE_AUTOMOC ON)
 set(CMAKE_AUTORCC ON)
 
-set(CMAKE_CXX_STANDARD 20)
-set(CMAKE_CXX_STANDARD_REQUIRED ON)
+
+
 
 find_package(QT NAMES Qt6 Qt5 REQUIRED COMPONENTS Widgets Concurrent )
 find_package(Qt${QT_VERSION_MAJOR} REQUIRED COMPONENTS Widgets Concurrent )
+
 
 set(PROJECT_SOURCES
         main.cpp
@@ -46,6 +53,9 @@ else()
     endif()
 endif()
 
+#target_compile_features(QtTest PUBLIC cxx_std_20)
+
+
 target_link_libraries(QtTest PRIVATE Qt${QT_VERSION_MAJOR}::Widgets Qt${QT_VERSION_MAJOR}::Concurrent)
 #target_link_libraries(QtTest PRIVATE
     #sensor
@@ -67,8 +77,3 @@ if(QT_VERSION_MAJOR EQUAL 6)
     qt_finalize_executable(QtTest)
 endif()
 
-target_compile_features(QtTest PUBLIC cxx_std_17)
-if(MSVC)
-    target_compile_options(QtTest PUBLIC "/Zc:__cplusplus" 
-    "/permissive-")
-endif()
