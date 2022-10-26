@@ -288,15 +288,6 @@ Qt6ZlibPrivate_DIR:PATH=C:/Qt/6.4.0/msvc2019_64/lib/cmake/Qt6ZlibPrivate
 //The directory containing a CMake configuration file for Qt6.
 Qt6_DIR:PATH=C:/Qt/6.4.0/msvc2019_64/lib/cmake/Qt6
 
-//Value Computed by CMake
-QtTest_BINARY_DIR:STATIC=C:/Users/SamiDhiab/Theion_Repos/soft_wgm_user_interface_qt_cpp/build/src/app
-
-//Value Computed by CMake
-QtTest_IS_TOP_LEVEL:STATIC=OFF
-
-//Value Computed by CMake
-QtTest_SOURCE_DIR:STATIC=C:/Users/SamiDhiab/Theion_Repos/soft_wgm_user_interface_qt_cpp/src/app
-
 //Path to a program.
 Vulkan_GLSLANG_VALIDATOR_EXECUTABLE:FILEPATH=Vulkan_GLSLANG_VALIDATOR_EXECUTABLE-NOTFOUND
 
@@ -312,9 +303,6 @@ Vulkan_LIBRARY:FILEPATH=Vulkan_LIBRARY-NOTFOUND
 //Path to a program.
 WINDEPLOYQT_EXECUTABLE:FILEPATH=C:/Qt/6.4.0/msvc2019_64/bin/windeployqt.exe
 
-//Dependencies for the target
-businesslogic_LIB_DEPENDS:STATIC=general;Qt6::Core;
-
 //Value Computed by CMake
 cnt_system_BINARY_DIR:STATIC=C:/Users/SamiDhiab/Theion_Repos/soft_wgm_user_interface_qt_cpp/build/dependencies/software_wgm_v2_cpp/dependencies/soft_cnt_system_submodule_cpp
 
@@ -325,13 +313,13 @@ cnt_system_IS_TOP_LEVEL:STATIC=OFF
 cnt_system_SOURCE_DIR:STATIC=C:/Users/SamiDhiab/Theion_Repos/soft_wgm_user_interface_qt_cpp/dependencies/software_wgm_v2_cpp/dependencies/soft_cnt_system_submodule_cpp
 
 //Dependencies for the target
-cnt_system_static_LIB_DEPENDS:STATIC=general;C:/Users/SamiDhiab/Theion_Repos/soft_wgm_user_interface_qt_cpp/dependencies/software_wgm_v2_cpp/dependencies/soft_cnt_system_submodule_cpp/build/dependencies/yaml-cpp/Debug/yaml-cppd.lib;general;C:/Users/SamiDhiab/Theion_Repos/soft_wgm_user_interface_qt_cpp/dependencies/software_wgm_v2_cpp/dependencies/soft_cnt_system_submodule_cpp/build/dependencies/sockpp/Debug/sockpp-static.lib;
+cnt_system_static_LIB_DEPENDS:STATIC=general;yaml-cpp;optimized;C:/Users/SamiDhiab/vcpkg/installed/x86-windows/lib/sockpp.lib;debug;C:/Users/SamiDhiab/vcpkg/installed/x86-windows/debug/lib/sockpp.lib;
 
 //Dependencies for the target
-controller_LIB_DEPENDS:STATIC=general;Qt6::Core;
+controller_LIB_DEPENDS:STATIC=general;Qt6::Core;general;model;
 
 //Dependencies for the target
-keyence_lib_static_LIB_DEPENDS:STATIC=general;C:/Users/SamiDhiab/Theion_Repos/soft_wgm_user_interface_qt_cpp/dependencies/software_wgm_v2_cpp/dependencies/soft_wafer_holder_system_controller/dependencies/lib_keyence_sdk/Samples/VC_Src/Libx64/LKIF2.lib;
+keyence_lib_static_LIB_DEPENDS:STATIC=general;C:/Users/SamiDhiab/Theion_Repos/soft_wgm_user_interface_qt_cpp/dependencies/software_wgm_v2_cpp/dependencies/soft_wafer_holder_system_controller/dependencies/lib_keyence_sdk/libs/LKIF2.lib;
 
 //Value Computed by CMake
 keyence_sdk_BINARY_DIR:STATIC=C:/Users/SamiDhiab/Theion_Repos/soft_wgm_user_interface_qt_cpp/build/dependencies/software_wgm_v2_cpp/dependencies/soft_wafer_holder_system_controller/dependencies/lib_keyence_sdk
@@ -343,7 +331,10 @@ keyence_sdk_IS_TOP_LEVEL:STATIC=OFF
 keyence_sdk_SOURCE_DIR:STATIC=C:/Users/SamiDhiab/Theion_Repos/soft_wgm_user_interface_qt_cpp/dependencies/software_wgm_v2_cpp/dependencies/soft_wafer_holder_system_controller/dependencies/lib_keyence_sdk
 
 //Dependencies for the target
-sensor_LIB_DEPENDS:STATIC=general;Qt6::Core;
+model_LIB_DEPENDS:STATIC=general;Qt6::Core;general;wgm_static;
+
+//The directory containing a CMake configuration file for sockpp.
+sockpp_DIR:PATH=C:/Users/SamiDhiab/vcpkg/installed/x86-windows/share/sockpp
 
 //Value Computed by CMake
 wgm_core_BINARY_DIR:STATIC=C:/Users/SamiDhiab/Theion_Repos/soft_wgm_user_interface_qt_cpp/build/dependencies/software_wgm_v2_cpp
@@ -355,7 +346,7 @@ wgm_core_IS_TOP_LEVEL:STATIC=OFF
 wgm_core_SOURCE_DIR:STATIC=C:/Users/SamiDhiab/Theion_Repos/soft_wgm_user_interface_qt_cpp/dependencies/software_wgm_v2_cpp
 
 //Dependencies for the target
-wgm_static_LIB_DEPENDS:STATIC=general;C:/Users/SamiDhiab/Theion_Repos/soft_wgm_user_interface_qt_cpp/dependencies/software_wgm_v2_cpp/build/dependencies/soft_wafer_holder_system_controller/Debug/whs_static.lib;general;C:/Users/SamiDhiab/Theion_Repos/soft_wgm_user_interface_qt_cpp/dependencies/software_wgm_v2_cpp/build/dependencies/soft_wafer_holder_system_controller/dependencies/lib_keyence_sdk/Debug/keyence_lib_static.lib;general;C:/Users/SamiDhiab/Theion_Repos/soft_wgm_user_interface_qt_cpp/dependencies/software_wgm_v2_cpp/dependencies/soft_wafer_holder_system_controller/dependencies/lib_keyence_sdk/Samples/VC_Src/Libx64/LKIF2.lib;general;C:/Users/SamiDhiab/Theion_Repos/soft_wgm_user_interface_qt_cpp/dependencies/software_wgm_v2_cpp/build/dependencies/soft_cnt_system_submodule_cpp/Debug/cnt_system_static.lib;general;C:/Users/SamiDhiab/Theion_Repos/soft_wgm_user_interface_qt_cpp/dependencies/software_wgm_v2_cpp/build/dependencies/soft_wafer_holder_system_controller/dependencies/sockpp/Debug/sockpp-static.lib;general;C:/Users/SamiDhiab/Theion_Repos/soft_wgm_user_interface_qt_cpp/dependencies/software_wgm_v2_cpp/build/dependencies/soft_wafer_holder_system_controller/dependencies/yaml-cpp/Debug/libyaml-cppmdd.lib;
+wgm_static_LIB_DEPENDS:STATIC=general;whs_static;general;cnt_system_static;
 
 //Value Computed by CMake
 wgm_ui_BINARY_DIR:STATIC=C:/Users/SamiDhiab/Theion_Repos/soft_wgm_user_interface_qt_cpp/build
@@ -367,6 +358,15 @@ wgm_ui_IS_TOP_LEVEL:STATIC=ON
 wgm_ui_SOURCE_DIR:STATIC=C:/Users/SamiDhiab/Theion_Repos/soft_wgm_user_interface_qt_cpp
 
 //Value Computed by CMake
+wgm_view_BINARY_DIR:STATIC=C:/Users/SamiDhiab/Theion_Repos/soft_wgm_user_interface_qt_cpp/build/src/app
+
+//Value Computed by CMake
+wgm_view_IS_TOP_LEVEL:STATIC=OFF
+
+//Value Computed by CMake
+wgm_view_SOURCE_DIR:STATIC=C:/Users/SamiDhiab/Theion_Repos/soft_wgm_user_interface_qt_cpp/src/app
+
+//Value Computed by CMake
 whs_controller_BINARY_DIR:STATIC=C:/Users/SamiDhiab/Theion_Repos/soft_wgm_user_interface_qt_cpp/build/dependencies/software_wgm_v2_cpp/dependencies/soft_wafer_holder_system_controller
 
 //Value Computed by CMake
@@ -376,7 +376,10 @@ whs_controller_IS_TOP_LEVEL:STATIC=OFF
 whs_controller_SOURCE_DIR:STATIC=C:/Users/SamiDhiab/Theion_Repos/soft_wgm_user_interface_qt_cpp/dependencies/software_wgm_v2_cpp/dependencies/soft_wafer_holder_system_controller
 
 //Dependencies for the target
-whs_static_LIB_DEPENDS:STATIC=general;C:/Users/SamiDhiab/Theion_Repos/soft_wgm_user_interface_qt_cpp/dependencies/software_wgm_v2_cpp/dependencies/soft_wafer_holder_system_controller/build/dependencies/lib_keyence_sdk/Debug/keyence_lib_static.lib;general;C:/Users/SamiDhiab/Theion_Repos/soft_wgm_user_interface_qt_cpp/dependencies/software_wgm_v2_cpp/dependencies/soft_wafer_holder_system_controller/dependencies/lib_keyence_sdk/Samples/VC_Src/Libx64/LKIF2.lib;general;C:/Users/SamiDhiab/Theion_Repos/soft_wgm_user_interface_qt_cpp/dependencies/software_wgm_v2_cpp/dependencies/soft_wafer_holder_system_controller/build/dependencies/sockpp/Debug/sockpp-static.lib;general;C:/Users/SamiDhiab/Theion_Repos/soft_wgm_user_interface_qt_cpp/dependencies/software_wgm_v2_cpp/dependencies/soft_wafer_holder_system_controller/build/dependencies/yaml-cpp/Debug/libyaml-cppmdd.lib;
+whs_static_LIB_DEPENDS:STATIC=general;keyence_lib_static;optimized;C:/Users/SamiDhiab/vcpkg/installed/x86-windows/lib/sockpp.lib;debug;C:/Users/SamiDhiab/vcpkg/installed/x86-windows/debug/lib/sockpp.lib;general;yaml-cpp;
+
+//The directory containing a CMake configuration file for yaml-cpp.
+yaml-cpp_DIR:PATH=C:/Users/SamiDhiab/Theion_Repos/soft_wafer_holder_system_controller/dependencies/yaml-cpp/build
 
 
 ########################
@@ -497,7 +500,7 @@ CMAKE_MODULE_LINKER_FLAGS_RELWITHDEBINFO-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_MT
 CMAKE_MT-ADVANCED:INTERNAL=1
 //number of local generators
-CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=7
+CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=10
 //Platform information initialized
 CMAKE_PLATFORM_INFO_INITIALIZED:INTERNAL=1
 //noop for ranlib

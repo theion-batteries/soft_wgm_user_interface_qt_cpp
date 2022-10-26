@@ -173,9 +173,9 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
       <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </ProjectReference>
-    <ProjectReference Include="C:\Users\SamiDhiab\Theion_Repos\soft_wgm_user_interface_qt_cpp\build\src\app\QtTest.vcxproj">
-      <Project>{E9CD47E1-1B98-3569-AC60-8B7A1CFEC189}</Project>
-      <Name>QtTest</Name>
+    <ProjectReference Include="C:\Users\SamiDhiab\Theion_Repos\soft_wgm_user_interface_qt_cpp\build\src\app\wgm_view.vcxproj">
+      <Project>{D3BA4410-9C3D-38F5-BB24-67A117A74B43}</Project>
+      <Name>wgm_view</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

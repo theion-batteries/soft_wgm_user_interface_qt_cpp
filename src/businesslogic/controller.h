@@ -5,6 +5,8 @@
 #include <QDebug>
 #include <QThread>
 #include <atomic>
+#include "model.h"
+
 class controller: public QObject
 {
     Q_OBJECT
@@ -19,5 +21,6 @@ public slots:
     int getValue();
 signals:
    void valueChanged(int newValue);
+
 
 };

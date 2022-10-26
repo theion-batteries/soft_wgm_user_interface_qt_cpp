@@ -79,4 +79,58 @@ C:/Users/SamiDhiab/Theion_Repos/soft_wgm_user_interface_qt_cpp/build/src/busines
   C:/Qt/6.4.0/msvc2019_64/include/QtCore/qtypeinfo.h \
   C:/Qt/6.4.0/msvc2019_64/include/QtCore/qutf8stringview.h \
   C:/Qt/6.4.0/msvc2019_64/include/QtCore/qvarlengtharray.h \
-  C:/Qt/6.4.0/msvc2019_64/include/QtCore/qversiontagging.h
+  C:/Qt/6.4.0/msvc2019_64/include/QtCore/qversiontagging.h \
+  C:/Users/SamiDhiab/Theion_Repos/soft_wgm_user_interface_qt_cpp/dependencies/model/model.h \
+  C:/Users/SamiDhiab/Theion_Repos/soft_wgm_user_interface_qt_cpp/dependencies/software_wgm_v2_cpp/dependencies/soft_cnt_system_submodule_cpp/includes/cnt_controller.h \
+  C:/Users/SamiDhiab/Theion_Repos/soft_wgm_user_interface_qt_cpp/dependencies/software_wgm_v2_cpp/dependencies/soft_cnt_system_submodule_cpp/includes/cnt_dispenser.h \
+  C:/Users/SamiDhiab/Theion_Repos/soft_wgm_user_interface_qt_cpp/dependencies/software_wgm_v2_cpp/dependencies/soft_cnt_system_submodule_cpp/includes/cnt_high_voltage.h \
+  C:/Users/SamiDhiab/Theion_Repos/soft_wgm_user_interface_qt_cpp/dependencies/software_wgm_v2_cpp/dependencies/soft_cnt_system_submodule_cpp/includes/cnt_motion.h \
+  C:/Users/SamiDhiab/Theion_Repos/soft_wgm_user_interface_qt_cpp/dependencies/software_wgm_v2_cpp/dependencies/soft_wafer_holder_system_controller/dependencies/lib_keyence_sdk/includes/LKIF2.h \
+  C:/Users/SamiDhiab/Theion_Repos/soft_wgm_user_interface_qt_cpp/dependencies/software_wgm_v2_cpp/dependencies/soft_wafer_holder_system_controller/dependencies/lib_keyence_sdk/includes/keyence_client.h \
+  C:/Users/SamiDhiab/Theion_Repos/soft_wgm_user_interface_qt_cpp/dependencies/software_wgm_v2_cpp/dependencies/soft_wafer_holder_system_controller/includes/whs_controller.h \
+  C:/Users/SamiDhiab/Theion_Repos/soft_wgm_user_interface_qt_cpp/dependencies/software_wgm_v2_cpp/includes/cnt_alignment_system.h \
+  C:/Users/SamiDhiab/Theion_Repos/soft_wgm_user_interface_qt_cpp/dependencies/software_wgm_v2_cpp/includes/feedback_management.h \
+  C:/Users/SamiDhiab/Theion_Repos/soft_wgm_user_interface_qt_cpp/dependencies/software_wgm_v2_cpp/includes/heating_system.h \
+  C:/Users/SamiDhiab/Theion_Repos/soft_wgm_user_interface_qt_cpp/dependencies/software_wgm_v2_cpp/includes/process_manager.h \
+  C:/Users/SamiDhiab/Theion_Repos/soft_wgm_user_interface_qt_cpp/dependencies/software_wgm_v2_cpp/includes/wafer_cooling_system.h \
+  C:/Users/SamiDhiab/Theion_Repos/soft_wgm_user_interface_qt_cpp/dependencies/software_wgm_v2_cpp/includes/wafer_holder_motion_system.h \
+  C:/Users/SamiDhiab/Theion_Repos/soft_wgm_user_interface_qt_cpp/dependencies/software_wgm_v2_cpp/includes/wgm_monitoring.h \
+  C:/Users/SamiDhiab/vcpkg/installed/x86-windows/include/sockpp/connector.h \
+  C:/Users/SamiDhiab/vcpkg/installed/x86-windows/include/sockpp/inet_address.h \
+  C:/Users/SamiDhiab/vcpkg/installed/x86-windows/include/sockpp/platform.h \
+  C:/Users/SamiDhiab/vcpkg/installed/x86-windows/include/sockpp/sock_address.h \
+  C:/Users/SamiDhiab/vcpkg/installed/x86-windows/include/sockpp/socket.h \
+  C:/Users/SamiDhiab/vcpkg/installed/x86-windows/include/sockpp/stream_socket.h \
+  C:/Users/SamiDhiab/vcpkg/installed/x86-windows/include/sockpp/tcp_connector.h \
+  C:/Users/SamiDhiab/vcpkg/installed/x86-windows/include/sockpp/tcp_socket.h \
+  C:/Users/SamiDhiab/vcpkg/installed/x86-windows/include/yaml-cpp/binary.h \
+  C:/Users/SamiDhiab/vcpkg/installed/x86-windows/include/yaml-cpp/dll.h \
+  C:/Users/SamiDhiab/vcpkg/installed/x86-windows/include/yaml-cpp/emitter.h \
+  C:/Users/SamiDhiab/vcpkg/installed/x86-windows/include/yaml-cpp/emitterdef.h \
+  C:/Users/SamiDhiab/vcpkg/installed/x86-windows/include/yaml-cpp/emittermanip.h \
+  C:/Users/SamiDhiab/vcpkg/installed/x86-windows/include/yaml-cpp/emitterstyle.h \
+  C:/Users/SamiDhiab/vcpkg/installed/x86-windows/include/yaml-cpp/exceptions.h \
+  C:/Users/SamiDhiab/vcpkg/installed/x86-windows/include/yaml-cpp/mark.h \
+  C:/Users/SamiDhiab/vcpkg/installed/x86-windows/include/yaml-cpp/node/convert.h \
+  C:/Users/SamiDhiab/vcpkg/installed/x86-windows/include/yaml-cpp/node/detail/impl.h \
+  C:/Users/SamiDhiab/vcpkg/installed/x86-windows/include/yaml-cpp/node/detail/iterator.h \
+  C:/Users/SamiDhiab/vcpkg/installed/x86-windows/include/yaml-cpp/node/detail/iterator_fwd.h \
+  C:/Users/SamiDhiab/vcpkg/installed/x86-windows/include/yaml-cpp/node/detail/memory.h \
+  C:/Users/SamiDhiab/vcpkg/installed/x86-windows/include/yaml-cpp/node/detail/node.h \
+  C:/Users/SamiDhiab/vcpkg/installed/x86-windows/include/yaml-cpp/node/detail/node_data.h \
+  C:/Users/SamiDhiab/vcpkg/installed/x86-windows/include/yaml-cpp/node/detail/node_iterator.h \
+  C:/Users/SamiDhiab/vcpkg/installed/x86-windows/include/yaml-cpp/node/detail/node_ref.h \
+  C:/Users/SamiDhiab/vcpkg/installed/x86-windows/include/yaml-cpp/node/emit.h \
+  C:/Users/SamiDhiab/vcpkg/installed/x86-windows/include/yaml-cpp/node/impl.h \
+  C:/Users/SamiDhiab/vcpkg/installed/x86-windows/include/yaml-cpp/node/iterator.h \
+  C:/Users/SamiDhiab/vcpkg/installed/x86-windows/include/yaml-cpp/node/node.h \
+  C:/Users/SamiDhiab/vcpkg/installed/x86-windows/include/yaml-cpp/node/parse.h \
+  C:/Users/SamiDhiab/vcpkg/installed/x86-windows/include/yaml-cpp/node/ptr.h \
+  C:/Users/SamiDhiab/vcpkg/installed/x86-windows/include/yaml-cpp/node/type.h \
+  C:/Users/SamiDhiab/vcpkg/installed/x86-windows/include/yaml-cpp/noexcept.h \
+  C:/Users/SamiDhiab/vcpkg/installed/x86-windows/include/yaml-cpp/null.h \
+  C:/Users/SamiDhiab/vcpkg/installed/x86-windows/include/yaml-cpp/ostream_wrapper.h \
+  C:/Users/SamiDhiab/vcpkg/installed/x86-windows/include/yaml-cpp/parser.h \
+  C:/Users/SamiDhiab/vcpkg/installed/x86-windows/include/yaml-cpp/stlemitter.h \
+  C:/Users/SamiDhiab/vcpkg/installed/x86-windows/include/yaml-cpp/traits.h \
+  C:/Users/SamiDhiab/vcpkg/installed/x86-windows/include/yaml-cpp/yaml.h
