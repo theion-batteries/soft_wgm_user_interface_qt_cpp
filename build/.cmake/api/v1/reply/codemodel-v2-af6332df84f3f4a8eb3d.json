@@ -1,0 +1,1612 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"childIndexes" : 
+					[
+						1,
+						7
+					],
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-.-Debug-d0094a50bb2071803777.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.16"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						6
+					]
+				},
+				{
+					"build" : "dependencies",
+					"childIndexes" : 
+					[
+						2,
+						6
+					],
+					"jsonFile" : "directory-dependencies-Debug-213773dd22be3796fa39.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.16"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 0,
+					"source" : "dependencies"
+				},
+				{
+					"build" : "dependencies/software_wgm_v2_cpp",
+					"childIndexes" : 
+					[
+						3,
+						5
+					],
+					"jsonFile" : "directory-dependencies.software_wgm_v2_cpp-Debug-6d96700872d2db55d90a.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.5.0"
+					},
+					"parentIndex" : 1,
+					"projectIndex" : 1,
+					"source" : "dependencies/software_wgm_v2_cpp",
+					"targetIndexes" : 
+					[
+						1,
+						13
+					]
+				},
+				{
+					"build" : "dependencies/software_wgm_v2_cpp/dependencies/soft_wafer_holder_system_controller",
+					"childIndexes" : 
+					[
+						4
+					],
+					"jsonFile" : "directory-dependencies.software_wgm_v2_cpp.dependencies.soft_wafer_holder_system_controller-Debug-dc260f46db254f3270e8.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.5.0"
+					},
+					"parentIndex" : 2,
+					"projectIndex" : 2,
+					"source" : "dependencies/software_wgm_v2_cpp/dependencies/soft_wafer_holder_system_controller",
+					"targetIndexes" : 
+					[
+						2,
+						15
+					]
+				},
+				{
+					"build" : "dependencies/software_wgm_v2_cpp/dependencies/soft_wafer_holder_system_controller/dependencies/lib_keyence_sdk",
+					"jsonFile" : "directory-dependencies.software_wgm_v2_cpp.dependencies.soft_wafer_holder_system_controller.dependencies.lib_keyence_sdk-Debug-03d90e96668f3ddb4cff.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.5.0"
+					},
+					"parentIndex" : 3,
+					"projectIndex" : 3,
+					"source" : "dependencies/software_wgm_v2_cpp/dependencies/soft_wafer_holder_system_controller/dependencies/lib_keyence_sdk",
+					"targetIndexes" : 
+					[
+						3,
+						10,
+						11
+					]
+				},
+				{
+					"build" : "dependencies/software_wgm_v2_cpp/dependencies/soft_cnt_system_submodule_cpp",
+					"jsonFile" : "directory-dependencies.software_wgm_v2_cpp.dependencies.soft_cnt_system_submodule_cpp-Debug-8be95c426a88f1644a57.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.5.0"
+					},
+					"parentIndex" : 2,
+					"projectIndex" : 4,
+					"source" : "dependencies/software_wgm_v2_cpp/dependencies/soft_cnt_system_submodule_cpp",
+					"targetIndexes" : 
+					[
+						4,
+						7,
+						8
+					]
+				},
+				{
+					"build" : "dependencies/model",
+					"jsonFile" : "directory-dependencies.model-Debug-42986c1cb69f146c8ddc.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.16"
+					},
+					"parentIndex" : 1,
+					"projectIndex" : 0,
+					"source" : "dependencies/model",
+					"targetIndexes" : 
+					[
+						12
+					]
+				},
+				{
+					"build" : "src",
+					"childIndexes" : 
+					[
+						8,
+						9
+					],
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-src-Debug-c94b7c2814d5a21df52c.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.16"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 0,
+					"source" : "src"
+				},
+				{
+					"build" : "src/businesslogic",
+					"jsonFile" : "directory-src.businesslogic-Debug-cb51d08c41009e1b8bb3.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.16"
+					},
+					"parentIndex" : 7,
+					"projectIndex" : 0,
+					"source" : "src/businesslogic",
+					"targetIndexes" : 
+					[
+						9
+					]
+				},
+				{
+					"build" : "src/app",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-src.app-Debug-09f7d8de4c224bce6f97.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.16"
+					},
+					"parentIndex" : 7,
+					"projectIndex" : 5,
+					"source" : "src/app",
+					"targetIndexes" : 
+					[
+						5,
+						14
+					]
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"childIndexes" : 
+					[
+						1,
+						5
+					],
+					"directoryIndexes" : 
+					[
+						0,
+						1,
+						6,
+						7,
+						8
+					],
+					"name" : "wgm_ui",
+					"targetIndexes" : 
+					[
+						0,
+						6,
+						9,
+						12
+					]
+				},
+				{
+					"childIndexes" : 
+					[
+						2,
+						4
+					],
+					"directoryIndexes" : 
+					[
+						2
+					],
+					"name" : "wgm_core",
+					"parentIndex" : 0,
+					"targetIndexes" : 
+					[
+						1,
+						13
+					]
+				},
+				{
+					"childIndexes" : 
+					[
+						3
+					],
+					"directoryIndexes" : 
+					[
+						3
+					],
+					"name" : "whs_controller",
+					"parentIndex" : 1,
+					"targetIndexes" : 
+					[
+						2,
+						15
+					]
+				},
+				{
+					"directoryIndexes" : 
+					[
+						4
+					],
+					"name" : "keyence_sdk",
+					"parentIndex" : 2,
+					"targetIndexes" : 
+					[
+						3,
+						10,
+						11
+					]
+				},
+				{
+					"directoryIndexes" : 
+					[
+						5
+					],
+					"name" : "cnt_system",
+					"parentIndex" : 1,
+					"targetIndexes" : 
+					[
+						4,
+						7,
+						8
+					]
+				},
+				{
+					"directoryIndexes" : 
+					[
+						9
+					],
+					"name" : "wgm_view",
+					"parentIndex" : 0,
+					"targetIndexes" : 
+					[
+						5,
+						14
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "ALL_BUILD::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-ALL_BUILD-Debug-cb1350bf8faef069cd0f.json",
+					"name" : "ALL_BUILD",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 2,
+					"id" : "ALL_BUILD::@4bfcd7cf7ac49fce9d65",
+					"jsonFile" : "target-ALL_BUILD-Debug-72c112d22769d525e5ff.json",
+					"name" : "ALL_BUILD",
+					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 3,
+					"id" : "ALL_BUILD::@f34ba466f21c72a91b89",
+					"jsonFile" : "target-ALL_BUILD-Debug-2fc12b0ed1b15ca4ce8e.json",
+					"name" : "ALL_BUILD",
+					"projectIndex" : 2
+				},
+				{
+					"directoryIndex" : 4,
+					"id" : "ALL_BUILD::@e1105e4bf232d1bfed4b",
+					"jsonFile" : "target-ALL_BUILD-Debug-ce64d2e81ba05bbe96e8.json",
+					"name" : "ALL_BUILD",
+					"projectIndex" : 3
+				},
+				{
+					"directoryIndex" : 5,
+					"id" : "ALL_BUILD::@717c18fb618b01b17ec1",
+					"jsonFile" : "target-ALL_BUILD-Debug-e1c1dc22535cc1e40b34.json",
+					"name" : "ALL_BUILD",
+					"projectIndex" : 4
+				},
+				{
+					"directoryIndex" : 9,
+					"id" : "ALL_BUILD::@ff93792cf40911dae1b8",
+					"jsonFile" : "target-ALL_BUILD-Debug-42f56d8e58f0288dfc63.json",
+					"name" : "ALL_BUILD",
+					"projectIndex" : 5
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "ZERO_CHECK::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-ZERO_CHECK-Debug-9f1a31e18a82b394a81c.json",
+					"name" : "ZERO_CHECK",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 5,
+					"id" : "cnt_system_exe::@717c18fb618b01b17ec1",
+					"jsonFile" : "target-cnt_system_exe-Debug-15197e450adb7b72b142.json",
+					"name" : "cnt_system_exe",
+					"projectIndex" : 4
+				},
+				{
+					"directoryIndex" : 5,
+					"id" : "cnt_system_static::@717c18fb618b01b17ec1",
+					"jsonFile" : "target-cnt_system_static-Debug-46923172fb6d40303c01.json",
+					"name" : "cnt_system_static",
+					"projectIndex" : 4
+				},
+				{
+					"directoryIndex" : 8,
+					"id" : "controller::@3cefde71a3853251e858",
+					"jsonFile" : "target-controller-Debug-542940c0d79a2757cac8.json",
+					"name" : "controller",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 4,
+					"id" : "keyence_exe::@e1105e4bf232d1bfed4b",
+					"jsonFile" : "target-keyence_exe-Debug-f602c4393198b33ca0e0.json",
+					"name" : "keyence_exe",
+					"projectIndex" : 3
+				},
+				{
+					"directoryIndex" : 4,
+					"id" : "keyence_lib_static::@e1105e4bf232d1bfed4b",
+					"jsonFile" : "target-keyence_lib_static-Debug-0382fff706009ffc04f3.json",
+					"name" : "keyence_lib_static",
+					"projectIndex" : 3
+				},
+				{
+					"directoryIndex" : 6,
+					"id" : "model::@1ca0ed82e3ab703857bd",
+					"jsonFile" : "target-model-Debug-beb458f9c49c356fdd02.json",
+					"name" : "model",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 2,
+					"id" : "wgm_static::@4bfcd7cf7ac49fce9d65",
+					"jsonFile" : "target-wgm_static-Debug-e5add24766b95f6fabb4.json",
+					"name" : "wgm_static",
+					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 9,
+					"id" : "wgm_view::@ff93792cf40911dae1b8",
+					"jsonFile" : "target-wgm_view-Debug-71d4f99ec268ddcd0c56.json",
+					"name" : "wgm_view",
+					"projectIndex" : 5
+				},
+				{
+					"directoryIndex" : 3,
+					"id" : "whs_static::@f34ba466f21c72a91b89",
+					"jsonFile" : "target-whs_static-Debug-8e4f7e00db189eef877e.json",
+					"name" : "whs_static",
+					"projectIndex" : 2
+				}
+			]
+		},
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"childIndexes" : 
+					[
+						1,
+						7
+					],
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-.-Release-d0094a50bb2071803777.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.16"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						6
+					]
+				},
+				{
+					"build" : "dependencies",
+					"childIndexes" : 
+					[
+						2,
+						6
+					],
+					"jsonFile" : "directory-dependencies-Release-213773dd22be3796fa39.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.16"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 0,
+					"source" : "dependencies"
+				},
+				{
+					"build" : "dependencies/software_wgm_v2_cpp",
+					"childIndexes" : 
+					[
+						3,
+						5
+					],
+					"jsonFile" : "directory-dependencies.software_wgm_v2_cpp-Release-6d96700872d2db55d90a.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.5.0"
+					},
+					"parentIndex" : 1,
+					"projectIndex" : 1,
+					"source" : "dependencies/software_wgm_v2_cpp",
+					"targetIndexes" : 
+					[
+						1,
+						13
+					]
+				},
+				{
+					"build" : "dependencies/software_wgm_v2_cpp/dependencies/soft_wafer_holder_system_controller",
+					"childIndexes" : 
+					[
+						4
+					],
+					"jsonFile" : "directory-dependencies.software_wgm_v2_cpp.dependencies.soft_wafer_holder_system_controller-Release-dc260f46db254f3270e8.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.5.0"
+					},
+					"parentIndex" : 2,
+					"projectIndex" : 2,
+					"source" : "dependencies/software_wgm_v2_cpp/dependencies/soft_wafer_holder_system_controller",
+					"targetIndexes" : 
+					[
+						2,
+						15
+					]
+				},
+				{
+					"build" : "dependencies/software_wgm_v2_cpp/dependencies/soft_wafer_holder_system_controller/dependencies/lib_keyence_sdk",
+					"jsonFile" : "directory-dependencies.software_wgm_v2_cpp.dependencies.soft_wafer_holder_system_controller.dependencies.lib_keyence_sdk-Release-03d90e96668f3ddb4cff.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.5.0"
+					},
+					"parentIndex" : 3,
+					"projectIndex" : 3,
+					"source" : "dependencies/software_wgm_v2_cpp/dependencies/soft_wafer_holder_system_controller/dependencies/lib_keyence_sdk",
+					"targetIndexes" : 
+					[
+						3,
+						10,
+						11
+					]
+				},
+				{
+					"build" : "dependencies/software_wgm_v2_cpp/dependencies/soft_cnt_system_submodule_cpp",
+					"jsonFile" : "directory-dependencies.software_wgm_v2_cpp.dependencies.soft_cnt_system_submodule_cpp-Release-8be95c426a88f1644a57.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.5.0"
+					},
+					"parentIndex" : 2,
+					"projectIndex" : 4,
+					"source" : "dependencies/software_wgm_v2_cpp/dependencies/soft_cnt_system_submodule_cpp",
+					"targetIndexes" : 
+					[
+						4,
+						7,
+						8
+					]
+				},
+				{
+					"build" : "dependencies/model",
+					"jsonFile" : "directory-dependencies.model-Release-42986c1cb69f146c8ddc.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.16"
+					},
+					"parentIndex" : 1,
+					"projectIndex" : 0,
+					"source" : "dependencies/model",
+					"targetIndexes" : 
+					[
+						12
+					]
+				},
+				{
+					"build" : "src",
+					"childIndexes" : 
+					[
+						8,
+						9
+					],
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-src-Release-c94b7c2814d5a21df52c.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.16"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 0,
+					"source" : "src"
+				},
+				{
+					"build" : "src/businesslogic",
+					"jsonFile" : "directory-src.businesslogic-Release-cb51d08c41009e1b8bb3.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.16"
+					},
+					"parentIndex" : 7,
+					"projectIndex" : 0,
+					"source" : "src/businesslogic",
+					"targetIndexes" : 
+					[
+						9
+					]
+				},
+				{
+					"build" : "src/app",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-src.app-Release-04ee94535708491fb4f2.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.16"
+					},
+					"parentIndex" : 7,
+					"projectIndex" : 5,
+					"source" : "src/app",
+					"targetIndexes" : 
+					[
+						5,
+						14
+					]
+				}
+			],
+			"name" : "Release",
+			"projects" : 
+			[
+				{
+					"childIndexes" : 
+					[
+						1,
+						5
+					],
+					"directoryIndexes" : 
+					[
+						0,
+						1,
+						6,
+						7,
+						8
+					],
+					"name" : "wgm_ui",
+					"targetIndexes" : 
+					[
+						0,
+						6,
+						9,
+						12
+					]
+				},
+				{
+					"childIndexes" : 
+					[
+						2,
+						4
+					],
+					"directoryIndexes" : 
+					[
+						2
+					],
+					"name" : "wgm_core",
+					"parentIndex" : 0,
+					"targetIndexes" : 
+					[
+						1,
+						13
+					]
+				},
+				{
+					"childIndexes" : 
+					[
+						3
+					],
+					"directoryIndexes" : 
+					[
+						3
+					],
+					"name" : "whs_controller",
+					"parentIndex" : 1,
+					"targetIndexes" : 
+					[
+						2,
+						15
+					]
+				},
+				{
+					"directoryIndexes" : 
+					[
+						4
+					],
+					"name" : "keyence_sdk",
+					"parentIndex" : 2,
+					"targetIndexes" : 
+					[
+						3,
+						10,
+						11
+					]
+				},
+				{
+					"directoryIndexes" : 
+					[
+						5
+					],
+					"name" : "cnt_system",
+					"parentIndex" : 1,
+					"targetIndexes" : 
+					[
+						4,
+						7,
+						8
+					]
+				},
+				{
+					"directoryIndexes" : 
+					[
+						9
+					],
+					"name" : "wgm_view",
+					"parentIndex" : 0,
+					"targetIndexes" : 
+					[
+						5,
+						14
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "ALL_BUILD::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-ALL_BUILD-Release-cb1350bf8faef069cd0f.json",
+					"name" : "ALL_BUILD",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 2,
+					"id" : "ALL_BUILD::@4bfcd7cf7ac49fce9d65",
+					"jsonFile" : "target-ALL_BUILD-Release-72c112d22769d525e5ff.json",
+					"name" : "ALL_BUILD",
+					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 3,
+					"id" : "ALL_BUILD::@f34ba466f21c72a91b89",
+					"jsonFile" : "target-ALL_BUILD-Release-2fc12b0ed1b15ca4ce8e.json",
+					"name" : "ALL_BUILD",
+					"projectIndex" : 2
+				},
+				{
+					"directoryIndex" : 4,
+					"id" : "ALL_BUILD::@e1105e4bf232d1bfed4b",
+					"jsonFile" : "target-ALL_BUILD-Release-ce64d2e81ba05bbe96e8.json",
+					"name" : "ALL_BUILD",
+					"projectIndex" : 3
+				},
+				{
+					"directoryIndex" : 5,
+					"id" : "ALL_BUILD::@717c18fb618b01b17ec1",
+					"jsonFile" : "target-ALL_BUILD-Release-e1c1dc22535cc1e40b34.json",
+					"name" : "ALL_BUILD",
+					"projectIndex" : 4
+				},
+				{
+					"directoryIndex" : 9,
+					"id" : "ALL_BUILD::@ff93792cf40911dae1b8",
+					"jsonFile" : "target-ALL_BUILD-Release-42f56d8e58f0288dfc63.json",
+					"name" : "ALL_BUILD",
+					"projectIndex" : 5
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "ZERO_CHECK::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-ZERO_CHECK-Release-9f1a31e18a82b394a81c.json",
+					"name" : "ZERO_CHECK",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 5,
+					"id" : "cnt_system_exe::@717c18fb618b01b17ec1",
+					"jsonFile" : "target-cnt_system_exe-Release-47a57d908e9f563ae6fe.json",
+					"name" : "cnt_system_exe",
+					"projectIndex" : 4
+				},
+				{
+					"directoryIndex" : 5,
+					"id" : "cnt_system_static::@717c18fb618b01b17ec1",
+					"jsonFile" : "target-cnt_system_static-Release-e9f095690c982997c4f3.json",
+					"name" : "cnt_system_static",
+					"projectIndex" : 4
+				},
+				{
+					"directoryIndex" : 8,
+					"id" : "controller::@3cefde71a3853251e858",
+					"jsonFile" : "target-controller-Release-034398b59314565505ec.json",
+					"name" : "controller",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 4,
+					"id" : "keyence_exe::@e1105e4bf232d1bfed4b",
+					"jsonFile" : "target-keyence_exe-Release-673afea177a6573c17a8.json",
+					"name" : "keyence_exe",
+					"projectIndex" : 3
+				},
+				{
+					"directoryIndex" : 4,
+					"id" : "keyence_lib_static::@e1105e4bf232d1bfed4b",
+					"jsonFile" : "target-keyence_lib_static-Release-e25887f25b770815dd54.json",
+					"name" : "keyence_lib_static",
+					"projectIndex" : 3
+				},
+				{
+					"directoryIndex" : 6,
+					"id" : "model::@1ca0ed82e3ab703857bd",
+					"jsonFile" : "target-model-Release-ab418670f553237b3450.json",
+					"name" : "model",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 2,
+					"id" : "wgm_static::@4bfcd7cf7ac49fce9d65",
+					"jsonFile" : "target-wgm_static-Release-5843393d4010b820b3f9.json",
+					"name" : "wgm_static",
+					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 9,
+					"id" : "wgm_view::@ff93792cf40911dae1b8",
+					"jsonFile" : "target-wgm_view-Release-bb7345f34c01dfd8127e.json",
+					"name" : "wgm_view",
+					"projectIndex" : 5
+				},
+				{
+					"directoryIndex" : 3,
+					"id" : "whs_static::@f34ba466f21c72a91b89",
+					"jsonFile" : "target-whs_static-Release-e3c7f560208ac5da8802.json",
+					"name" : "whs_static",
+					"projectIndex" : 2
+				}
+			]
+		},
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"childIndexes" : 
+					[
+						1,
+						7
+					],
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-.-MinSizeRel-d0094a50bb2071803777.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.16"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						6
+					]
+				},
+				{
+					"build" : "dependencies",
+					"childIndexes" : 
+					[
+						2,
+						6
+					],
+					"jsonFile" : "directory-dependencies-MinSizeRel-213773dd22be3796fa39.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.16"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 0,
+					"source" : "dependencies"
+				},
+				{
+					"build" : "dependencies/software_wgm_v2_cpp",
+					"childIndexes" : 
+					[
+						3,
+						5
+					],
+					"jsonFile" : "directory-dependencies.software_wgm_v2_cpp-MinSizeRel-6d96700872d2db55d90a.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.5.0"
+					},
+					"parentIndex" : 1,
+					"projectIndex" : 1,
+					"source" : "dependencies/software_wgm_v2_cpp",
+					"targetIndexes" : 
+					[
+						1,
+						13
+					]
+				},
+				{
+					"build" : "dependencies/software_wgm_v2_cpp/dependencies/soft_wafer_holder_system_controller",
+					"childIndexes" : 
+					[
+						4
+					],
+					"jsonFile" : "directory-dependencies.software_wgm_v2_cpp.dependencies.soft_wafer_holder_system_controller-MinSizeRel-dc260f46db254f3270e8.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.5.0"
+					},
+					"parentIndex" : 2,
+					"projectIndex" : 2,
+					"source" : "dependencies/software_wgm_v2_cpp/dependencies/soft_wafer_holder_system_controller",
+					"targetIndexes" : 
+					[
+						2,
+						15
+					]
+				},
+				{
+					"build" : "dependencies/software_wgm_v2_cpp/dependencies/soft_wafer_holder_system_controller/dependencies/lib_keyence_sdk",
+					"jsonFile" : "directory-dependencies.software_wgm_v2_cpp.dependencies.soft_wafer_holder_system_controller.dependencies.lib_keyence_sdk-MinSizeRel-03d90e96668f3ddb4cff.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.5.0"
+					},
+					"parentIndex" : 3,
+					"projectIndex" : 3,
+					"source" : "dependencies/software_wgm_v2_cpp/dependencies/soft_wafer_holder_system_controller/dependencies/lib_keyence_sdk",
+					"targetIndexes" : 
+					[
+						3,
+						10,
+						11
+					]
+				},
+				{
+					"build" : "dependencies/software_wgm_v2_cpp/dependencies/soft_cnt_system_submodule_cpp",
+					"jsonFile" : "directory-dependencies.software_wgm_v2_cpp.dependencies.soft_cnt_system_submodule_cpp-MinSizeRel-8be95c426a88f1644a57.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.5.0"
+					},
+					"parentIndex" : 2,
+					"projectIndex" : 4,
+					"source" : "dependencies/software_wgm_v2_cpp/dependencies/soft_cnt_system_submodule_cpp",
+					"targetIndexes" : 
+					[
+						4,
+						7,
+						8
+					]
+				},
+				{
+					"build" : "dependencies/model",
+					"jsonFile" : "directory-dependencies.model-MinSizeRel-42986c1cb69f146c8ddc.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.16"
+					},
+					"parentIndex" : 1,
+					"projectIndex" : 0,
+					"source" : "dependencies/model",
+					"targetIndexes" : 
+					[
+						12
+					]
+				},
+				{
+					"build" : "src",
+					"childIndexes" : 
+					[
+						8,
+						9
+					],
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-src-MinSizeRel-c94b7c2814d5a21df52c.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.16"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 0,
+					"source" : "src"
+				},
+				{
+					"build" : "src/businesslogic",
+					"jsonFile" : "directory-src.businesslogic-MinSizeRel-cb51d08c41009e1b8bb3.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.16"
+					},
+					"parentIndex" : 7,
+					"projectIndex" : 0,
+					"source" : "src/businesslogic",
+					"targetIndexes" : 
+					[
+						9
+					]
+				},
+				{
+					"build" : "src/app",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-src.app-MinSizeRel-59df79b3177452049831.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.16"
+					},
+					"parentIndex" : 7,
+					"projectIndex" : 5,
+					"source" : "src/app",
+					"targetIndexes" : 
+					[
+						5,
+						14
+					]
+				}
+			],
+			"name" : "MinSizeRel",
+			"projects" : 
+			[
+				{
+					"childIndexes" : 
+					[
+						1,
+						5
+					],
+					"directoryIndexes" : 
+					[
+						0,
+						1,
+						6,
+						7,
+						8
+					],
+					"name" : "wgm_ui",
+					"targetIndexes" : 
+					[
+						0,
+						6,
+						9,
+						12
+					]
+				},
+				{
+					"childIndexes" : 
+					[
+						2,
+						4
+					],
+					"directoryIndexes" : 
+					[
+						2
+					],
+					"name" : "wgm_core",
+					"parentIndex" : 0,
+					"targetIndexes" : 
+					[
+						1,
+						13
+					]
+				},
+				{
+					"childIndexes" : 
+					[
+						3
+					],
+					"directoryIndexes" : 
+					[
+						3
+					],
+					"name" : "whs_controller",
+					"parentIndex" : 1,
+					"targetIndexes" : 
+					[
+						2,
+						15
+					]
+				},
+				{
+					"directoryIndexes" : 
+					[
+						4
+					],
+					"name" : "keyence_sdk",
+					"parentIndex" : 2,
+					"targetIndexes" : 
+					[
+						3,
+						10,
+						11
+					]
+				},
+				{
+					"directoryIndexes" : 
+					[
+						5
+					],
+					"name" : "cnt_system",
+					"parentIndex" : 1,
+					"targetIndexes" : 
+					[
+						4,
+						7,
+						8
+					]
+				},
+				{
+					"directoryIndexes" : 
+					[
+						9
+					],
+					"name" : "wgm_view",
+					"parentIndex" : 0,
+					"targetIndexes" : 
+					[
+						5,
+						14
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "ALL_BUILD::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-ALL_BUILD-MinSizeRel-cb1350bf8faef069cd0f.json",
+					"name" : "ALL_BUILD",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 2,
+					"id" : "ALL_BUILD::@4bfcd7cf7ac49fce9d65",
+					"jsonFile" : "target-ALL_BUILD-MinSizeRel-72c112d22769d525e5ff.json",
+					"name" : "ALL_BUILD",
+					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 3,
+					"id" : "ALL_BUILD::@f34ba466f21c72a91b89",
+					"jsonFile" : "target-ALL_BUILD-MinSizeRel-2fc12b0ed1b15ca4ce8e.json",
+					"name" : "ALL_BUILD",
+					"projectIndex" : 2
+				},
+				{
+					"directoryIndex" : 4,
+					"id" : "ALL_BUILD::@e1105e4bf232d1bfed4b",
+					"jsonFile" : "target-ALL_BUILD-MinSizeRel-ce64d2e81ba05bbe96e8.json",
+					"name" : "ALL_BUILD",
+					"projectIndex" : 3
+				},
+				{
+					"directoryIndex" : 5,
+					"id" : "ALL_BUILD::@717c18fb618b01b17ec1",
+					"jsonFile" : "target-ALL_BUILD-MinSizeRel-e1c1dc22535cc1e40b34.json",
+					"name" : "ALL_BUILD",
+					"projectIndex" : 4
+				},
+				{
+					"directoryIndex" : 9,
+					"id" : "ALL_BUILD::@ff93792cf40911dae1b8",
+					"jsonFile" : "target-ALL_BUILD-MinSizeRel-42f56d8e58f0288dfc63.json",
+					"name" : "ALL_BUILD",
+					"projectIndex" : 5
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "ZERO_CHECK::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-ZERO_CHECK-MinSizeRel-9f1a31e18a82b394a81c.json",
+					"name" : "ZERO_CHECK",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 5,
+					"id" : "cnt_system_exe::@717c18fb618b01b17ec1",
+					"jsonFile" : "target-cnt_system_exe-MinSizeRel-4b43811742f79159a905.json",
+					"name" : "cnt_system_exe",
+					"projectIndex" : 4
+				},
+				{
+					"directoryIndex" : 5,
+					"id" : "cnt_system_static::@717c18fb618b01b17ec1",
+					"jsonFile" : "target-cnt_system_static-MinSizeRel-1bc443ff59a57d04f71d.json",
+					"name" : "cnt_system_static",
+					"projectIndex" : 4
+				},
+				{
+					"directoryIndex" : 8,
+					"id" : "controller::@3cefde71a3853251e858",
+					"jsonFile" : "target-controller-MinSizeRel-03c7f87fa268480c15b1.json",
+					"name" : "controller",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 4,
+					"id" : "keyence_exe::@e1105e4bf232d1bfed4b",
+					"jsonFile" : "target-keyence_exe-MinSizeRel-c76ceb3f036a23c07d01.json",
+					"name" : "keyence_exe",
+					"projectIndex" : 3
+				},
+				{
+					"directoryIndex" : 4,
+					"id" : "keyence_lib_static::@e1105e4bf232d1bfed4b",
+					"jsonFile" : "target-keyence_lib_static-MinSizeRel-aea99a93436590d29feb.json",
+					"name" : "keyence_lib_static",
+					"projectIndex" : 3
+				},
+				{
+					"directoryIndex" : 6,
+					"id" : "model::@1ca0ed82e3ab703857bd",
+					"jsonFile" : "target-model-MinSizeRel-e34789405bca244b0ce2.json",
+					"name" : "model",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 2,
+					"id" : "wgm_static::@4bfcd7cf7ac49fce9d65",
+					"jsonFile" : "target-wgm_static-MinSizeRel-42baa7d194b9c5f3a089.json",
+					"name" : "wgm_static",
+					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 9,
+					"id" : "wgm_view::@ff93792cf40911dae1b8",
+					"jsonFile" : "target-wgm_view-MinSizeRel-16cc5945d7433d0a50fa.json",
+					"name" : "wgm_view",
+					"projectIndex" : 5
+				},
+				{
+					"directoryIndex" : 3,
+					"id" : "whs_static::@f34ba466f21c72a91b89",
+					"jsonFile" : "target-whs_static-MinSizeRel-607bbd0fcb9b91171f2d.json",
+					"name" : "whs_static",
+					"projectIndex" : 2
+				}
+			]
+		},
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"childIndexes" : 
+					[
+						1,
+						7
+					],
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-.-RelWithDebInfo-d0094a50bb2071803777.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.16"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						6
+					]
+				},
+				{
+					"build" : "dependencies",
+					"childIndexes" : 
+					[
+						2,
+						6
+					],
+					"jsonFile" : "directory-dependencies-RelWithDebInfo-213773dd22be3796fa39.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.16"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 0,
+					"source" : "dependencies"
+				},
+				{
+					"build" : "dependencies/software_wgm_v2_cpp",
+					"childIndexes" : 
+					[
+						3,
+						5
+					],
+					"jsonFile" : "directory-dependencies.software_wgm_v2_cpp-RelWithDebInfo-6d96700872d2db55d90a.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.5.0"
+					},
+					"parentIndex" : 1,
+					"projectIndex" : 1,
+					"source" : "dependencies/software_wgm_v2_cpp",
+					"targetIndexes" : 
+					[
+						1,
+						13
+					]
+				},
+				{
+					"build" : "dependencies/software_wgm_v2_cpp/dependencies/soft_wafer_holder_system_controller",
+					"childIndexes" : 
+					[
+						4
+					],
+					"jsonFile" : "directory-dependencies.software_wgm_v2_cpp.dependencies.soft_wafer_holder_system_controller-RelWithDebInfo-dc260f46db254f3270e8.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.5.0"
+					},
+					"parentIndex" : 2,
+					"projectIndex" : 2,
+					"source" : "dependencies/software_wgm_v2_cpp/dependencies/soft_wafer_holder_system_controller",
+					"targetIndexes" : 
+					[
+						2,
+						15
+					]
+				},
+				{
+					"build" : "dependencies/software_wgm_v2_cpp/dependencies/soft_wafer_holder_system_controller/dependencies/lib_keyence_sdk",
+					"jsonFile" : "directory-dependencies.software_wgm_v2_cpp.dependencies.soft_wafer_holder_system_controller.dependencies.lib_keyence_sdk-RelWithDebInfo-03d90e96668f3ddb4cff.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.5.0"
+					},
+					"parentIndex" : 3,
+					"projectIndex" : 3,
+					"source" : "dependencies/software_wgm_v2_cpp/dependencies/soft_wafer_holder_system_controller/dependencies/lib_keyence_sdk",
+					"targetIndexes" : 
+					[
+						3,
+						10,
+						11
+					]
+				},
+				{
+					"build" : "dependencies/software_wgm_v2_cpp/dependencies/soft_cnt_system_submodule_cpp",
+					"jsonFile" : "directory-dependencies.software_wgm_v2_cpp.dependencies.soft_cnt_system_submodule_cpp-RelWithDebInfo-8be95c426a88f1644a57.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.5.0"
+					},
+					"parentIndex" : 2,
+					"projectIndex" : 4,
+					"source" : "dependencies/software_wgm_v2_cpp/dependencies/soft_cnt_system_submodule_cpp",
+					"targetIndexes" : 
+					[
+						4,
+						7,
+						8
+					]
+				},
+				{
+					"build" : "dependencies/model",
+					"jsonFile" : "directory-dependencies.model-RelWithDebInfo-42986c1cb69f146c8ddc.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.16"
+					},
+					"parentIndex" : 1,
+					"projectIndex" : 0,
+					"source" : "dependencies/model",
+					"targetIndexes" : 
+					[
+						12
+					]
+				},
+				{
+					"build" : "src",
+					"childIndexes" : 
+					[
+						8,
+						9
+					],
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-src-RelWithDebInfo-c94b7c2814d5a21df52c.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.16"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 0,
+					"source" : "src"
+				},
+				{
+					"build" : "src/businesslogic",
+					"jsonFile" : "directory-src.businesslogic-RelWithDebInfo-cb51d08c41009e1b8bb3.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.16"
+					},
+					"parentIndex" : 7,
+					"projectIndex" : 0,
+					"source" : "src/businesslogic",
+					"targetIndexes" : 
+					[
+						9
+					]
+				},
+				{
+					"build" : "src/app",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-src.app-RelWithDebInfo-f5cd1fdb6168f60ccefb.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.16"
+					},
+					"parentIndex" : 7,
+					"projectIndex" : 5,
+					"source" : "src/app",
+					"targetIndexes" : 
+					[
+						5,
+						14
+					]
+				}
+			],
+			"name" : "RelWithDebInfo",
+			"projects" : 
+			[
+				{
+					"childIndexes" : 
+					[
+						1,
+						5
+					],
+					"directoryIndexes" : 
+					[
+						0,
+						1,
+						6,
+						7,
+						8
+					],
+					"name" : "wgm_ui",
+					"targetIndexes" : 
+					[
+						0,
+						6,
+						9,
+						12
+					]
+				},
+				{
+					"childIndexes" : 
+					[
+						2,
+						4
+					],
+					"directoryIndexes" : 
+					[
+						2
+					],
+					"name" : "wgm_core",
+					"parentIndex" : 0,
+					"targetIndexes" : 
+					[
+						1,
+						13
+					]
+				},
+				{
+					"childIndexes" : 
+					[
+						3
+					],
+					"directoryIndexes" : 
+					[
+						3
+					],
+					"name" : "whs_controller",
+					"parentIndex" : 1,
+					"targetIndexes" : 
+					[
+						2,
+						15
+					]
+				},
+				{
+					"directoryIndexes" : 
+					[
+						4
+					],
+					"name" : "keyence_sdk",
+					"parentIndex" : 2,
+					"targetIndexes" : 
+					[
+						3,
+						10,
+						11
+					]
+				},
+				{
+					"directoryIndexes" : 
+					[
+						5
+					],
+					"name" : "cnt_system",
+					"parentIndex" : 1,
+					"targetIndexes" : 
+					[
+						4,
+						7,
+						8
+					]
+				},
+				{
+					"directoryIndexes" : 
+					[
+						9
+					],
+					"name" : "wgm_view",
+					"parentIndex" : 0,
+					"targetIndexes" : 
+					[
+						5,
+						14
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "ALL_BUILD::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-ALL_BUILD-RelWithDebInfo-cb1350bf8faef069cd0f.json",
+					"name" : "ALL_BUILD",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 2,
+					"id" : "ALL_BUILD::@4bfcd7cf7ac49fce9d65",
+					"jsonFile" : "target-ALL_BUILD-RelWithDebInfo-72c112d22769d525e5ff.json",
+					"name" : "ALL_BUILD",
+					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 3,
+					"id" : "ALL_BUILD::@f34ba466f21c72a91b89",
+					"jsonFile" : "target-ALL_BUILD-RelWithDebInfo-2fc12b0ed1b15ca4ce8e.json",
+					"name" : "ALL_BUILD",
+					"projectIndex" : 2
+				},
+				{
+					"directoryIndex" : 4,
+					"id" : "ALL_BUILD::@e1105e4bf232d1bfed4b",
+					"jsonFile" : "target-ALL_BUILD-RelWithDebInfo-ce64d2e81ba05bbe96e8.json",
+					"name" : "ALL_BUILD",
+					"projectIndex" : 3
+				},
+				{
+					"directoryIndex" : 5,
+					"id" : "ALL_BUILD::@717c18fb618b01b17ec1",
+					"jsonFile" : "target-ALL_BUILD-RelWithDebInfo-e1c1dc22535cc1e40b34.json",
+					"name" : "ALL_BUILD",
+					"projectIndex" : 4
+				},
+				{
+					"directoryIndex" : 9,
+					"id" : "ALL_BUILD::@ff93792cf40911dae1b8",
+					"jsonFile" : "target-ALL_BUILD-RelWithDebInfo-42f56d8e58f0288dfc63.json",
+					"name" : "ALL_BUILD",
+					"projectIndex" : 5
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "ZERO_CHECK::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-ZERO_CHECK-RelWithDebInfo-9f1a31e18a82b394a81c.json",
+					"name" : "ZERO_CHECK",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 5,
+					"id" : "cnt_system_exe::@717c18fb618b01b17ec1",
+					"jsonFile" : "target-cnt_system_exe-RelWithDebInfo-76d6dd6721db91363e9d.json",
+					"name" : "cnt_system_exe",
+					"projectIndex" : 4
+				},
+				{
+					"directoryIndex" : 5,
+					"id" : "cnt_system_static::@717c18fb618b01b17ec1",
+					"jsonFile" : "target-cnt_system_static-RelWithDebInfo-b178c2d294b9511c2417.json",
+					"name" : "cnt_system_static",
+					"projectIndex" : 4
+				},
+				{
+					"directoryIndex" : 8,
+					"id" : "controller::@3cefde71a3853251e858",
+					"jsonFile" : "target-controller-RelWithDebInfo-a36b7be59f05084906cd.json",
+					"name" : "controller",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 4,
+					"id" : "keyence_exe::@e1105e4bf232d1bfed4b",
+					"jsonFile" : "target-keyence_exe-RelWithDebInfo-cb3bab5e9e6b4f1ddd5e.json",
+					"name" : "keyence_exe",
+					"projectIndex" : 3
+				},
+				{
+					"directoryIndex" : 4,
+					"id" : "keyence_lib_static::@e1105e4bf232d1bfed4b",
+					"jsonFile" : "target-keyence_lib_static-RelWithDebInfo-13ee0982a0dd15c64191.json",
+					"name" : "keyence_lib_static",
+					"projectIndex" : 3
+				},
+				{
+					"directoryIndex" : 6,
+					"id" : "model::@1ca0ed82e3ab703857bd",
+					"jsonFile" : "target-model-RelWithDebInfo-a7a7c2dd4c8026211874.json",
+					"name" : "model",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 2,
+					"id" : "wgm_static::@4bfcd7cf7ac49fce9d65",
+					"jsonFile" : "target-wgm_static-RelWithDebInfo-b708fa0bfcc1897f211f.json",
+					"name" : "wgm_static",
+					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 9,
+					"id" : "wgm_view::@ff93792cf40911dae1b8",
+					"jsonFile" : "target-wgm_view-RelWithDebInfo-ac858e7fd89186ef1a69.json",
+					"name" : "wgm_view",
+					"projectIndex" : 5
+				},
+				{
+					"directoryIndex" : 3,
+					"id" : "whs_static::@f34ba466f21c72a91b89",
+					"jsonFile" : "target-whs_static-RelWithDebInfo-dd919d2dbfe0bb5cc8ef.json",
+					"name" : "whs_static",
+					"projectIndex" : 2
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "C:/Users/SamiDhiab/Theion_Repos/soft_wgm_user_interface_qt_cpp/build",
+		"source" : "C:/Users/SamiDhiab/Theion_Repos/soft_wgm_user_interface_qt_cpp"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 4
+	}
+}
