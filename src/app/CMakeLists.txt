@@ -14,7 +14,10 @@ set(CMAKE_AUTOUIC ON)
 set(CMAKE_AUTOMOC ON)
 set(CMAKE_AUTORCC ON)
 
-
+#This is necessary for MSVC to create a symbol file, .lib, besides a shared library, .dll
+if (MSVC)
+    set(CMAKE_WINDOWS_EXPORT_ALL_SYMBOLS ON)
+endif()
 
 
 find_package(QT NAMES Qt6 Qt5 REQUIRED COMPONENTS Widgets Concurrent )

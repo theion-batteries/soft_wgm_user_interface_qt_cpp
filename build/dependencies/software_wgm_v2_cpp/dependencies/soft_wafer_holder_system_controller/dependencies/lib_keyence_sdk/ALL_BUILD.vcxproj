@@ -173,6 +173,10 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
       <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </ProjectReference>
+    <ProjectReference Include="C:\Users\SamiDhiab\Theion_Repos\soft_wgm_user_interface_qt_cpp\build\dependencies\software_wgm_v2_cpp\dependencies\soft_wafer_holder_system_controller\dependencies\lib_keyence_sdk\keyence_exe.vcxproj">
+      <Project>{148970B2-0ADB-31D2-B5D5-D289855D7DE6}</Project>
+      <Name>keyence_exe</Name>
+    </ProjectReference>
     <ProjectReference Include="C:\Users\SamiDhiab\Theion_Repos\soft_wgm_user_interface_qt_cpp\build\dependencies\software_wgm_v2_cpp\dependencies\soft_wafer_holder_system_controller\dependencies\lib_keyence_sdk\keyence_lib_static.vcxproj">
       <Project>{9127CB80-75D9-3FC2-B436-17A6C7246A7B}</Project>
       <Name>keyence_lib_static</Name>

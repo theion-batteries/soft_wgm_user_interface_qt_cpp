@@ -120,7 +120,7 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Users\SamiDhiab\Theion_Repos\soft_wafer_holder_system_controller\dependencies\yaml-cpp\build\yaml-cpp-config-version.cmake;C:\Users\SamiDhiab\Theion_Repos\soft_wafer_holder_system_controller\dependencies\yaml-cpp\build\yaml-cpp-config.cmake;C:\Users\SamiDhiab\Theion_Repos\soft_wafer_holder_system_controller\dependencies\yaml-cpp\build\yaml-cpp-targets.cmake;C:\Users\SamiDhiab\vcpkg\installed\x86-windows\share\sockpp\sockppConfig.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Users\SamiDhiab\vcpkg\installed\x64-windows\share\sockpp\sockppConfig.cmake;C:\Users\SamiDhiab\vcpkg\installed\x64-windows\share\yaml-cpp\yaml-cpp-config-version.cmake;C:\Users\SamiDhiab\vcpkg\installed\x64-windows\share\yaml-cpp\yaml-cpp-config.cmake;C:\Users\SamiDhiab\vcpkg\installed\x64-windows\share\yaml-cpp\yaml-cpp-targets-debug.cmake;C:\Users\SamiDhiab\vcpkg\installed\x64-windows\share\yaml-cpp\yaml-cpp-targets-release.cmake;C:\Users\SamiDhiab\vcpkg\installed\x64-windows\share\yaml-cpp\yaml-cpp-targets.cmake;%(AdditionalInputs)</AdditionalInputs>
       <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Users\SamiDhiab\Theion_Repos\soft_wgm_user_interface_qt_cpp\build\dependencies\software_wgm_v2_cpp\dependencies\soft_wafer_holder_system_controller\CMakeFiles\generate.stamp</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
       <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Building Custom Rule C:/Users/SamiDhiab/Theion_Repos/soft_wgm_user_interface_qt_cpp/dependencies/software_wgm_v2_cpp/dependencies/soft_wafer_holder_system_controller/CMakeLists.txt</Message>
@@ -133,7 +133,7 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Users\SamiDhiab\Theion_Repos\soft_wafer_holder_system_controller\dependencies\yaml-cpp\build\yaml-cpp-config-version.cmake;C:\Users\SamiDhiab\Theion_Repos\soft_wafer_holder_system_controller\dependencies\yaml-cpp\build\yaml-cpp-config.cmake;C:\Users\SamiDhiab\Theion_Repos\soft_wafer_holder_system_controller\dependencies\yaml-cpp\build\yaml-cpp-targets.cmake;C:\Users\SamiDhiab\vcpkg\installed\x86-windows\share\sockpp\sockppConfig.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Users\SamiDhiab\vcpkg\installed\x64-windows\share\sockpp\sockppConfig.cmake;C:\Users\SamiDhiab\vcpkg\installed\x64-windows\share\yaml-cpp\yaml-cpp-config-version.cmake;C:\Users\SamiDhiab\vcpkg\installed\x64-windows\share\yaml-cpp\yaml-cpp-config.cmake;C:\Users\SamiDhiab\vcpkg\installed\x64-windows\share\yaml-cpp\yaml-cpp-targets-debug.cmake;C:\Users\SamiDhiab\vcpkg\installed\x64-windows\share\yaml-cpp\yaml-cpp-targets-release.cmake;C:\Users\SamiDhiab\vcpkg\installed\x64-windows\share\yaml-cpp\yaml-cpp-targets.cmake;%(AdditionalInputs)</AdditionalInputs>
       <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Users\SamiDhiab\Theion_Repos\soft_wgm_user_interface_qt_cpp\build\dependencies\software_wgm_v2_cpp\dependencies\soft_wafer_holder_system_controller\CMakeFiles\generate.stamp</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
       <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">Building Custom Rule C:/Users/SamiDhiab/Theion_Repos/soft_wgm_user_interface_qt_cpp/dependencies/software_wgm_v2_cpp/dependencies/soft_wafer_holder_system_controller/CMakeLists.txt</Message>
@@ -146,7 +146,7 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\Users\SamiDhiab\Theion_Repos\soft_wafer_holder_system_controller\dependencies\yaml-cpp\build\yaml-cpp-config-version.cmake;C:\Users\SamiDhiab\Theion_Repos\soft_wafer_holder_system_controller\dependencies\yaml-cpp\build\yaml-cpp-config.cmake;C:\Users\SamiDhiab\Theion_Repos\soft_wafer_holder_system_controller\dependencies\yaml-cpp\build\yaml-cpp-targets.cmake;C:\Users\SamiDhiab\vcpkg\installed\x86-windows\share\sockpp\sockppConfig.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\Users\SamiDhiab\vcpkg\installed\x64-windows\share\sockpp\sockppConfig.cmake;C:\Users\SamiDhiab\vcpkg\installed\x64-windows\share\yaml-cpp\yaml-cpp-config-version.cmake;C:\Users\SamiDhiab\vcpkg\installed\x64-windows\share\yaml-cpp\yaml-cpp-config.cmake;C:\Users\SamiDhiab\vcpkg\installed\x64-windows\share\yaml-cpp\yaml-cpp-targets-debug.cmake;C:\Users\SamiDhiab\vcpkg\installed\x64-windows\share\yaml-cpp\yaml-cpp-targets-release.cmake;C:\Users\SamiDhiab\vcpkg\installed\x64-windows\share\yaml-cpp\yaml-cpp-targets.cmake;%(AdditionalInputs)</AdditionalInputs>
       <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\Users\SamiDhiab\Theion_Repos\soft_wgm_user_interface_qt_cpp\build\dependencies\software_wgm_v2_cpp\dependencies\soft_wafer_holder_system_controller\CMakeFiles\generate.stamp</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkObjects>
       <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Building Custom Rule C:/Users/SamiDhiab/Theion_Repos/soft_wgm_user_interface_qt_cpp/dependencies/software_wgm_v2_cpp/dependencies/soft_wafer_holder_system_controller/CMakeLists.txt</Message>
@@ -159,7 +159,7 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\Users\SamiDhiab\Theion_Repos\soft_wafer_holder_system_controller\dependencies\yaml-cpp\build\yaml-cpp-config-version.cmake;C:\Users\SamiDhiab\Theion_Repos\soft_wafer_holder_system_controller\dependencies\yaml-cpp\build\yaml-cpp-config.cmake;C:\Users\SamiDhiab\Theion_Repos\soft_wafer_holder_system_controller\dependencies\yaml-cpp\build\yaml-cpp-targets.cmake;C:\Users\SamiDhiab\vcpkg\installed\x86-windows\share\sockpp\sockppConfig.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\Users\SamiDhiab\vcpkg\installed\x64-windows\share\sockpp\sockppConfig.cmake;C:\Users\SamiDhiab\vcpkg\installed\x64-windows\share\yaml-cpp\yaml-cpp-config-version.cmake;C:\Users\SamiDhiab\vcpkg\installed\x64-windows\share\yaml-cpp\yaml-cpp-config.cmake;C:\Users\SamiDhiab\vcpkg\installed\x64-windows\share\yaml-cpp\yaml-cpp-targets-debug.cmake;C:\Users\SamiDhiab\vcpkg\installed\x64-windows\share\yaml-cpp\yaml-cpp-targets-release.cmake;C:\Users\SamiDhiab\vcpkg\installed\x64-windows\share\yaml-cpp\yaml-cpp-targets.cmake;%(AdditionalInputs)</AdditionalInputs>
       <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\Users\SamiDhiab\Theion_Repos\soft_wgm_user_interface_qt_cpp\build\dependencies\software_wgm_v2_cpp\dependencies\soft_wafer_holder_system_controller\CMakeFiles\generate.stamp</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</LinkObjects>
     </CustomBuild>
@@ -172,6 +172,10 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
       <Name>ZERO_CHECK</Name>
       <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\SamiDhiab\Theion_Repos\soft_wgm_user_interface_qt_cpp\build\dependencies\software_wgm_v2_cpp\dependencies\soft_wafer_holder_system_controller\dependencies\lib_keyence_sdk\keyence_exe.vcxproj">
+      <Project>{148970B2-0ADB-31D2-B5D5-D289855D7DE6}</Project>
+      <Name>keyence_exe</Name>
     </ProjectReference>
     <ProjectReference Include="C:\Users\SamiDhiab\Theion_Repos\soft_wgm_user_interface_qt_cpp\build\dependencies\software_wgm_v2_cpp\dependencies\soft_wafer_holder_system_controller\dependencies\lib_keyence_sdk\keyence_lib_static.vcxproj">
       <Project>{9127CB80-75D9-3FC2-B436-17A6C7246A7B}</Project>

@@ -22,5 +22,8 @@ public slots:
 signals:
    void valueChanged(int newValue);
 
+private:
+    model proc_model;
+
 
 };

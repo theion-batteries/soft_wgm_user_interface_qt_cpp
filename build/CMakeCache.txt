@@ -313,7 +313,7 @@ cnt_system_IS_TOP_LEVEL:STATIC=OFF
 cnt_system_SOURCE_DIR:STATIC=C:/Users/SamiDhiab/Theion_Repos/soft_wgm_user_interface_qt_cpp/dependencies/software_wgm_v2_cpp/dependencies/soft_cnt_system_submodule_cpp
 
 //Dependencies for the target
-cnt_system_static_LIB_DEPENDS:STATIC=general;yaml-cpp;optimized;C:/Users/SamiDhiab/vcpkg/installed/x86-windows/lib/sockpp.lib;debug;C:/Users/SamiDhiab/vcpkg/installed/x86-windows/debug/lib/sockpp.lib;
+cnt_system_static_LIB_DEPENDS:STATIC=general;yaml-cpp;optimized;C:/Users/SamiDhiab/vcpkg/installed/x64-windows/lib/sockpp.lib;debug;C:/Users/SamiDhiab/vcpkg/installed/x64-windows/debug/lib/sockpp.lib;
 
 //Dependencies for the target
 controller_LIB_DEPENDS:STATIC=general;Qt6::Core;general;model;
@@ -334,7 +334,7 @@ keyence_sdk_SOURCE_DIR:STATIC=C:/Users/SamiDhiab/Theion_Repos/soft_wgm_user_inte
 model_LIB_DEPENDS:STATIC=general;Qt6::Core;general;wgm_static;
 
 //The directory containing a CMake configuration file for sockpp.
-sockpp_DIR:PATH=C:/Users/SamiDhiab/vcpkg/installed/x86-windows/share/sockpp
+sockpp_DIR:PATH=C:/Users/SamiDhiab/vcpkg/installed/x64-windows/share/sockpp
 
 //Value Computed by CMake
 wgm_core_BINARY_DIR:STATIC=C:/Users/SamiDhiab/Theion_Repos/soft_wgm_user_interface_qt_cpp/build/dependencies/software_wgm_v2_cpp
@@ -376,10 +376,10 @@ whs_controller_IS_TOP_LEVEL:STATIC=OFF
 whs_controller_SOURCE_DIR:STATIC=C:/Users/SamiDhiab/Theion_Repos/soft_wgm_user_interface_qt_cpp/dependencies/software_wgm_v2_cpp/dependencies/soft_wafer_holder_system_controller
 
 //Dependencies for the target
-whs_static_LIB_DEPENDS:STATIC=general;keyence_lib_static;optimized;C:/Users/SamiDhiab/vcpkg/installed/x86-windows/lib/sockpp.lib;debug;C:/Users/SamiDhiab/vcpkg/installed/x86-windows/debug/lib/sockpp.lib;general;yaml-cpp;
+whs_static_LIB_DEPENDS:STATIC=general;keyence_lib_static;optimized;C:/Users/SamiDhiab/vcpkg/installed/x64-windows/lib/sockpp.lib;debug;C:/Users/SamiDhiab/vcpkg/installed/x64-windows/debug/lib/sockpp.lib;general;yaml-cpp;
 
 //The directory containing a CMake configuration file for yaml-cpp.
-yaml-cpp_DIR:PATH=C:/Users/SamiDhiab/Theion_Repos/soft_wafer_holder_system_controller/dependencies/yaml-cpp/build
+yaml-cpp_DIR:PATH=C:/Users/SamiDhiab/vcpkg/installed/x64-windows/share/yaml-cpp
 
 
 ########################
