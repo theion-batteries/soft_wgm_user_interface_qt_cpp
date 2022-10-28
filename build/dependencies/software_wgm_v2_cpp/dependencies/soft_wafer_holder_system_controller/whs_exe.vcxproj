@@ -99,11 +99,11 @@
       <RuntimeTypeInfo>true</RuntimeTypeInfo>
       <UseFullPaths>false</UseFullPaths>
       <WarningLevel>Level3</WarningLevel>
-      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;_SILENCE_CXX17_ITERATOR_BASE_CLASS_DEPRECATION_WARNING;CMAKE_INTDIR="Debug"</PreprocessorDefinitions>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;_SILENCE_CXX17_ITERATOR_BASE_CLASS_DEPRECATION_WARNING;WHS_CONFIG="C:/Users/SamiDhiab/Theion_Repos/soft_wgm_user_interface_qt_cpp/dependencies/software_wgm_v2_cpp/dependencies/soft_wafer_holder_system_controller/config/whs_config.yaml";PY_INTERPRETER="C:/Users/SamiDhiab/AppData/Local/Programs/Python/Python39/python.exe";CMAKE_INTDIR="Debug"</PreprocessorDefinitions>
       <ObjectFileName>$(IntDir)</ObjectFileName>
     </ClCompile>
     <ResourceCompile>
-      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_DEBUG;_WINDOWS;_SILENCE_CXX17_ITERATOR_BASE_CLASS_DEPRECATION_WARNING;CMAKE_INTDIR=\"Debug\"</PreprocessorDefinitions>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_DEBUG;_WINDOWS;_SILENCE_CXX17_ITERATOR_BASE_CLASS_DEPRECATION_WARNING;WHS_CONFIG=\"C:/Users/SamiDhiab/Theion_Repos/soft_wgm_user_interface_qt_cpp/dependencies/software_wgm_v2_cpp/dependencies/soft_wafer_holder_system_controller/config/whs_config.yaml\";PY_INTERPRETER=\"C:/Users/SamiDhiab/AppData/Local/Programs/Python/Python39/python.exe\";CMAKE_INTDIR=\"Debug\"</PreprocessorDefinitions>
       <AdditionalIncludeDirectories>C:\Users\SamiDhiab\Theion_Repos\soft_wgm_user_interface_qt_cpp\build\dependencies\software_wgm_v2_cpp\dependencies\soft_wafer_holder_system_controller;C:\Users\SamiDhiab\Theion_Repos\soft_wgm_user_interface_qt_cpp\dependencies\software_wgm_v2_cpp\dependencies\soft_wafer_holder_system_controller;C:\Users\SamiDhiab\Theion_Repos\soft_wgm_user_interface_qt_cpp\build\dependencies\software_wgm_v2_cpp\dependencies\soft_wafer_holder_system_controller\whs_exe_autogen\include_Debug;C:\Users\SamiDhiab\Theion_Repos\soft_wgm_user_interface_qt_cpp\dependencies\software_wgm_v2_cpp\dependencies\soft_wafer_holder_system_controller\includes;C:\Users\SamiDhiab\Theion_Repos\soft_wgm_user_interface_qt_cpp\dependencies\software_wgm_v2_cpp\dependencies\soft_wafer_holder_system_controller\dependencies\lib_keyence_sdk\includes;C:\vcpkg\installed\x64-windows\include;C:\Program Files\Microsoft\jdk-11.0.12.7-hotspot;C:\Users\SamiDhiab\Theion_Repos\soft_wgm_user_interface_qt_cpp\dependencies\software_wgm_v2_cpp\dependencies\soft_wafer_holder_system_controller\dependencies\yaml-cpp\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Midl>
@@ -158,13 +158,13 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
       <RuntimeTypeInfo>true</RuntimeTypeInfo>
       <UseFullPaths>false</UseFullPaths>
       <WarningLevel>Level3</WarningLevel>
-      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;_SILENCE_CXX17_ITERATOR_BASE_CLASS_DEPRECATION_WARNING;CMAKE_INTDIR="Release"</PreprocessorDefinitions>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;_SILENCE_CXX17_ITERATOR_BASE_CLASS_DEPRECATION_WARNING;WHS_CONFIG="C:/Users/SamiDhiab/Theion_Repos/soft_wgm_user_interface_qt_cpp/dependencies/software_wgm_v2_cpp/dependencies/soft_wafer_holder_system_controller/config/whs_config.yaml";PY_INTERPRETER="C:/Users/SamiDhiab/AppData/Local/Programs/Python/Python39/python.exe";CMAKE_INTDIR="Release"</PreprocessorDefinitions>
       <ObjectFileName>$(IntDir)</ObjectFileName>
       <DebugInformationFormat>
       </DebugInformationFormat>
     </ClCompile>
     <ResourceCompile>
-      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;_SILENCE_CXX17_ITERATOR_BASE_CLASS_DEPRECATION_WARNING;CMAKE_INTDIR=\"Release\"</PreprocessorDefinitions>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;_SILENCE_CXX17_ITERATOR_BASE_CLASS_DEPRECATION_WARNING;WHS_CONFIG=\"C:/Users/SamiDhiab/Theion_Repos/soft_wgm_user_interface_qt_cpp/dependencies/software_wgm_v2_cpp/dependencies/soft_wafer_holder_system_controller/config/whs_config.yaml\";PY_INTERPRETER=\"C:/Users/SamiDhiab/AppData/Local/Programs/Python/Python39/python.exe\";CMAKE_INTDIR=\"Release\"</PreprocessorDefinitions>
       <AdditionalIncludeDirectories>C:\Users\SamiDhiab\Theion_Repos\soft_wgm_user_interface_qt_cpp\build\dependencies\software_wgm_v2_cpp\dependencies\soft_wafer_holder_system_controller;C:\Users\SamiDhiab\Theion_Repos\soft_wgm_user_interface_qt_cpp\dependencies\software_wgm_v2_cpp\dependencies\soft_wafer_holder_system_controller;C:\Users\SamiDhiab\Theion_Repos\soft_wgm_user_interface_qt_cpp\build\dependencies\software_wgm_v2_cpp\dependencies\soft_wafer_holder_system_controller\whs_exe_autogen\include_Release;C:\Users\SamiDhiab\Theion_Repos\soft_wgm_user_interface_qt_cpp\dependencies\software_wgm_v2_cpp\dependencies\soft_wafer_holder_system_controller\includes;C:\Users\SamiDhiab\Theion_Repos\soft_wgm_user_interface_qt_cpp\dependencies\software_wgm_v2_cpp\dependencies\soft_wafer_holder_system_controller\dependencies\lib_keyence_sdk\includes;C:\vcpkg\installed\x64-windows\include;C:\Program Files\Microsoft\jdk-11.0.12.7-hotspot;C:\Users\SamiDhiab\Theion_Repos\soft_wgm_user_interface_qt_cpp\dependencies\software_wgm_v2_cpp\dependencies\soft_wafer_holder_system_controller\dependencies\yaml-cpp\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Midl>
@@ -219,13 +219,13 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
       <RuntimeTypeInfo>true</RuntimeTypeInfo>
       <UseFullPaths>false</UseFullPaths>
       <WarningLevel>Level3</WarningLevel>
-      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;_SILENCE_CXX17_ITERATOR_BASE_CLASS_DEPRECATION_WARNING;CMAKE_INTDIR="MinSizeRel"</PreprocessorDefinitions>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;_SILENCE_CXX17_ITERATOR_BASE_CLASS_DEPRECATION_WARNING;WHS_CONFIG="C:/Users/SamiDhiab/Theion_Repos/soft_wgm_user_interface_qt_cpp/dependencies/software_wgm_v2_cpp/dependencies/soft_wafer_holder_system_controller/config/whs_config.yaml";PY_INTERPRETER="C:/Users/SamiDhiab/AppData/Local/Programs/Python/Python39/python.exe";CMAKE_INTDIR="MinSizeRel"</PreprocessorDefinitions>
       <ObjectFileName>$(IntDir)</ObjectFileName>
       <DebugInformationFormat>
       </DebugInformationFormat>
     </ClCompile>
     <ResourceCompile>
-      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;_SILENCE_CXX17_ITERATOR_BASE_CLASS_DEPRECATION_WARNING;CMAKE_INTDIR=\"MinSizeRel\"</PreprocessorDefinitions>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;_SILENCE_CXX17_ITERATOR_BASE_CLASS_DEPRECATION_WARNING;WHS_CONFIG=\"C:/Users/SamiDhiab/Theion_Repos/soft_wgm_user_interface_qt_cpp/dependencies/software_wgm_v2_cpp/dependencies/soft_wafer_holder_system_controller/config/whs_config.yaml\";PY_INTERPRETER=\"C:/Users/SamiDhiab/AppData/Local/Programs/Python/Python39/python.exe\";CMAKE_INTDIR=\"MinSizeRel\"</PreprocessorDefinitions>
       <AdditionalIncludeDirectories>C:\Users\SamiDhiab\Theion_Repos\soft_wgm_user_interface_qt_cpp\build\dependencies\software_wgm_v2_cpp\dependencies\soft_wafer_holder_system_controller;C:\Users\SamiDhiab\Theion_Repos\soft_wgm_user_interface_qt_cpp\dependencies\software_wgm_v2_cpp\dependencies\soft_wafer_holder_system_controller;C:\Users\SamiDhiab\Theion_Repos\soft_wgm_user_interface_qt_cpp\build\dependencies\software_wgm_v2_cpp\dependencies\soft_wafer_holder_system_controller\whs_exe_autogen\include_MinSizeRel;C:\Users\SamiDhiab\Theion_Repos\soft_wgm_user_interface_qt_cpp\dependencies\software_wgm_v2_cpp\dependencies\soft_wafer_holder_system_controller\includes;C:\Users\SamiDhiab\Theion_Repos\soft_wgm_user_interface_qt_cpp\dependencies\software_wgm_v2_cpp\dependencies\soft_wafer_holder_system_controller\dependencies\lib_keyence_sdk\includes;C:\vcpkg\installed\x64-windows\include;C:\Program Files\Microsoft\jdk-11.0.12.7-hotspot;C:\Users\SamiDhiab\Theion_Repos\soft_wgm_user_interface_qt_cpp\dependencies\software_wgm_v2_cpp\dependencies\soft_wafer_holder_system_controller\dependencies\yaml-cpp\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Midl>
@@ -281,11 +281,11 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
       <RuntimeTypeInfo>true</RuntimeTypeInfo>
       <UseFullPaths>false</UseFullPaths>
       <WarningLevel>Level3</WarningLevel>
-      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;_SILENCE_CXX17_ITERATOR_BASE_CLASS_DEPRECATION_WARNING;CMAKE_INTDIR="RelWithDebInfo"</PreprocessorDefinitions>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;_SILENCE_CXX17_ITERATOR_BASE_CLASS_DEPRECATION_WARNING;WHS_CONFIG="C:/Users/SamiDhiab/Theion_Repos/soft_wgm_user_interface_qt_cpp/dependencies/software_wgm_v2_cpp/dependencies/soft_wafer_holder_system_controller/config/whs_config.yaml";PY_INTERPRETER="C:/Users/SamiDhiab/AppData/Local/Programs/Python/Python39/python.exe";CMAKE_INTDIR="RelWithDebInfo"</PreprocessorDefinitions>
       <ObjectFileName>$(IntDir)</ObjectFileName>
     </ClCompile>
     <ResourceCompile>
-      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;_SILENCE_CXX17_ITERATOR_BASE_CLASS_DEPRECATION_WARNING;CMAKE_INTDIR=\"RelWithDebInfo\"</PreprocessorDefinitions>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;_SILENCE_CXX17_ITERATOR_BASE_CLASS_DEPRECATION_WARNING;WHS_CONFIG=\"C:/Users/SamiDhiab/Theion_Repos/soft_wgm_user_interface_qt_cpp/dependencies/software_wgm_v2_cpp/dependencies/soft_wafer_holder_system_controller/config/whs_config.yaml\";PY_INTERPRETER=\"C:/Users/SamiDhiab/AppData/Local/Programs/Python/Python39/python.exe\";CMAKE_INTDIR=\"RelWithDebInfo\"</PreprocessorDefinitions>
       <AdditionalIncludeDirectories>C:\Users\SamiDhiab\Theion_Repos\soft_wgm_user_interface_qt_cpp\build\dependencies\software_wgm_v2_cpp\dependencies\soft_wafer_holder_system_controller;C:\Users\SamiDhiab\Theion_Repos\soft_wgm_user_interface_qt_cpp\dependencies\software_wgm_v2_cpp\dependencies\soft_wafer_holder_system_controller;C:\Users\SamiDhiab\Theion_Repos\soft_wgm_user_interface_qt_cpp\build\dependencies\software_wgm_v2_cpp\dependencies\soft_wafer_holder_system_controller\whs_exe_autogen\include_RelWithDebInfo;C:\Users\SamiDhiab\Theion_Repos\soft_wgm_user_interface_qt_cpp\dependencies\software_wgm_v2_cpp\dependencies\soft_wafer_holder_system_controller\includes;C:\Users\SamiDhiab\Theion_Repos\soft_wgm_user_interface_qt_cpp\dependencies\software_wgm_v2_cpp\dependencies\soft_wafer_holder_system_controller\dependencies\lib_keyence_sdk\includes;C:\vcpkg\installed\x64-windows\include;C:\Program Files\Microsoft\jdk-11.0.12.7-hotspot;C:\Users\SamiDhiab\Theion_Repos\soft_wgm_user_interface_qt_cpp\dependencies\software_wgm_v2_cpp\dependencies\soft_wafer_holder_system_controller\dependencies\yaml-cpp\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Midl>
@@ -340,7 +340,7 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\vcpkg\installed\x64-windows\share\sockpp\sockppConfig.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Qt\Tools\CMake_64\share\cmake-3.23\Modules\FindPackageHandleStandardArgs.cmake;C:\Qt\Tools\CMake_64\share\cmake-3.23\Modules\FindPackageMessage.cmake;C:\Qt\Tools\CMake_64\share\cmake-3.23\Modules\FindPythonInterp.cmake;C:\vcpkg\installed\x64-windows\share\sockpp\sockppConfig.cmake;%(AdditionalInputs)</AdditionalInputs>
       <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Users\SamiDhiab\Theion_Repos\soft_wgm_user_interface_qt_cpp\build\dependencies\software_wgm_v2_cpp\dependencies\soft_wafer_holder_system_controller\CMakeFiles\generate.stamp</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
       <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Building Custom Rule C:/Users/SamiDhiab/Theion_Repos/soft_wgm_user_interface_qt_cpp/dependencies/software_wgm_v2_cpp/dependencies/soft_wafer_holder_system_controller/CMakeLists.txt</Message>
@@ -353,7 +353,7 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\vcpkg\installed\x64-windows\share\sockpp\sockppConfig.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Qt\Tools\CMake_64\share\cmake-3.23\Modules\FindPackageHandleStandardArgs.cmake;C:\Qt\Tools\CMake_64\share\cmake-3.23\Modules\FindPackageMessage.cmake;C:\Qt\Tools\CMake_64\share\cmake-3.23\Modules\FindPythonInterp.cmake;C:\vcpkg\installed\x64-windows\share\sockpp\sockppConfig.cmake;%(AdditionalInputs)</AdditionalInputs>
       <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Users\SamiDhiab\Theion_Repos\soft_wgm_user_interface_qt_cpp\build\dependencies\software_wgm_v2_cpp\dependencies\soft_wafer_holder_system_controller\CMakeFiles\generate.stamp</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
       <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">Building Custom Rule C:/Users/SamiDhiab/Theion_Repos/soft_wgm_user_interface_qt_cpp/dependencies/software_wgm_v2_cpp/dependencies/soft_wafer_holder_system_controller/CMakeLists.txt</Message>
@@ -366,7 +366,7 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\vcpkg\installed\x64-windows\share\sockpp\sockppConfig.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\Qt\Tools\CMake_64\share\cmake-3.23\Modules\FindPackageHandleStandardArgs.cmake;C:\Qt\Tools\CMake_64\share\cmake-3.23\Modules\FindPackageMessage.cmake;C:\Qt\Tools\CMake_64\share\cmake-3.23\Modules\FindPythonInterp.cmake;C:\vcpkg\installed\x64-windows\share\sockpp\sockppConfig.cmake;%(AdditionalInputs)</AdditionalInputs>
       <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\Users\SamiDhiab\Theion_Repos\soft_wgm_user_interface_qt_cpp\build\dependencies\software_wgm_v2_cpp\dependencies\soft_wafer_holder_system_controller\CMakeFiles\generate.stamp</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkObjects>
       <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Building Custom Rule C:/Users/SamiDhiab/Theion_Repos/soft_wgm_user_interface_qt_cpp/dependencies/software_wgm_v2_cpp/dependencies/soft_wafer_holder_system_controller/CMakeLists.txt</Message>
@@ -379,7 +379,7 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\vcpkg\installed\x64-windows\share\sockpp\sockppConfig.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\Qt\Tools\CMake_64\share\cmake-3.23\Modules\FindPackageHandleStandardArgs.cmake;C:\Qt\Tools\CMake_64\share\cmake-3.23\Modules\FindPackageMessage.cmake;C:\Qt\Tools\CMake_64\share\cmake-3.23\Modules\FindPythonInterp.cmake;C:\vcpkg\installed\x64-windows\share\sockpp\sockppConfig.cmake;%(AdditionalInputs)</AdditionalInputs>
       <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\Users\SamiDhiab\Theion_Repos\soft_wgm_user_interface_qt_cpp\build\dependencies\software_wgm_v2_cpp\dependencies\soft_wafer_holder_system_controller\CMakeFiles\generate.stamp</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</LinkObjects>
     </CustomBuild>
