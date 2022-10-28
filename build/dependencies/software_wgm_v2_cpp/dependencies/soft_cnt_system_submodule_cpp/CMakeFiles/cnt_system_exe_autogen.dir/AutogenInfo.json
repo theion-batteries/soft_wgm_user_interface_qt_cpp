@@ -7,12 +7,7 @@
 	"CMAKE_LIST_FILES" : 
 	[
 		"C:/Users/SamiDhiab/Theion_Repos/soft_wgm_user_interface_qt_cpp/dependencies/software_wgm_v2_cpp/dependencies/soft_cnt_system_submodule_cpp/CMakeLists.txt",
-		"C:/Users/SamiDhiab/vcpkg/installed/x64-windows/share/yaml-cpp/yaml-cpp-config-version.cmake",
-		"C:/Users/SamiDhiab/vcpkg/installed/x64-windows/share/yaml-cpp/yaml-cpp-config.cmake",
-		"C:/Users/SamiDhiab/vcpkg/installed/x64-windows/share/yaml-cpp/yaml-cpp-targets.cmake",
-		"C:/Users/SamiDhiab/vcpkg/installed/x64-windows/share/yaml-cpp/yaml-cpp-targets-debug.cmake",
-		"C:/Users/SamiDhiab/vcpkg/installed/x64-windows/share/yaml-cpp/yaml-cpp-targets-release.cmake",
-		"C:/Users/SamiDhiab/vcpkg/installed/x64-windows/share/sockpp/sockppConfig.cmake"
+		"C:/vcpkg/installed/x64-windows/share/sockpp/sockppConfig.cmake"
 	],
 	"CMAKE_SOURCE_DIR" : "C:/Users/SamiDhiab/Theion_Repos/soft_wgm_user_interface_qt_cpp",
 	"DEP_FILE" : "",
@@ -29,7 +24,7 @@
 	"MOC_COMPILATION_FILE_MinSizeRel" : "C:/Users/SamiDhiab/Theion_Repos/soft_wgm_user_interface_qt_cpp/build/dependencies/software_wgm_v2_cpp/dependencies/soft_cnt_system_submodule_cpp/cnt_system_exe_autogen/mocs_compilation_MinSizeRel.cpp",
 	"MOC_COMPILATION_FILE_RelWithDebInfo" : "C:/Users/SamiDhiab/Theion_Repos/soft_wgm_user_interface_qt_cpp/build/dependencies/software_wgm_v2_cpp/dependencies/soft_cnt_system_submodule_cpp/cnt_system_exe_autogen/mocs_compilation_RelWithDebInfo.cpp",
 	"MOC_COMPILATION_FILE_Release" : "C:/Users/SamiDhiab/Theion_Repos/soft_wgm_user_interface_qt_cpp/build/dependencies/software_wgm_v2_cpp/dependencies/soft_cnt_system_submodule_cpp/cnt_system_exe_autogen/mocs_compilation_Release.cpp",
-	"MOC_DEFINITIONS" : [ "WIN32" ],
+	"MOC_DEFINITIONS" : [ "WIN32", "_SILENCE_CXX17_ITERATOR_BASE_CLASS_DEPRECATION_WARNING" ],
 	"MOC_DEPEND_FILTERS" : 
 	[
 		[
@@ -42,7 +37,8 @@
 		"C:/Users/SamiDhiab/Theion_Repos/soft_wgm_user_interface_qt_cpp/build/dependencies/software_wgm_v2_cpp/dependencies/soft_cnt_system_submodule_cpp",
 		"C:/Users/SamiDhiab/Theion_Repos/soft_wgm_user_interface_qt_cpp/dependencies/software_wgm_v2_cpp/dependencies/soft_cnt_system_submodule_cpp",
 		"C:/Users/SamiDhiab/Theion_Repos/soft_wgm_user_interface_qt_cpp/dependencies/software_wgm_v2_cpp/dependencies/soft_cnt_system_submodule_cpp/includes",
-		"C:/Users/SamiDhiab/vcpkg/installed/x64-windows/include"
+		"C:/vcpkg/installed/x64-windows/include",
+		"C:/Users/SamiDhiab/Theion_Repos/soft_wgm_user_interface_qt_cpp/dependencies/software_wgm_v2_cpp/dependencies/soft_wafer_holder_system_controller/dependencies/yaml-cpp/include"
 	],
 	"MOC_MACRO_NAMES" : 
 	[

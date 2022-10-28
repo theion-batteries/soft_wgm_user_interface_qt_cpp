@@ -86,7 +86,7 @@
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <ClCompile>
-      <AdditionalIncludeDirectories>C:\Users\SamiDhiab\Theion_Repos\soft_wgm_user_interface_qt_cpp\build\dependencies\software_wgm_v2_cpp\dependencies\soft_cnt_system_submodule_cpp;C:\Users\SamiDhiab\Theion_Repos\soft_wgm_user_interface_qt_cpp\dependencies\software_wgm_v2_cpp\dependencies\soft_cnt_system_submodule_cpp;C:\Users\SamiDhiab\Theion_Repos\soft_wgm_user_interface_qt_cpp\build\dependencies\software_wgm_v2_cpp\dependencies\soft_cnt_system_submodule_cpp\cnt_system_exe_autogen\include_Debug;C:\Users\SamiDhiab\Theion_Repos\soft_wgm_user_interface_qt_cpp\dependencies\software_wgm_v2_cpp\dependencies\soft_cnt_system_submodule_cpp\includes;C:\Users\SamiDhiab\vcpkg\installed\x64-windows\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\SamiDhiab\Theion_Repos\soft_wgm_user_interface_qt_cpp\build\dependencies\software_wgm_v2_cpp\dependencies\soft_cnt_system_submodule_cpp;C:\Users\SamiDhiab\Theion_Repos\soft_wgm_user_interface_qt_cpp\dependencies\software_wgm_v2_cpp\dependencies\soft_cnt_system_submodule_cpp;C:\Users\SamiDhiab\Theion_Repos\soft_wgm_user_interface_qt_cpp\build\dependencies\software_wgm_v2_cpp\dependencies\soft_cnt_system_submodule_cpp\cnt_system_exe_autogen\include_Debug;C:\Users\SamiDhiab\Theion_Repos\soft_wgm_user_interface_qt_cpp\dependencies\software_wgm_v2_cpp\dependencies\soft_cnt_system_submodule_cpp\includes;C:\vcpkg\installed\x64-windows\include;C:\Users\SamiDhiab\Theion_Repos\soft_wgm_user_interface_qt_cpp\dependencies\software_wgm_v2_cpp\dependencies\soft_wafer_holder_system_controller\dependencies\yaml-cpp\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
       <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
@@ -99,15 +99,15 @@
       <RuntimeTypeInfo>true</RuntimeTypeInfo>
       <UseFullPaths>false</UseFullPaths>
       <WarningLevel>Level3</WarningLevel>
-      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;CMAKE_INTDIR="Debug"</PreprocessorDefinitions>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;_SILENCE_CXX17_ITERATOR_BASE_CLASS_DEPRECATION_WARNING;CMAKE_INTDIR="Debug"</PreprocessorDefinitions>
       <ObjectFileName>$(IntDir)</ObjectFileName>
     </ClCompile>
     <ResourceCompile>
-      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_DEBUG;_WINDOWS;CMAKE_INTDIR=\"Debug\"</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>C:\Users\SamiDhiab\Theion_Repos\soft_wgm_user_interface_qt_cpp\build\dependencies\software_wgm_v2_cpp\dependencies\soft_cnt_system_submodule_cpp;C:\Users\SamiDhiab\Theion_Repos\soft_wgm_user_interface_qt_cpp\dependencies\software_wgm_v2_cpp\dependencies\soft_cnt_system_submodule_cpp;C:\Users\SamiDhiab\Theion_Repos\soft_wgm_user_interface_qt_cpp\build\dependencies\software_wgm_v2_cpp\dependencies\soft_cnt_system_submodule_cpp\cnt_system_exe_autogen\include_Debug;C:\Users\SamiDhiab\Theion_Repos\soft_wgm_user_interface_qt_cpp\dependencies\software_wgm_v2_cpp\dependencies\soft_cnt_system_submodule_cpp\includes;C:\Users\SamiDhiab\vcpkg\installed\x64-windows\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_DEBUG;_WINDOWS;_SILENCE_CXX17_ITERATOR_BASE_CLASS_DEPRECATION_WARNING;CMAKE_INTDIR=\"Debug\"</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:\Users\SamiDhiab\Theion_Repos\soft_wgm_user_interface_qt_cpp\build\dependencies\software_wgm_v2_cpp\dependencies\soft_cnt_system_submodule_cpp;C:\Users\SamiDhiab\Theion_Repos\soft_wgm_user_interface_qt_cpp\dependencies\software_wgm_v2_cpp\dependencies\soft_cnt_system_submodule_cpp;C:\Users\SamiDhiab\Theion_Repos\soft_wgm_user_interface_qt_cpp\build\dependencies\software_wgm_v2_cpp\dependencies\soft_cnt_system_submodule_cpp\cnt_system_exe_autogen\include_Debug;C:\Users\SamiDhiab\Theion_Repos\soft_wgm_user_interface_qt_cpp\dependencies\software_wgm_v2_cpp\dependencies\soft_cnt_system_submodule_cpp\includes;C:\vcpkg\installed\x64-windows\include;C:\Users\SamiDhiab\Theion_Repos\soft_wgm_user_interface_qt_cpp\dependencies\software_wgm_v2_cpp\dependencies\soft_wafer_holder_system_controller\dependencies\yaml-cpp\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Midl>
-      <AdditionalIncludeDirectories>C:\Users\SamiDhiab\Theion_Repos\soft_wgm_user_interface_qt_cpp\build\dependencies\software_wgm_v2_cpp\dependencies\soft_cnt_system_submodule_cpp;C:\Users\SamiDhiab\Theion_Repos\soft_wgm_user_interface_qt_cpp\dependencies\software_wgm_v2_cpp\dependencies\soft_cnt_system_submodule_cpp;C:\Users\SamiDhiab\Theion_Repos\soft_wgm_user_interface_qt_cpp\build\dependencies\software_wgm_v2_cpp\dependencies\soft_cnt_system_submodule_cpp\cnt_system_exe_autogen\include_Debug;C:\Users\SamiDhiab\Theion_Repos\soft_wgm_user_interface_qt_cpp\dependencies\software_wgm_v2_cpp\dependencies\soft_cnt_system_submodule_cpp\includes;C:\Users\SamiDhiab\vcpkg\installed\x64-windows\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\SamiDhiab\Theion_Repos\soft_wgm_user_interface_qt_cpp\build\dependencies\software_wgm_v2_cpp\dependencies\soft_cnt_system_submodule_cpp;C:\Users\SamiDhiab\Theion_Repos\soft_wgm_user_interface_qt_cpp\dependencies\software_wgm_v2_cpp\dependencies\soft_cnt_system_submodule_cpp;C:\Users\SamiDhiab\Theion_Repos\soft_wgm_user_interface_qt_cpp\build\dependencies\software_wgm_v2_cpp\dependencies\soft_cnt_system_submodule_cpp\cnt_system_exe_autogen\include_Debug;C:\Users\SamiDhiab\Theion_Repos\soft_wgm_user_interface_qt_cpp\dependencies\software_wgm_v2_cpp\dependencies\soft_cnt_system_submodule_cpp\includes;C:\vcpkg\installed\x64-windows\include;C:\Users\SamiDhiab\Theion_Repos\soft_wgm_user_interface_qt_cpp\dependencies\software_wgm_v2_cpp\dependencies\soft_wafer_holder_system_controller\dependencies\yaml-cpp\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
       <HeaderFileName>%(Filename).h</HeaderFileName>
       <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
@@ -132,7 +132,7 @@ exit /b %1
 if %errorlevel% neq 0 goto :VCEnd</Command>
     </PreBuildEvent>
     <Link>
-      <AdditionalDependencies>C:\Users\SamiDhiab\vcpkg\installed\x64-windows\debug\lib\yaml-cppd.lib;C:\Users\SamiDhiab\vcpkg\installed\x64-windows\debug\lib\sockpp.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalDependencies>..\soft_wafer_holder_system_controller\dependencies\yaml-cpp\Debug\libyaml-cppmdd.lib;C:\vcpkg\installed\x64-windows\debug\lib\sockpp.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
       <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
       <GenerateDebugInformation>true</GenerateDebugInformation>
@@ -147,7 +147,7 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <ClCompile>
-      <AdditionalIncludeDirectories>C:\Users\SamiDhiab\Theion_Repos\soft_wgm_user_interface_qt_cpp\build\dependencies\software_wgm_v2_cpp\dependencies\soft_cnt_system_submodule_cpp;C:\Users\SamiDhiab\Theion_Repos\soft_wgm_user_interface_qt_cpp\dependencies\software_wgm_v2_cpp\dependencies\soft_cnt_system_submodule_cpp;C:\Users\SamiDhiab\Theion_Repos\soft_wgm_user_interface_qt_cpp\build\dependencies\software_wgm_v2_cpp\dependencies\soft_cnt_system_submodule_cpp\cnt_system_exe_autogen\include_Release;C:\Users\SamiDhiab\Theion_Repos\soft_wgm_user_interface_qt_cpp\dependencies\software_wgm_v2_cpp\dependencies\soft_cnt_system_submodule_cpp\includes;C:\Users\SamiDhiab\vcpkg\installed\x64-windows\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\SamiDhiab\Theion_Repos\soft_wgm_user_interface_qt_cpp\build\dependencies\software_wgm_v2_cpp\dependencies\soft_cnt_system_submodule_cpp;C:\Users\SamiDhiab\Theion_Repos\soft_wgm_user_interface_qt_cpp\dependencies\software_wgm_v2_cpp\dependencies\soft_cnt_system_submodule_cpp;C:\Users\SamiDhiab\Theion_Repos\soft_wgm_user_interface_qt_cpp\build\dependencies\software_wgm_v2_cpp\dependencies\soft_cnt_system_submodule_cpp\cnt_system_exe_autogen\include_Release;C:\Users\SamiDhiab\Theion_Repos\soft_wgm_user_interface_qt_cpp\dependencies\software_wgm_v2_cpp\dependencies\soft_cnt_system_submodule_cpp\includes;C:\vcpkg\installed\x64-windows\include;C:\Users\SamiDhiab\Theion_Repos\soft_wgm_user_interface_qt_cpp\dependencies\software_wgm_v2_cpp\dependencies\soft_wafer_holder_system_controller\dependencies\yaml-cpp\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
       <ExceptionHandling>Sync</ExceptionHandling>
       <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
@@ -158,17 +158,17 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
       <RuntimeTypeInfo>true</RuntimeTypeInfo>
       <UseFullPaths>false</UseFullPaths>
       <WarningLevel>Level3</WarningLevel>
-      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;CMAKE_INTDIR="Release"</PreprocessorDefinitions>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;_SILENCE_CXX17_ITERATOR_BASE_CLASS_DEPRECATION_WARNING;CMAKE_INTDIR="Release"</PreprocessorDefinitions>
       <ObjectFileName>$(IntDir)</ObjectFileName>
       <DebugInformationFormat>
       </DebugInformationFormat>
     </ClCompile>
     <ResourceCompile>
-      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;CMAKE_INTDIR=\"Release\"</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>C:\Users\SamiDhiab\Theion_Repos\soft_wgm_user_interface_qt_cpp\build\dependencies\software_wgm_v2_cpp\dependencies\soft_cnt_system_submodule_cpp;C:\Users\SamiDhiab\Theion_Repos\soft_wgm_user_interface_qt_cpp\dependencies\software_wgm_v2_cpp\dependencies\soft_cnt_system_submodule_cpp;C:\Users\SamiDhiab\Theion_Repos\soft_wgm_user_interface_qt_cpp\build\dependencies\software_wgm_v2_cpp\dependencies\soft_cnt_system_submodule_cpp\cnt_system_exe_autogen\include_Release;C:\Users\SamiDhiab\Theion_Repos\soft_wgm_user_interface_qt_cpp\dependencies\software_wgm_v2_cpp\dependencies\soft_cnt_system_submodule_cpp\includes;C:\Users\SamiDhiab\vcpkg\installed\x64-windows\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;_SILENCE_CXX17_ITERATOR_BASE_CLASS_DEPRECATION_WARNING;CMAKE_INTDIR=\"Release\"</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:\Users\SamiDhiab\Theion_Repos\soft_wgm_user_interface_qt_cpp\build\dependencies\software_wgm_v2_cpp\dependencies\soft_cnt_system_submodule_cpp;C:\Users\SamiDhiab\Theion_Repos\soft_wgm_user_interface_qt_cpp\dependencies\software_wgm_v2_cpp\dependencies\soft_cnt_system_submodule_cpp;C:\Users\SamiDhiab\Theion_Repos\soft_wgm_user_interface_qt_cpp\build\dependencies\software_wgm_v2_cpp\dependencies\soft_cnt_system_submodule_cpp\cnt_system_exe_autogen\include_Release;C:\Users\SamiDhiab\Theion_Repos\soft_wgm_user_interface_qt_cpp\dependencies\software_wgm_v2_cpp\dependencies\soft_cnt_system_submodule_cpp\includes;C:\vcpkg\installed\x64-windows\include;C:\Users\SamiDhiab\Theion_Repos\soft_wgm_user_interface_qt_cpp\dependencies\software_wgm_v2_cpp\dependencies\soft_wafer_holder_system_controller\dependencies\yaml-cpp\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Midl>
-      <AdditionalIncludeDirectories>C:\Users\SamiDhiab\Theion_Repos\soft_wgm_user_interface_qt_cpp\build\dependencies\software_wgm_v2_cpp\dependencies\soft_cnt_system_submodule_cpp;C:\Users\SamiDhiab\Theion_Repos\soft_wgm_user_interface_qt_cpp\dependencies\software_wgm_v2_cpp\dependencies\soft_cnt_system_submodule_cpp;C:\Users\SamiDhiab\Theion_Repos\soft_wgm_user_interface_qt_cpp\build\dependencies\software_wgm_v2_cpp\dependencies\soft_cnt_system_submodule_cpp\cnt_system_exe_autogen\include_Release;C:\Users\SamiDhiab\Theion_Repos\soft_wgm_user_interface_qt_cpp\dependencies\software_wgm_v2_cpp\dependencies\soft_cnt_system_submodule_cpp\includes;C:\Users\SamiDhiab\vcpkg\installed\x64-windows\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\SamiDhiab\Theion_Repos\soft_wgm_user_interface_qt_cpp\build\dependencies\software_wgm_v2_cpp\dependencies\soft_cnt_system_submodule_cpp;C:\Users\SamiDhiab\Theion_Repos\soft_wgm_user_interface_qt_cpp\dependencies\software_wgm_v2_cpp\dependencies\soft_cnt_system_submodule_cpp;C:\Users\SamiDhiab\Theion_Repos\soft_wgm_user_interface_qt_cpp\build\dependencies\software_wgm_v2_cpp\dependencies\soft_cnt_system_submodule_cpp\cnt_system_exe_autogen\include_Release;C:\Users\SamiDhiab\Theion_Repos\soft_wgm_user_interface_qt_cpp\dependencies\software_wgm_v2_cpp\dependencies\soft_cnt_system_submodule_cpp\includes;C:\vcpkg\installed\x64-windows\include;C:\Users\SamiDhiab\Theion_Repos\soft_wgm_user_interface_qt_cpp\dependencies\software_wgm_v2_cpp\dependencies\soft_wafer_holder_system_controller\dependencies\yaml-cpp\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
       <HeaderFileName>%(Filename).h</HeaderFileName>
       <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
@@ -193,7 +193,7 @@ exit /b %1
 if %errorlevel% neq 0 goto :VCEnd</Command>
     </PreBuildEvent>
     <Link>
-      <AdditionalDependencies>C:\Users\SamiDhiab\vcpkg\installed\x64-windows\lib\yaml-cpp.lib;C:\Users\SamiDhiab\vcpkg\installed\x64-windows\lib\sockpp.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalDependencies>..\soft_wafer_holder_system_controller\dependencies\yaml-cpp\Release\libyaml-cppmd.lib;C:\vcpkg\installed\x64-windows\lib\sockpp.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
       <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
       <GenerateDebugInformation>false</GenerateDebugInformation>
@@ -208,7 +208,7 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">
     <ClCompile>
-      <AdditionalIncludeDirectories>C:\Users\SamiDhiab\Theion_Repos\soft_wgm_user_interface_qt_cpp\build\dependencies\software_wgm_v2_cpp\dependencies\soft_cnt_system_submodule_cpp;C:\Users\SamiDhiab\Theion_Repos\soft_wgm_user_interface_qt_cpp\dependencies\software_wgm_v2_cpp\dependencies\soft_cnt_system_submodule_cpp;C:\Users\SamiDhiab\Theion_Repos\soft_wgm_user_interface_qt_cpp\build\dependencies\software_wgm_v2_cpp\dependencies\soft_cnt_system_submodule_cpp\cnt_system_exe_autogen\include_MinSizeRel;C:\Users\SamiDhiab\Theion_Repos\soft_wgm_user_interface_qt_cpp\dependencies\software_wgm_v2_cpp\dependencies\soft_cnt_system_submodule_cpp\includes;C:\Users\SamiDhiab\vcpkg\installed\x64-windows\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\SamiDhiab\Theion_Repos\soft_wgm_user_interface_qt_cpp\build\dependencies\software_wgm_v2_cpp\dependencies\soft_cnt_system_submodule_cpp;C:\Users\SamiDhiab\Theion_Repos\soft_wgm_user_interface_qt_cpp\dependencies\software_wgm_v2_cpp\dependencies\soft_cnt_system_submodule_cpp;C:\Users\SamiDhiab\Theion_Repos\soft_wgm_user_interface_qt_cpp\build\dependencies\software_wgm_v2_cpp\dependencies\soft_cnt_system_submodule_cpp\cnt_system_exe_autogen\include_MinSizeRel;C:\Users\SamiDhiab\Theion_Repos\soft_wgm_user_interface_qt_cpp\dependencies\software_wgm_v2_cpp\dependencies\soft_cnt_system_submodule_cpp\includes;C:\vcpkg\installed\x64-windows\include;C:\Users\SamiDhiab\Theion_Repos\soft_wgm_user_interface_qt_cpp\dependencies\software_wgm_v2_cpp\dependencies\soft_wafer_holder_system_controller\dependencies\yaml-cpp\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
       <ExceptionHandling>Sync</ExceptionHandling>
       <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
@@ -219,17 +219,17 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
       <RuntimeTypeInfo>true</RuntimeTypeInfo>
       <UseFullPaths>false</UseFullPaths>
       <WarningLevel>Level3</WarningLevel>
-      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;CMAKE_INTDIR="MinSizeRel"</PreprocessorDefinitions>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;_SILENCE_CXX17_ITERATOR_BASE_CLASS_DEPRECATION_WARNING;CMAKE_INTDIR="MinSizeRel"</PreprocessorDefinitions>
       <ObjectFileName>$(IntDir)</ObjectFileName>
       <DebugInformationFormat>
       </DebugInformationFormat>
     </ClCompile>
     <ResourceCompile>
-      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;CMAKE_INTDIR=\"MinSizeRel\"</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>C:\Users\SamiDhiab\Theion_Repos\soft_wgm_user_interface_qt_cpp\build\dependencies\software_wgm_v2_cpp\dependencies\soft_cnt_system_submodule_cpp;C:\Users\SamiDhiab\Theion_Repos\soft_wgm_user_interface_qt_cpp\dependencies\software_wgm_v2_cpp\dependencies\soft_cnt_system_submodule_cpp;C:\Users\SamiDhiab\Theion_Repos\soft_wgm_user_interface_qt_cpp\build\dependencies\software_wgm_v2_cpp\dependencies\soft_cnt_system_submodule_cpp\cnt_system_exe_autogen\include_MinSizeRel;C:\Users\SamiDhiab\Theion_Repos\soft_wgm_user_interface_qt_cpp\dependencies\software_wgm_v2_cpp\dependencies\soft_cnt_system_submodule_cpp\includes;C:\Users\SamiDhiab\vcpkg\installed\x64-windows\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;_SILENCE_CXX17_ITERATOR_BASE_CLASS_DEPRECATION_WARNING;CMAKE_INTDIR=\"MinSizeRel\"</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:\Users\SamiDhiab\Theion_Repos\soft_wgm_user_interface_qt_cpp\build\dependencies\software_wgm_v2_cpp\dependencies\soft_cnt_system_submodule_cpp;C:\Users\SamiDhiab\Theion_Repos\soft_wgm_user_interface_qt_cpp\dependencies\software_wgm_v2_cpp\dependencies\soft_cnt_system_submodule_cpp;C:\Users\SamiDhiab\Theion_Repos\soft_wgm_user_interface_qt_cpp\build\dependencies\software_wgm_v2_cpp\dependencies\soft_cnt_system_submodule_cpp\cnt_system_exe_autogen\include_MinSizeRel;C:\Users\SamiDhiab\Theion_Repos\soft_wgm_user_interface_qt_cpp\dependencies\software_wgm_v2_cpp\dependencies\soft_cnt_system_submodule_cpp\includes;C:\vcpkg\installed\x64-windows\include;C:\Users\SamiDhiab\Theion_Repos\soft_wgm_user_interface_qt_cpp\dependencies\software_wgm_v2_cpp\dependencies\soft_wafer_holder_system_controller\dependencies\yaml-cpp\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Midl>
-      <AdditionalIncludeDirectories>C:\Users\SamiDhiab\Theion_Repos\soft_wgm_user_interface_qt_cpp\build\dependencies\software_wgm_v2_cpp\dependencies\soft_cnt_system_submodule_cpp;C:\Users\SamiDhiab\Theion_Repos\soft_wgm_user_interface_qt_cpp\dependencies\software_wgm_v2_cpp\dependencies\soft_cnt_system_submodule_cpp;C:\Users\SamiDhiab\Theion_Repos\soft_wgm_user_interface_qt_cpp\build\dependencies\software_wgm_v2_cpp\dependencies\soft_cnt_system_submodule_cpp\cnt_system_exe_autogen\include_MinSizeRel;C:\Users\SamiDhiab\Theion_Repos\soft_wgm_user_interface_qt_cpp\dependencies\software_wgm_v2_cpp\dependencies\soft_cnt_system_submodule_cpp\includes;C:\Users\SamiDhiab\vcpkg\installed\x64-windows\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\SamiDhiab\Theion_Repos\soft_wgm_user_interface_qt_cpp\build\dependencies\software_wgm_v2_cpp\dependencies\soft_cnt_system_submodule_cpp;C:\Users\SamiDhiab\Theion_Repos\soft_wgm_user_interface_qt_cpp\dependencies\software_wgm_v2_cpp\dependencies\soft_cnt_system_submodule_cpp;C:\Users\SamiDhiab\Theion_Repos\soft_wgm_user_interface_qt_cpp\build\dependencies\software_wgm_v2_cpp\dependencies\soft_cnt_system_submodule_cpp\cnt_system_exe_autogen\include_MinSizeRel;C:\Users\SamiDhiab\Theion_Repos\soft_wgm_user_interface_qt_cpp\dependencies\software_wgm_v2_cpp\dependencies\soft_cnt_system_submodule_cpp\includes;C:\vcpkg\installed\x64-windows\include;C:\Users\SamiDhiab\Theion_Repos\soft_wgm_user_interface_qt_cpp\dependencies\software_wgm_v2_cpp\dependencies\soft_wafer_holder_system_controller\dependencies\yaml-cpp\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
       <HeaderFileName>%(Filename).h</HeaderFileName>
       <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
@@ -254,7 +254,7 @@ exit /b %1
 if %errorlevel% neq 0 goto :VCEnd</Command>
     </PreBuildEvent>
     <Link>
-      <AdditionalDependencies>C:\Users\SamiDhiab\vcpkg\installed\x64-windows\debug\lib\yaml-cppd.lib;C:\Users\SamiDhiab\vcpkg\installed\x64-windows\lib\sockpp.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalDependencies>..\soft_wafer_holder_system_controller\dependencies\yaml-cpp\MinSizeRel\libyaml-cppmd.lib;C:\vcpkg\installed\x64-windows\lib\sockpp.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
       <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
       <GenerateDebugInformation>false</GenerateDebugInformation>
@@ -269,7 +269,7 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">
     <ClCompile>
-      <AdditionalIncludeDirectories>C:\Users\SamiDhiab\Theion_Repos\soft_wgm_user_interface_qt_cpp\build\dependencies\software_wgm_v2_cpp\dependencies\soft_cnt_system_submodule_cpp;C:\Users\SamiDhiab\Theion_Repos\soft_wgm_user_interface_qt_cpp\dependencies\software_wgm_v2_cpp\dependencies\soft_cnt_system_submodule_cpp;C:\Users\SamiDhiab\Theion_Repos\soft_wgm_user_interface_qt_cpp\build\dependencies\software_wgm_v2_cpp\dependencies\soft_cnt_system_submodule_cpp\cnt_system_exe_autogen\include_RelWithDebInfo;C:\Users\SamiDhiab\Theion_Repos\soft_wgm_user_interface_qt_cpp\dependencies\software_wgm_v2_cpp\dependencies\soft_cnt_system_submodule_cpp\includes;C:\Users\SamiDhiab\vcpkg\installed\x64-windows\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\SamiDhiab\Theion_Repos\soft_wgm_user_interface_qt_cpp\build\dependencies\software_wgm_v2_cpp\dependencies\soft_cnt_system_submodule_cpp;C:\Users\SamiDhiab\Theion_Repos\soft_wgm_user_interface_qt_cpp\dependencies\software_wgm_v2_cpp\dependencies\soft_cnt_system_submodule_cpp;C:\Users\SamiDhiab\Theion_Repos\soft_wgm_user_interface_qt_cpp\build\dependencies\software_wgm_v2_cpp\dependencies\soft_cnt_system_submodule_cpp\cnt_system_exe_autogen\include_RelWithDebInfo;C:\Users\SamiDhiab\Theion_Repos\soft_wgm_user_interface_qt_cpp\dependencies\software_wgm_v2_cpp\dependencies\soft_cnt_system_submodule_cpp\includes;C:\vcpkg\installed\x64-windows\include;C:\Users\SamiDhiab\Theion_Repos\soft_wgm_user_interface_qt_cpp\dependencies\software_wgm_v2_cpp\dependencies\soft_wafer_holder_system_controller\dependencies\yaml-cpp\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
       <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
       <ExceptionHandling>Sync</ExceptionHandling>
@@ -281,15 +281,15 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
       <RuntimeTypeInfo>true</RuntimeTypeInfo>
       <UseFullPaths>false</UseFullPaths>
       <WarningLevel>Level3</WarningLevel>
-      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;CMAKE_INTDIR="RelWithDebInfo"</PreprocessorDefinitions>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;_SILENCE_CXX17_ITERATOR_BASE_CLASS_DEPRECATION_WARNING;CMAKE_INTDIR="RelWithDebInfo"</PreprocessorDefinitions>
       <ObjectFileName>$(IntDir)</ObjectFileName>
     </ClCompile>
     <ResourceCompile>
-      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;CMAKE_INTDIR=\"RelWithDebInfo\"</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>C:\Users\SamiDhiab\Theion_Repos\soft_wgm_user_interface_qt_cpp\build\dependencies\software_wgm_v2_cpp\dependencies\soft_cnt_system_submodule_cpp;C:\Users\SamiDhiab\Theion_Repos\soft_wgm_user_interface_qt_cpp\dependencies\software_wgm_v2_cpp\dependencies\soft_cnt_system_submodule_cpp;C:\Users\SamiDhiab\Theion_Repos\soft_wgm_user_interface_qt_cpp\build\dependencies\software_wgm_v2_cpp\dependencies\soft_cnt_system_submodule_cpp\cnt_system_exe_autogen\include_RelWithDebInfo;C:\Users\SamiDhiab\Theion_Repos\soft_wgm_user_interface_qt_cpp\dependencies\software_wgm_v2_cpp\dependencies\soft_cnt_system_submodule_cpp\includes;C:\Users\SamiDhiab\vcpkg\installed\x64-windows\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;_SILENCE_CXX17_ITERATOR_BASE_CLASS_DEPRECATION_WARNING;CMAKE_INTDIR=\"RelWithDebInfo\"</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:\Users\SamiDhiab\Theion_Repos\soft_wgm_user_interface_qt_cpp\build\dependencies\software_wgm_v2_cpp\dependencies\soft_cnt_system_submodule_cpp;C:\Users\SamiDhiab\Theion_Repos\soft_wgm_user_interface_qt_cpp\dependencies\software_wgm_v2_cpp\dependencies\soft_cnt_system_submodule_cpp;C:\Users\SamiDhiab\Theion_Repos\soft_wgm_user_interface_qt_cpp\build\dependencies\software_wgm_v2_cpp\dependencies\soft_cnt_system_submodule_cpp\cnt_system_exe_autogen\include_RelWithDebInfo;C:\Users\SamiDhiab\Theion_Repos\soft_wgm_user_interface_qt_cpp\dependencies\software_wgm_v2_cpp\dependencies\soft_cnt_system_submodule_cpp\includes;C:\vcpkg\installed\x64-windows\include;C:\Users\SamiDhiab\Theion_Repos\soft_wgm_user_interface_qt_cpp\dependencies\software_wgm_v2_cpp\dependencies\soft_wafer_holder_system_controller\dependencies\yaml-cpp\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Midl>
-      <AdditionalIncludeDirectories>C:\Users\SamiDhiab\Theion_Repos\soft_wgm_user_interface_qt_cpp\build\dependencies\software_wgm_v2_cpp\dependencies\soft_cnt_system_submodule_cpp;C:\Users\SamiDhiab\Theion_Repos\soft_wgm_user_interface_qt_cpp\dependencies\software_wgm_v2_cpp\dependencies\soft_cnt_system_submodule_cpp;C:\Users\SamiDhiab\Theion_Repos\soft_wgm_user_interface_qt_cpp\build\dependencies\software_wgm_v2_cpp\dependencies\soft_cnt_system_submodule_cpp\cnt_system_exe_autogen\include_RelWithDebInfo;C:\Users\SamiDhiab\Theion_Repos\soft_wgm_user_interface_qt_cpp\dependencies\software_wgm_v2_cpp\dependencies\soft_cnt_system_submodule_cpp\includes;C:\Users\SamiDhiab\vcpkg\installed\x64-windows\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\SamiDhiab\Theion_Repos\soft_wgm_user_interface_qt_cpp\build\dependencies\software_wgm_v2_cpp\dependencies\soft_cnt_system_submodule_cpp;C:\Users\SamiDhiab\Theion_Repos\soft_wgm_user_interface_qt_cpp\dependencies\software_wgm_v2_cpp\dependencies\soft_cnt_system_submodule_cpp;C:\Users\SamiDhiab\Theion_Repos\soft_wgm_user_interface_qt_cpp\build\dependencies\software_wgm_v2_cpp\dependencies\soft_cnt_system_submodule_cpp\cnt_system_exe_autogen\include_RelWithDebInfo;C:\Users\SamiDhiab\Theion_Repos\soft_wgm_user_interface_qt_cpp\dependencies\software_wgm_v2_cpp\dependencies\soft_cnt_system_submodule_cpp\includes;C:\vcpkg\installed\x64-windows\include;C:\Users\SamiDhiab\Theion_Repos\soft_wgm_user_interface_qt_cpp\dependencies\software_wgm_v2_cpp\dependencies\soft_wafer_holder_system_controller\dependencies\yaml-cpp\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
       <HeaderFileName>%(Filename).h</HeaderFileName>
       <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
@@ -314,7 +314,7 @@ exit /b %1
 if %errorlevel% neq 0 goto :VCEnd</Command>
     </PreBuildEvent>
     <Link>
-      <AdditionalDependencies>C:\Users\SamiDhiab\vcpkg\installed\x64-windows\debug\lib\yaml-cppd.lib;C:\Users\SamiDhiab\vcpkg\installed\x64-windows\lib\sockpp.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalDependencies>..\soft_wafer_holder_system_controller\dependencies\yaml-cpp\RelWithDebInfo\libyaml-cppmd.lib;C:\vcpkg\installed\x64-windows\lib\sockpp.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
       <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
       <GenerateDebugInformation>true</GenerateDebugInformation>
@@ -340,7 +340,7 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Users\SamiDhiab\vcpkg\installed\x64-windows\share\sockpp\sockppConfig.cmake;C:\Users\SamiDhiab\vcpkg\installed\x64-windows\share\yaml-cpp\yaml-cpp-config-version.cmake;C:\Users\SamiDhiab\vcpkg\installed\x64-windows\share\yaml-cpp\yaml-cpp-config.cmake;C:\Users\SamiDhiab\vcpkg\installed\x64-windows\share\yaml-cpp\yaml-cpp-targets-debug.cmake;C:\Users\SamiDhiab\vcpkg\installed\x64-windows\share\yaml-cpp\yaml-cpp-targets-release.cmake;C:\Users\SamiDhiab\vcpkg\installed\x64-windows\share\yaml-cpp\yaml-cpp-targets.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\vcpkg\installed\x64-windows\share\sockpp\sockppConfig.cmake;%(AdditionalInputs)</AdditionalInputs>
       <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Users\SamiDhiab\Theion_Repos\soft_wgm_user_interface_qt_cpp\build\dependencies\software_wgm_v2_cpp\dependencies\soft_cnt_system_submodule_cpp\CMakeFiles\generate.stamp</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
       <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Building Custom Rule C:/Users/SamiDhiab/Theion_Repos/soft_wgm_user_interface_qt_cpp/dependencies/software_wgm_v2_cpp/dependencies/soft_cnt_system_submodule_cpp/CMakeLists.txt</Message>
@@ -353,7 +353,7 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Users\SamiDhiab\vcpkg\installed\x64-windows\share\sockpp\sockppConfig.cmake;C:\Users\SamiDhiab\vcpkg\installed\x64-windows\share\yaml-cpp\yaml-cpp-config-version.cmake;C:\Users\SamiDhiab\vcpkg\installed\x64-windows\share\yaml-cpp\yaml-cpp-config.cmake;C:\Users\SamiDhiab\vcpkg\installed\x64-windows\share\yaml-cpp\yaml-cpp-targets-debug.cmake;C:\Users\SamiDhiab\vcpkg\installed\x64-windows\share\yaml-cpp\yaml-cpp-targets-release.cmake;C:\Users\SamiDhiab\vcpkg\installed\x64-windows\share\yaml-cpp\yaml-cpp-targets.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\vcpkg\installed\x64-windows\share\sockpp\sockppConfig.cmake;%(AdditionalInputs)</AdditionalInputs>
       <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Users\SamiDhiab\Theion_Repos\soft_wgm_user_interface_qt_cpp\build\dependencies\software_wgm_v2_cpp\dependencies\soft_cnt_system_submodule_cpp\CMakeFiles\generate.stamp</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
       <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">Building Custom Rule C:/Users/SamiDhiab/Theion_Repos/soft_wgm_user_interface_qt_cpp/dependencies/software_wgm_v2_cpp/dependencies/soft_cnt_system_submodule_cpp/CMakeLists.txt</Message>
@@ -366,7 +366,7 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\Users\SamiDhiab\vcpkg\installed\x64-windows\share\sockpp\sockppConfig.cmake;C:\Users\SamiDhiab\vcpkg\installed\x64-windows\share\yaml-cpp\yaml-cpp-config-version.cmake;C:\Users\SamiDhiab\vcpkg\installed\x64-windows\share\yaml-cpp\yaml-cpp-config.cmake;C:\Users\SamiDhiab\vcpkg\installed\x64-windows\share\yaml-cpp\yaml-cpp-targets-debug.cmake;C:\Users\SamiDhiab\vcpkg\installed\x64-windows\share\yaml-cpp\yaml-cpp-targets-release.cmake;C:\Users\SamiDhiab\vcpkg\installed\x64-windows\share\yaml-cpp\yaml-cpp-targets.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\vcpkg\installed\x64-windows\share\sockpp\sockppConfig.cmake;%(AdditionalInputs)</AdditionalInputs>
       <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\Users\SamiDhiab\Theion_Repos\soft_wgm_user_interface_qt_cpp\build\dependencies\software_wgm_v2_cpp\dependencies\soft_cnt_system_submodule_cpp\CMakeFiles\generate.stamp</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkObjects>
       <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Building Custom Rule C:/Users/SamiDhiab/Theion_Repos/soft_wgm_user_interface_qt_cpp/dependencies/software_wgm_v2_cpp/dependencies/soft_cnt_system_submodule_cpp/CMakeLists.txt</Message>
@@ -379,7 +379,7 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\Users\SamiDhiab\vcpkg\installed\x64-windows\share\sockpp\sockppConfig.cmake;C:\Users\SamiDhiab\vcpkg\installed\x64-windows\share\yaml-cpp\yaml-cpp-config-version.cmake;C:\Users\SamiDhiab\vcpkg\installed\x64-windows\share\yaml-cpp\yaml-cpp-config.cmake;C:\Users\SamiDhiab\vcpkg\installed\x64-windows\share\yaml-cpp\yaml-cpp-targets-debug.cmake;C:\Users\SamiDhiab\vcpkg\installed\x64-windows\share\yaml-cpp\yaml-cpp-targets-release.cmake;C:\Users\SamiDhiab\vcpkg\installed\x64-windows\share\yaml-cpp\yaml-cpp-targets.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\vcpkg\installed\x64-windows\share\sockpp\sockppConfig.cmake;%(AdditionalInputs)</AdditionalInputs>
       <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\Users\SamiDhiab\Theion_Repos\soft_wgm_user_interface_qt_cpp\build\dependencies\software_wgm_v2_cpp\dependencies\soft_cnt_system_submodule_cpp\CMakeFiles\generate.stamp</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</LinkObjects>
     </CustomBuild>
@@ -417,6 +417,10 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
       <Name>ZERO_CHECK</Name>
       <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\SamiDhiab\Theion_Repos\soft_wgm_user_interface_qt_cpp\build\dependencies\software_wgm_v2_cpp\dependencies\soft_wafer_holder_system_controller\dependencies\yaml-cpp\yaml-cpp.vcxproj">
+      <Project>{7B3A37BB-FC8D-3978-9C41-2752EFC9A2BE}</Project>
+      <Name>yaml-cpp</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

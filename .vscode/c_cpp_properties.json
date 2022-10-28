@@ -4,8 +4,6 @@
             "name": "Win32",
             "includePath": [
                 "${workspaceFolder}/**",
-                "${vcpkgRoot}/x64-windows/include",
-                "${vcpkgRoot}/x86-windows/include",
                 "${workspaceFolder}/dependencies/software_wgm_v2_cpp/includes"
             ],
             "defines": [

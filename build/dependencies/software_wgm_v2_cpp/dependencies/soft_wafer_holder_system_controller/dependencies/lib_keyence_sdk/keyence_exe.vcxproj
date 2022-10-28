@@ -99,11 +99,11 @@
       <RuntimeTypeInfo>true</RuntimeTypeInfo>
       <UseFullPaths>false</UseFullPaths>
       <WarningLevel>Level3</WarningLevel>
-      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;CMAKE_INTDIR="Debug"</PreprocessorDefinitions>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;_SILENCE_CXX17_ITERATOR_BASE_CLASS_DEPRECATION_WARNING;CMAKE_INTDIR="Debug"</PreprocessorDefinitions>
       <ObjectFileName>$(IntDir)</ObjectFileName>
     </ClCompile>
     <ResourceCompile>
-      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_DEBUG;_WINDOWS;CMAKE_INTDIR=\"Debug\"</PreprocessorDefinitions>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_DEBUG;_WINDOWS;_SILENCE_CXX17_ITERATOR_BASE_CLASS_DEPRECATION_WARNING;CMAKE_INTDIR=\"Debug\"</PreprocessorDefinitions>
       <AdditionalIncludeDirectories>C:\Users\SamiDhiab\Theion_Repos\soft_wgm_user_interface_qt_cpp\build\dependencies\software_wgm_v2_cpp\dependencies\soft_wafer_holder_system_controller\dependencies\lib_keyence_sdk;C:\Users\SamiDhiab\Theion_Repos\soft_wgm_user_interface_qt_cpp\dependencies\software_wgm_v2_cpp\dependencies\soft_wafer_holder_system_controller\dependencies\lib_keyence_sdk;C:\Users\SamiDhiab\Theion_Repos\soft_wgm_user_interface_qt_cpp\build\dependencies\software_wgm_v2_cpp\dependencies\soft_wafer_holder_system_controller\dependencies\lib_keyence_sdk\keyence_exe_autogen\include_Debug;C:\Users\SamiDhiab\Theion_Repos\soft_wgm_user_interface_qt_cpp\dependencies\software_wgm_v2_cpp\dependencies\soft_wafer_holder_system_controller\dependencies\lib_keyence_sdk\includes;C:\Users\SamiDhiab\Theion_Repos\soft_wgm_user_interface_qt_cpp\dependencies\software_wgm_v2_cpp\dependencies\soft_wafer_holder_system_controller\dependencies\lib_keyence_sdk\Samples\VC_Src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Midl>
@@ -132,7 +132,7 @@ exit /b %1
 if %errorlevel% neq 0 goto :VCEnd</Command>
     </PreBuildEvent>
     <Link>
-      <AdditionalDependencies>C:\src\vcpkg\installed\x64-windows\lib\libs\LKIF2.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalDependencies>C:\vcpkg\installed\x64-windows\lib\libs\LKIF2.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
       <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
       <GenerateDebugInformation>true</GenerateDebugInformation>
@@ -158,13 +158,13 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
       <RuntimeTypeInfo>true</RuntimeTypeInfo>
       <UseFullPaths>false</UseFullPaths>
       <WarningLevel>Level3</WarningLevel>
-      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;CMAKE_INTDIR="Release"</PreprocessorDefinitions>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;_SILENCE_CXX17_ITERATOR_BASE_CLASS_DEPRECATION_WARNING;CMAKE_INTDIR="Release"</PreprocessorDefinitions>
       <ObjectFileName>$(IntDir)</ObjectFileName>
       <DebugInformationFormat>
       </DebugInformationFormat>
     </ClCompile>
     <ResourceCompile>
-      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;CMAKE_INTDIR=\"Release\"</PreprocessorDefinitions>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;_SILENCE_CXX17_ITERATOR_BASE_CLASS_DEPRECATION_WARNING;CMAKE_INTDIR=\"Release\"</PreprocessorDefinitions>
       <AdditionalIncludeDirectories>C:\Users\SamiDhiab\Theion_Repos\soft_wgm_user_interface_qt_cpp\build\dependencies\software_wgm_v2_cpp\dependencies\soft_wafer_holder_system_controller\dependencies\lib_keyence_sdk;C:\Users\SamiDhiab\Theion_Repos\soft_wgm_user_interface_qt_cpp\dependencies\software_wgm_v2_cpp\dependencies\soft_wafer_holder_system_controller\dependencies\lib_keyence_sdk;C:\Users\SamiDhiab\Theion_Repos\soft_wgm_user_interface_qt_cpp\build\dependencies\software_wgm_v2_cpp\dependencies\soft_wafer_holder_system_controller\dependencies\lib_keyence_sdk\keyence_exe_autogen\include_Release;C:\Users\SamiDhiab\Theion_Repos\soft_wgm_user_interface_qt_cpp\dependencies\software_wgm_v2_cpp\dependencies\soft_wafer_holder_system_controller\dependencies\lib_keyence_sdk\includes;C:\Users\SamiDhiab\Theion_Repos\soft_wgm_user_interface_qt_cpp\dependencies\software_wgm_v2_cpp\dependencies\soft_wafer_holder_system_controller\dependencies\lib_keyence_sdk\Samples\VC_Src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Midl>
@@ -193,7 +193,7 @@ exit /b %1
 if %errorlevel% neq 0 goto :VCEnd</Command>
     </PreBuildEvent>
     <Link>
-      <AdditionalDependencies>C:\src\vcpkg\installed\x64-windows\lib\libs\LKIF2.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalDependencies>C:\vcpkg\installed\x64-windows\lib\libs\LKIF2.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
       <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
       <GenerateDebugInformation>false</GenerateDebugInformation>
@@ -219,13 +219,13 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
       <RuntimeTypeInfo>true</RuntimeTypeInfo>
       <UseFullPaths>false</UseFullPaths>
       <WarningLevel>Level3</WarningLevel>
-      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;CMAKE_INTDIR="MinSizeRel"</PreprocessorDefinitions>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;_SILENCE_CXX17_ITERATOR_BASE_CLASS_DEPRECATION_WARNING;CMAKE_INTDIR="MinSizeRel"</PreprocessorDefinitions>
       <ObjectFileName>$(IntDir)</ObjectFileName>
       <DebugInformationFormat>
       </DebugInformationFormat>
     </ClCompile>
     <ResourceCompile>
-      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;CMAKE_INTDIR=\"MinSizeRel\"</PreprocessorDefinitions>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;_SILENCE_CXX17_ITERATOR_BASE_CLASS_DEPRECATION_WARNING;CMAKE_INTDIR=\"MinSizeRel\"</PreprocessorDefinitions>
       <AdditionalIncludeDirectories>C:\Users\SamiDhiab\Theion_Repos\soft_wgm_user_interface_qt_cpp\build\dependencies\software_wgm_v2_cpp\dependencies\soft_wafer_holder_system_controller\dependencies\lib_keyence_sdk;C:\Users\SamiDhiab\Theion_Repos\soft_wgm_user_interface_qt_cpp\dependencies\software_wgm_v2_cpp\dependencies\soft_wafer_holder_system_controller\dependencies\lib_keyence_sdk;C:\Users\SamiDhiab\Theion_Repos\soft_wgm_user_interface_qt_cpp\build\dependencies\software_wgm_v2_cpp\dependencies\soft_wafer_holder_system_controller\dependencies\lib_keyence_sdk\keyence_exe_autogen\include_MinSizeRel;C:\Users\SamiDhiab\Theion_Repos\soft_wgm_user_interface_qt_cpp\dependencies\software_wgm_v2_cpp\dependencies\soft_wafer_holder_system_controller\dependencies\lib_keyence_sdk\includes;C:\Users\SamiDhiab\Theion_Repos\soft_wgm_user_interface_qt_cpp\dependencies\software_wgm_v2_cpp\dependencies\soft_wafer_holder_system_controller\dependencies\lib_keyence_sdk\Samples\VC_Src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Midl>
@@ -254,7 +254,7 @@ exit /b %1
 if %errorlevel% neq 0 goto :VCEnd</Command>
     </PreBuildEvent>
     <Link>
-      <AdditionalDependencies>C:\src\vcpkg\installed\x64-windows\lib\libs\LKIF2.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalDependencies>C:\vcpkg\installed\x64-windows\lib\libs\LKIF2.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
       <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
       <GenerateDebugInformation>false</GenerateDebugInformation>
@@ -281,11 +281,11 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
       <RuntimeTypeInfo>true</RuntimeTypeInfo>
       <UseFullPaths>false</UseFullPaths>
       <WarningLevel>Level3</WarningLevel>
-      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;CMAKE_INTDIR="RelWithDebInfo"</PreprocessorDefinitions>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;_SILENCE_CXX17_ITERATOR_BASE_CLASS_DEPRECATION_WARNING;CMAKE_INTDIR="RelWithDebInfo"</PreprocessorDefinitions>
       <ObjectFileName>$(IntDir)</ObjectFileName>
     </ClCompile>
     <ResourceCompile>
-      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;CMAKE_INTDIR=\"RelWithDebInfo\"</PreprocessorDefinitions>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;_SILENCE_CXX17_ITERATOR_BASE_CLASS_DEPRECATION_WARNING;CMAKE_INTDIR=\"RelWithDebInfo\"</PreprocessorDefinitions>
       <AdditionalIncludeDirectories>C:\Users\SamiDhiab\Theion_Repos\soft_wgm_user_interface_qt_cpp\build\dependencies\software_wgm_v2_cpp\dependencies\soft_wafer_holder_system_controller\dependencies\lib_keyence_sdk;C:\Users\SamiDhiab\Theion_Repos\soft_wgm_user_interface_qt_cpp\dependencies\software_wgm_v2_cpp\dependencies\soft_wafer_holder_system_controller\dependencies\lib_keyence_sdk;C:\Users\SamiDhiab\Theion_Repos\soft_wgm_user_interface_qt_cpp\build\dependencies\software_wgm_v2_cpp\dependencies\soft_wafer_holder_system_controller\dependencies\lib_keyence_sdk\keyence_exe_autogen\include_RelWithDebInfo;C:\Users\SamiDhiab\Theion_Repos\soft_wgm_user_interface_qt_cpp\dependencies\software_wgm_v2_cpp\dependencies\soft_wafer_holder_system_controller\dependencies\lib_keyence_sdk\includes;C:\Users\SamiDhiab\Theion_Repos\soft_wgm_user_interface_qt_cpp\dependencies\software_wgm_v2_cpp\dependencies\soft_wafer_holder_system_controller\dependencies\lib_keyence_sdk\Samples\VC_Src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Midl>
@@ -314,7 +314,7 @@ exit /b %1
 if %errorlevel% neq 0 goto :VCEnd</Command>
     </PreBuildEvent>
     <Link>
-      <AdditionalDependencies>C:\src\vcpkg\installed\x64-windows\lib\libs\LKIF2.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalDependencies>C:\vcpkg\installed\x64-windows\lib\libs\LKIF2.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
       <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
       <GenerateDebugInformation>true</GenerateDebugInformation>

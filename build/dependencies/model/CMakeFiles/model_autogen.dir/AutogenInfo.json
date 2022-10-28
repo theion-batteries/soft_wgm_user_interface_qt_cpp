@@ -39,6 +39,7 @@
 		"WIN32",
 		"WIN64",
 		"_ENABLE_EXTENDED_ALIGNED_STORAGE",
+		"_SILENCE_CXX17_ITERATOR_BASE_CLASS_DEPRECATION_WARNING",
 		"_UNICODE",
 		"_WIN64"
 	],
@@ -49,6 +50,7 @@
 		"WIN32",
 		"WIN64",
 		"_ENABLE_EXTENDED_ALIGNED_STORAGE",
+		"_SILENCE_CXX17_ITERATOR_BASE_CLASS_DEPRECATION_WARNING",
 		"_UNICODE",
 		"_WIN64"
 	],
@@ -68,11 +70,12 @@
 		"C:/Users/SamiDhiab/Theion_Repos/soft_wgm_user_interface_qt_cpp/dependencies/software_wgm_v2_cpp/dependencies/soft_wafer_holder_system_controller/includes",
 		"C:/Users/SamiDhiab/Theion_Repos/soft_wgm_user_interface_qt_cpp/dependencies/software_wgm_v2_cpp/dependencies/soft_cnt_system_submodule_cpp/includes",
 		"C:/Users/SamiDhiab/Theion_Repos/soft_wgm_user_interface_qt_cpp/dependencies/software_wgm_v2_cpp/dependencies/soft_wafer_holder_system_controller/dependencies/lib_keyence_sdk/includes",
+		"C:/vcpkg/installed/x64-windows/include",
 		"C:/Program Files/Microsoft/jdk-11.0.12.7-hotspot",
+		"C:/Users/SamiDhiab/Theion_Repos/soft_wgm_user_interface_qt_cpp/dependencies/software_wgm_v2_cpp/dependencies/soft_wafer_holder_system_controller/dependencies/yaml-cpp/include",
 		"C:/Qt/6.4.0/msvc2019_64/include/QtCore",
 		"C:/Qt/6.4.0/msvc2019_64/include",
-		"C:/Qt/6.4.0/msvc2019_64/mkspecs/win32-msvc",
-		"C:/Users/SamiDhiab/vcpkg/installed/x64-windows/include"
+		"C:/Qt/6.4.0/msvc2019_64/mkspecs/win32-msvc"
 	],
 	"MOC_MACRO_NAMES" : 
 	[

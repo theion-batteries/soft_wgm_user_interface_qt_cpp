@@ -32,9 +32,22 @@ if(NOT DEFINED CMAKE_CROSSCOMPILING)
   set(CMAKE_CROSSCOMPILING "FALSE")
 endif()
 
+if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
+  if("${CMAKE_INSTALL_CONFIG_NAME}" MATCHES "^([Dd][Ee][Bb][Uu][Gg])$")
+    file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib" TYPE STATIC_LIBRARY FILES "C:/Users/SamiDhiab/Theion_Repos/soft_wgm_user_interface_qt_cpp/build/dependencies/software_wgm_v2_cpp/dependencies/soft_wafer_holder_system_controller/dependencies/yaml-cpp/Debug/libyaml-cppmdd.lib")
+  elseif("${CMAKE_INSTALL_CONFIG_NAME}" MATCHES "^([Rr][Ee][Ll][Ee][Aa][Ss][Ee])$")
+    file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib" TYPE STATIC_LIBRARY FILES "C:/Users/SamiDhiab/Theion_Repos/soft_wgm_user_interface_qt_cpp/build/dependencies/software_wgm_v2_cpp/dependencies/soft_wafer_holder_system_controller/dependencies/yaml-cpp/Release/libyaml-cppmd.lib")
+  elseif("${CMAKE_INSTALL_CONFIG_NAME}" MATCHES "^([Mm][Ii][Nn][Ss][Ii][Zz][Ee][Rr][Ee][Ll])$")
+    file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib" TYPE STATIC_LIBRARY FILES "C:/Users/SamiDhiab/Theion_Repos/soft_wgm_user_interface_qt_cpp/build/dependencies/software_wgm_v2_cpp/dependencies/soft_wafer_holder_system_controller/dependencies/yaml-cpp/MinSizeRel/libyaml-cppmd.lib")
+  elseif("${CMAKE_INSTALL_CONFIG_NAME}" MATCHES "^([Rr][Ee][Ll][Ww][Ii][Tt][Hh][Dd][Ee][Bb][Ii][Nn][Ff][Oo])$")
+    file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib" TYPE STATIC_LIBRARY FILES "C:/Users/SamiDhiab/Theion_Repos/soft_wgm_user_interface_qt_cpp/build/dependencies/software_wgm_v2_cpp/dependencies/soft_wafer_holder_system_controller/dependencies/yaml-cpp/RelWithDebInfo/libyaml-cppmd.lib")
+  endif()
+endif()
+
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
   include("C:/Users/SamiDhiab/Theion_Repos/soft_wgm_user_interface_qt_cpp/build/dependencies/software_wgm_v2_cpp/dependencies/soft_wafer_holder_system_controller/dependencies/lib_keyence_sdk/cmake_install.cmake")
+  include("C:/Users/SamiDhiab/Theion_Repos/soft_wgm_user_interface_qt_cpp/build/dependencies/software_wgm_v2_cpp/dependencies/soft_wafer_holder_system_controller/dependencies/yaml-cpp/cmake_install.cmake")
 
 endif()
 

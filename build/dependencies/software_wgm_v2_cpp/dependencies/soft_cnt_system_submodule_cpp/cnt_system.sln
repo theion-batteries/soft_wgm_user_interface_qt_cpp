@@ -21,9 +21,16 @@ EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "cnt_system_exe", "cnt_system_exe.vcxproj", "{6C5D95F5-2C9B-3623-B763-446F524FFA6B}"
 	ProjectSection(ProjectDependencies) = postProject
 		{73B946BE-7C4A-317A-B990-FEE4A26222A5} = {73B946BE-7C4A-317A-B990-FEE4A26222A5}
+		{7B3A37BB-FC8D-3978-9C41-2752EFC9A2BE} = {7B3A37BB-FC8D-3978-9C41-2752EFC9A2BE}
 	EndProjectSection
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "cnt_system_static", "cnt_system_static.vcxproj", "{DC3FA122-E388-3485-8B9C-3C86811B45E9}"
+	ProjectSection(ProjectDependencies) = postProject
+		{73B946BE-7C4A-317A-B990-FEE4A26222A5} = {73B946BE-7C4A-317A-B990-FEE4A26222A5}
+		{7B3A37BB-FC8D-3978-9C41-2752EFC9A2BE} = {7B3A37BB-FC8D-3978-9C41-2752EFC9A2BE}
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "yaml-cpp", "..\soft_wafer_holder_system_controller\dependencies\yaml-cpp\yaml-cpp.vcxproj", "{7B3A37BB-FC8D-3978-9C41-2752EFC9A2BE}"
 	ProjectSection(ProjectDependencies) = postProject
 		{73B946BE-7C4A-317A-B990-FEE4A26222A5} = {73B946BE-7C4A-317A-B990-FEE4A26222A5}
 	EndProjectSection
@@ -72,6 +79,14 @@ Global
 		{DC3FA122-E388-3485-8B9C-3C86811B45E9}.MinSizeRel|x64.Build.0 = MinSizeRel|x64
 		{DC3FA122-E388-3485-8B9C-3C86811B45E9}.RelWithDebInfo|x64.ActiveCfg = RelWithDebInfo|x64
 		{DC3FA122-E388-3485-8B9C-3C86811B45E9}.RelWithDebInfo|x64.Build.0 = RelWithDebInfo|x64
+		{7B3A37BB-FC8D-3978-9C41-2752EFC9A2BE}.Debug|x64.ActiveCfg = Debug|x64
+		{7B3A37BB-FC8D-3978-9C41-2752EFC9A2BE}.Debug|x64.Build.0 = Debug|x64
+		{7B3A37BB-FC8D-3978-9C41-2752EFC9A2BE}.Release|x64.ActiveCfg = Release|x64
+		{7B3A37BB-FC8D-3978-9C41-2752EFC9A2BE}.Release|x64.Build.0 = Release|x64
+		{7B3A37BB-FC8D-3978-9C41-2752EFC9A2BE}.MinSizeRel|x64.ActiveCfg = MinSizeRel|x64
+		{7B3A37BB-FC8D-3978-9C41-2752EFC9A2BE}.MinSizeRel|x64.Build.0 = MinSizeRel|x64
+		{7B3A37BB-FC8D-3978-9C41-2752EFC9A2BE}.RelWithDebInfo|x64.ActiveCfg = RelWithDebInfo|x64
+		{7B3A37BB-FC8D-3978-9C41-2752EFC9A2BE}.RelWithDebInfo|x64.Build.0 = RelWithDebInfo|x64
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {C0D5D883-7910-378F-A00F-C85D73E0BBD0}
