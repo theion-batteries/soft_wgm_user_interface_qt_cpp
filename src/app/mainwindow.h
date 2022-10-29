@@ -8,6 +8,8 @@
 #include <QThread>
 #include <QThreadPool>
 #include <QTimer>
+#include <QLabel>
+#include <QTabWidget>
 #include "controller.h"
 #include <QtConcurrent>
 QT_BEGIN_NAMESPACE
@@ -20,10 +22,12 @@ class MainWindow : public QMainWindow
 public:
     MainWindow(QWidget *parent = nullptr);
     ~MainWindow();
+
+
 private:
     Ui::MainWindow *ui;
-    controller distance;
-
+    //controller distance;
+    sinkingController sinkControll;
     
 };
 #endif // MAINWINDOW_H

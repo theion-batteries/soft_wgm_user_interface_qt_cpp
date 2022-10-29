@@ -2,7 +2,9 @@
 
 controller::controller(/* args */)
 {
+          std::cout<< "controller constructed"<< std::endl;
 }
+
 
 controller::~controller()
 {
@@ -28,4 +30,26 @@ void controller::generateValues()
 int controller::getValue()
 {
     return m_value;
+}
+
+sinkingController::sinkingController()
+{
+          std::cout<< "sinking controller constructed"<< std::endl;
+}
+
+sinkingController::~sinkingController()
+{
+          std::cout<< "sinking controller desctructed"<< std::endl;
+}
+
+void sinkingController::on_execute_delta_subprocess_clicked()
+{
+
+    proc_sinking_model.sinkingProcessHandler->get_sys_obj()->execute_delta_sub();
+}
+
+void sinkingController::on_run_sinking_process_clicked()
+{
+
+    proc_sinking_model.sinkingProcessHandler->start_process();
 }
