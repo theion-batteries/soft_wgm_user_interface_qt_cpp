@@ -8,10 +8,11 @@ class model
     model()
     {
         std::cout<< "model constructed"<< std::endl;
-        whs_sinking_proc = new wgm_processes::sinking_process();
-
-
+      // processManager = new wgm_processes::process_management();
+    sinkingProcessHandler = new wgm_processes::sinking_process();
     }
     private:
-    wgm_processes::Isinking_process* whs_sinking_proc;
+    //wgm_processes::Iprocesses_managment* processManager;
+    //wgm_processes::Iprocesses_managment* heatingProcessHandler;
+    wgm_processes::Iprocesses_managment* sinkingProcessHandler;
 };

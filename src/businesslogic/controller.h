@@ -24,6 +24,7 @@ signals:
 
 private:
     model proc_model;
-
-
 };
+
+class processController: public controller
+{};

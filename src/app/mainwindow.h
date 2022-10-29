@@ -22,7 +22,6 @@ public:
     ~MainWindow();
 private:
     Ui::MainWindow *ui;
-    controller temperature;
     controller distance;
 
     
