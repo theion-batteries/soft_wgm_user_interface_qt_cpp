@@ -132,7 +132,7 @@ exit /b %1
 if %errorlevel% neq 0 goto :VCEnd</Command>
     </PreBuildEvent>
     <Link>
-      <AdditionalDependencies>dependencies\soft_wafer_holder_system_controller\Debug\whs_static.lib;dependencies\soft_cnt_system_submodule_cpp\Debug\cnt_system_static.lib;dependencies\soft_wafer_holder_system_controller\dependencies\lib_keyence_sdk\Debug\keyence_lib_static.lib;C:\vcpkg\installed\x64-windows\lib\libs\LKIF2.lib;C:\vcpkg\installed\x64-windows\debug\lib\sockpp.lib;dependencies\soft_wafer_holder_system_controller\dependencies\yaml-cpp\Debug\libyaml-cppmdd.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalDependencies>dependencies\soft_wafer_holder_system_controller\Debug\whs_static.lib;dependencies\soft_cnt_system_submodule_cpp\Debug\cnt_system_static.lib;dependencies\soft_wafer_holder_system_controller\dependencies\lib_keyence_sdk\Debug\keyence_lib_static.lib;C:\vcpkg\installed\x64-windows\lib\libs\LKIF2.lib;C:\Users\SamiDhiab\AppData\Local\Programs\Python\Python39\libs\python39.lib;C:\vcpkg\installed\x64-windows\debug\lib\sockpp.lib;dependencies\soft_wafer_holder_system_controller\dependencies\yaml-cpp\Debug\libyaml-cppmdd.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
       <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
       <GenerateDebugInformation>true</GenerateDebugInformation>
@@ -193,7 +193,7 @@ exit /b %1
 if %errorlevel% neq 0 goto :VCEnd</Command>
     </PreBuildEvent>
     <Link>
-      <AdditionalDependencies>dependencies\soft_wafer_holder_system_controller\Release\whs_static.lib;dependencies\soft_cnt_system_submodule_cpp\Release\cnt_system_static.lib;dependencies\soft_wafer_holder_system_controller\dependencies\lib_keyence_sdk\Release\keyence_lib_static.lib;C:\vcpkg\installed\x64-windows\lib\libs\LKIF2.lib;C:\vcpkg\installed\x64-windows\lib\sockpp.lib;dependencies\soft_wafer_holder_system_controller\dependencies\yaml-cpp\Release\libyaml-cppmd.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalDependencies>dependencies\soft_wafer_holder_system_controller\Release\whs_static.lib;dependencies\soft_cnt_system_submodule_cpp\Release\cnt_system_static.lib;dependencies\soft_wafer_holder_system_controller\dependencies\lib_keyence_sdk\Release\keyence_lib_static.lib;C:\vcpkg\installed\x64-windows\lib\libs\LKIF2.lib;C:\Users\SamiDhiab\AppData\Local\Programs\Python\Python39\libs\python39.lib;C:\vcpkg\installed\x64-windows\lib\sockpp.lib;dependencies\soft_wafer_holder_system_controller\dependencies\yaml-cpp\Release\libyaml-cppmd.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
       <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
       <GenerateDebugInformation>false</GenerateDebugInformation>
@@ -254,7 +254,7 @@ exit /b %1
 if %errorlevel% neq 0 goto :VCEnd</Command>
     </PreBuildEvent>
     <Link>
-      <AdditionalDependencies>dependencies\soft_wafer_holder_system_controller\MinSizeRel\whs_static.lib;dependencies\soft_cnt_system_submodule_cpp\MinSizeRel\cnt_system_static.lib;dependencies\soft_wafer_holder_system_controller\dependencies\lib_keyence_sdk\MinSizeRel\keyence_lib_static.lib;C:\vcpkg\installed\x64-windows\lib\libs\LKIF2.lib;C:\vcpkg\installed\x64-windows\lib\sockpp.lib;dependencies\soft_wafer_holder_system_controller\dependencies\yaml-cpp\MinSizeRel\libyaml-cppmd.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalDependencies>dependencies\soft_wafer_holder_system_controller\MinSizeRel\whs_static.lib;dependencies\soft_cnt_system_submodule_cpp\MinSizeRel\cnt_system_static.lib;dependencies\soft_wafer_holder_system_controller\dependencies\lib_keyence_sdk\MinSizeRel\keyence_lib_static.lib;C:\vcpkg\installed\x64-windows\lib\libs\LKIF2.lib;C:\Users\SamiDhiab\AppData\Local\Programs\Python\Python39\libs\python39.lib;C:\vcpkg\installed\x64-windows\lib\sockpp.lib;dependencies\soft_wafer_holder_system_controller\dependencies\yaml-cpp\MinSizeRel\libyaml-cppmd.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
       <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
       <GenerateDebugInformation>false</GenerateDebugInformation>
@@ -314,7 +314,7 @@ exit /b %1
 if %errorlevel% neq 0 goto :VCEnd</Command>
     </PreBuildEvent>
     <Link>
-      <AdditionalDependencies>dependencies\soft_wafer_holder_system_controller\RelWithDebInfo\whs_static.lib;dependencies\soft_cnt_system_submodule_cpp\RelWithDebInfo\cnt_system_static.lib;dependencies\soft_wafer_holder_system_controller\dependencies\lib_keyence_sdk\RelWithDebInfo\keyence_lib_static.lib;C:\vcpkg\installed\x64-windows\lib\libs\LKIF2.lib;C:\vcpkg\installed\x64-windows\lib\sockpp.lib;dependencies\soft_wafer_holder_system_controller\dependencies\yaml-cpp\RelWithDebInfo\libyaml-cppmd.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalDependencies>dependencies\soft_wafer_holder_system_controller\RelWithDebInfo\whs_static.lib;dependencies\soft_cnt_system_submodule_cpp\RelWithDebInfo\cnt_system_static.lib;dependencies\soft_wafer_holder_system_controller\dependencies\lib_keyence_sdk\RelWithDebInfo\keyence_lib_static.lib;C:\vcpkg\installed\x64-windows\lib\libs\LKIF2.lib;C:\Users\SamiDhiab\AppData\Local\Programs\Python\Python39\libs\python39.lib;C:\vcpkg\installed\x64-windows\lib\sockpp.lib;dependencies\soft_wafer_holder_system_controller\dependencies\yaml-cpp\RelWithDebInfo\libyaml-cppmd.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
       <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
       <GenerateDebugInformation>true</GenerateDebugInformation>
