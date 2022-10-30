@@ -4,9 +4,11 @@
 #include <iostream>
 #include <QDebug>
 #include <QThread>
+#include <QLCDNumber>
 #include <atomic>
 #include "model.h"
-//#include <QAbstractButton>
+#include <QFile>
+#include <QProcess>
 
 class controller : public QObject
 {
@@ -36,14 +38,19 @@ class sinkingController : public QObject
 public:
     sinkingController(/* args */);
     ~sinkingController();
+    void passLcdNum(QLCDNumber* Lcd);
 signals:
     void pressed();
+    void triggered();
 public slots:
     void on_execute_delta_subprocess_clicked();
     void on_run_sinking_process_clicked();
-
-    
+    void on_stop_sinking_process_clicked();
+    void on_actionwhs_config_triggered(); 
 private:
     modelSinking proc_sinking_model;
+    double time_elapsed;
+    QLCDNumber* LcdTime;
+    QLCDNumber* LcdDistance;
 
 };

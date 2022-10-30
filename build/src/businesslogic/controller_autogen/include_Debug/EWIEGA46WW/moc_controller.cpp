@@ -167,12 +167,15 @@ void controller::valueChanged(int _t1)
 }
 namespace {
 struct qt_meta_stringdata_sinkingController_t {
-    uint offsetsAndSizes[10];
+    uint offsetsAndSizes[16];
     char stringdata0[18];
     char stringdata1[8];
     char stringdata2[1];
-    char stringdata3[36];
-    char stringdata4[31];
+    char stringdata3[10];
+    char stringdata4[36];
+    char stringdata5[31];
+    char stringdata6[32];
+    char stringdata7[30];
 };
 #define QT_MOC_LITERAL(ofs, len) \
     uint(sizeof(qt_meta_stringdata_sinkingController_t::offsetsAndSizes) + ofs), len 
@@ -181,14 +184,20 @@ Q_CONSTINIT static const qt_meta_stringdata_sinkingController_t qt_meta_stringda
         QT_MOC_LITERAL(0, 17),  // "sinkingController"
         QT_MOC_LITERAL(18, 7),  // "pressed"
         QT_MOC_LITERAL(26, 0),  // ""
-        QT_MOC_LITERAL(27, 35),  // "on_execute_delta_subprocess_c..."
-        QT_MOC_LITERAL(63, 30)   // "on_run_sinking_process_clicked"
+        QT_MOC_LITERAL(27, 9),  // "triggered"
+        QT_MOC_LITERAL(37, 35),  // "on_execute_delta_subprocess_c..."
+        QT_MOC_LITERAL(73, 30),  // "on_run_sinking_process_clicked"
+        QT_MOC_LITERAL(104, 31),  // "on_stop_sinking_process_clicked"
+        QT_MOC_LITERAL(136, 29)   // "on_actionwhs_config_triggered"
     },
     "sinkingController",
     "pressed",
     "",
+    "triggered",
     "on_execute_delta_subprocess_clicked",
-    "on_run_sinking_process_clicked"
+    "on_run_sinking_process_clicked",
+    "on_stop_sinking_process_clicked",
+    "on_actionwhs_config_triggered"
 };
 #undef QT_MOC_LITERAL
 } // unnamed namespace
@@ -199,24 +208,30 @@ Q_CONSTINIT static const uint qt_meta_data_sinkingController[] = {
       10,       // revision
        0,       // classname
        0,    0, // classinfo
-       3,   14, // methods
+       6,   14, // methods
        0,    0, // properties
        0,    0, // enums/sets
        0,    0, // constructors
        0,       // flags
-       1,       // signalCount
+       2,       // signalCount
 
  // signals: name, argc, parameters, tag, flags, initial metatype offsets
-       1,    0,   32,    2, 0x06,    1 /* Public */,
+       1,    0,   50,    2, 0x06,    1 /* Public */,
+       3,    0,   51,    2, 0x06,    2 /* Public */,
 
  // slots: name, argc, parameters, tag, flags, initial metatype offsets
-       3,    0,   33,    2, 0x0a,    2 /* Public */,
-       4,    0,   34,    2, 0x0a,    3 /* Public */,
+       4,    0,   52,    2, 0x0a,    3 /* Public */,
+       5,    0,   53,    2, 0x0a,    4 /* Public */,
+       6,    0,   54,    2, 0x0a,    5 /* Public */,
+       7,    0,   55,    2, 0x0a,    6 /* Public */,
 
  // signals: parameters
     QMetaType::Void,
+    QMetaType::Void,
 
  // slots: parameters
+    QMetaType::Void,
+    QMetaType::Void,
     QMetaType::Void,
     QMetaType::Void,
 
@@ -234,9 +249,15 @@ Q_CONSTINIT const QMetaObject sinkingController::staticMetaObject = { {
         QtPrivate::TypeAndForceComplete<sinkingController, std::true_type>,
         // method 'pressed'
         QtPrivate::TypeAndForceComplete<void, std::false_type>,
+        // method 'triggered'
+        QtPrivate::TypeAndForceComplete<void, std::false_type>,
         // method 'on_execute_delta_subprocess_clicked'
         QtPrivate::TypeAndForceComplete<void, std::false_type>,
         // method 'on_run_sinking_process_clicked'
+        QtPrivate::TypeAndForceComplete<void, std::false_type>,
+        // method 'on_stop_sinking_process_clicked'
+        QtPrivate::TypeAndForceComplete<void, std::false_type>,
+        // method 'on_actionwhs_config_triggered'
         QtPrivate::TypeAndForceComplete<void, std::false_type>
     >,
     nullptr
@@ -249,8 +270,11 @@ void sinkingController::qt_static_metacall(QObject *_o, QMetaObject::Call _c, in
         (void)_t;
         switch (_id) {
         case 0: _t->pressed(); break;
-        case 1: _t->on_execute_delta_subprocess_clicked(); break;
-        case 2: _t->on_run_sinking_process_clicked(); break;
+        case 1: _t->triggered(); break;
+        case 2: _t->on_execute_delta_subprocess_clicked(); break;
+        case 3: _t->on_run_sinking_process_clicked(); break;
+        case 4: _t->on_stop_sinking_process_clicked(); break;
+        case 5: _t->on_actionwhs_config_triggered(); break;
         default: ;
         }
     } else if (_c == QMetaObject::IndexOfMethod) {
@@ -259,6 +283,13 @@ void sinkingController::qt_static_metacall(QObject *_o, QMetaObject::Call _c, in
             using _t = void (sinkingController::*)();
             if (_t _q_method = &sinkingController::pressed; *reinterpret_cast<_t *>(_a[1]) == _q_method) {
                 *result = 0;
+                return;
+            }
+        }
+        {
+            using _t = void (sinkingController::*)();
+            if (_t _q_method = &sinkingController::triggered; *reinterpret_cast<_t *>(_a[1]) == _q_method) {
+                *result = 1;
                 return;
             }
         }
@@ -285,13 +316,13 @@ int sinkingController::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
     if (_id < 0)
         return _id;
     if (_c == QMetaObject::InvokeMetaMethod) {
-        if (_id < 3)
+        if (_id < 6)
             qt_static_metacall(this, _c, _id, _a);
-        _id -= 3;
+        _id -= 6;
     } else if (_c == QMetaObject::RegisterMethodArgumentMetaType) {
-        if (_id < 3)
+        if (_id < 6)
             *reinterpret_cast<QMetaType *>(_a[0]) = QMetaType();
-        _id -= 3;
+        _id -= 6;
     }
     return _id;
 }
@@ -300,6 +331,12 @@ int sinkingController::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
 void sinkingController::pressed()
 {
     QMetaObject::activate(this, &staticMetaObject, 0, nullptr);
+}
+
+// SIGNAL 1
+void sinkingController::triggered()
+{
+    QMetaObject::activate(this, &staticMetaObject, 1, nullptr);
 }
 QT_WARNING_POP
 QT_END_MOC_NAMESPACE

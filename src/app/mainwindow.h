@@ -20,14 +20,16 @@ class MainWindow : public QMainWindow
 {
 
 public:
-    MainWindow(QWidget *parent = nullptr);
+    MainWindow(QWidget* parent = nullptr);
     ~MainWindow();
+public slots:
 
+    void on_actionExit_triggered();
 
 private:
-    Ui::MainWindow *ui;
+    Ui::MainWindow* ui;
     //controller distance;
     sinkingController sinkControll;
-    
+
 };
 #endif // MAINWINDOW_H

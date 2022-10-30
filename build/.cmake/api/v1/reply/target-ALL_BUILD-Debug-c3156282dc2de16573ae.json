@@ -1,0 +1,51 @@
+{
+	"backtrace" : 0,
+	"backtraceGraph" : 
+	{
+		"commands" : [],
+		"files" : 
+		[
+			"dependencies/software_wgm_v2_cpp/dependencies/soft_wafer_holder_system_controller/dependencies/yaml-cpp/CMakeLists.txt"
+		],
+		"nodes" : 
+		[
+			{
+				"file" : 0
+			}
+		]
+	},
+	"dependencies" : 
+	[
+		{
+			"id" : "parse::@c9d3a79e897bd27b3ce9"
+		},
+		{
+			"id" : "yaml-cpp::@55b674396f8677c8a2c1"
+		},
+		{
+			"id" : "run-tests::@0c11a3d957e576259dc7"
+		},
+		{
+			"id" : "read::@c9d3a79e897bd27b3ce9"
+		},
+		{
+			"id" : "googletest_project::@0c11a3d957e576259dc7"
+		},
+		{
+			"id" : "sandbox::@c9d3a79e897bd27b3ce9"
+		},
+		{
+			"id" : "ZERO_CHECK::@6890427a1f51a3e7e1df"
+		}
+	],
+	"id" : "ALL_BUILD::@55b674396f8677c8a2c1",
+	"isGeneratorProvided" : true,
+	"name" : "ALL_BUILD",
+	"paths" : 
+	{
+		"build" : "dependencies/software_wgm_v2_cpp/dependencies/soft_wafer_holder_system_controller/dependencies/yaml-cpp",
+		"source" : "dependencies/software_wgm_v2_cpp/dependencies/soft_wafer_holder_system_controller/dependencies/yaml-cpp"
+	},
+	"sources" : [],
+	"type" : "UTILITY"
+}
