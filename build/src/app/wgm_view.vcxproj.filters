@@ -16,6 +16,21 @@
     <ClCompile Include="C:\Users\SamiDhiab\Theion_Repos\soft_wgm_user_interface_qt_cpp\src\app\sinkingView.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="C:\Users\SamiDhiab\Theion_Repos\soft_wgm_user_interface_qt_cpp\src\app\cntAlignView.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\SamiDhiab\Theion_Repos\soft_wgm_user_interface_qt_cpp\src\app\mainView.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\SamiDhiab\Theion_Repos\soft_wgm_user_interface_qt_cpp\src\app\heatingView.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\SamiDhiab\Theion_Repos\soft_wgm_user_interface_qt_cpp\src\app\extractingView.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\SamiDhiab\Theion_Repos\soft_wgm_user_interface_qt_cpp\src\app\coolingView.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
     <ClCompile Include="C:\Users\SamiDhiab\Theion_Repos\soft_wgm_user_interface_qt_cpp\build\src\app\wgm_view_autogen\mocs_compilation_Release.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
@@ -34,6 +49,21 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="C:\Users\SamiDhiab\Theion_Repos\soft_wgm_user_interface_qt_cpp\src\app\sinkingView.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\SamiDhiab\Theion_Repos\soft_wgm_user_interface_qt_cpp\src\app\cntAlignView.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\SamiDhiab\Theion_Repos\soft_wgm_user_interface_qt_cpp\src\app\mainView.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\SamiDhiab\Theion_Repos\soft_wgm_user_interface_qt_cpp\src\app\heatingView.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\SamiDhiab\Theion_Repos\soft_wgm_user_interface_qt_cpp\src\app\extractingView.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\SamiDhiab\Theion_Repos\soft_wgm_user_interface_qt_cpp\src\app\coolingView.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="C:\Users\SamiDhiab\Theion_Repos\soft_wgm_user_interface_qt_cpp\build\src\app\wgm_view_autogen\include_Debug\ui_mainwindow.h">

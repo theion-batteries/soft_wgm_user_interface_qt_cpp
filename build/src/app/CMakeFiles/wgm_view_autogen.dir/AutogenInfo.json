@@ -80,6 +80,36 @@
 	"HEADERS" : 
 	[
 		[
+			"C:/Users/SamiDhiab/Theion_Repos/soft_wgm_user_interface_qt_cpp/src/app/cntAlignView.h",
+			"MU",
+			"EWIEGA46WW/moc_cntAlignView.cpp",
+			null
+		],
+		[
+			"C:/Users/SamiDhiab/Theion_Repos/soft_wgm_user_interface_qt_cpp/src/app/coolingView.h",
+			"MU",
+			"EWIEGA46WW/moc_coolingView.cpp",
+			null
+		],
+		[
+			"C:/Users/SamiDhiab/Theion_Repos/soft_wgm_user_interface_qt_cpp/src/app/extractingView.h",
+			"MU",
+			"EWIEGA46WW/moc_extractingView.cpp",
+			null
+		],
+		[
+			"C:/Users/SamiDhiab/Theion_Repos/soft_wgm_user_interface_qt_cpp/src/app/heatingView.h",
+			"MU",
+			"EWIEGA46WW/moc_heatingView.cpp",
+			null
+		],
+		[
+			"C:/Users/SamiDhiab/Theion_Repos/soft_wgm_user_interface_qt_cpp/src/app/mainView.h",
+			"MU",
+			"EWIEGA46WW/moc_mainView.cpp",
+			null
+		],
+		[
 			"C:/Users/SamiDhiab/Theion_Repos/soft_wgm_user_interface_qt_cpp/src/app/mainwindow.h",
 			"MU",
 			"EWIEGA46WW/moc_mainwindow.cpp",
@@ -199,7 +229,32 @@
 	"SOURCES" : 
 	[
 		[
+			"C:/Users/SamiDhiab/Theion_Repos/soft_wgm_user_interface_qt_cpp/src/app/cntAlignView.cpp",
+			"MU",
+			null
+		],
+		[
+			"C:/Users/SamiDhiab/Theion_Repos/soft_wgm_user_interface_qt_cpp/src/app/coolingView.cpp",
+			"MU",
+			null
+		],
+		[
+			"C:/Users/SamiDhiab/Theion_Repos/soft_wgm_user_interface_qt_cpp/src/app/extractingView.cpp",
+			"MU",
+			null
+		],
+		[
+			"C:/Users/SamiDhiab/Theion_Repos/soft_wgm_user_interface_qt_cpp/src/app/heatingView.cpp",
+			"MU",
+			null
+		],
+		[
 			"C:/Users/SamiDhiab/Theion_Repos/soft_wgm_user_interface_qt_cpp/src/app/main.cpp",
+			"MU",
+			null
+		],
+		[
+			"C:/Users/SamiDhiab/Theion_Repos/soft_wgm_user_interface_qt_cpp/src/app/mainView.cpp",
 			"MU",
 			null
 		],

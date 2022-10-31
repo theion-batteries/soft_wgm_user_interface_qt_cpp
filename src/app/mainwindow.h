@@ -13,6 +13,11 @@
 #include <QtConcurrent>
 // app headers
 #include "sinkingView.h"
+#include "cntAlignView.h"
+#include "coolingView.h"
+#include "heatingView.h"
+#include "extractingView.h"
+#include "mainView.h"
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
@@ -32,6 +37,10 @@ private:
 /****************   view layer ******************/
     // view sinking
     sinkingView* sinkView;
+    cntAlignView* cntView;
+    heatingView* heatView;
+    extractingView* extractView;
+    mainView* managerView;
 
 };
 #endif // MAINWINDOW_H

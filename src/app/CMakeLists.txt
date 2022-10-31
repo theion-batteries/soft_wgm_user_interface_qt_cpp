@@ -33,7 +33,20 @@ set(PROJECT_SOURCES
         view.cpp
         sinkingView.h
         sinkingView.cpp
-)
+        cntAlignView.h
+        cntAlignView.cpp
+        mainView.h
+        mainView.cpp
+        heatingView.h
+        heatingView.cpp
+        extractingView.h
+        extractingView.cpp
+        coolingView.h
+        coolingView.cpp
+
+
+
+        )
 
 if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)
     qt_add_executable(wgm_view

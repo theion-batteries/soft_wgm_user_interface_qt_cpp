@@ -6,27 +6,31 @@ MainWindow::MainWindow(QWidget* parent)
     /********** General UI Setup*********************/
     ui->setupUi(this);
 
-    ui->tabWidget->setTabText(0, "Main");
-    ui->tabWidget->setTabText(1, "Heating");
-    ui->tabWidget->setTabText(3, "Cnt_Alignment");
-    ui->tabWidget->setTabText(4, "Cooling");
-    ui->tabWidget->setTabText(5, "Extracting");
     /********** Sinking View *********************/
+    managerView = new mainView(getUi());
     sinkView = new sinkingView(getUi());
+    heatView = new heatingView(getUi());
+    cntView = new cntAlignView(getUi());
+    extractView = new extractingView(getUi());
 
-   // connect(&sinkControll, &sinkingController::valueChanged, [this]() {
-   //     auto value = distance.getValue();
-   //     qInfo() << "value distance controller changed, new value: " << value;
-   //     qInfo() << "updating display with thread: " << QThread::currentThread();
-   //   ui->temperature->display(value);
-   //     });
-   // auto dis = QtConcurrent::run(&controller::generateValues, &distance);
+
+    // connect(&sinkControll, &sinkingController::valueChanged, [this]() {
+    //     auto value = distance.getValue();
+    //     qInfo() << "value distance controller changed, new value: " << value;
+    //     qInfo() << "updating display with thread: " << QThread::currentThread();
+    //   ui->temperature->display(value);
+    //     });
+    // auto dis = QtConcurrent::run(&controller::generateValues, &distance);
 
 }
 
 MainWindow::~MainWindow()
 {
+    delete managerView;
     delete sinkView;
+    delete heatView;
+    delete cntView;
+    delete extractView;
     delete ui;
 }
 Ui::MainWindow* MainWindow::getUi()
