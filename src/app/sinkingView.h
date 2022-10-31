@@ -9,7 +9,22 @@
  * 
  */
 #pragma once
-
 // qt
-
+#include "./ui_mainwindow.h"
 // mvc
+#include "sinkingController.h"
+
+class sinkingView: QObject
+{
+    Q_OBJECT
+public:
+    sinkingView(Ui::MainWindow* uiPtr);
+    ~sinkingView();
+private:
+    Ui::MainWindow* ui;
+    sinkingController sinkControll;
+};
+
+
+
+

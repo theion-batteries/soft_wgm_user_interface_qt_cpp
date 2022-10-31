@@ -1,5 +1,5 @@
 #pragma once 
-// 
+// qt
 #include <QObject>
 #include <QDebug>
 #include <QThread>
@@ -8,10 +8,10 @@
 #include <QProcess>
 #include <QLabel>
 #include <QString>
-// 
+// mvc
 #include <atomic>
-#include "model.h"
-
+#include "sinkingModel.h"
+//#include "sinkingView.h"
 class sinkingController : public QObject
 {
     Q_OBJECT
@@ -36,7 +36,7 @@ public slots:
 
 
 private:
-    modelSinking proc_sinking_model;
+    sinkingModel proc_sinking_model;
     double time_elapsed;
     QLCDNumber* LcdTime;
     QLCDNumber* LcdDistance;

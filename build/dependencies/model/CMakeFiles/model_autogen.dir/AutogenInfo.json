@@ -18,6 +18,12 @@
 			"MU",
 			"EWIEGA46WW/moc_model.cpp",
 			null
+		],
+		[
+			"C:/Users/SamiDhiab/Theion_Repos/soft_wgm_user_interface_qt_cpp/dependencies/model/sinkingModel.h",
+			"MU",
+			"EWIEGA46WW/moc_sinkingModel.cpp",
+			null
 		]
 	],
 	"HEADER_EXTENSIONS" : [ "h", "hh", "h++", "hm", "hpp", "hxx", "in", "txx" ],
@@ -111,6 +117,11 @@
 	[
 		[
 			"C:/Users/SamiDhiab/Theion_Repos/soft_wgm_user_interface_qt_cpp/dependencies/model/model.cpp",
+			"MU",
+			null
+		],
+		[
+			"C:/Users/SamiDhiab/Theion_Repos/soft_wgm_user_interface_qt_cpp/dependencies/model/sinkingModel.cpp",
 			"MU",
 			null
 		]

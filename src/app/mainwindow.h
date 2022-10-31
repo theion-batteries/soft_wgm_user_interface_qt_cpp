@@ -24,14 +24,14 @@ class MainWindow : public QMainWindow
 public:
     MainWindow(QWidget* parent = nullptr);
     ~MainWindow();
+    Ui::MainWindow* getUi();
 public slots:
-
-    void on_actionExit_triggered();
 
 private:
     Ui::MainWindow* ui;
-    //controller distance;
-    sinkingController sinkControll;
+/****************   view layer ******************/
+    // view sinking
+    sinkingView* sinkView;
 
 };
 #endif // MAINWINDOW_H

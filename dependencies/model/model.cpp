@@ -1,14 +1,14 @@
 #include "model.h"
 
-modelSinking::modelSinking()
+model::model()
 {
     std::cout << "model sinking constructed" << std::endl;
-    sinkingProcessHandler = new wgm_processes::sinking_process();
+    processManager = new wgm_processes::sinking_process();
 }
 
-modelSinking::~modelSinking()
+model::~model()
 {
 
-    delete sinkingProcessHandler;
+    delete processManager;
 
 }

@@ -16,6 +16,7 @@
 
 class view : public QObject
 {
+    Q_OBJECT
 private:
     /* data */
 public:
@@ -23,10 +24,3 @@ public:
     ~view();
 };
 
-view::view(/* args */)
-{
-}
-
-view::~view()
-{
-}

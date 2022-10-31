@@ -1,0 +1,63 @@
+{
+	"backtrace" : 0,
+	"backtraceGraph" : 
+	{
+		"commands" : [],
+		"files" : 
+		[
+			"dependencies/software_wgm_v2_cpp/dependencies/soft_wafer_holder_system_controller/CMakeLists.txt"
+		],
+		"nodes" : 
+		[
+			{
+				"file" : 0
+			}
+		]
+	},
+	"dependencies" : 
+	[
+		{
+			"id" : "run-tests::@0c11a3d957e576259dc7"
+		},
+		{
+			"id" : "keyence_lib_static::@e1105e4bf232d1bfed4b"
+		},
+		{
+			"id" : "keyence_exe::@e1105e4bf232d1bfed4b"
+		},
+		{
+			"id" : "parse::@c9d3a79e897bd27b3ce9"
+		},
+		{
+			"id" : "whs_exe::@f34ba466f21c72a91b89"
+		},
+		{
+			"id" : "googletest_project::@0c11a3d957e576259dc7"
+		},
+		{
+			"id" : "sandbox::@c9d3a79e897bd27b3ce9"
+		},
+		{
+			"id" : "yaml-cpp::@55b674396f8677c8a2c1"
+		},
+		{
+			"id" : "read::@c9d3a79e897bd27b3ce9"
+		},
+		{
+			"id" : "whs_static::@f34ba466f21c72a91b89"
+		},
+		{
+			"id" : "ZERO_CHECK::@6890427a1f51a3e7e1df"
+		}
+	],
+	"id" : "ALL_BUILD::@f34ba466f21c72a91b89",
+	"isGeneratorProvided" : true,
+	"name" : "ALL_BUILD",
+	"paths" : 
+	{
+		"build" : "dependencies/software_wgm_v2_cpp/dependencies/soft_wafer_holder_system_controller",
+		"source" : "dependencies/software_wgm_v2_cpp/dependencies/soft_wafer_holder_system_controller"
+	},
+	"sources" : [],
+	"type" : "UTILITY"
+}

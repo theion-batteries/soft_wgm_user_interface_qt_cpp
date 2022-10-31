@@ -7,7 +7,7 @@ Id flags:
 The output was:
 0
 MSBuild version 17.3.1+2badb37d1 for .NET Framework
-Build started 28/10/2022 18:19:48.
+Build started 31/10/2022 15:28:22.
 Project "C:\Users\SamiDhiab\Theion_Repos\soft_wgm_user_interface_qt_cpp\build\CMakeFiles\3.23.2\CompilerIdCXX\CompilerIdCXX.vcxproj" on node 1 (default targets).
 PrepareForBuild:
   Creating directory "Debug\".
@@ -42,7 +42,7 @@ Build succeeded.
     0 Warning(s)
     0 Error(s)
 
-Time Elapsed 00:00:01.17
+Time Elapsed 00:00:01.06
 
 
 Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "CompilerIdCXX.exe"
@@ -54,24 +54,24 @@ The CXX compiler identification is MSVC, found in "C:/Users/SamiDhiab/Theion_Rep
 Detecting CXX compiler ABI info compiled with the following output:
 Change Dir: C:/Users/SamiDhiab/Theion_Repos/soft_wgm_user_interface_qt_cpp/build/CMakeFiles/CMakeTmp
 
-Run Build Command(s):C:/Program Files/Microsoft Visual Studio/2022/Community/MSBuild/Current/Bin/amd64/MSBuild.exe cmTC_9487a.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:m && MSBuild version 17.3.1+2badb37d1 for .NET Framework
+Run Build Command(s):C:/Program Files/Microsoft Visual Studio/2022/Community/MSBuild/Current/Bin/amd64/MSBuild.exe cmTC_74f95.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:m && MSBuild version 17.3.1+2badb37d1 for .NET Framework
   Microsoft (R) C/C++ Optimizing Compiler Version 19.33.31630 for x64
   CMakeCXXCompilerABI.cpp
   Copyright (C) Microsoft Corporation.  All rights reserved.
-  cl /c /I"C:\vcpkg\installed\x64-windows\include" /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\"Debug\"" /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /GR /Fo"cmTC_9487a.dir\Debug\\" /Fd"cmTC_9487a.dir\Debug\vc143.pdb" /external:W3 /Gd /TP /errorReport:queue "C:\Qt\Tools\CMake_64\share\cmake-3.23\Modules\CMakeCXXCompilerABI.cpp"
-  cmTC_9487a.vcxproj -> C:\Users\SamiDhiab\Theion_Repos\soft_wgm_user_interface_qt_cpp\build\CMakeFiles\CMakeTmp\Debug\cmTC_9487a.exe
+  cl /c /I"C:\vcpkg\installed\x64-windows\include" /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\"Debug\"" /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /GR /Fo"cmTC_74f95.dir\Debug\\" /Fd"cmTC_74f95.dir\Debug\vc143.pdb" /external:W3 /Gd /TP /errorReport:queue "C:\Qt\Tools\CMake_64\share\cmake-3.23\Modules\CMakeCXXCompilerABI.cpp"
+  cmTC_74f95.vcxproj -> C:\Users\SamiDhiab\Theion_Repos\soft_wgm_user_interface_qt_cpp\build\CMakeFiles\CMakeTmp\Debug\cmTC_74f95.exe
 
 
 
 Performing C++ SOURCE FILE Test HAVE_STDATOMIC succeeded with the following output:
 Change Dir: C:/Users/SamiDhiab/Theion_Repos/soft_wgm_user_interface_qt_cpp/build/CMakeFiles/CMakeTmp
 
-Run Build Command(s):C:/Program Files/Microsoft Visual Studio/2022/Community/MSBuild/Current/Bin/amd64/MSBuild.exe cmTC_47fb9.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:m && MSBuild version 17.3.1+2badb37d1 for .NET Framework
+Run Build Command(s):C:/Program Files/Microsoft Visual Studio/2022/Community/MSBuild/Current/Bin/amd64/MSBuild.exe cmTC_c642e.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:m && MSBuild version 17.3.1+2badb37d1 for .NET Framework
   Microsoft (R) C/C++ Optimizing Compiler Version 19.33.31630 for x64
   src.cxx
   Copyright (C) Microsoft Corporation.  All rights reserved.
-  cl /c /I"C:\vcpkg\installed\x64-windows\include" /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D HAVE_STDATOMIC /D "CMAKE_INTDIR=\"Debug\"" /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /GR /std:c++20 /Fo"cmTC_47fb9.dir\Debug\\" /Fd"cmTC_47fb9.dir\Debug\vc143.pdb" /external:W3 /Gd /TP /errorReport:queue C:\Users\SamiDhiab\Theion_Repos\soft_wgm_user_interface_qt_cpp\build\CMakeFiles\CMakeTmp\src.cxx
-  cmTC_47fb9.vcxproj -> C:\Users\SamiDhiab\Theion_Repos\soft_wgm_user_interface_qt_cpp\build\CMakeFiles\CMakeTmp\Debug\cmTC_47fb9.exe
+  cl /c /I"C:\vcpkg\installed\x64-windows\include" /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D HAVE_STDATOMIC /D "CMAKE_INTDIR=\"Debug\"" /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /GR /std:c++20 /Fo"cmTC_c642e.dir\Debug\\" /Fd"cmTC_c642e.dir\Debug\vc143.pdb" /external:W3 /Gd /TP /errorReport:queue C:\Users\SamiDhiab\Theion_Repos\soft_wgm_user_interface_qt_cpp\build\CMakeFiles\CMakeTmp\src.cxx
+  cmTC_c642e.vcxproj -> C:\Users\SamiDhiab\Theion_Repos\soft_wgm_user_interface_qt_cpp\build\CMakeFiles\CMakeTmp\Debug\cmTC_c642e.exe
 
 
 Source file was:
@@ -105,7 +105,7 @@ Id flags:
 The output was:
 0
 MSBuild version 17.3.1+2badb37d1 for .NET Framework
-Build started 28/10/2022 18:19:54.
+Build started 31/10/2022 15:28:27.
 Project "C:\Users\SamiDhiab\Theion_Repos\soft_wgm_user_interface_qt_cpp\build\CMakeFiles\3.23.2\CompilerIdC\CompilerIdC.vcxproj" on node 1 (default targets).
 PrepareForBuild:
   Creating directory "Debug\".
@@ -140,7 +140,7 @@ Build succeeded.
     0 Warning(s)
     0 Error(s)
 
-Time Elapsed 00:00:00.97
+Time Elapsed 00:00:00.94
 
 
 Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "CompilerIdC.exe"
@@ -152,12 +152,12 @@ The C compiler identification is MSVC, found in "C:/Users/SamiDhiab/Theion_Repos
 Detecting C compiler ABI info compiled with the following output:
 Change Dir: C:/Users/SamiDhiab/Theion_Repos/soft_wgm_user_interface_qt_cpp/build/CMakeFiles/CMakeTmp
 
-Run Build Command(s):C:/Program Files/Microsoft Visual Studio/2022/Community/MSBuild/Current/Bin/amd64/MSBuild.exe cmTC_6844a.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:m && MSBuild version 17.3.1+2badb37d1 for .NET Framework
+Run Build Command(s):C:/Program Files/Microsoft Visual Studio/2022/Community/MSBuild/Current/Bin/amd64/MSBuild.exe cmTC_8f87d.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:m && MSBuild version 17.3.1+2badb37d1 for .NET Framework
   Microsoft (R) C/C++ Optimizing Compiler Version 19.33.31630 for x64
   CMakeCCompilerABI.c
   Copyright (C) Microsoft Corporation.  All rights reserved.
-  cl /c /I"C:\vcpkg\installed\x64-windows\include" /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\"Debug\"" /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_6844a.dir\Debug\\" /Fd"cmTC_6844a.dir\Debug\vc143.pdb" /external:W3 /Gd /TC /errorReport:queue "C:\Qt\Tools\CMake_64\share\cmake-3.23\Modules\CMakeCCompilerABI.c"
-  cmTC_6844a.vcxproj -> C:\Users\SamiDhiab\Theion_Repos\soft_wgm_user_interface_qt_cpp\build\CMakeFiles\CMakeTmp\Debug\cmTC_6844a.exe
+  cl /c /I"C:\vcpkg\installed\x64-windows\include" /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\"Debug\"" /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_8f87d.dir\Debug\\" /Fd"cmTC_8f87d.dir\Debug\vc143.pdb" /external:W3 /Gd /TC /errorReport:queue "C:\Qt\Tools\CMake_64\share\cmake-3.23\Modules\CMakeCCompilerABI.c"
+  cmTC_8f87d.vcxproj -> C:\Users\SamiDhiab\Theion_Repos\soft_wgm_user_interface_qt_cpp\build\CMakeFiles\CMakeTmp\Debug\cmTC_8f87d.exe
 
 
 

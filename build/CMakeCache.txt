@@ -256,9 +256,6 @@ KEYENCE_DIR:PATH=C:/Program Files/Microsoft/jdk-11.0.12.7-hotspot
 //Path to a library.
 KEYENCE_LIB:FILEPATH=C:/vcpkg/installed/x64-windows/lib/libs/LKIF2.lib
 
-//Path to a program.
-PYTHON_EXECUTABLE:FILEPATH=C:/Users/SamiDhiab/AppData/Local/Programs/Python/Python39/python.exe
-
 //Additional directories where find(Qt6 ...) host Qt components
 // are searched
 QT_ADDITIONAL_HOST_PACKAGES_PREFIX_PATH:STRING=
@@ -598,16 +595,12 @@ CMAKE_VERBOSE_MAKEFILE-ADVANCED:INTERNAL=1
 EXPORT_TARGETS:INTERNAL=yaml-cpp
 //Details about finding Python
 FIND_PACKAGE_MESSAGE_DETAILS_Python:INTERNAL=[C:/Users/SamiDhiab/AppData/Local/Programs/Python/Python39/python.exe][C:/Users/SamiDhiab/AppData/Local/Programs/Python/Python39/libs/python39.lib][C:/Users/SamiDhiab/AppData/Local/Programs/Python/Python39/include][cfound components: Interpreter Development Development.Module Development.Embed ][v3.9.7()]
-//Details about finding PythonInterp
-FIND_PACKAGE_MESSAGE_DETAILS_PythonInterp:INTERNAL=[C:/Users/SamiDhiab/AppData/Local/Programs/Python/Python39/python.exe][v3.9.7()]
 //Details about finding Threads
 FIND_PACKAGE_MESSAGE_DETAILS_Threads:INTERNAL=[TRUE][v()]
 //Details about finding WrapAtomic
 FIND_PACKAGE_MESSAGE_DETAILS_WrapAtomic:INTERNAL=[1][v()]
 //Test HAVE_STDATOMIC
 HAVE_STDATOMIC:INTERNAL=1
-//ADVANCED property for variable: PYTHON_EXECUTABLE
-PYTHON_EXECUTABLE-ADVANCED:INTERNAL=1
 //Qt feature: abstractbutton (from target Qt6::Widgets)
 QT_FEATURE_abstractbutton:INTERNAL=ON
 //Qt feature: abstractslider (from target Qt6::Widgets)

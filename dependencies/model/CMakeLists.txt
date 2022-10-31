@@ -1,6 +1,8 @@
 add_library(model STATIC
     model.cpp
     model.h
+    sinkingModel.h
+    sinkingModel.cpp
 )
 target_link_libraries(model PRIVATE Qt6::Core 
                             PUBLIC wgm_static)
