@@ -16,14 +16,23 @@ MainWindow::MainWindow(QWidget* parent)
     connect(ui->actionwhs_config, &QAction::triggered, [this]() {
         sinkControll.on_actionwhs_config_triggered();
         });
-    // connect cmd button execute delta
+    // connect cmd button execute delta subproc
     connect(ui->execute_delta_subprocess, &QAbstractButton::pressed, [this]() {
         sinkControll.on_execute_delta_subprocess_clicked();
+        });
+    // connect cmd button connect delta
+    connect(ui->connect_delta_server, &QAbstractButton::pressed, [this]() {
+        sinkControll.on_connect_delta_clicked();
+        });
+    // connect cmd button execute keyence
+    connect(ui->connect_keyence_sensor, &QAbstractButton::pressed, [this]() {
+        sinkControll.on_connect_keyence_sensor_clicked();
         });
     // connect cmd button run process sinking
     connect(ui->run_sinking_process, &QAbstractButton::pressed, [this]() {
         sinkControll.passLcdNum(ui->time_sinking);
         sinkControll.on_run_sinking_process_clicked();
+        ui->delta_ready->setText(sinkControll.get_delta_status());
         sinkControll.passLcdNum(ui->time_sinking);
         });
     // connect cmd button stop process sinking
@@ -34,34 +43,19 @@ MainWindow::MainWindow(QWidget* parent)
         });
 
 
+            
 
 
-
-
-
-
-
-
-
-
-
-
-
-    /********** XXX process connections*********************/
-
-
-
-
-
-    // connect time monitor sinking
-    //connect(&distance, &controller::valueChanged, [this]() {
-    //    auto value = distance.getValue();
-    //    qInfo() << "value distance controller changed, new value: " << value;
-    //    qInfo() << "updating display with thread: " << QThread::currentThread();
-     //  ui->temperature->display(value);
-    //    });
-    //auto dis = QtConcurrent::run(&controller::generateValues, &distance);
-
+   // connect(&sinkControll, &sinkingController::valueChanged, [this]() {
+   //     auto value = distance.getValue();
+   //     qInfo() << "value distance controller changed, new value: " << value;
+   //     qInfo() << "updating display with thread: " << QThread::currentThread();
+   //   ui->temperature->display(value);
+   //     });
+   // auto dis = QtConcurrent::run(&controller::generateValues, &distance);
+//
+   // connect(this,SIGNAL(triggered()),this,SLOT(close()));
+//
 }
 
 MainWindow::~MainWindow()
@@ -74,5 +68,4 @@ MainWindow::~MainWindow()
  void MainWindow::on_actionExit_triggered()
 {
     qInfo() << "application closed" << QThread::currentThread();
-    connect(this,SIGNAL(triggered()),this,SLOT(close()));
 } 

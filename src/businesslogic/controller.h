@@ -1,14 +1,28 @@
+/**
+ * @file controller.h
+ * @author sami dhiab
+ * @brief template for control layer mvc
+ * @version 0.1
+ * @date 2022-10-31
+ * 
+ * @copyright Copyright (c) 2022
+ * 
+ */
+
+
 #pragma once 
 #include <random>
 #include <QObject>
-#include <iostream>
 #include <QDebug>
 #include <QThread>
 #include <QLCDNumber>
-#include <atomic>
-#include "model.h"
 #include <QFile>
 #include <QProcess>
+#include <QLabel>
+#include <QString>
+//
+#include <atomic>
+#include "model.h"
 
 class controller : public QObject
 {
@@ -31,26 +45,3 @@ private:
 
 class processController : public QObject
 {};
-
-class sinkingController : public QObject
-{
-    Q_OBJECT
-public:
-    sinkingController(/* args */);
-    ~sinkingController();
-    void passLcdNum(QLCDNumber* Lcd);
-signals:
-    void pressed();
-    void triggered();
-public slots:
-    void on_execute_delta_subprocess_clicked();
-    void on_run_sinking_process_clicked();
-    void on_stop_sinking_process_clicked();
-    void on_actionwhs_config_triggered(); 
-private:
-    modelSinking proc_sinking_model;
-    double time_elapsed;
-    QLCDNumber* LcdTime;
-    QLCDNumber* LcdDistance;
-
-};

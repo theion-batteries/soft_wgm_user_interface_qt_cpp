@@ -3,6 +3,7 @@ C:/Users/SamiDhiab/Theion_Repos/soft_wgm_user_interface_qt_cpp/build/src/busines
   C:/Qt/6.4.0/msvc2019_64/include/QtCore/QFile \
   C:/Qt/6.4.0/msvc2019_64/include/QtCore/QObject \
   C:/Qt/6.4.0/msvc2019_64/include/QtCore/QProcess \
+  C:/Qt/6.4.0/msvc2019_64/include/QtCore/QString \
   C:/Qt/6.4.0/msvc2019_64/include/QtCore/QThread \
   C:/Qt/6.4.0/msvc2019_64/include/QtCore/qalgorithms.h \
   C:/Qt/6.4.0/msvc2019_64/include/QtCore/qanystringview.h \
@@ -88,6 +89,7 @@ C:/Users/SamiDhiab/Theion_Repos/soft_wgm_user_interface_qt_cpp/build/src/busines
   C:/Qt/6.4.0/msvc2019_64/include/QtCore/qthread.h \
   C:/Qt/6.4.0/msvc2019_64/include/QtCore/qtmetamacros.h \
   C:/Qt/6.4.0/msvc2019_64/include/QtCore/qtypeinfo.h \
+  C:/Qt/6.4.0/msvc2019_64/include/QtCore/qurl.h \
   C:/Qt/6.4.0/msvc2019_64/include/QtCore/qutf8stringview.h \
   C:/Qt/6.4.0/msvc2019_64/include/QtCore/qvariant.h \
   C:/Qt/6.4.0/msvc2019_64/include/QtCore/qvarlengtharray.h \
@@ -105,12 +107,14 @@ C:/Users/SamiDhiab/Theion_Repos/soft_wgm_user_interface_qt_cpp/build/src/busines
   C:/Qt/6.4.0/msvc2019_64/include/QtGui/qkeysequence.h \
   C:/Qt/6.4.0/msvc2019_64/include/QtGui/qpaintdevice.h \
   C:/Qt/6.4.0/msvc2019_64/include/QtGui/qpalette.h \
+  C:/Qt/6.4.0/msvc2019_64/include/QtGui/qpicture.h \
   C:/Qt/6.4.0/msvc2019_64/include/QtGui/qpixelformat.h \
   C:/Qt/6.4.0/msvc2019_64/include/QtGui/qpixmap.h \
   C:/Qt/6.4.0/msvc2019_64/include/QtGui/qpolygon.h \
   C:/Qt/6.4.0/msvc2019_64/include/QtGui/qregion.h \
   C:/Qt/6.4.0/msvc2019_64/include/QtGui/qrgb.h \
   C:/Qt/6.4.0/msvc2019_64/include/QtGui/qrgba64.h \
+  C:/Qt/6.4.0/msvc2019_64/include/QtGui/qtextdocument.h \
   C:/Qt/6.4.0/msvc2019_64/include/QtGui/qtgui-config.h \
   C:/Qt/6.4.0/msvc2019_64/include/QtGui/qtguiexports.h \
   C:/Qt/6.4.0/msvc2019_64/include/QtGui/qtguiglobal.h \
@@ -118,7 +122,9 @@ C:/Users/SamiDhiab/Theion_Repos/soft_wgm_user_interface_qt_cpp/build/src/busines
   C:/Qt/6.4.0/msvc2019_64/include/QtGui/qwindowdefs.h \
   C:/Qt/6.4.0/msvc2019_64/include/QtGui/qwindowdefs_win.h \
   C:/Qt/6.4.0/msvc2019_64/include/QtWidgets/QLCDNumber \
+  C:/Qt/6.4.0/msvc2019_64/include/QtWidgets/QLabel \
   C:/Qt/6.4.0/msvc2019_64/include/QtWidgets/qframe.h \
+  C:/Qt/6.4.0/msvc2019_64/include/QtWidgets/qlabel.h \
   C:/Qt/6.4.0/msvc2019_64/include/QtWidgets/qlcdnumber.h \
   C:/Qt/6.4.0/msvc2019_64/include/QtWidgets/qsizepolicy.h \
   C:/Qt/6.4.0/msvc2019_64/include/QtWidgets/qtwidgets-config.h \

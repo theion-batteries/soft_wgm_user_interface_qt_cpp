@@ -1,6 +1,6 @@
 #ifndef MAINWINDOW_H
 #define MAINWINDOW_H
-
+// qt headers
 #include <QMainWindow>
 #include <QApplication>
 #include <QCoreApplication>
@@ -10,8 +10,10 @@
 #include <QTimer>
 #include <QLabel>
 #include <QTabWidget>
-#include "controller.h"
 #include <QtConcurrent>
+// app headers
+#include "sinkingView.h"
+
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
 QT_END_NAMESPACE

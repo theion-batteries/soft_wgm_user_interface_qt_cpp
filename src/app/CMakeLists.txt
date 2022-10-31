@@ -29,6 +29,10 @@ set(PROJECT_SOURCES
         mainwindow.cpp
         mainwindow.h
         mainwindow.ui
+        view.h
+        view.cpp
+        sinkingView.h
+        sinkingView.cpp
 )
 
 if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)

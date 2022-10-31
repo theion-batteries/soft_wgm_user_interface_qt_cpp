@@ -9,6 +9,8 @@ add_definitions(-DWHS_CONFIG="${WHS_CONFIG}")
 add_library(controller STATIC
     controller.cpp
     controller.h
+    sinkingController.h
+    sinkingController.cpp
 )
 target_link_libraries(controller PRIVATE Qt6::Core 
                                  PRIVATE Qt6::Widgets

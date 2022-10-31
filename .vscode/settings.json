@@ -3,6 +3,7 @@
     "cmake.useCMakePresets": "auto",
     "files.associations": {
         "qlcdnumber": "cpp",
-        "qfile": "cpp"
+        "qfile": "cpp",
+        "qstring": "cpp"
     }
 }
