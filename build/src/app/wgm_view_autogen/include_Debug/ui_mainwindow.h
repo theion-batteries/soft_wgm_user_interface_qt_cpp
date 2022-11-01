@@ -58,20 +58,32 @@ public:
     QLabel *label;
     QLCDNumber *temperature;
     QWidget *Sinking;
-    QWidget *widget;
+    QHBoxLayout *horizontalLayout_7;
     QHBoxLayout *horizontalLayout_2;
     QVBoxLayout *verticalLayout_6;
     QHBoxLayout *horizontalLayout_8;
     QVBoxLayout *verticalLayout_9;
     QHBoxLayout *horizontalLayout_3;
-    QCommandLinkButton *connect_delta_server;
+    QCommandLinkButton *connect_motion_axis;
     QSpacerItem *horizontalSpacer;
-    QHBoxLayout *horizontalLayout_7;
     QLabel *label_7;
     QSpacerItem *horizontalSpacer_2;
     QLabel *delta_ready;
+    QHBoxLayout *horizontalLayout_9;
+    QLabel *label_10;
+    QSpacerItem *horizontalSpacer_7;
+    QLineEdit *input_axis_cmd;
+    QSpacerItem *horizontalSpacer_8;
+    QHBoxLayout *horizontalLayout_11;
+    QHBoxLayout *horizontalLayout_10;
+    QLabel *cmd_given_1;
+    QSpacerItem *horizontalSpacer_11;
+    QLabel *cmd_given;
+    QLabel *label_11;
+    QSpacerItem *horizontalSpacer_9;
+    QLabel *axis_response;
     QHBoxLayout *horizontalLayout_4;
-    QCommandLinkButton *connect_keyence_sensor;
+    QCommandLinkButton *connect_distance_sensor;
     QSpacerItem *horizontalSpacer_3;
     QLabel *label_8;
     QSpacerItem *horizontalSpacer_4;
@@ -86,14 +98,6 @@ public:
     QLabel *label_9;
     QSpacerItem *horizontalSpacer_5;
     QLabel *sinking_finished;
-    QHBoxLayout *horizontalLayout_9;
-    QLabel *label_10;
-    QSpacerItem *horizontalSpacer_7;
-    QLineEdit *lineEdit;
-    QSpacerItem *horizontalSpacer_8;
-    QLabel *label_11;
-    QSpacerItem *horizontalSpacer_9;
-    QLabel *label_12;
     QSpacerItem *horizontalSpacer_10;
     QVBoxLayout *verticalLayout_11;
     QVBoxLayout *verticalLayout_2;
@@ -249,12 +253,10 @@ public:
         tabWidget->addTab(Heating, QString());
         Sinking = new QWidget();
         Sinking->setObjectName("Sinking");
-        widget = new QWidget(Sinking);
-        widget->setObjectName("widget");
-        widget->setGeometry(QRect(10, 20, 1041, 411));
-        horizontalLayout_2 = new QHBoxLayout(widget);
+        horizontalLayout_7 = new QHBoxLayout(Sinking);
+        horizontalLayout_7->setObjectName("horizontalLayout_7");
+        horizontalLayout_2 = new QHBoxLayout();
         horizontalLayout_2->setObjectName("horizontalLayout_2");
-        horizontalLayout_2->setContentsMargins(0, 0, 0, 0);
         verticalLayout_6 = new QVBoxLayout();
         verticalLayout_6->setObjectName("verticalLayout_6");
         horizontalLayout_8 = new QHBoxLayout();
@@ -263,13 +265,13 @@ public:
         verticalLayout_9->setObjectName("verticalLayout_9");
         horizontalLayout_3 = new QHBoxLayout();
         horizontalLayout_3->setObjectName("horizontalLayout_3");
-        connect_delta_server = new QCommandLinkButton(widget);
-        connect_delta_server->setObjectName("connect_delta_server");
-        sizePolicy.setHeightForWidth(connect_delta_server->sizePolicy().hasHeightForWidth());
-        connect_delta_server->setSizePolicy(sizePolicy);
-        connect_delta_server->setMinimumSize(QSize(100, 10));
+        connect_motion_axis = new QCommandLinkButton(Sinking);
+        connect_motion_axis->setObjectName("connect_motion_axis");
+        sizePolicy.setHeightForWidth(connect_motion_axis->sizePolicy().hasHeightForWidth());
+        connect_motion_axis->setSizePolicy(sizePolicy);
+        connect_motion_axis->setMinimumSize(QSize(100, 10));
 
-        horizontalLayout_3->addWidget(connect_delta_server);
+        horizontalLayout_3->addWidget(connect_motion_axis);
 
 
         verticalLayout_9->addLayout(horizontalLayout_3);
@@ -281,48 +283,118 @@ public:
 
         horizontalLayout_8->addItem(horizontalSpacer);
 
-        horizontalLayout_7 = new QHBoxLayout();
-        horizontalLayout_7->setObjectName("horizontalLayout_7");
-        label_7 = new QLabel(widget);
+        label_7 = new QLabel(Sinking);
         label_7->setObjectName("label_7");
 
-        horizontalLayout_7->addWidget(label_7);
+        horizontalLayout_8->addWidget(label_7);
 
         horizontalSpacer_2 = new QSpacerItem(40, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
 
-        horizontalLayout_7->addItem(horizontalSpacer_2);
+        horizontalLayout_8->addItem(horizontalSpacer_2);
 
-        delta_ready = new QLabel(widget);
+        delta_ready = new QLabel(Sinking);
         delta_ready->setObjectName("delta_ready");
         sizePolicy.setHeightForWidth(delta_ready->sizePolicy().hasHeightForWidth());
         delta_ready->setSizePolicy(sizePolicy);
+        delta_ready->setAutoFillBackground(true);
 
-        horizontalLayout_7->addWidget(delta_ready);
-
-
-        horizontalLayout_8->addLayout(horizontalLayout_7);
+        horizontalLayout_8->addWidget(delta_ready);
 
 
         verticalLayout_6->addLayout(horizontalLayout_8);
 
+        horizontalLayout_9 = new QHBoxLayout();
+        horizontalLayout_9->setObjectName("horizontalLayout_9");
+        label_10 = new QLabel(Sinking);
+        label_10->setObjectName("label_10");
+
+        horizontalLayout_9->addWidget(label_10);
+
+        horizontalSpacer_7 = new QSpacerItem(40, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
+
+        horizontalLayout_9->addItem(horizontalSpacer_7);
+
+        input_axis_cmd = new QLineEdit(Sinking);
+        input_axis_cmd->setObjectName("input_axis_cmd");
+        input_axis_cmd->setContextMenuPolicy(Qt::NoContextMenu);
+        input_axis_cmd->setClearButtonEnabled(true);
+
+        horizontalLayout_9->addWidget(input_axis_cmd);
+
+        horizontalSpacer_8 = new QSpacerItem(40, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
+
+        horizontalLayout_9->addItem(horizontalSpacer_8);
+
+        horizontalLayout_11 = new QHBoxLayout();
+        horizontalLayout_11->setObjectName("horizontalLayout_11");
+        horizontalLayout_10 = new QHBoxLayout();
+        horizontalLayout_10->setObjectName("horizontalLayout_10");
+        cmd_given_1 = new QLabel(Sinking);
+        cmd_given_1->setObjectName("cmd_given_1");
+
+        horizontalLayout_10->addWidget(cmd_given_1);
+
+        horizontalSpacer_11 = new QSpacerItem(40, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
+
+        horizontalLayout_10->addItem(horizontalSpacer_11);
+
+        cmd_given = new QLabel(Sinking);
+        cmd_given->setObjectName("cmd_given");
+        QSizePolicy sizePolicy2(QSizePolicy::Preferred, QSizePolicy::Fixed);
+        sizePolicy2.setHorizontalStretch(0);
+        sizePolicy2.setVerticalStretch(0);
+        sizePolicy2.setHeightForWidth(cmd_given->sizePolicy().hasHeightForWidth());
+        cmd_given->setSizePolicy(sizePolicy2);
+        cmd_given->setMinimumSize(QSize(100, 50));
+        cmd_given->setAutoFillBackground(true);
+
+        horizontalLayout_10->addWidget(cmd_given);
+
+
+        horizontalLayout_11->addLayout(horizontalLayout_10);
+
+
+        horizontalLayout_9->addLayout(horizontalLayout_11);
+
+        label_11 = new QLabel(Sinking);
+        label_11->setObjectName("label_11");
+
+        horizontalLayout_9->addWidget(label_11);
+
+        horizontalSpacer_9 = new QSpacerItem(40, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
+
+        horizontalLayout_9->addItem(horizontalSpacer_9);
+
+        axis_response = new QLabel(Sinking);
+        axis_response->setObjectName("axis_response");
+        sizePolicy2.setHeightForWidth(axis_response->sizePolicy().hasHeightForWidth());
+        axis_response->setSizePolicy(sizePolicy2);
+        axis_response->setMinimumSize(QSize(30, 50));
+        axis_response->setAutoFillBackground(true);
+
+        horizontalLayout_9->addWidget(axis_response);
+
+
+        verticalLayout_6->addLayout(horizontalLayout_9);
+
         horizontalLayout_4 = new QHBoxLayout();
         horizontalLayout_4->setObjectName("horizontalLayout_4");
-        connect_keyence_sensor = new QCommandLinkButton(widget);
-        connect_keyence_sensor->setObjectName("connect_keyence_sensor");
-        QSizePolicy sizePolicy2(QSizePolicy::Fixed, QSizePolicy::Fixed);
-        sizePolicy2.setHorizontalStretch(100);
-        sizePolicy2.setVerticalStretch(100);
-        sizePolicy2.setHeightForWidth(connect_keyence_sensor->sizePolicy().hasHeightForWidth());
-        connect_keyence_sensor->setSizePolicy(sizePolicy2);
-        connect_keyence_sensor->setMinimumSize(QSize(100, 10));
+        connect_distance_sensor = new QCommandLinkButton(Sinking);
+        connect_distance_sensor->setObjectName("connect_distance_sensor");
+        QSizePolicy sizePolicy3(QSizePolicy::Fixed, QSizePolicy::Fixed);
+        sizePolicy3.setHorizontalStretch(100);
+        sizePolicy3.setVerticalStretch(100);
+        sizePolicy3.setHeightForWidth(connect_distance_sensor->sizePolicy().hasHeightForWidth());
+        connect_distance_sensor->setSizePolicy(sizePolicy3);
+        connect_distance_sensor->setMinimumSize(QSize(100, 10));
 
-        horizontalLayout_4->addWidget(connect_keyence_sensor);
+        horizontalLayout_4->addWidget(connect_distance_sensor);
 
         horizontalSpacer_3 = new QSpacerItem(40, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
 
         horizontalLayout_4->addItem(horizontalSpacer_3);
 
-        label_8 = new QLabel(widget);
+        label_8 = new QLabel(Sinking);
         label_8->setObjectName("label_8");
 
         horizontalLayout_4->addWidget(label_8);
@@ -331,10 +403,11 @@ public:
 
         horizontalLayout_4->addItem(horizontalSpacer_4);
 
-        keyence_ready = new QLabel(widget);
+        keyence_ready = new QLabel(Sinking);
         keyence_ready->setObjectName("keyence_ready");
         sizePolicy.setHeightForWidth(keyence_ready->sizePolicy().hasHeightForWidth());
         keyence_ready->setSizePolicy(sizePolicy);
+        keyence_ready->setAutoFillBackground(true);
 
         horizontalLayout_4->addWidget(keyence_ready);
 
@@ -345,7 +418,7 @@ public:
         horizontalLayout_6->setObjectName("horizontalLayout_6");
         verticalLayout_8 = new QVBoxLayout();
         verticalLayout_8->setObjectName("verticalLayout_8");
-        run_sinking_process = new QCommandLinkButton(widget);
+        run_sinking_process = new QCommandLinkButton(Sinking);
         run_sinking_process->setObjectName("run_sinking_process");
         sizePolicy.setHeightForWidth(run_sinking_process->sizePolicy().hasHeightForWidth());
         run_sinking_process->setSizePolicy(sizePolicy);
@@ -357,26 +430,26 @@ public:
 
         verticalLayout_8->addItem(verticalSpacer);
 
-        stop_sinking_process = new QCommandLinkButton(widget);
+        stop_sinking_process = new QCommandLinkButton(Sinking);
         stop_sinking_process->setObjectName("stop_sinking_process");
-        QSizePolicy sizePolicy3(QSizePolicy::Maximum, QSizePolicy::Maximum);
-        sizePolicy3.setHorizontalStretch(0);
-        sizePolicy3.setVerticalStretch(0);
-        sizePolicy3.setHeightForWidth(stop_sinking_process->sizePolicy().hasHeightForWidth());
-        stop_sinking_process->setSizePolicy(sizePolicy3);
+        QSizePolicy sizePolicy4(QSizePolicy::Maximum, QSizePolicy::Maximum);
+        sizePolicy4.setHorizontalStretch(0);
+        sizePolicy4.setVerticalStretch(0);
+        sizePolicy4.setHeightForWidth(stop_sinking_process->sizePolicy().hasHeightForWidth());
+        stop_sinking_process->setSizePolicy(sizePolicy4);
 
         verticalLayout_8->addWidget(stop_sinking_process);
 
 
         horizontalLayout_6->addLayout(verticalLayout_8);
 
-        horizontalSpacer_6 = new QSpacerItem(40, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
+        horizontalSpacer_6 = new QSpacerItem(200, 20, QSizePolicy::Fixed, QSizePolicy::Minimum);
 
         horizontalLayout_6->addItem(horizontalSpacer_6);
 
         horizontalLayout_5 = new QHBoxLayout();
         horizontalLayout_5->setObjectName("horizontalLayout_5");
-        label_9 = new QLabel(widget);
+        label_9 = new QLabel(Sinking);
         label_9->setObjectName("label_9");
 
         horizontalLayout_5->addWidget(label_9);
@@ -385,10 +458,11 @@ public:
 
         horizontalLayout_5->addItem(horizontalSpacer_5);
 
-        sinking_finished = new QLabel(widget);
+        sinking_finished = new QLabel(Sinking);
         sinking_finished->setObjectName("sinking_finished");
         sizePolicy.setHeightForWidth(sinking_finished->sizePolicy().hasHeightForWidth());
         sinking_finished->setSizePolicy(sizePolicy);
+        sinking_finished->setAutoFillBackground(true);
 
         horizontalLayout_5->addWidget(sinking_finished);
 
@@ -397,43 +471,6 @@ public:
 
 
         verticalLayout_6->addLayout(horizontalLayout_6);
-
-        horizontalLayout_9 = new QHBoxLayout();
-        horizontalLayout_9->setObjectName("horizontalLayout_9");
-        label_10 = new QLabel(widget);
-        label_10->setObjectName("label_10");
-
-        horizontalLayout_9->addWidget(label_10);
-
-        horizontalSpacer_7 = new QSpacerItem(40, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
-
-        horizontalLayout_9->addItem(horizontalSpacer_7);
-
-        lineEdit = new QLineEdit(widget);
-        lineEdit->setObjectName("lineEdit");
-
-        horizontalLayout_9->addWidget(lineEdit);
-
-        horizontalSpacer_8 = new QSpacerItem(40, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
-
-        horizontalLayout_9->addItem(horizontalSpacer_8);
-
-        label_11 = new QLabel(widget);
-        label_11->setObjectName("label_11");
-
-        horizontalLayout_9->addWidget(label_11);
-
-        horizontalSpacer_9 = new QSpacerItem(40, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
-
-        horizontalLayout_9->addItem(horizontalSpacer_9);
-
-        label_12 = new QLabel(widget);
-        label_12->setObjectName("label_12");
-
-        horizontalLayout_9->addWidget(label_12);
-
-
-        verticalLayout_6->addLayout(horizontalLayout_9);
 
 
         horizontalLayout_2->addLayout(verticalLayout_6);
@@ -447,7 +484,7 @@ public:
         verticalLayout_11->setSizeConstraint(QLayout::SetFixedSize);
         verticalLayout_2 = new QVBoxLayout();
         verticalLayout_2->setObjectName("verticalLayout_2");
-        label_2 = new QLabel(widget);
+        label_2 = new QLabel(Sinking);
         label_2->setObjectName("label_2");
         sizePolicy.setHeightForWidth(label_2->sizePolicy().hasHeightForWidth());
         label_2->setSizePolicy(sizePolicy);
@@ -456,7 +493,7 @@ public:
 
         verticalLayout_2->addWidget(label_2);
 
-        distance_head1 = new QLCDNumber(widget);
+        distance_head1 = new QLCDNumber(Sinking);
         distance_head1->setObjectName("distance_head1");
         sizePolicy.setHeightForWidth(distance_head1->sizePolicy().hasHeightForWidth());
         distance_head1->setSizePolicy(sizePolicy);
@@ -472,7 +509,7 @@ public:
 
         verticalLayout_3 = new QVBoxLayout();
         verticalLayout_3->setObjectName("verticalLayout_3");
-        label_3 = new QLabel(widget);
+        label_3 = new QLabel(Sinking);
         label_3->setObjectName("label_3");
         sizePolicy.setHeightForWidth(label_3->sizePolicy().hasHeightForWidth());
         label_3->setSizePolicy(sizePolicy);
@@ -481,7 +518,7 @@ public:
 
         verticalLayout_3->addWidget(label_3);
 
-        time_sinking = new QLCDNumber(widget);
+        time_sinking = new QLCDNumber(Sinking);
         time_sinking->setObjectName("time_sinking");
         sizePolicy.setHeightForWidth(time_sinking->sizePolicy().hasHeightForWidth());
         time_sinking->setSizePolicy(sizePolicy);
@@ -497,7 +534,7 @@ public:
 
         verticalLayout_7 = new QVBoxLayout();
         verticalLayout_7->setObjectName("verticalLayout_7");
-        label_6 = new QLabel(widget);
+        label_6 = new QLabel(Sinking);
         label_6->setObjectName("label_6");
         sizePolicy.setHeightForWidth(label_6->sizePolicy().hasHeightForWidth());
         label_6->setSizePolicy(sizePolicy);
@@ -506,7 +543,7 @@ public:
 
         verticalLayout_7->addWidget(label_6);
 
-        delta_pos = new QLCDNumber(widget);
+        delta_pos = new QLCDNumber(Sinking);
         delta_pos->setObjectName("delta_pos");
         sizePolicy.setHeightForWidth(delta_pos->sizePolicy().hasHeightForWidth());
         delta_pos->setSizePolicy(sizePolicy);
@@ -522,6 +559,9 @@ public:
 
 
         horizontalLayout_2->addLayout(verticalLayout_11);
+
+
+        horizontalLayout_7->addLayout(horizontalLayout_2);
 
         tabWidget->addTab(Sinking, QString());
         Cnt_Alignment = new QWidget();
@@ -618,19 +658,21 @@ public:
         run_heating_process->setText(QCoreApplication::translate("MainWindow", "run heating process", nullptr));
         label->setText(QCoreApplication::translate("MainWindow", "temperature (\302\260C)", nullptr));
         tabWidget->setTabText(tabWidget->indexOf(Heating), QCoreApplication::translate("MainWindow", "Heating", nullptr));
-        connect_delta_server->setText(QCoreApplication::translate("MainWindow", "connect motion axis", nullptr));
+        connect_motion_axis->setText(QCoreApplication::translate("MainWindow", "connect motion axis", nullptr));
         label_7->setText(QCoreApplication::translate("MainWindow", "axis_ready", nullptr));
         delta_ready->setText(QCoreApplication::translate("MainWindow", "false", nullptr));
-        connect_keyence_sensor->setText(QCoreApplication::translate("MainWindow", "connect distance sensor", nullptr));
+        label_10->setText(QCoreApplication::translate("MainWindow", "axis_input_command", nullptr));
+        cmd_given_1->setText(QCoreApplication::translate("MainWindow", "cmd_given: ", nullptr));
+        cmd_given->setText(QString());
+        label_11->setText(QCoreApplication::translate("MainWindow", "axis_response", nullptr));
+        axis_response->setText(QCoreApplication::translate("MainWindow", "idle", nullptr));
+        connect_distance_sensor->setText(QCoreApplication::translate("MainWindow", "connect distance sensor", nullptr));
         label_8->setText(QCoreApplication::translate("MainWindow", "distance_ready", nullptr));
         keyence_ready->setText(QCoreApplication::translate("MainWindow", "false", nullptr));
         run_sinking_process->setText(QCoreApplication::translate("MainWindow", "run sinking process", nullptr));
         stop_sinking_process->setText(QCoreApplication::translate("MainWindow", "stop sinking process", nullptr));
         label_9->setText(QCoreApplication::translate("MainWindow", "process_finished", nullptr));
         sinking_finished->setText(QCoreApplication::translate("MainWindow", "false", nullptr));
-        label_10->setText(QCoreApplication::translate("MainWindow", "axis_input_command", nullptr));
-        label_11->setText(QCoreApplication::translate("MainWindow", "axis_response", nullptr));
-        label_12->setText(QCoreApplication::translate("MainWindow", "idle", nullptr));
         label_2->setText(QCoreApplication::translate("MainWindow", "keyence mesured distance(mm)", nullptr));
         label_3->setText(QCoreApplication::translate("MainWindow", "process time elapsed (sec)", nullptr));
         label_6->setText(QCoreApplication::translate("MainWindow", "axis current position (mm)", nullptr));

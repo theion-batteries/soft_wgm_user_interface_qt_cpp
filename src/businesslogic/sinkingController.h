@@ -21,12 +21,15 @@ public:
 signals:
     void pressed();
     void triggered();
+    void returnPressed(); // line edit enter key pressed
 public slots:
-    void on_connect_keyence_sensor_clicked();
+    void on_connect_motion_axis_clicked();
+    void on_connect_distance_sensor_clicked();
     void on_run_sinking_process_clicked();
     void on_stop_sinking_process_clicked();
     void on_actionwhs_config_triggered(); 
-    QString get_delta_status();
+    QString get_axis_status();
+    QString get_sensor_status();
     
 
     // view distance sensors

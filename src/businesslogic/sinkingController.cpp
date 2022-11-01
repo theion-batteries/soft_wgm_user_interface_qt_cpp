@@ -12,9 +12,12 @@ sinkingController::~sinkingController()
     std::cout << "sinking controller desctructed" << std::endl;
 }
 
+void sinkingController::on_connect_distance_sensor_clicked()
+{
+    proc_sinking_model.sinkingProcessHandler->get_sys_obj()->connect_keyence();
+}
 
-
-void sinkingController::on_connect_keyence_sensor_clicked()
+void sinkingController::on_connect_motion_axis_clicked()
 {
     proc_sinking_model.sinkingProcessHandler->get_sys_obj()->connect_keyence();
 }
@@ -47,7 +50,15 @@ void  sinkingController::on_actionwhs_config_triggered()
 #endif
 
 }
-QString sinkingController::get_delta_status()
+QString sinkingController::get_axis_status()
+{
+
+    std::cout<<proc_sinking_model.sinkingProcessHandler->get_sys_obj()->getSubSysStatus("delta")<<std::endl;
+    if (proc_sinking_model.sinkingProcessHandler->get_sys_obj()->getSubSysStatus("delta") == true) return "true";
+    else return "false";
+}
+
+QString sinkingController::get_sensor_status()
 {
 
     std::cout<<proc_sinking_model.sinkingProcessHandler->get_sys_obj()->getSubSysStatus("delta")<<std::endl;
