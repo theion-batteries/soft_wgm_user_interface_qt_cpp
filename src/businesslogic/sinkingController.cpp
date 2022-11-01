@@ -12,14 +12,7 @@ sinkingController::~sinkingController()
     std::cout << "sinking controller desctructed" << std::endl;
 }
 
-void sinkingController::on_execute_delta_subprocess_clicked()
-{
-    proc_sinking_model.sinkingProcessHandler->get_sys_obj()->execute_delta_sub();
-}
-void sinkingController::on_connect_delta_clicked()
-{
-    proc_sinking_model.sinkingProcessHandler->get_sys_obj()->getSubSysController()->connect_to_delta_server();
-}
+
 
 void sinkingController::on_connect_keyence_sensor_clicked()
 {

@@ -10,14 +10,7 @@ sinkingView::sinkingView(Ui::MainWindow* uiPtr)
     connect(ui->actionwhs_config, &QAction::triggered, [this]() {
         sinkControll.on_actionwhs_config_triggered();
         });
-    // connect cmd button execute delta subproc
-    connect(ui->execute_delta_subprocess, &QAbstractButton::pressed, [this]() {
-        sinkControll.on_execute_delta_subprocess_clicked();
-        });
-    // connect cmd button connect delta
-    connect(ui->connect_delta_server, &QAbstractButton::pressed, [this]() {
-        sinkControll.on_connect_delta_clicked();
-        });
+
     // connect cmd button execute keyence
     connect(ui->connect_keyence_sensor, &QAbstractButton::pressed, [this]() {
         sinkControll.on_connect_keyence_sensor_clicked();

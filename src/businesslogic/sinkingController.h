@@ -11,7 +11,6 @@
 // mvc
 #include <atomic>
 #include "sinkingModel.h"
-//#include "sinkingView.h"
 class sinkingController : public QObject
 {
     Q_OBJECT
@@ -23,8 +22,6 @@ signals:
     void pressed();
     void triggered();
 public slots:
-    void on_execute_delta_subprocess_clicked();
-    void on_connect_delta_clicked();
     void on_connect_keyence_sensor_clicked();
     void on_run_sinking_process_clicked();
     void on_stop_sinking_process_clicked();
