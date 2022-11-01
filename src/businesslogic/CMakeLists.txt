@@ -11,6 +11,16 @@ add_library(controller STATIC
     controller.h
     sinkingController.h
     sinkingController.cpp
+    cntAlignController.h
+    cntAlignController.cpp
+    mainController.h
+    mainController.cpp
+    heatingController.h
+    heatingController.cpp
+    extractingController.h
+    extractingController.cpp
+    coolingController.h
+    coolingController.cpp
 )
 target_link_libraries(controller PRIVATE Qt6::Core 
                                  PRIVATE Qt6::Widgets

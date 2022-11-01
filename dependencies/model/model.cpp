@@ -2,8 +2,8 @@
 
 model::model()
 {
-    std::cout << "model sinking constructed" << std::endl;
-    processManager = new wgm_processes::sinking_process();
+    std::cout << "model constructed" << std::endl;
+    processManager = new wgm_processes::process_management();
 }
 
 model::~model()

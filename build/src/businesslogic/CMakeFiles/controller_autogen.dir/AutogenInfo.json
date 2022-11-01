@@ -14,9 +14,39 @@
 	"HEADERS" : 
 	[
 		[
+			"C:/Users/SamiDhiab/Theion_Repos/soft_wgm_user_interface_qt_cpp/src/businesslogic/cntAlignController.h",
+			"MU",
+			"EWIEGA46WW/moc_cntAlignController.cpp",
+			null
+		],
+		[
 			"C:/Users/SamiDhiab/Theion_Repos/soft_wgm_user_interface_qt_cpp/src/businesslogic/controller.h",
 			"MU",
 			"EWIEGA46WW/moc_controller.cpp",
+			null
+		],
+		[
+			"C:/Users/SamiDhiab/Theion_Repos/soft_wgm_user_interface_qt_cpp/src/businesslogic/coolingController.h",
+			"MU",
+			"EWIEGA46WW/moc_coolingController.cpp",
+			null
+		],
+		[
+			"C:/Users/SamiDhiab/Theion_Repos/soft_wgm_user_interface_qt_cpp/src/businesslogic/extractingController.h",
+			"MU",
+			"EWIEGA46WW/moc_extractingController.cpp",
+			null
+		],
+		[
+			"C:/Users/SamiDhiab/Theion_Repos/soft_wgm_user_interface_qt_cpp/src/businesslogic/heatingController.h",
+			"MU",
+			"EWIEGA46WW/moc_heatingController.cpp",
+			null
+		],
+		[
+			"C:/Users/SamiDhiab/Theion_Repos/soft_wgm_user_interface_qt_cpp/src/businesslogic/mainController.h",
+			"MU",
+			"EWIEGA46WW/moc_mainController.cpp",
 			null
 		],
 		[
@@ -125,7 +155,32 @@
 	"SOURCES" : 
 	[
 		[
+			"C:/Users/SamiDhiab/Theion_Repos/soft_wgm_user_interface_qt_cpp/src/businesslogic/cntAlignController.cpp",
+			"MU",
+			null
+		],
+		[
 			"C:/Users/SamiDhiab/Theion_Repos/soft_wgm_user_interface_qt_cpp/src/businesslogic/controller.cpp",
+			"MU",
+			null
+		],
+		[
+			"C:/Users/SamiDhiab/Theion_Repos/soft_wgm_user_interface_qt_cpp/src/businesslogic/coolingController.cpp",
+			"MU",
+			null
+		],
+		[
+			"C:/Users/SamiDhiab/Theion_Repos/soft_wgm_user_interface_qt_cpp/src/businesslogic/extractingController.cpp",
+			"MU",
+			null
+		],
+		[
+			"C:/Users/SamiDhiab/Theion_Repos/soft_wgm_user_interface_qt_cpp/src/businesslogic/heatingController.cpp",
+			"MU",
+			null
+		],
+		[
+			"C:/Users/SamiDhiab/Theion_Repos/soft_wgm_user_interface_qt_cpp/src/businesslogic/mainController.cpp",
 			"MU",
 			null
 		],

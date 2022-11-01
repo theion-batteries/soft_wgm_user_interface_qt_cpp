@@ -354,6 +354,16 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
     <ClInclude Include="C:\Users\SamiDhiab\Theion_Repos\soft_wgm_user_interface_qt_cpp\dependencies\model\model.h" />
     <ClInclude Include="C:\Users\SamiDhiab\Theion_Repos\soft_wgm_user_interface_qt_cpp\dependencies\model\sinkingModel.h" />
     <ClCompile Include="C:\Users\SamiDhiab\Theion_Repos\soft_wgm_user_interface_qt_cpp\dependencies\model\sinkingModel.cpp" />
+    <ClInclude Include="C:\Users\SamiDhiab\Theion_Repos\soft_wgm_user_interface_qt_cpp\dependencies\model\cntAlignModel.h" />
+    <ClCompile Include="C:\Users\SamiDhiab\Theion_Repos\soft_wgm_user_interface_qt_cpp\dependencies\model\cntAlignModel.cpp" />
+    <ClInclude Include="C:\Users\SamiDhiab\Theion_Repos\soft_wgm_user_interface_qt_cpp\dependencies\model\mainModel.h" />
+    <ClCompile Include="C:\Users\SamiDhiab\Theion_Repos\soft_wgm_user_interface_qt_cpp\dependencies\model\mainModel.cpp" />
+    <ClInclude Include="C:\Users\SamiDhiab\Theion_Repos\soft_wgm_user_interface_qt_cpp\dependencies\model\heatingModel.h" />
+    <ClCompile Include="C:\Users\SamiDhiab\Theion_Repos\soft_wgm_user_interface_qt_cpp\dependencies\model\heatingModel.cpp" />
+    <ClInclude Include="C:\Users\SamiDhiab\Theion_Repos\soft_wgm_user_interface_qt_cpp\dependencies\model\extractingModel.h" />
+    <ClCompile Include="C:\Users\SamiDhiab\Theion_Repos\soft_wgm_user_interface_qt_cpp\dependencies\model\extractingModel.cpp" />
+    <ClInclude Include="C:\Users\SamiDhiab\Theion_Repos\soft_wgm_user_interface_qt_cpp\dependencies\model\coolingModel.h" />
+    <ClCompile Include="C:\Users\SamiDhiab\Theion_Repos\soft_wgm_user_interface_qt_cpp\dependencies\model\coolingModel.cpp" />
     <ClCompile Include="C:\Users\SamiDhiab\Theion_Repos\soft_wgm_user_interface_qt_cpp\build\dependencies\model\model_autogen\mocs_compilation_Release.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">true</ExcludedFromBuild>

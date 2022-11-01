@@ -354,6 +354,16 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
     <ClInclude Include="C:\Users\SamiDhiab\Theion_Repos\soft_wgm_user_interface_qt_cpp\src\businesslogic\controller.h" />
     <ClInclude Include="C:\Users\SamiDhiab\Theion_Repos\soft_wgm_user_interface_qt_cpp\src\businesslogic\sinkingController.h" />
     <ClCompile Include="C:\Users\SamiDhiab\Theion_Repos\soft_wgm_user_interface_qt_cpp\src\businesslogic\sinkingController.cpp" />
+    <ClInclude Include="C:\Users\SamiDhiab\Theion_Repos\soft_wgm_user_interface_qt_cpp\src\businesslogic\cntAlignController.h" />
+    <ClCompile Include="C:\Users\SamiDhiab\Theion_Repos\soft_wgm_user_interface_qt_cpp\src\businesslogic\cntAlignController.cpp" />
+    <ClInclude Include="C:\Users\SamiDhiab\Theion_Repos\soft_wgm_user_interface_qt_cpp\src\businesslogic\mainController.h" />
+    <ClCompile Include="C:\Users\SamiDhiab\Theion_Repos\soft_wgm_user_interface_qt_cpp\src\businesslogic\mainController.cpp" />
+    <ClInclude Include="C:\Users\SamiDhiab\Theion_Repos\soft_wgm_user_interface_qt_cpp\src\businesslogic\heatingController.h" />
+    <ClCompile Include="C:\Users\SamiDhiab\Theion_Repos\soft_wgm_user_interface_qt_cpp\src\businesslogic\heatingController.cpp" />
+    <ClInclude Include="C:\Users\SamiDhiab\Theion_Repos\soft_wgm_user_interface_qt_cpp\src\businesslogic\extractingController.h" />
+    <ClCompile Include="C:\Users\SamiDhiab\Theion_Repos\soft_wgm_user_interface_qt_cpp\src\businesslogic\extractingController.cpp" />
+    <ClInclude Include="C:\Users\SamiDhiab\Theion_Repos\soft_wgm_user_interface_qt_cpp\src\businesslogic\coolingController.h" />
+    <ClCompile Include="C:\Users\SamiDhiab\Theion_Repos\soft_wgm_user_interface_qt_cpp\src\businesslogic\coolingController.cpp" />
     <ClCompile Include="C:\Users\SamiDhiab\Theion_Repos\soft_wgm_user_interface_qt_cpp\build\src\businesslogic\controller_autogen\mocs_compilation_Release.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">true</ExcludedFromBuild>

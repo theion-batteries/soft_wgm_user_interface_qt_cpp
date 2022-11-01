@@ -3,6 +3,24 @@ add_library(model STATIC
     model.h
     sinkingModel.h
     sinkingModel.cpp
+    cntAlignModel.h
+    cntAlignModel.cpp
+    mainModel.h
+    mainModel.cpp
+    heatingModel.h
+    heatingModel.cpp
+    extractingModel.h
+    extractingModel.cpp
+    coolingModel.h
+    coolingModel.cpp
+
+
+
+
+
+
+
+
 )
 target_link_libraries(model PRIVATE Qt6::Core 
                             PUBLIC wgm_static)

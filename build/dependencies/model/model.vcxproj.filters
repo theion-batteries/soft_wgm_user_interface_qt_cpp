@@ -10,6 +10,21 @@
     <ClCompile Include="C:\Users\SamiDhiab\Theion_Repos\soft_wgm_user_interface_qt_cpp\dependencies\model\sinkingModel.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="C:\Users\SamiDhiab\Theion_Repos\soft_wgm_user_interface_qt_cpp\dependencies\model\cntAlignModel.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\SamiDhiab\Theion_Repos\soft_wgm_user_interface_qt_cpp\dependencies\model\mainModel.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\SamiDhiab\Theion_Repos\soft_wgm_user_interface_qt_cpp\dependencies\model\heatingModel.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\SamiDhiab\Theion_Repos\soft_wgm_user_interface_qt_cpp\dependencies\model\extractingModel.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\SamiDhiab\Theion_Repos\soft_wgm_user_interface_qt_cpp\dependencies\model\coolingModel.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
     <ClCompile Include="C:\Users\SamiDhiab\Theion_Repos\soft_wgm_user_interface_qt_cpp\build\dependencies\model\model_autogen\mocs_compilation_Release.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
@@ -25,6 +40,21 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="C:\Users\SamiDhiab\Theion_Repos\soft_wgm_user_interface_qt_cpp\dependencies\model\sinkingModel.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\SamiDhiab\Theion_Repos\soft_wgm_user_interface_qt_cpp\dependencies\model\cntAlignModel.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\SamiDhiab\Theion_Repos\soft_wgm_user_interface_qt_cpp\dependencies\model\mainModel.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\SamiDhiab\Theion_Repos\soft_wgm_user_interface_qt_cpp\dependencies\model\heatingModel.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\SamiDhiab\Theion_Repos\soft_wgm_user_interface_qt_cpp\dependencies\model\extractingModel.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\SamiDhiab\Theion_Repos\soft_wgm_user_interface_qt_cpp\dependencies\model\coolingModel.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
