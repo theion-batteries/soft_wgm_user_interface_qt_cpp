@@ -4,6 +4,21 @@
     <ClCompile Include="C:\Users\SamiDhiab\Theion_Repos\soft_wgm_user_interface_qt_cpp\build\dependencies\software_wgm_v2_cpp\dependencies\soft_wafer_holder_system_controller\whs_static_autogen\mocs_compilation_Debug.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="C:\Users\SamiDhiab\Theion_Repos\soft_wgm_user_interface_qt_cpp\dependencies\software_wgm_v2_cpp\dependencies\soft_wafer_holder_system_controller\src\Iaxis_motion.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\SamiDhiab\Theion_Repos\soft_wgm_user_interface_qt_cpp\dependencies\software_wgm_v2_cpp\dependencies\soft_wafer_holder_system_controller\src\Idistance_sensor.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\SamiDhiab\Theion_Repos\soft_wgm_user_interface_qt_cpp\dependencies\software_wgm_v2_cpp\dependencies\soft_wafer_holder_system_controller\src\delta_motion.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\SamiDhiab\Theion_Repos\soft_wgm_user_interface_qt_cpp\dependencies\software_wgm_v2_cpp\dependencies\soft_wafer_holder_system_controller\src\keyence_sensor.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\SamiDhiab\Theion_Repos\soft_wgm_user_interface_qt_cpp\dependencies\software_wgm_v2_cpp\dependencies\soft_wafer_holder_system_controller\src\linear_motion.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
     <ClCompile Include="C:\Users\SamiDhiab\Theion_Repos\soft_wgm_user_interface_qt_cpp\dependencies\software_wgm_v2_cpp\dependencies\soft_wafer_holder_system_controller\src\whs_controller.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>

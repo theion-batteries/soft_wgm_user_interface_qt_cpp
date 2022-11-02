@@ -86,6 +86,31 @@
 	"SOURCES" : 
 	[
 		[
+			"C:/Users/SamiDhiab/Theion_Repos/soft_wgm_user_interface_qt_cpp/dependencies/software_wgm_v2_cpp/dependencies/soft_wafer_holder_system_controller/src/Iaxis_motion.cpp",
+			"MU",
+			null
+		],
+		[
+			"C:/Users/SamiDhiab/Theion_Repos/soft_wgm_user_interface_qt_cpp/dependencies/software_wgm_v2_cpp/dependencies/soft_wafer_holder_system_controller/src/Idistance_sensor.cpp",
+			"MU",
+			null
+		],
+		[
+			"C:/Users/SamiDhiab/Theion_Repos/soft_wgm_user_interface_qt_cpp/dependencies/software_wgm_v2_cpp/dependencies/soft_wafer_holder_system_controller/src/delta_motion.cpp",
+			"MU",
+			null
+		],
+		[
+			"C:/Users/SamiDhiab/Theion_Repos/soft_wgm_user_interface_qt_cpp/dependencies/software_wgm_v2_cpp/dependencies/soft_wafer_holder_system_controller/src/keyence_sensor.cpp",
+			"MU",
+			null
+		],
+		[
+			"C:/Users/SamiDhiab/Theion_Repos/soft_wgm_user_interface_qt_cpp/dependencies/software_wgm_v2_cpp/dependencies/soft_wafer_holder_system_controller/src/linear_motion.cpp",
+			"MU",
+			null
+		],
+		[
 			"C:/Users/SamiDhiab/Theion_Repos/soft_wgm_user_interface_qt_cpp/dependencies/software_wgm_v2_cpp/dependencies/soft_wafer_holder_system_controller/src/whs_controller.cpp",
 			"MU",
 			null
