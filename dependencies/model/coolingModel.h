@@ -11,7 +11,7 @@
 
 #pragma once
 #include <iostream>
-#include "process_manager.h"
+#include "cooling_process.h"
 
 
 class coolingModel 

@@ -11,7 +11,8 @@
 
 #pragma once
 #include <iostream>
-#include "process_manager.h"
+#include "sinking_process.h"
+#include "extracting_process.h"
 
 
 class extractingModel 
