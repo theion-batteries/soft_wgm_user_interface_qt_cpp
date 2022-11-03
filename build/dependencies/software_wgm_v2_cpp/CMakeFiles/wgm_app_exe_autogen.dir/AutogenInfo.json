@@ -86,11 +86,6 @@
 	"SOURCES" : 
 	[
 		[
-			"C:/Users/SamiDhiab/Theion_Repos/soft_wgm_user_interface_qt_cpp/dependencies/software_wgm_v2_cpp/src/feedback_management.cpp",
-			"MU",
-			null
-		],
-		[
 			"C:/Users/SamiDhiab/Theion_Repos/soft_wgm_user_interface_qt_cpp/dependencies/software_wgm_v2_cpp/src/main.cpp",
 			"MU",
 			null
