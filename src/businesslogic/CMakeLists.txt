@@ -6,21 +6,12 @@ endif()
 # pass variable of config file
 add_definitions(-DWHS_CONFIG="${WHS_CONFIG}") 
 
-add_library(controller STATIC
-    controller.cpp
-    controller.h
-    sinkingController.h
-    sinkingController.cpp
-    cntAlignController.h
-    cntAlignController.cpp
-    mainController.h
-    mainController.cpp
-    heatingController.h
-    heatingController.cpp
-    extractingController.h
-    extractingController.cpp
-    coolingController.h
-    coolingController.cpp
+file(GLOB PROJECT_SOURCES
+       "${CMAKE_CURRENT_SOURCE_DIR}/*.cpp"
+        )
+add_library(controller STATIC ${PROJECT_SOURCES}
+
+
 )
 target_link_libraries(controller PRIVATE Qt6::Core 
                                  PRIVATE Qt6::Widgets

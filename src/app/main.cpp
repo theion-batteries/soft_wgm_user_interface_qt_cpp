@@ -6,5 +6,6 @@ int main(int argc, char *argv[])
     MainWindow w;
     w.setWindowTitle("Wafer Growing System User Interface");
     w.show();
+    
     return a.exec();
 }

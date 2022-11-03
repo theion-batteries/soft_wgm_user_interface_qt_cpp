@@ -12,12 +12,8 @@
 #include <QTabWidget>
 #include <QtConcurrent>
 // app headers
-#include "sinkingView.h"
-#include "cntAlignView.h"
-#include "coolingView.h"
-#include "heatingView.h"
-#include "extractingView.h"
-#include "mainView.h"
+#include "processTabView.h"
+#include "menuView.h"
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
@@ -35,12 +31,14 @@ public slots:
 private:
     Ui::MainWindow* ui;
 /****************   view layer ******************/
-    // view sinking
+    /********** process Tab View *********************/
     sinkingView* sinkView;
     cntAlignView* cntView;
     heatingView* heatView;
     extractingView* extractView;
     mainView* managerView;
-
+    /********** menu View *********************/
+    menuEditView* editView;
+    menuDebugView* debugView;
 };
 #endif // MAINWINDOW_H

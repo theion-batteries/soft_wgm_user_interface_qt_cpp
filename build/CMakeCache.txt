@@ -593,8 +593,6 @@ CMAKE_STATIC_LINKER_FLAGS_RELWITHDEBINFO-ADVANCED:INTERNAL=1
 CMAKE_VERBOSE_MAKEFILE-ADVANCED:INTERNAL=1
 //export targets
 EXPORT_TARGETS:INTERNAL=yaml-cpp
-//Details about finding Python
-FIND_PACKAGE_MESSAGE_DETAILS_Python:INTERNAL=[C:/Users/SamiDhiab/AppData/Local/Programs/Python/Python39/python.exe][cfound components: Interpreter ][v3.9.7()]
 //Details about finding Python3
 FIND_PACKAGE_MESSAGE_DETAILS_Python3:INTERNAL=[C:/Users/SamiDhiab/AppData/Local/Programs/Python/Python39/python.exe][C:/Users/SamiDhiab/AppData/Local/Programs/Python/Python39/libs/python39.lib][C:/Users/SamiDhiab/AppData/Local/Programs/Python/Python39/include][cfound components: Interpreter Development Development.Module Development.Embed ][v3.9.7()]
 //Details about finding Threads
@@ -1340,19 +1338,4 @@ _Python3_LIBRARY_DEBUG:INTERNAL=_Python3_LIBRARY_DEBUG-NOTFOUND
 _Python3_LIBRARY_RELEASE:INTERNAL=C:/Users/SamiDhiab/AppData/Local/Programs/Python/Python39/libs/python39.lib
 //Path to a library.
 _Python3_RUNTIME_LIBRARY_RELEASE:INTERNAL=C:/Users/SamiDhiab/AppData/Local/Programs/Python/Python39/python39.dll
-_Python_DEVELOPMENT_EMBED_SIGNATURE:INTERNAL=1dc15aaa06f4fa4c9d48827b89ecb3ff
-_Python_DEVELOPMENT_MODULE_SIGNATURE:INTERNAL=1dc15aaa06f4fa4c9d48827b89ecb3ff
-//Path to a program.
-_Python_EXECUTABLE:INTERNAL=C:/Users/SamiDhiab/AppData/Local/Programs/Python/Python39/python.exe
-//Path to a file.
-_Python_INCLUDE_DIR:INTERNAL=C:/Users/SamiDhiab/AppData/Local/Programs/Python/Python39/include
-//Python Properties
-_Python_INTERPRETER_PROPERTIES:INTERNAL=Python;3;9;7;64;;cp39-win_amd64;C:\Users\SamiDhiab\AppData\Local\Programs\Python\Python39\Lib;C:\Users\SamiDhiab\AppData\Local\Programs\Python\Python39\Lib;C:\Users\SamiDhiab\AppData\Local\Programs\Python\Python39\Lib\site-packages;C:\Users\SamiDhiab\AppData\Local\Programs\Python\Python39\Lib\site-packages
-_Python_INTERPRETER_SIGNATURE:INTERNAL=8471351b16d0f07cae20c2c789fa8d12
-//Path to a library.
-_Python_LIBRARY_DEBUG:INTERNAL=_Python_LIBRARY_DEBUG-NOTFOUND
-//Path to a library.
-_Python_LIBRARY_RELEASE:INTERNAL=C:/Users/SamiDhiab/AppData/Local/Programs/Python/Python39/libs/python39.lib
-//Path to a library.
-_Python_RUNTIME_LIBRARY_RELEASE:INTERNAL=C:/Users/SamiDhiab/AppData/Local/Programs/Python/Python39/python39.dll
 

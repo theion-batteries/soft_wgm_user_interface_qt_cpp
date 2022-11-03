@@ -12,12 +12,12 @@ sinkingController::~sinkingController()
     std::cout << "sinking controller desctructed" << std::endl;
 }
 
-void sinkingController::on_connect_distance_sensor_clicked()
+void sinkingController::on_sink_connect_distance_sensor_clicked()
 {
     proc_sinking_model.sinkingProcessHandler->get_sys_ptr()->connect_sensor();
 }
 
-void sinkingController::on_connect_motion_axis_clicked()
+void sinkingController::on_sink_connect_motion_axis_clicked()
 {
     proc_sinking_model.sinkingProcessHandler->get_sys_ptr()->connect_sensor();
 }
@@ -42,14 +42,7 @@ void sinkingController::passLcdNum(QLCDNumber* Lcd)
     time_elapsed = 0;
 }
 
-void  sinkingController::on_actionwhs_config_triggered()
-{
-#ifdef WHS_CONFIG
-    qInfo() << "opening whs config yaml file in notepad";
-    QProcess::startDetached("C:\\Windows\\system32\\notepad.exe", {WHS_CONFIG});
-#endif
 
-}
 QString sinkingController::get_axis_status()
 {
 

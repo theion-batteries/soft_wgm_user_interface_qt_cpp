@@ -5,8 +5,10 @@ MainWindow::MainWindow(QWidget* parent)
 {
     /********** General UI Setup*********************/
     ui->setupUi(this);
-
-    /********** Sinking View *********************/
+    /********** menu View *********************/
+    editView= new editView(getUi());
+    debugView= new debugView(getUi());
+    /********** process Tab View *********************/
     managerView = new mainView(getUi());
     sinkView = new sinkingView(getUi());
     heatView = new heatingView(getUi());

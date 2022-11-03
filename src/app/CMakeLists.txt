@@ -24,28 +24,12 @@ find_package(QT NAMES Qt6 Qt5 REQUIRED COMPONENTS Widgets Concurrent )
 find_package(Qt${QT_VERSION_MAJOR} REQUIRED COMPONENTS Widgets Concurrent )
 
 
-set(PROJECT_SOURCES
-        main.cpp
-        mainwindow.cpp
-        mainwindow.h
+# pass variable of config file
+add_definitions(-DWHS_CONFIG="${WHS_CONFIG}") 
+
+file(GLOB PROJECT_SOURCES
         mainwindow.ui
-        view.h
-        view.cpp
-        sinkingView.h
-        sinkingView.cpp
-        cntAlignView.h
-        cntAlignView.cpp
-        mainView.h
-        mainView.cpp
-        heatingView.h
-        heatingView.cpp
-        extractingView.h
-        extractingView.cpp
-        coolingView.h
-        coolingView.cpp
-
-
-
+       "${CMAKE_CURRENT_SOURCE_DIR}/*.cpp"
         )
 
 if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)
@@ -69,6 +53,8 @@ endif()
 
 target_link_libraries(wgm_view PRIVATE Qt${QT_VERSION_MAJOR}::Widgets Qt${QT_VERSION_MAJOR}::Concurrent)
 target_link_libraries(wgm_view PUBLIC controller)
+
+target_include_directories(wgm_view PUBLIC ${CMAKE_CURRENT_SOURCE_DIR})
 
 set_target_properties(wgm_view PROPERTIES
     MACOSX_BUNDLE_GUI_IDENTIFIER my.example.com
