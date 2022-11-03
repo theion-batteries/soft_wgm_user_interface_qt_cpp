@@ -6,8 +6,8 @@ MainWindow::MainWindow(QWidget* parent)
     /********** General UI Setup*********************/
     ui->setupUi(this);
     /********** menu View *********************/
-    editView= new editView(getUi());
-    debugView= new debugView(getUi());
+    editView= new menuEditView(getUi());
+    debugView= new menuDebugView(getUi());
     /********** process Tab View *********************/
     managerView = new mainView(getUi());
     sinkView = new sinkingView(getUi());
