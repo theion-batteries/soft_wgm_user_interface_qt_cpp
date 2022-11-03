@@ -7,5 +7,6 @@
 #include <EWIEGA46WW/moc_menuDebugView.cpp>
 #include <EWIEGA46WW/moc_menuEditView.cpp>
 #include <EWIEGA46WW/moc_menuView.cpp>
+#include <EWIEGA46WW/moc_processTabView.cpp>
 #include <EWIEGA46WW/moc_sinkingView.cpp>
 #include <EWIEGA46WW/moc_view.cpp>

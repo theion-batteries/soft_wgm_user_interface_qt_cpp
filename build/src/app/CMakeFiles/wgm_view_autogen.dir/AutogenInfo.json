@@ -134,6 +134,12 @@
 			null
 		],
 		[
+			"C:/Users/SamiDhiab/Theion_Repos/soft_wgm_user_interface_qt_cpp/src/app/processTabView.h",
+			"MU",
+			"EWIEGA46WW/moc_processTabView.cpp",
+			null
+		],
+		[
 			"C:/Users/SamiDhiab/Theion_Repos/soft_wgm_user_interface_qt_cpp/src/app/sinkingView.h",
 			"MU",
 			"EWIEGA46WW/moc_sinkingView.cpp",
@@ -297,6 +303,11 @@
 		],
 		[
 			"C:/Users/SamiDhiab/Theion_Repos/soft_wgm_user_interface_qt_cpp/src/app/menuView.cpp",
+			"MU",
+			null
+		],
+		[
+			"C:/Users/SamiDhiab/Theion_Repos/soft_wgm_user_interface_qt_cpp/src/app/processTabView.cpp",
 			"MU",
 			null
 		],
