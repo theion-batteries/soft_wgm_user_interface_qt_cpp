@@ -14,8 +14,7 @@ MainWindow::MainWindow(QWidget* parent)
     heatView = new heatingView(getUi());
     cntView = new cntAlignView(getUi());
     extractView = new extractingView(getUi());
-
-
+     
     // connect(&sinkControll, &sinkingController::valueChanged, [this]() {
     //     auto value = distance.getValue();
     //     qInfo() << "value distance controller changed, new value: " << value;

@@ -12,9 +12,9 @@
 // qt
 #include "./ui_mainwindow.h"
 #include <QObject>
-#include <iostream>
-#include <keyence_client.h>
+#include <QProcess>
 // mvc
+#include "mainController.h"
 
 
 class menuDebugView: QObject
@@ -25,10 +25,11 @@ public:
     ~menuDebugView();
 signals:
     void triggered();
-private:
-    Ui::MainWindow* ui;
 public slots:
     void on_actionopen_debug_console_triggered(); 
+private:
+    Ui::MainWindow* ui;
+
 
     
 };

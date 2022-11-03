@@ -4,6 +4,7 @@
     "files.associations": {
         "qlcdnumber": "cpp",
         "qfile": "cpp",
-        "qstring": "cpp"
+        "qstring": "cpp",
+        "xiosbase": "cpp"
     }
 }

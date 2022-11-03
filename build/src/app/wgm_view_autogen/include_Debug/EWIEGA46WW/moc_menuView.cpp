@@ -8,6 +8,7 @@
 
 #include <memory>
 #include "../../../../../../src/app/menuView.h"
+#include <QtGui/qtextcursor.h>
 #include <QtCore/qmetatype.h>
 #if !defined(Q_MOC_OUTPUT_REVISION)
 #error "The header file 'menuView.h' doesn't include <QObject>."
