@@ -20,8 +20,8 @@ if (MSVC)
 endif()
 
 
-find_package(QT NAMES Qt6 Qt5 REQUIRED COMPONENTS Widgets Concurrent )
-find_package(Qt${QT_VERSION_MAJOR} REQUIRED COMPONENTS Widgets Concurrent )
+find_package(QT NAMES Qt6 Qt5 REQUIRED COMPONENTS Core Widgets Concurrent )
+find_package(Qt${QT_VERSION_MAJOR} REQUIRED COMPONENTS Core Widgets Concurrent )
 
 
 # pass variable of config file
@@ -51,10 +51,17 @@ else()
 endif()
 
 
-target_link_libraries(wgm_view PRIVATE Qt${QT_VERSION_MAJOR}::Widgets Qt${QT_VERSION_MAJOR}::Concurrent)
+target_link_libraries(wgm_view PRIVATE Qt${QT_VERSION_MAJOR}::Core
+PRIVATE Qt${QT_VERSION_MAJOR}::Widgets
+PRIVATE Qt${QT_VERSION_MAJOR}::Concurrent
+
+)
 target_link_libraries(wgm_view PUBLIC controller)
 
-target_include_directories(wgm_view PUBLIC ${CMAKE_CURRENT_SOURCE_DIR})
+target_include_directories(wgm_view 
+PUBLIC ${CMAKE_CURRENT_SOURCE_DIR}
+PUBLIC ${CMAKE_CURRENT_SOURCE_DIR}/../../includes/app
+)
 
 set_target_properties(wgm_view PROPERTIES
     MACOSX_BUNDLE_GUI_IDENTIFIER my.example.com

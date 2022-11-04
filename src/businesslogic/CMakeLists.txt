@@ -13,9 +13,13 @@ add_library(controller STATIC ${PROJECT_SOURCES}
 
 
 )
-target_link_libraries(controller PRIVATE Qt6::Core 
-                                 PRIVATE Qt6::Widgets
+target_link_libraries(controller PUBLIC Qt6::Core 
+                                 PUBLIC Qt6::Widgets
                                  PUBLIC model
 )
 
-target_include_directories(controller PUBLIC ${CMAKE_CURRENT_SOURCE_DIR})
+target_include_directories(controller
+PUBLIC ${CMAKE_CURRENT_SOURCE_DIR} 
+PUBLIC ${CMAKE_CURRENT_SOURCE_DIR}/../../includes/businesslogic
+
+)
