@@ -10,13 +10,14 @@
  */
 #pragma once
 // qt
+#include <QObject>
 
 // mvc
 #include "controller.h"
 
 class view : public QObject
 {
-    Q_OBJECT
+    //Q_OBJECT
 private:
     /* data */
 public:

@@ -10,18 +10,18 @@
 #include <QString>
 // mvc
 #include <atomic>
-#include "extractingModel.h"
-class extractingController : public QObject
+#include "mainModel.h"
+class mainController : public QObject
 {
-    Q_OBJECT
+    //Q_OBJECT
 public:
-    extractingController(/* args */);
-    ~extractingController();
+    mainController(/* args */);
+    ~mainController();
 signals:
 
 public slots:
     // view distance sensors
 private:
-    extractingModel* extractModel;
+    mainModel modelManager;
 
 };

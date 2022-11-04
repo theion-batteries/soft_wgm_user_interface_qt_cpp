@@ -11,6 +11,8 @@
 #pragma once
 // qt
 #include "./ui_mainwindow.h"
+#include <QObject>
+
 // mvc
 #include "menuView.h"
 #include "sinkingView.h"
@@ -22,7 +24,7 @@
 
 class processTabView: public QObject
 {
-    Q_OBJECT
+   // Q_OBJECT
 public:
     processTabView(Ui::MainWindow* uiPtr);
     ~processTabView();

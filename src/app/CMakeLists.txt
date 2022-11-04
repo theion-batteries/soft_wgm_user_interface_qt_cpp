@@ -7,7 +7,7 @@ set(CMAKE_PREFIX_PATH  "C:/Qt/6.4.0/msvc2019_64/lib/cmake/Qt6")
 set(CMAKE_CXX_STANDARD 20)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
-
+ 
 set(CMAKE_INCLUDE_CURRENT_DIR ON)
 
 set(CMAKE_AUTOUIC ON)
@@ -51,16 +51,16 @@ else()
 endif()
 
 
-target_link_libraries(wgm_view PRIVATE Qt${QT_VERSION_MAJOR}::Core
-PRIVATE Qt${QT_VERSION_MAJOR}::Widgets
-PRIVATE Qt${QT_VERSION_MAJOR}::Concurrent
-
-)
-target_link_libraries(wgm_view PUBLIC controller)
+target_link_libraries(wgm_view PUBLIC Qt${QT_VERSION_MAJOR}::Core
+PUBLIC Qt${QT_VERSION_MAJOR}::Widgets
+PUBLIC Qt${QT_VERSION_MAJOR}::Concurrent
+PUBLIC controller)
 
 target_include_directories(wgm_view 
 PUBLIC ${CMAKE_CURRENT_SOURCE_DIR}
 PUBLIC ${CMAKE_CURRENT_SOURCE_DIR}/../../includes/app
+PUBLIC ${CMAKE_CURRENT_SOURCE_DIR}/../../includes/businesslogic
+
 )
 
 set_target_properties(wgm_view PROPERTIES

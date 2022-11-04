@@ -10,19 +10,17 @@
  */
 #pragma once
 // qt
+#include <QObject>
+
 #include "./ui_mainwindow.h"
 // mvc
-#include "menuDebugView.h"
-#include "menuEditView.h"
 
-
-
-class menuView: public QObject
+class heatingView: public QObject
 {
-    Q_OBJECT
+   // Q_OBJECT
 public:
-    menuView(Ui::MainWindow* uiPtr);
-    ~menuView();
+    heatingView(Ui::MainWindow* uiPtr);
+    ~heatingView();
 private:
     Ui::MainWindow* ui;
 };

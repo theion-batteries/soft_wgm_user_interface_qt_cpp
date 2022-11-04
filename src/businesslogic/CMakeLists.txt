@@ -21,5 +21,6 @@ target_link_libraries(controller PUBLIC Qt6::Core
 target_include_directories(controller
 PUBLIC ${CMAKE_CURRENT_SOURCE_DIR} 
 PUBLIC ${CMAKE_CURRENT_SOURCE_DIR}/../../includes/businesslogic
+PUBLIC ${CMAKE_CURRENT_SOURCE_DIR}/../../dependencies/model
 
 )

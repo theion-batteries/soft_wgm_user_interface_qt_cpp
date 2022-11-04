@@ -11,16 +11,20 @@
 #pragma once
 // qt
 #include "./ui_mainwindow.h"
-// mvc
+#include <QObject>
 
-class extractingView: public QObject
+// mvc
+#include "sinkingController.h"
+
+class sinkingView: public QObject
 {
-    Q_OBJECT
+    //Q_OBJECT
 public:
-    extractingView(Ui::MainWindow* uiPtr);
-    ~extractingView();
+    sinkingView(Ui::MainWindow* uiPtr);
+    ~sinkingView();
 private:
     Ui::MainWindow* ui;
+    sinkingController sinkControll;
 };
 
 

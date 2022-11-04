@@ -10,15 +10,17 @@
  */
 #pragma once
 // qt
+#include <QObject>
+
 #include "./ui_mainwindow.h"
 // mvc
 
-class heatingView: public QObject
+class coolingView: public QObject
 {
-    Q_OBJECT
+    //Q_OBJECT
 public:
-    heatingView(Ui::MainWindow* uiPtr);
-    ~heatingView();
+    coolingView(Ui::MainWindow* uiPtr);
+    ~coolingView();
 private:
     Ui::MainWindow* ui;
 };

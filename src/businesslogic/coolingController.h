@@ -10,18 +10,18 @@
 #include <QString>
 // mvc
 #include <atomic>
-#include "cntAlignModel.h"
-class cntAlignController : public QObject
+#include "coolingModel.h"
+class coolingController : public QObject
 {
-    Q_OBJECT
+   // Q_OBJECT
 public:
-    cntAlignController(/* args */);
-    ~cntAlignController();
+    coolingController(/* args */);
+    ~coolingController();
 signals:
 
 public slots:
     // view distance sensors
 private:
-    cntAlignModel cntModel;
+    coolingModel coolModel;
 
 };

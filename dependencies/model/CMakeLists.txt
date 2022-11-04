@@ -22,7 +22,7 @@ add_library(model STATIC
 
 
 )
-target_link_libraries(model PRIVATE Qt6::Core 
+target_link_libraries(model PUBLIC Qt6::Core 
                             PUBLIC wgm_static)
 
 target_include_directories(model PUBLIC ${CMAKE_CURRENT_SOURCE_DIR}

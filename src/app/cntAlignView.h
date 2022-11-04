@@ -10,15 +10,16 @@
  */
 #pragma once
 // qt
+#include <QObject>
 #include "./ui_mainwindow.h"
 // mvc
 
-class mainView: public QObject
+class cntAlignView: public QObject
 {
-    Q_OBJECT
+   // Q_OBJECT
 public:
-    mainView(Ui::MainWindow* uiPtr);
-    ~mainView();
+    cntAlignView(Ui::MainWindow* uiPtr);
+    ~cntAlignView();
 private:
     Ui::MainWindow* ui;
 };
