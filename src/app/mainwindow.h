@@ -42,3 +42,5 @@ private:
     menuDebugView* debugView;
 };
 #endif // MAINWINDOW_H
+
+
