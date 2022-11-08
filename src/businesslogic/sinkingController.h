@@ -29,8 +29,8 @@ public slots:
     void on_stop_sinking_process_clicked();
     QString get_axis_status();
     QString get_sensor_status();
-    
-
+    void sendAxisCmd(std::string Cmd);
+    void reload_whs_config_file();
     // view distance sensors
 
 

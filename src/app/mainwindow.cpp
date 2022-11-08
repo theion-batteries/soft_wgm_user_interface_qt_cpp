@@ -16,6 +16,12 @@ MainWindow::MainWindow(QWidget* parent)
     cntView = new cntAlignView(getUi());
     extractView = new extractingView(getUi());
 
+    /********************* connect tab with menu **************************/
+    connect(editView->getWhsConfigProc(), &QProcess::finished,
+        [this]() {
+            std::cout<<"process exit succefully"<<std::endl;
+            sinkView->getController()->reload_whs_config_file();
+         });
     // connect(&sinkControll, &sinkingController::valueChanged, [this]() {
     //     auto value = distance.getValue();
     //     qInfo() << "value distance controller changed, new value: " << value;

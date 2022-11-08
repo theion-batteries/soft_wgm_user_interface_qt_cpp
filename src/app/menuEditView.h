@@ -24,12 +24,14 @@ public:
     ~menuEditView();
 signals:
     void triggered();
+    void finished();
 private:
     Ui::MainWindow* ui;
+    QProcess whs_config_editor;
 
 public slots:
     void on_actionwhs_config_triggered(); 
-
+    QProcess* getWhsConfigProc();
 };
 
 
