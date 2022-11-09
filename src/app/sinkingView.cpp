@@ -10,10 +10,12 @@ sinkingView::sinkingView(Ui::MainWindow* uiPtr)
     // connect cmd button connect axis
     connect(ui->sink_connect_distance_sensor, &QAbstractButton::pressed, [this]() {
         sinkControll.on_sink_connect_distance_sensor_clicked();
+        ui->sink_sensor_ready->setText(sinkControll.get_sensor_status() );
         });
     // connect cmd button connect sensor
     connect(ui->sink_connect_motion_axis, &QAbstractButton::pressed, [this]() {
         sinkControll.on_sink_connect_motion_axis_clicked();
+        ui->sink_motion_ready->setText(sinkControll.get_axis_status() );
         });
     // connect cmd button run process sinking
     connect(ui->run_sinking_process, &QAbstractButton::pressed, [this]() {

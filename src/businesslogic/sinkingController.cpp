@@ -55,7 +55,7 @@ QString sinkingController::get_sensor_status()
 {
 
     std::cout << "checking sensor status " << std::endl;
-    if (proc_sinking_model.sinkingProcessHandler->get_sys_ptr()->getSubSysStatus("axis_motion") == true) return "true";
+    if (proc_sinking_model.sinkingProcessHandler->get_sys_ptr()->getSubSysStatus("distance_sensor") == true) return "true";
     else return "false";
 }
 
