@@ -7,10 +7,11 @@ sinkingView::sinkingView(Ui::MainWindow* uiPtr)
     ui->sink_sensor_ready->setStyleSheet("QLabel { background-color : red; color : black; }");
     ui->sink_motion_ready->setStyleSheet("QLabel { background-color : red; color : black; }");
     ui->sinking_finished->setStyleSheet("QLabel { background-color : red; color : black; }");
+    ui->sink_axis_response->setStyleSheet("QLabel { background-color : red; color : black; }");
 
 /**************** signals and slots ********************/
 
-    // connect cmd button connect axis
+    // connect cmd button connect sensor
     connect(ui->sink_connect_distance_sensor, &QAbstractButton::pressed, [this]() {
         sinkControll.on_sink_connect_distance_sensor_clicked();
         ui->sink_sensor_ready->setText(sinkControll.get_sensor_status() );
@@ -18,10 +19,11 @@ sinkingView::sinkingView(Ui::MainWindow* uiPtr)
         sinkControll.updateLcdDistance(ui->sink_distance_head1);
 
         });
-    // connect cmd button connect sensor
+    // connect cmd button connect axis
     connect(ui->sink_connect_motion_axis, &QAbstractButton::pressed, [this]() {
         sinkControll.on_sink_connect_motion_axis_clicked();
         ui->sink_motion_ready->setText(sinkControll.get_axis_status() );
+        ui->sink_motion_ready->setStyleSheet("QLabel { background-color : green; color : black; }");
         sinkControll.updateLcdPosition(ui->sink_axis_pos);
         });
     // connect cmd button run process sinking
@@ -40,7 +42,9 @@ sinkingView::sinkingView(Ui::MainWindow* uiPtr)
     connect(ui->sink_input_axis_cmd , &QLineEdit::returnPressed, [this]() {
         auto inputCmd = ui->sink_input_axis_cmd->text();
         ui->sink_cmd_given->setText(inputCmd);
-        sinkControll.sendAxisCmd(inputCmd.toStdString());
+        auto response = sinkControll.sendAxisCmd(inputCmd.toStdString());
+        ui->sink_axis_response->setStyleSheet("QLabel { background-color : green; color : black; }");        
+        ui->sink_axis_response->setText(response.c_str());
         ui->sink_input_axis_cmd->clear();
     
         });

@@ -28,7 +28,8 @@ if (MSVC)
 endif()
 add_definitions(-D_SILENCE_CXX17_ITERATOR_BASE_CLASS_DEPRECATION_WARNING)  
 # To enable mocking
-add_definitions(-DMOCK_SENSOR)  
+add_definitions(-DSINK_SENSOR_MOCK)  
+add_definitions(-DSINK_AXIS_MOCK)  
 
 find_package(QT NAMES Qt6 Qt5 REQUIRED COMPONENTS Widgets)
 find_package(Qt${QT_VERSION_MAJOR} REQUIRED COMPONENTS Widgets)
