@@ -17,7 +17,7 @@ class sinkingController : public QObject
 public:
     sinkingController(/* args */);
     ~sinkingController();
-    void passLcdNum(QLCDNumber* Lcd);
+
 signals:
     void pressed();
     void triggered();
@@ -31,13 +31,15 @@ public slots:
     QString get_sensor_status();
     void sendAxisCmd(std::string Cmd);
     void reload_whs_config_file();
-    // view distance sensors
-
+    // lcd update
+    void updateLcdTime(QLCDNumber* Lcd);
+    void updateLcdDistance(QLCDNumber* Lcd);
+    void updateLcdPosition(QLCDNumber* Lcd);
 
 private:
     sinkingModel proc_sinking_model;
     double time_elapsed;
     QLCDNumber* LcdTime;
     QLCDNumber* LcdDistance;
-
+    QLCDNumber* LcdPosition;
 };

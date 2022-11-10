@@ -35,14 +35,22 @@ void sinkingController::on_stop_sinking_process_clicked()
     proc_sinking_model.sinkingProcessHandler->stop_process();
     time_elapsed = proc_sinking_model.sinkingProcessHandler->get_elapsed_time();
 }
-void sinkingController::passLcdNum(QLCDNumber* Lcd)
+void sinkingController::updateLcdTime(QLCDNumber* Lcd)
 {
     LcdTime = Lcd;
     LcdTime->display(time_elapsed);
     time_elapsed = 0;
 }
 
+void sinkingController::updateLcdDistance(QLCDNumber* Lcd)
+{
+    LcdDistance = Lcd;
+    LcdDistance->display(proc_sinking_model.sinkingProcessHandler->get_sys_ptr()->getSubSysController()->get_sensor_values());
+}
+void sinkingController::updateLcdPosition(QLCDNumber* Lcd)
+{
 
+}
 QString sinkingController::get_axis_status()
 {
 
