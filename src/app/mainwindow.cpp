@@ -22,13 +22,6 @@ MainWindow::MainWindow(QWidget* parent)
             std::cout<<"process exit succefully"<<std::endl;
             sinkView->getController()->reload_whs_config_file();
          });
-    // connect(&sinkControll, &sinkingController::valueChanged, [this]() {
-    //     auto value = distance.getValue();
-    //     qInfo() << "value distance controller changed, new value: " << value;
-    //     qInfo() << "updating display with thread: " << QThread::currentThread();
-    //   ui->temperature->display(value);
-    //     });
-    // auto dis = QtConcurrent::run(&controller::generateValues, &distance);
 
 }
 

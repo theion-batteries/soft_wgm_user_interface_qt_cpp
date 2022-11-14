@@ -8,6 +8,7 @@
 #include <QProcess>
 #include <QLabel>
 #include <QString>
+#include <QtConcurrent>
 // mvc
 #include <atomic>
 #include "sinkingModel.h"
@@ -22,11 +23,18 @@ signals:
     void pressed();
     void triggered();
     void returnPressed(); // line edit enter key pressed
+    void valueChanged();
 public slots:
     void on_sink_connect_motion_axis_clicked();
     void on_sink_connect_distance_sensor_clicked();
     void on_run_sinking_process_clicked();
     void on_stop_sinking_process_clicked();
+    void on_move_down_until_sensor_data_valid_clicked();
+    void on_move_down_to_surface_contact_clicked();
+    void on_deep_wafer_holder_desired_thickness_clicked();
+    void on_monitor_and_calibrate_clicked();
+
+
     QString get_axis_status();
     QString get_sensor_status();
     std::string sendAxisCmd(std::string Cmd);

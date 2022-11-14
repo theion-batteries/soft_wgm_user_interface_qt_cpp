@@ -16,7 +16,8 @@ sinkingView::sinkingView(Ui::MainWindow* uiPtr)
         sinkControll.on_sink_connect_distance_sensor_clicked();
         ui->sink_sensor_ready->setText(sinkControll.get_sensor_status() );
         ui->sink_sensor_ready->setStyleSheet("QLabel { background-color : green; color : black; }");
-        sinkControll.updateLcdDistance(ui->sink_distance_head1);
+        //sinkControll.updateLcdDistance(ui->sink_distance_head1);
+        auto func = QtConcurrent::run(&sinkingController::updateLcdDistance, &sinkControll,ui->sink_distance_head1);
 
         });
     // connect cmd button connect axis
@@ -25,6 +26,7 @@ sinkingView::sinkingView(Ui::MainWindow* uiPtr)
         ui->sink_motion_ready->setText(sinkControll.get_axis_status() );
         ui->sink_motion_ready->setStyleSheet("QLabel { background-color : green; color : black; }");
         sinkControll.updateLcdPosition(ui->sink_axis_pos);
+        //auto func = QtConcurrent::run(&sinkingController::updateLcdPosition, &sinkControll,ui->sink_axis_pos);
         });
     // connect cmd button run process sinking
     connect(ui->run_sinking_process, &QAbstractButton::pressed, [this]() {
@@ -47,6 +49,31 @@ sinkingView::sinkingView(Ui::MainWindow* uiPtr)
         ui->sink_axis_response->setText(response.c_str());
         ui->sink_input_axis_cmd->clear();
     
+        });
+    // algorithms
+    // move down until data valid
+    connect(ui->move_down_until_sensor_data_valid, &QAbstractButton::pressed, [this]() {
+        auto func = QtConcurrent::run(&sinkingController::on_move_down_until_sensor_data_valid_clicked, &sinkControll);
+        sinkControll.updateLcdPosition(ui->sink_axis_pos);
+        sinkControll.updateLcdDistance(ui->sink_distance_head1);
+        });
+    // move down to surface
+    connect(ui->move_down_to_surface_contact, &QAbstractButton::pressed, [this]() {
+        auto func = QtConcurrent::run(&sinkingController::on_move_down_to_surface_contact_clicked, &sinkControll);
+        sinkControll.updateLcdPosition(ui->sink_axis_pos);
+        sinkControll.updateLcdDistance(ui->sink_distance_head1);
+        });
+    // deep wafer desired thicknesss
+    connect(ui->deep_wafer_holder_desired_thickness, &QAbstractButton::pressed, [this]() {
+        auto func = QtConcurrent::run(&sinkingController::on_deep_wafer_holder_desired_thickness_clicked, &sinkControll);
+        sinkControll.updateLcdPosition(ui->sink_axis_pos);
+        sinkControll.updateLcdDistance(ui->sink_distance_head1);
+        });
+    // calibrate
+    connect(ui->monitor_and_calibrate, &QAbstractButton::pressed, [this]() {
+        auto func = QtConcurrent::run(&sinkingController::on_monitor_and_calibrate_clicked, &sinkControll);
+        sinkControll.updateLcdPosition(ui->sink_axis_pos);
+        sinkControll.updateLcdDistance(ui->sink_distance_head1);
         });
 
 }

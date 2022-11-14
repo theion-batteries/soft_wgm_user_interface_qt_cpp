@@ -12,7 +12,7 @@
 // qt
 #include "./ui_mainwindow.h"
 #include <QObject>
-
+#include <QtConcurrent>
 // mvc
 #include "sinkingController.h"
 
