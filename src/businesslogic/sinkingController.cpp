@@ -26,12 +26,10 @@ void sinkingController::on_run_sinking_process_clicked()
 {
     proc_sinking_model.sinkingProcessHandler->start_process();
     time_elapsed = proc_sinking_model.sinkingProcessHandler->get_elapsed_time();
-    LcdTime->display(time_elapsed);
 }
 
 void sinkingController::on_stop_sinking_process_clicked()
 {
-    LcdTime->display(time_elapsed);
     proc_sinking_model.sinkingProcessHandler->stop_process();
     time_elapsed = proc_sinking_model.sinkingProcessHandler->get_elapsed_time();
 }
@@ -53,53 +51,45 @@ void sinkingController::on_monitor_and_calibrate_clicked()
 }
 void sinkingController::updateLcdTime(QLCDNumber* Lcd)
 {
-    LcdTime = Lcd;
-    LcdTime->display(time_elapsed);
+    Lcd->display(time_elapsed);
     time_elapsed = 0;
 }
 
 void sinkingController::updateLcdDistance(QLCDNumber* Lcd)
 {
-    LcdDistance = Lcd;
-    LcdDistance->display(proc_sinking_model.sinkingProcessHandler->get_sys_ptr()->getSubSysController()->get_sensor_values());
+    while (get_sensor_status()) // while connected, launch thread display
+    {
+        std::cout << "updating lcd distance " << std::endl;
+        Lcd->display(proc_sinking_model.sinkingProcessHandler->get_sys_ptr()->getSubSysController()->get_sensor_values());
+        std::cout << "lcd distance thread id: " << QThread::currentThreadId() << std::endl;
+        QThread::currentThread()->sleep(1);
+    }
 
 }
 void sinkingController::updateLcdPosition(QLCDNumber* Lcd)
 {
-    LcdPosition = Lcd;
-    LcdPosition->display(proc_sinking_model.sinkingProcessHandler->get_sys_ptr()->getSubSysController()->get_axis_position());
+
+    while (get_axis_status()) // while connected, launch thread display
+    {
+        std::cout << "updating lcd position " << std::endl;
+        Lcd->display(proc_sinking_model.sinkingProcessHandler->get_sys_ptr()->getSubSysController()->get_axis_position());
+        std::cout << "lcd position thread id: " << QThread::currentThreadId() << std::endl;
+        QThread::currentThread()->sleep(1);
+    }
 
 }
-QString sinkingController::get_axis_status()
+bool sinkingController::get_axis_status()
 {
 
-    if (proc_sinking_model.sinkingProcessHandler->get_sys_ptr()->getSubSysStatus("axis_motion") == true)
-    {
-        std::cout << "axis connected succefully " << std::endl;
-        return "true";
-    }
-    else
-    {
-        std::cout << "axis not connected " << std::endl;
-        return "false";
-    }
+    return proc_sinking_model.sinkingProcessHandler->get_sys_ptr()->getSubSysStatus("axis_motion");
+
 }
 
-QString sinkingController::get_sensor_status()
+bool sinkingController::get_sensor_status()
 {
 
-    if (proc_sinking_model.sinkingProcessHandler->get_sys_ptr()->getSubSysStatus("distance_sensor") == true)
-    {
-        std::cout << "sensor connected succefully " << std::endl;
+    return proc_sinking_model.sinkingProcessHandler->get_sys_ptr()->getSubSysStatus("distance_sensor");
 
-        return "true";
-    }
-    else
-    {
-        std::cout << "sensor not connected " << std::endl;
-
-        return "false";
-    }
 }
 
 std::string sinkingController::sendAxisCmd(std::string Cmd)
@@ -111,4 +101,62 @@ void sinkingController::reload_whs_config_file()
 {
     std::cout << "file closed succefuly, updating parameters" << std::endl;
     proc_sinking_model.sinkingProcessHandler->get_sys_ptr()->getSubSysController()->reload_config_file();
+}
+
+bool sinkingController::getProcessStatus()
+{
+    std::cout << "getting process status" << std::endl;
+    return proc_sinking_model.sinkingProcessHandler->is_proc_success();
+}
+
+// label update
+void sinkingController::updateLabelAxis(QLabel* label)
+{
+    if (get_axis_status())
+    {
+        label->setText("true");
+        label->setStyleSheet("QLabel { background-color : green; color : black; }");
+        return;
+    }
+
+}
+void sinkingController::updateLabelSensor(QLabel* label)
+{
+    if (get_sensor_status())
+    {
+        label->setText("true");
+        label->setStyleSheet("QLabel { background-color : green; color : black; }");
+        return;
+    }
+
+}
+void sinkingController::updateLabelProcess(QLabel* label)
+{
+    if (getProcessStatus())
+    {
+        label->setText("true");
+        label->setStyleSheet("QLabel { background-color : green; color : black; }");
+        return;
+    }
+
+}
+void sinkingController::updateLabelAxisResponse(QLabel* label, QString cmd)
+{
+    auto response = sendAxisCmd(cmd.toStdString());
+    if (response == "ok")
+    {
+        label->setStyleSheet("QLabel { background-color : green; color : black; }");
+        label->setText(response.c_str());
+        return;
+    }
+    label->setText(response.c_str());
+
+}
+
+void sinkingController::updateLcdPosThread(QLCDNumber* Lcd)
+{
+    std::cout << "creating position update thread" << std::endl;
+    LcdPosThread.create(&sinkingController::updateLcdPosition, this, Lcd);
+    std::cout << "starting position update thread" << std::endl;
+    LcdPosThread.start();
 }
