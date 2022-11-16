@@ -39,19 +39,19 @@ void cntAlignController::on_stop_cnt_proc_clicked()
 }
 void cntAlignController::on_move_down_to_center_clicked()
 {
-    cntModel.aligningProcessHandler->get_sys_ptr()->getSubSysController()->move_down_to_center();
+    cntModel.aligningProcessHandler->get_sys_ptr()->getSubSysController().cnt_motion_move_to_center();
 }
 void cntAlignController::on_move_back_home_clicked()
 {
-    cntModel.aligningProcessHandler->get_sys_ptr()->getSubSysController()->move_home();
+    cntModel.aligningProcessHandler->get_sys_ptr()->getSubSysController().cnt_motion_move_home();
 }
 void cntAlignController::on_dispenser_vibrate_clicked()
 {
-    cntModel.aligningProcessHandler->get_sys_ptr()->getSubSysController()->vibrate();
+    cntModel.aligningProcessHandler->get_sys_ptr()->getSubSysController().cnt_dispenser_vibrate();          
 }
 void cntAlignController::on_high_voltage_pulse_clicked()
 {
-    cntModel.aligningProcessHandler->get_sys_ptr()->getSubSysController()->pulse();
+    cntModel.aligningProcessHandler->get_sys_ptr()->getSubSysController().get_hv_ptr()->  pulse();
 }
 
 // update lcd
@@ -62,7 +62,7 @@ void cntAlignController::updateLcdDispenserFreq(QLCDNumber* Lcd)
     while (get_dispenser_status()) // while connected, launch thread display
     {
         std::cout << "updating lcd dispensr freq" << std::endl;
-        Lcd->display(cntModel.aligningProcessHandler->get_sys_ptr()->getSubSysController()->get_dispenser_freq());
+        Lcd->display(cntModel.aligningProcessHandler->get_sys_ptr()->getSubSysController().get_dispenser_frequency());
         std::cout << "lcd Dispenser thread id: " << QThread::currentThreadId() << std::endl;
         QThread::currentThread()->sleep(1);
     }
@@ -74,7 +74,7 @@ void cntAlignController::updateLcdPosition(QLCDNumber* Lcd)
     while (get_axis_status()) // while connected, launch thread display
     {
         std::cout << "updating lcd position " << std::endl;
-        Lcd->display(cntModel.aligningProcessHandler->get_sys_ptr()->getSubSysController()->get_axis_position());
+        Lcd->display(cntModel.aligningProcessHandler->get_sys_ptr()->getSubSysController().get_axis_position());
         std::cout << "lcd position thread id: " << QThread::currentThreadId() << std::endl;
         QThread::currentThread()->sleep(1);
     }
@@ -87,23 +87,23 @@ void cntAlignController::updateLcdTime(QLCDNumber* Lcd)
 }
 void cntAlignController::updateLcdInputCurrent(QLCDNumber* Lcd)
 {
-    Lcd->display(cntModel.aligningProcessHandler->get_sys_ptr()->getSubSysController()->get_input_current());
+    Lcd->display(cntModel.aligningProcessHandler->get_sys_ptr()->getSubSysController().get_hv_ptr()-> get_input_current());
 }
 void cntAlignController::updateLcdInputVoltage(QLCDNumber* Lcd)
 {
-    Lcd->display(cntModel.aligningProcessHandler->get_sys_ptr()->getSubSysController()->get_input_Voltage());
+    Lcd->display(cntModel.aligningProcessHandler->get_sys_ptr()->getSubSysController().get_hv_ptr()-> get_input_voltage());
 }
 void cntAlignController::updateLcdOutputCurrent(QLCDNumber* Lcd)
 {
-    Lcd->display(cntModel.aligningProcessHandler->get_sys_ptr()->getSubSysController()->get_Output_current());
+    Lcd->display(cntModel.aligningProcessHandler->get_sys_ptr()->getSubSysController().get_hv_ptr()-> get_output_current());
 }
 void cntAlignController::updateLcdInputFrequency(QLCDNumber* Lcd)
 {
-    Lcd->display(cntModel.aligningProcessHandler->get_sys_ptr()->getSubSysController()->get_input_Frequency());
+    Lcd->display(cntModel.aligningProcessHandler->get_sys_ptr()->getSubSysController().get_hv_ptr()-> get_input_frequency());
 }
 void cntAlignController::updateLcdOutputFrequency(QLCDNumber* Lcd)
 {
-    Lcd->display(cntModel.aligningProcessHandler->get_sys_ptr()->getSubSysController()->get_Output_Frequency());
+    Lcd->display(cntModel.aligningProcessHandler->get_sys_ptr()->getSubSysController().get_hv_ptr()-> get_output_frequency());
 }
 // get status
 bool cntAlignController::get_axis_status()
@@ -189,11 +189,11 @@ void cntAlignController::updateLabelAxisResponse(QLabel* label, QString cmd)
 
 std::string cntAlignController::sendAxisCmd(std::string Cmd)
 {
-    return cntModel.aligningProcessHandler->get_sys_ptr()->getSubSysController()->sendDirectCmdAxis(Cmd);
+    return cntModel.aligningProcessHandler->get_sys_ptr()->getSubSysController().sendDirectCmdAxis(Cmd);
 }
 
 void cntAlignController::reload_cnt_config_file()
 {
     std::cout << "file closed succefuly, updating parameters" << std::endl;
-    cntModel.aligningProcessHandler->get_sys_ptr()->getSubSysController()->reload_config_file();
+    cntModel.aligningProcessHandler->get_sys_ptr()->getSubSysController().reload_config_file();
 }
