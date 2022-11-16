@@ -153,10 +153,3 @@ void sinkingController::updateLabelAxisResponse(QLabel* label, QString cmd)
 
 }
 
-void sinkingController::updateLcdPosThread(QLCDNumber* Lcd)
-{
-    std::cout << "creating position update thread" << std::endl;
-    LcdPosThread.create(&sinkingController::updateLcdPosition, this, Lcd);
-    std::cout << "starting position update thread" << std::endl;
-    LcdPosThread.start();
-}

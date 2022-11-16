@@ -50,10 +50,7 @@ public slots:
     void updateLabelSensor(QLabel* label);
     void updateLabelProcess(QLabel* label);
     void updateLabelAxisResponse(QLabel* label, QString cmd);
-    // update loop using thread/asynchron
-     void updateLcdPosThread(QLCDNumber* Lcd);
 private:
     sinkingModel proc_sinking_model;
     double time_elapsed;
-    QThread LcdPosThread;
 };
