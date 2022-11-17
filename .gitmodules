@@ -2,3 +2,6 @@
 	path = dependencies/software_wgm_v2_cpp
 	url = https://github.com/theionSami/software_wgm_v2_cpp.git
 	branch = dev_win_api
+[submodule "dependencies/database/sqlite3-cmake"]
+	path = dependencies/database/sqlite3-cmake
+	url = https://github.com/alex85k/sqlite3-cmake.git
