@@ -1,3 +1,3 @@
 add_subdirectory(software_wgm_v2_cpp)
 add_subdirectory(model)
-
+add_subdirectory(database)

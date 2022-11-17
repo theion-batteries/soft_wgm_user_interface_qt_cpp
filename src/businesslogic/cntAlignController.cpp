@@ -89,13 +89,18 @@ void cntAlignController::updateLcdInputCurrent(QLCDNumber* Lcd)
 {
     Lcd->display(cntModel.aligningProcessHandler->get_sys_ptr()->getSubSysController().get_hv_ptr()-> get_input_current());
 }
+
+void cntAlignController::updateLcdOutputCurrent(QLCDNumber* Lcd)
+{
+    Lcd->display(cntModel.aligningProcessHandler->get_sys_ptr()->getSubSysController().get_hv_ptr()-> get_output_current());
+}
 void cntAlignController::updateLcdInputVoltage(QLCDNumber* Lcd)
 {
     Lcd->display(cntModel.aligningProcessHandler->get_sys_ptr()->getSubSysController().get_hv_ptr()-> get_input_voltage());
 }
-void cntAlignController::updateLcdOutputCurrent(QLCDNumber* Lcd)
+void cntAlignController::updateLcdOutputVoltage(QLCDNumber* Lcd)
 {
-    Lcd->display(cntModel.aligningProcessHandler->get_sys_ptr()->getSubSysController().get_hv_ptr()-> get_output_current());
+    Lcd->display(cntModel.aligningProcessHandler->get_sys_ptr()->getSubSysController().get_hv_ptr()-> get_output_voltage());
 }
 void cntAlignController::updateLcdInputFrequency(QLCDNumber* Lcd)
 {

@@ -2083,6 +2083,19 @@
            </layout>
           </item>
           <item>
+           <spacer name="horizontalSpacer_77">
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>40</width>
+              <height>20</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+          <item>
            <spacer name="horizontalSpacer_75">
             <property name="orientation">
              <enum>Qt::Horizontal</enum>
@@ -4576,6 +4589,7 @@
     </property>
     <addaction name="actionopen_experiment"/>
     <addaction name="actionnew_experiment"/>
+    <addaction name="actionsave_experiemnt"/>
     <addaction name="actionexit"/>
    </widget>
    <widget class="QMenu" name="menuEdit">
@@ -4669,6 +4683,11 @@
   <action name="actionopen_experiment">
    <property name="text">
     <string>open experiment</string>
+   </property>
+  </action>
+  <action name="actionsave_experiemnt">
+   <property name="text">
+    <string>save experiemnt</string>
    </property>
   </action>
  </widget>
