@@ -7,6 +7,8 @@ endif()
 add_library(database STATIC
 Idatabase.h
 Idatabase.cpp
+sinkingDB.h
+sinkingDB.cpp
 )
 target_link_libraries(database PUBLIC sqlite3)
 target_include_directories(database 
@@ -16,6 +18,8 @@ PUBLIC ${CMAKE_CURRENT_SOURCE_DIR}
 add_executable(dbTest
 Idatabase.h
 Idatabase.cpp
+sinkingDB.h
+sinkingDB.cpp
 main.cpp
 )
 target_link_libraries(dbTest PUBLIC sqlite3)

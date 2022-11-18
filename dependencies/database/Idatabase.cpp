@@ -1,5 +1,13 @@
 #include "Idatabase.h"
 
+table::table()
+{
+
+}
+table::table(std::string name)
+{
+    Table_name=name;
+}
 // struct table
 void table::setTableName(std::string name)
 {
@@ -129,13 +137,13 @@ void Idatabase::insertDBTableRow(std::string table, std::string row)
     }
 
 }
-void Idatabase::deleteDBTableRow(std::string table, std::string rowIndex)
+void Idatabase::deleteDBTableRow(std::string table, std::string rowIndex, std::string key)
 {
     std::string delete_cmd = "DELETE FROM ";
-    std::string where_id = " WHERE ID = ";
+    std::string where = " WHERE ";    
     int rc;
     char* zErrMsg = 0;
-    rc = sqlite3_exec(dbHandler, (delete_cmd + table + where_id + rowIndex+";").c_str(), NULL, 0, &zErrMsg);
+    rc = sqlite3_exec(dbHandler, (delete_cmd + table + where+ key +" ="+ rowIndex+";").c_str(), NULL, 0, &zErrMsg);
     if (rc != SQLITE_OK) {
         std::cerr << "Error DELETE" << std::endl;
         sqlite3_free(zErrMsg);
@@ -172,4 +180,9 @@ int Idatabase::queryDBCallback(void* data, int argc, char** argv, char** azColNa
     }
     printf("\n");
     return 0;
+}
+
+table& Idatabase::getTableHandle()
+{
+    return *tableHandler;
 }
