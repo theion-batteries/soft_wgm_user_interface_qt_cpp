@@ -1,5 +1,6 @@
+
 /**
- * @file sinkingDB.h
+ * @file extractingDB.h
  * @author your name (you@domain.com)
  * @brief 
  * @version 0.1
@@ -11,10 +12,10 @@
 #pragma once
 #include "Idatabase.h"
 
-class sinkingDB: public Idatabase
+class extractingDB: public Idatabase
 {
     public:
-    sinkingDB(std::string tableName="sinkingTable");
-    ~sinkingDB();
+    extractingDB(std::string tableName="extractingTable");
+    ~extractingDB();
 
 };

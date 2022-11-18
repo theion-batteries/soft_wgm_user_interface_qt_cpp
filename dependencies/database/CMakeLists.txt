@@ -9,6 +9,14 @@ Idatabase.h
 Idatabase.cpp
 sinkingDB.h
 sinkingDB.cpp
+coolingDB.h
+coolingDB.cpp
+heatingDB.h
+heatingDB.cpp
+extractingDB.h
+extractingDB.cpp
+aligningDB.h
+aligningDB.cpp
 )
 target_link_libraries(database PUBLIC sqlite3)
 target_include_directories(database 
@@ -20,6 +28,15 @@ Idatabase.h
 Idatabase.cpp
 sinkingDB.h
 sinkingDB.cpp
+coolingDB.h
+coolingDB.cpp
+heatingDB.h
+heatingDB.cpp
+extractingDB.h
+extractingDB.cpp
+aligningDB.h
+aligningDB.cpp
+
 main.cpp
 )
 target_link_libraries(dbTest PUBLIC sqlite3)
