@@ -40,6 +40,7 @@ private:
     /********** menu View *********************/
     menuEditView* editView;
     menuDebugView* debugView;
+    menuFileView* fileView;
 };
 #endif // MAINWINDOW_H
 

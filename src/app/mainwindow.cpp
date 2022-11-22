@@ -7,6 +7,7 @@ MainWindow::MainWindow(QWidget* parent)
     ui->setupUi(this);
     setWindowTitle("Wafer Growing System User Interface");
     /********** menu View *********************/
+    fileView = new menuFileView(getUi());
     editView = new menuEditView(getUi());
     debugView = new menuDebugView(getUi());
     /********** process Tab View *********************/

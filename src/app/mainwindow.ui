@@ -4587,9 +4587,12 @@
     <property name="title">
      <string>File</string>
     </property>
+    <addaction name="actionnew_user"/>
     <addaction name="actionopen_experiment"/>
     <addaction name="actionnew_experiment"/>
     <addaction name="actionsave_experiemnt"/>
+    <addaction name="actionlogin"/>
+    <addaction name="actionlogout"/>
     <addaction name="actionexit"/>
    </widget>
    <widget class="QMenu" name="menuEdit">
@@ -4688,6 +4691,21 @@
   <action name="actionsave_experiemnt">
    <property name="text">
     <string>save experiemnt</string>
+   </property>
+  </action>
+  <action name="actionnew_user">
+   <property name="text">
+    <string>new user</string>
+   </property>
+  </action>
+  <action name="actionlogin">
+   <property name="text">
+    <string>login</string>
+   </property>
+  </action>
+  <action name="actionlogout">
+   <property name="text">
+    <string>logout</string>
    </property>
   </action>
  </widget>
