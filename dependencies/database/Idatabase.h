@@ -23,6 +23,7 @@ struct table
     std::string Table_name;
     void setTableName(std::string name);
     void addColumn(std::pair<std::string,std::string> element_type_pair,  bool isNotNull=false,bool isFirstKey=false);
+    std::string createRow(std::string Val1, std::string Val2, ...);
     void generateTable();
     void printTable();
     std::string TableToSend;

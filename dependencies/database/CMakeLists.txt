@@ -18,6 +18,8 @@ extractingDB.cpp
 aligningDB.h
 aligningDB.cpp
 dbIncludeAll.h
+userDB.h
+userDB.cpp
 )
 target_link_libraries(database PUBLIC sqlite3)
 target_include_directories(database 
@@ -38,7 +40,8 @@ extractingDB.cpp
 aligningDB.h
 aligningDB.cpp
 dbIncludeAll.h
-
+userDB.h
+userDB.cpp
 main.cpp
 )
 target_link_libraries(dbTest PUBLIC sqlite3)

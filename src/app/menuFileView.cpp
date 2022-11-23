@@ -33,17 +33,25 @@ QProcess* menuFileView::getWhsConfigProc()
 
 void menuFileView::on_actionnew_user_triggered()
 {
-//QMessageBox msgBox;
-//QLineEdit username;
-//QLineEdit password;
-//username.setText("enter username");
-//password.setText("enter password");
-//msgBox.layout()->addWidget(&username);
-//msgBox.layout()->addWidget(&password);
-//
-//int ret = msgBox.exec();
-        QMessageBox msgbox;
-        msgbox.setText("to select click");
-        msgbox.setDetailedText("line 1\nline 2\nline 3");
-        msgbox.exec();
+QMessageBox msgBox;
+    bool ok;
+    QInputDialog userInput;
+   // userInput.getMultiLineText()
+    QString username = QInputDialog::getText(&msgBox, tr("create new user"),
+                                         tr("please enter username:"), QLineEdit::Normal,
+                                         NULL, &ok);
+    QString password = QInputDialog::getText(&msgBox, tr("create new user"),
+                                         tr("please enter password:"), QLineEdit::Password,
+                                         NULL, &ok);                
+    //debug
+    std::cout << "username: " << username.toStdString() << " password: "<< password.toStdString() <<std::endl;
+    wgm_user::user new_user(username.toStdString(),password.toStdString());
+    userList.push_back(new_user);
+    // debug
+    std::cout<<"added new user to list"<<std::endl;
+    std::cout<<"listing available users"<<std::endl;
+    for(auto& u: userList)
+    {
+    std::cout << "username: " << u.getUserName() << " password: "<< u.getUserPassowrd() <<std::endl;
+    }
 }

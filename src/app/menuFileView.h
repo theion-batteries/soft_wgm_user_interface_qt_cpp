@@ -23,7 +23,8 @@
 #include <QGridLayout>
 #include <QStringList>
 #include <QDebug>
-
+#include <QInputDialog>
+#include <QDir>
 // mvc
 #include <iostream>
 #include "wgm_user.h"
