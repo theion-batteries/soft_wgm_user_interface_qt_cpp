@@ -40,12 +40,13 @@ signals:
 private:
     Ui::MainWindow* ui;
     QProcess whs_config_editor;
-   std::vector< wgm_user::user> userList;
    
 
 public slots:
     void on_actionwhs_config_triggered();
     void on_actionnew_user_triggered();
+    void on_actionlogin_triggered();
+    void on_actionlogout_triggered();
 
     QProcess* getWhsConfigProc();
 };

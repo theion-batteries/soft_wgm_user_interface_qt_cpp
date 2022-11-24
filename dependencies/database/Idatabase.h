@@ -29,11 +29,16 @@ struct table
     std::string TableToSend;
     std::vector<std::string> Columns_Vector;
 };
+
+using Record = std::vector<std::string>;
+using Records = std::vector<Record>;
+
 class Idatabase
 {
 protected:
     sqlite3* dbHandler;
     table* tableHandler;
+    static inline int LastID=0;
 public:
     Idatabase(/* args */);
      ~Idatabase();
@@ -47,6 +52,12 @@ public:
     void selectDBTableColumn(std::string table, std::string Column);
     static int queryDBCallback(void* data, int argc, char** argv, char** azColName);
     table& getTableHandle();
+    int getLastInsertRowID();
+    int getLastRowID();
+    bool searchDBRowValues(std::string table, std::string col1, std::string val1, std::string col2, std::string val2);
+    static int select_callback(void *p_data, int num_fields, char **p_fields, char **p_col_names); 
+
+
 };
 
 

@@ -42,7 +42,7 @@
        <bool>false</bool>
       </property>
       <property name="currentIndex">
-       <number>3</number>
+       <number>0</number>
       </property>
       <widget class="QWidget" name="Main">
        <attribute name="title">
@@ -4588,11 +4588,11 @@
      <string>File</string>
     </property>
     <addaction name="actionnew_user"/>
+    <addaction name="actionlogin"/>
+    <addaction name="actionlogout"/>
     <addaction name="actionopen_experiment"/>
     <addaction name="actionnew_experiment"/>
     <addaction name="actionsave_experiemnt"/>
-    <addaction name="actionlogin"/>
-    <addaction name="actionlogout"/>
     <addaction name="actionexit"/>
    </widget>
    <widget class="QMenu" name="menuEdit">
