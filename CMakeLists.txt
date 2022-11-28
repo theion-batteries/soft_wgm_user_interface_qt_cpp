@@ -26,7 +26,7 @@ set(CMAKE_AUTORCC ON)
 if (MSVC)
     set(CMAKE_WINDOWS_EXPORT_ALL_SYMBOLS ON)
 endif()
-add_definitions(-D_SILENCE_CXX17_ITERATOR_BASE_CLASS_DEPRECATION_WARNING)  
+#add_definitions(-D_SILENCE_CXX17_ITERATOR_BASE_CLASS_DEPRECATION_WARNING)  
 # To enable mocking
 add_definitions(-DSINK_SENSOR_MOCK)  
 add_definitions(-DSINK_AXIS_MOCK)  
