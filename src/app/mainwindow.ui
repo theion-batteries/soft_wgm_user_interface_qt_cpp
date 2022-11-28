@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1362</width>
+    <width>1406</width>
     <height>789</height>
    </rect>
   </property>
@@ -4579,7 +4579,7 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>1362</width>
+     <width>1406</width>
      <height>26</height>
     </rect>
    </property>
@@ -4638,6 +4638,7 @@
     </property>
     <addaction name="actiondocumentation"/>
     <addaction name="actiongrbl"/>
+    <addaction name="actionhelp"/>
    </widget>
    <addaction name="menuMain"/>
    <addaction name="menuEdit"/>
@@ -4706,6 +4707,11 @@
   <action name="actionlogout">
    <property name="text">
     <string>logout</string>
+   </property>
+  </action>
+  <action name="actionhelp">
+   <property name="text">
+    <string>github</string>
    </property>
   </action>
  </widget>
