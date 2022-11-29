@@ -2,6 +2,8 @@
 this repo holds the user interface made with qt. 
 the core app (wgm software) is to be added as dependency inside the correct folder. please read the README.md in each folder for more informations.
 
+* Author & Maintainer: Sami dhiab
+* contact: sami@theion.de
 
 # vcpkg
 vcpkg is used as a package manager for c/cpp projects.

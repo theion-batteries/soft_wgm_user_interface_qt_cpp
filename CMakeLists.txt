@@ -8,8 +8,13 @@
 
 cmake_minimum_required(VERSION 3.5.0)
 
-project(wgm_pkg VERSION 0.1 LANGUAGES CXX)
-
+#project(wgm_pkg VERSION 0.1 LANGUAGES CXX)
+project(wgm_pkg
+        VERSION 0.1.0
+        DESCRIPTION "created and maintained by sami dhiab"
+        HOMEPAGE_URL "https://github.com/theionSami/soft_wgm_user_interface_qt_cpp"
+        LANGUAGES CXX)
+        
 #set(CMAKE_PREFIX_PATH  "C:/Qt/6.4.0/msvc2019_64/lib/cmake/Qt6")
 set(CMAKE_OBJECT_PATH_MAX 300)
 set(CMAKE_CXX_STANDARD 20)
