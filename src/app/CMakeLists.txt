@@ -1,8 +1,8 @@
 cmake_minimum_required(VERSION 3.5.0)
 
-project(wgm_view VERSION 0.1 LANGUAGES CXX)
+project(wgm_app VERSION 0.1 LANGUAGES CXX)
 
-set(CMAKE_PREFIX_PATH  "C:/Qt/6.4.0/msvc2019_64/lib/cmake/Qt6")
+#set(CMAKE_PREFIX_PATH  "C:/Qt/6.4.0/msvc2019_64/lib/cmake/Qt6")
 
 set(CMAKE_CXX_STANDARD 20)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
@@ -20,8 +20,9 @@ if (MSVC)
 endif()
 
 
-find_package(QT NAMES Qt6 Qt5 REQUIRED COMPONENTS Core Widgets Concurrent )
+find_package(QT NAMES Qt6 REQUIRED COMPONENTS Core Widgets Concurrent )
 find_package(Qt${QT_VERSION_MAJOR} REQUIRED COMPONENTS Core Widgets Concurrent )
+
 
 
 # pass variable of config file
@@ -33,37 +34,37 @@ file(GLOB PROJECT_SOURCES
         )
 
 if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)
-    qt_add_executable(wgm_view
+    qt_add_executable(wgm_app
         MANUAL_FINALIZATION
         ${PROJECT_SOURCES}
     )
 
 else()
     if(ANDROID)
-        add_library(wgm_view SHARED
+        add_library(wgm_app SHARED
             ${PROJECT_SOURCES}
         )
     else()
-        add_executable(wgm_view
+        add_executable(wgm_app
             ${PROJECT_SOURCES}
         )
     endif()
 endif()
 
 
-target_link_libraries(wgm_view PUBLIC Qt${QT_VERSION_MAJOR}::Core
+target_link_libraries(wgm_app PUBLIC Qt${QT_VERSION_MAJOR}::Core
 PUBLIC Qt${QT_VERSION_MAJOR}::Widgets
 PUBLIC Qt${QT_VERSION_MAJOR}::Concurrent
 PUBLIC controller)
 
-target_include_directories(wgm_view 
+target_include_directories(wgm_app 
 PUBLIC ${CMAKE_CURRENT_SOURCE_DIR}
 PUBLIC ${CMAKE_CURRENT_SOURCE_DIR}/../../includes/app
 PUBLIC ${CMAKE_CURRENT_SOURCE_DIR}/../../includes/businesslogic
 
 )
 
-set_target_properties(wgm_view PROPERTIES
+set_target_properties(wgm_app PROPERTIES
     MACOSX_BUNDLE_GUI_IDENTIFIER my.example.com
     MACOSX_BUNDLE_BUNDLE_VERSION ${PROJECT_VERSION}
     MACOSX_BUNDLE_SHORT_VERSION_STRING ${PROJECT_VERSION_MAJOR}.${PROJECT_VERSION_MINOR}
@@ -71,11 +72,10 @@ set_target_properties(wgm_view PROPERTIES
     WIN32_EXECUTABLE TRUE
 )
 
-install(TARGETS wgm_view
+install(TARGETS wgm_app
     BUNDLE DESTINATION .
     LIBRARY DESTINATION ${CMAKE_INSTALL_LIBDIR})
 
 if(QT_VERSION_MAJOR EQUAL 6)
-    qt_finalize_executable(wgm_view)
+    qt_finalize_executable(wgm_app)
 endif()
-

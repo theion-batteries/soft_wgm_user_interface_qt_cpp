@@ -13,14 +13,6 @@ add_library(model STATIC
     extractingModel.cpp
     coolingModel.h
     coolingModel.cpp
-
-
-
-
-
-
-
-
 )
 target_link_libraries(model PUBLIC Qt6::Core 
                             PUBLIC wgm_static)
@@ -33,3 +25,7 @@ target_include_directories(model PUBLIC ${CMAKE_CURRENT_SOURCE_DIR}
 if (MSVC)
 set(CMAKE_WINDOWS_EXPORT_ALL_SYMBOLS ON)
 endif()
+
+install(TARGETS model DESTINATION lib)
+FILE(GLOB files "${CMAKE_CURRENT_SOURCE_DIR}/*.h")
+INSTALL(FILES ${files} DESTINATION include)

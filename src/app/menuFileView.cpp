@@ -4,10 +4,7 @@ menuFileView::menuFileView(Ui::MainWindow* uiPtr)
 {
     ui = uiPtr;
     /**************** signals and slots ********************/
-         // open whs config
-    connect(ui->actionwhs_config, &QAction::triggered, [this]() {
-        on_actionwhs_config_triggered();
-        });
+
     // create new user
     connect(ui->actionnew_user, &QAction::triggered, [this]() {
         on_actionnew_user_triggered();
@@ -26,13 +23,7 @@ menuFileView::~menuFileView()
 {
 }
 
-void  menuFileView::on_actionwhs_config_triggered()
-{
-#ifdef WHS_CONFIG
-    std::cout << "opening whs config yaml file in notepad" << std::endl;
-    whs_config_editor.start("C:\\Windows\\system32\\notepad.exe", { WHS_CONFIG });
-#endif
-}
+
 
 QProcess* menuFileView::getWhsConfigProc()
 {

@@ -28,3 +28,9 @@ PUBLIC ${CMAKE_CURRENT_SOURCE_DIR}/../../includes/businesslogic
 PUBLIC ${CMAKE_CURRENT_SOURCE_DIR}/../../dependencies/model
 
 )
+
+############################# install target lib ########################################
+install(TARGETS keyence_lib_static DESTINATION lib)
+FILE(GLOB files "${CMAKE_CURRENT_SOURCE_DIR}/*.h" 
+)
+INSTALL(FILES ${files} DESTINATION include)

@@ -26,6 +26,13 @@ target_include_directories(database
 PUBLIC ${CMAKE_CURRENT_SOURCE_DIR}/sqlite3-cmake/src
 PUBLIC ${CMAKE_CURRENT_SOURCE_DIR}
 )
+
+install(TARGETS database DESTINATION lib)
+FILE(GLOB files "${CMAKE_CURRENT_SOURCE_DIR}/*.h")
+INSTALL(FILES ${files} DESTINATION include)
+
+
+
 add_executable(dbTest
 Idatabase.h
 Idatabase.cpp
