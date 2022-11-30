@@ -1,8 +1,6 @@
-cmake_minimum_required(VERSION 3.5.0)
+cmake_minimum_required(VERSION 3.1.0)
 
 project(wgm_app VERSION 0.1 LANGUAGES CXX)
-
-#set(CMAKE_PREFIX_PATH  "C:/Qt/6.4.0/msvc2019_64/lib/cmake/Qt6")
 
 set(CMAKE_CXX_STANDARD 20)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
@@ -23,10 +21,6 @@ endif()
 find_package(QT NAMES Qt6 REQUIRED COMPONENTS Core Widgets Concurrent )
 find_package(Qt${QT_VERSION_MAJOR} REQUIRED COMPONENTS Core Widgets Concurrent )
 
-
-
-# pass variable of config file
-add_definitions(-DWHS_CONFIG="${WHS_CONFIG}") 
 
 file(GLOB PROJECT_SOURCES
         mainwindow.ui
@@ -76,6 +70,16 @@ install(TARGETS wgm_app
     BUNDLE DESTINATION .
     LIBRARY DESTINATION ${CMAKE_INSTALL_LIBDIR})
 
+FILE(GLOB files "${CMAKE_CURRENT_SOURCE_DIR}/*.h" 
+)
+INSTALL(FILES ${files} DESTINATION include/wgm_app/)
+
 if(QT_VERSION_MAJOR EQUAL 6)
     qt_finalize_executable(wgm_app)
 endif()
+
+#add_custom_command(TARGET wgm_app POST_BUILD
+#COMMAND ${CMAKE_COMMAND} -E copy_if_different  $<TARGET_RUNTIME_DLLS:wgm_app> ${CMAKE_RUNTIME_OUTPUT_DIRECTORY}$<CONFIG>
+#COMMAND_EXPAND_LISTS
+#
+#    )

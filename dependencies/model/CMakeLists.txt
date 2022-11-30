@@ -28,4 +28,4 @@ endif()
 
 install(TARGETS model DESTINATION lib)
 FILE(GLOB files "${CMAKE_CURRENT_SOURCE_DIR}/*.h")
-INSTALL(FILES ${files} DESTINATION include)
+INSTALL(FILES ${files} DESTINATION include/model/)

@@ -33,4 +33,4 @@ PUBLIC ${CMAKE_CURRENT_SOURCE_DIR}/../../dependencies/model
 install(TARGETS keyence_lib_static DESTINATION lib)
 FILE(GLOB files "${CMAKE_CURRENT_SOURCE_DIR}/*.h" 
 )
-INSTALL(FILES ${files} DESTINATION include)
+INSTALL(FILES ${files} DESTINATION include/keyence_lib_static/)
