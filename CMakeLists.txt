@@ -13,7 +13,9 @@ project(wgm_pkg
         DESCRIPTION "created and maintained by sami dhiab"
         HOMEPAGE_URL "https://github.com/theionSami/soft_wgm_user_interface_qt_cpp"
         LANGUAGES CXX)
-        
+
+include(cmake/Windeployqt.cmake)
+
 set(CMAKE_OBJECT_PATH_MAX 300)
 set(CMAKE_CXX_STANDARD 20)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
@@ -29,18 +31,23 @@ set(CMAKE_AUTORCC ON)
 if (MSVC)
     set(CMAKE_WINDOWS_EXPORT_ALL_SYMBOLS ON)
 endif()
+
+
+
 # To enable mocking
 #add_definitions(-DSINK_SENSOR_MOCK)  
 #add_definitions(-DSINK_AXIS_MOCK)  
 # pass variable of config file
 add_definitions(-DWHS_CONFIG="${WHS_CONFIG}") 
 
-find_package(QT NAMES Qt6 REQUIRED COMPONENTS Widgets)
-find_package(Qt${QT_VERSION_MAJOR} REQUIRED COMPONENTS Widgets)
+find_package(QT NAMES Qt6 REQUIRED COMPONENTS Core Widgets Concurrent )
+find_package(Qt${QT_VERSION_MAJOR} REQUIRED COMPONENTS Core Widgets Concurrent )
 
 add_subdirectory(dependencies)
 add_subdirectory(src)
 
+
+set(CMAKE_INSTALL_UCRT_LIBRARIES TRUE)
 include(InstallRequiredSystemLibraries)
 set(CPACK_RESOURCE_FILE_LICENSE "${CMAKE_CURRENT_SOURCE_DIR}/LICENSE")
 set(CPACK_GENERATOR "NSIS")

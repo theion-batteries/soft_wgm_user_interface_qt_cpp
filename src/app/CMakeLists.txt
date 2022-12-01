@@ -67,19 +67,18 @@ set_target_properties(wgm_app PROPERTIES
 )
 
 install(TARGETS wgm_app
-    BUNDLE DESTINATION .
-    LIBRARY DESTINATION ${CMAKE_INSTALL_LIBDIR})
+    RUNTIME DESTINATION bin/$<CONFIG>
+    LIBRARY DESTINATION ${CMAKE_INSTALL_LIBDIR}
+)
 
 FILE(GLOB files "${CMAKE_CURRENT_SOURCE_DIR}/*.h" 
 )
 INSTALL(FILES ${files} DESTINATION include/wgm_app/)
 
+
 if(QT_VERSION_MAJOR EQUAL 6)
     qt_finalize_executable(wgm_app)
 endif()
 
-#add_custom_command(TARGET wgm_app POST_BUILD
-#COMMAND ${CMAKE_COMMAND} -E copy_if_different  $<TARGET_RUNTIME_DLLS:wgm_app> ${CMAKE_RUNTIME_OUTPUT_DIRECTORY}$<CONFIG>
-#COMMAND_EXPAND_LISTS
-#
-#    )
+message(${CMAKE_RUNTIME_OUTPUT_DIRECTORY})
+windeployqt( wgm_app ${CMAKE_RUNTIME_OUTPUT_DIRECTORY}$<CONFIG>)
