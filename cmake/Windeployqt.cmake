@@ -1,7 +1,7 @@
 # Helper cmake to deploy qt application using windeployqt
 # original work: https://github.com/nitroshare/nitroshare-desktop/blob/226dd32879981c0bf2ef4c78faee3af3b797bfdc/cmake/Windeployqt.cmake
 # article: https://blog.nathanosman.com/2017/11/24/using-windeployqt-with-cpack.html
-
+# useful link: https://github.com/miurahr/cmake-qt-packaging-example/blob/master/Packaging.cmake
 find_package(QT NAMES Qt6 REQUIRED COMPONENTS Core Widgets Concurrent )
 find_package(Qt${QT_VERSION_MAJOR} REQUIRED COMPONENTS Core Widgets Concurrent )
 

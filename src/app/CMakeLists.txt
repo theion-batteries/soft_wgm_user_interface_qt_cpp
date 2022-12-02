@@ -45,6 +45,12 @@ else()
     endif()
 endif()
 
+set_target_properties(wgm_app PROPERTIES
+    RUNTIME_OUTPUT_DIRECTORY_DEBUG "${CMAKE_RUNTIME_OUTPUT_DIRECTORY}"
+    RUNTIME_OUTPUT_DIRECTORY_RELEASE "${CMAKE_RUNTIME_OUTPUT_DIRECTORY}"
+    RUNTIME_OUTPUT_DIRECTORY_RELWITHDEBINFO "${CMAKE_RUNTIME_OUTPUT_DIRECTORY}"
+    RUNTIME_OUTPUT_DIRECTORY_MINSIZEREL "${CMAKE_RUNTIME_OUTPUT_DIRECTORY}"
+)
 
 target_link_libraries(wgm_app PUBLIC Qt${QT_VERSION_MAJOR}::Core
 PUBLIC Qt${QT_VERSION_MAJOR}::Widgets
@@ -66,6 +72,12 @@ set_target_properties(wgm_app PROPERTIES
     WIN32_EXECUTABLE TRUE
 )
 
+
+# copy dlls to target build dir
+copy_dlls_target_dir(wgm_app)
+
+
+
 install(TARGETS wgm_app
     RUNTIME DESTINATION bin/$<CONFIG>
     LIBRARY DESTINATION ${CMAKE_INSTALL_LIBDIR}
@@ -80,5 +92,5 @@ if(QT_VERSION_MAJOR EQUAL 6)
     qt_finalize_executable(wgm_app)
 endif()
 
-message(${CMAKE_RUNTIME_OUTPUT_DIRECTORY})
-windeployqt( wgm_app ${CMAKE_RUNTIME_OUTPUT_DIRECTORY}$<CONFIG>)
+message("cmake_runtime_output_dir: ${CMAKE_RUNTIME_OUTPUT_DIRECTORY}")
+#windeployqt( wgm_app ${CMAKE_RUNTIME_OUTPUT_DIRECTORY}$<CONFIG>)
