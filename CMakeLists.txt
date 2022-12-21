@@ -13,6 +13,7 @@ project(wgm_pkg
         DESCRIPTION "created and maintained by sami dhiab"
         HOMEPAGE_URL "https://github.com/theionSami/soft_wgm_user_interface_qt_cpp"
         LANGUAGES CXX)
+enable_testing()
 
 include(cmake/Windeployqt.cmake)
 
@@ -37,12 +38,11 @@ if (MSVC)
     set(CMAKE_WINDOWS_EXPORT_ALL_SYMBOLS ON)
 endif()
 
-
-
 # To enable mocking
 #add_definitions(-DSINK_SENSOR_MOCK)  
 #add_definitions(-DSINK_AXIS_MOCK)  
-# pass variable of config file
+# pass variable of config file to subdir cpp file
+
 add_definitions(-DWHS_CONFIG="${WHS_CONFIG}") 
 
 find_package(QT NAMES Qt6 REQUIRED COMPONENTS Core Widgets Concurrent )

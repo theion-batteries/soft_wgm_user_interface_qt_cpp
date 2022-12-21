@@ -59,23 +59,23 @@ void sinkingController::updateLcdDistance(QLCDNumber* Lcd)
 {
     while (get_sensor_status()) // while connected, launch thread display
     {
-        std::cout << "updating lcd distance " << std::endl;
-        Lcd->display(proc_sinking_model.sinkingProcessHandler->get_sys_ptr()->getSubSysController()->get_sensor_values());
-        std::cout << "lcd distance thread id: " << QThread::currentThreadId() << std::endl;
-        QThread::currentThread()->sleep(1);
+      //  std::cout << "updating lcd distance " << std::endl;
+      //  Lcd->display(proc_sinking_model.sinkingProcessHandler->get_sys_ptr()->getSubSysController()->get_sensor_values());
+      //  std::cout << "lcd distance thread id: " << QThread::currentThreadId() << std::endl;
+      //  QThread::currentThread()->sleep(10);
     }
 
 }
 void sinkingController::updateLcdPosition(QLCDNumber* Lcd)
 {
 
-    while (get_axis_status()) // while connected, launch thread display
-    {
-        std::cout << "updating lcd position " << std::endl;
-        Lcd->display(proc_sinking_model.sinkingProcessHandler->get_sys_ptr()->getSubSysController()->get_axis_position());
-        std::cout << "lcd position thread id: " << QThread::currentThreadId() << std::endl;
-        QThread::currentThread()->sleep(1);
-    }
+  while (get_axis_status()) // while connected, launch thread display
+  {
+    //  std::cout << "updating lcd position " << std::endl;
+    //  Lcd->display(proc_sinking_model.sinkingProcessHandler->get_sys_ptr()->getSubSysController()->get_axis_position());
+    //  std::cout << "lcd position thread id: " << QThread::currentThreadId() << std::endl;
+    //  QThread::currentThread()->sleep(10);
+  }
 
 }
 bool sinkingController::get_axis_status()
@@ -142,14 +142,12 @@ void sinkingController::updateLabelProcess(QLabel* label)
 }
 void sinkingController::updateLabelAxisResponse(QLabel* label, QString cmd)
 {
-    auto response = sendAxisCmd(cmd.toStdString());
-    if (response == "ok")
-    {
-        label->setStyleSheet("QLabel { background-color : green; color : black; }");
-        label->setText(response.c_str());
-        return;
-    }
-    label->setText(response.c_str());
-
+    label->clear();
+    std::cout << "user cmd: " << cmd.toStdString() << std::endl;
+    auto strCmd = cmd.toStdString();
+    std::string resp = sendAxisCmd(strCmd);
+    std::cout << "axis full response: " << resp << std::endl;
+    label->setStyleSheet("QLabel { background-color : green; color : black; }");
+    label->setText(resp.c_str());
 }
 

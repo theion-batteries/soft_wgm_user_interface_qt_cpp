@@ -44,8 +44,10 @@ sinkingView::sinkingView(Ui::MainWindow* uiPtr)
     connect(ui->sink_input_axis_cmd, &QLineEdit::returnPressed, [this]() {
         auto inputCmd = ui->sink_input_axis_cmd->text();
         ui->sink_cmd_given->setText(inputCmd);
-        ui->sink_input_axis_cmd->clear();
+        
         sinkControll.updateLabelAxisResponse(ui->sink_axis_response, inputCmd );
+        ui->sink_input_axis_cmd->clear();
+        //ui->sink_cmd_given->clear();
         });
     // algorithms
     // move down until data valid

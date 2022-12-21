@@ -79,7 +79,7 @@ copy_dlls_target_dir(wgm_app)
 
 
 install(TARGETS wgm_app
-    RUNTIME DESTINATION bin/$<CONFIG>
+    RUNTIME DESTINATION bin/$<CONFIG>/
     LIBRARY DESTINATION ${CMAKE_INSTALL_LIBDIR}
 )
 
@@ -93,4 +93,4 @@ if(QT_VERSION_MAJOR EQUAL 6)
 endif()
 
 message("cmake_runtime_output_dir: ${CMAKE_RUNTIME_OUTPUT_DIRECTORY}")
-#windeployqt( wgm_app ${CMAKE_RUNTIME_OUTPUT_DIRECTORY}$<CONFIG>)
+windeployqt( wgm_app ${CMAKE_RUNTIME_OUTPUT_DIRECTORY})

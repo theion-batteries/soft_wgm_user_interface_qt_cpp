@@ -18,8 +18,11 @@ menuEditView::~menuEditView()
 void  menuEditView::on_actionwhs_config_triggered()
 {
 #ifdef WHS_CONFIG
-    std::cout << "opening whs config yaml file in notepad" << std::endl;
+
+    std::cout << "opening whs config yaml file in notepad: " << WHS_CONFIG<<std::endl;
     whs_config_editor.start("C:\\Windows\\system32\\notepad.exe", { WHS_CONFIG });
+
+
 #endif
 }
 
