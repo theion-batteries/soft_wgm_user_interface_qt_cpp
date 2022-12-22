@@ -25,7 +25,7 @@ sinkingView::sinkingView(Ui::MainWindow* uiPtr)
         });
     // connect cmd button run process sinking
     connect(ui->run_sinking_process, &QAbstractButton::pressed, [this]() {
-        sinkControll.on_run_sinking_process_clicked();
+    auto func = QtConcurrent::run([this](){sinkControll.on_run_sinking_process_clicked();});
         sinkControll.updateLabelAxis(ui->sink_motion_ready);        
         sinkControll.updateLabelSensor(ui->sink_sensor_ready);
         sinkControll.updateLabelProcess(ui->sinking_finished);
@@ -38,16 +38,14 @@ sinkingView::sinkingView(Ui::MainWindow* uiPtr)
             std::cout << "process already finished" <<std::endl;
             return;
         }
-        sinkControll.on_stop_sinking_process_clicked();
+    auto func = QtConcurrent::run([this](){sinkControll.on_stop_sinking_process_clicked();});
         });
     // connect enter to send cmd and to clear input
     connect(ui->sink_input_axis_cmd, &QLineEdit::returnPressed, [this]() {
         auto inputCmd = ui->sink_input_axis_cmd->text();
         ui->sink_cmd_given->setText(inputCmd);
-        
         sinkControll.updateLabelAxisResponse(ui->sink_axis_response, inputCmd );
         ui->sink_input_axis_cmd->clear();
-        //ui->sink_cmd_given->clear();
         });
     // algorithms
     // move down until data valid
