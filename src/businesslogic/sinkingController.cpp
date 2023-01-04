@@ -14,12 +14,12 @@ sinkingController::~sinkingController()
 
 void sinkingController::on_sink_connect_distance_sensor_clicked()
 {
-    auto func = QtConcurrent::run([this]() {proc_sinking_model.sinkingProcessHandler->get_sys_ptr()->connect_sensor();});
+    proc_sinking_model.sinkingProcessHandler->get_sys_ptr()->connect_sensor();
 }
 
 void sinkingController::on_sink_connect_motion_axis_clicked()
 {
-    auto func = QtConcurrent::run([this]() {proc_sinking_model.sinkingProcessHandler->get_sys_ptr()->connect_motion_axis();});
+proc_sinking_model.sinkingProcessHandler->get_sys_ptr()->connect_motion_axis();
 }
 
 void sinkingController::on_run_sinking_process_clicked()

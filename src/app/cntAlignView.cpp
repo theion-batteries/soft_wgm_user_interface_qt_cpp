@@ -59,7 +59,7 @@ cntAlignView::cntAlignView(Ui::MainWindow* uiPtr)
     // connect enter to send cmd and to clear input
     connect(ui->cnt_input_axis_cmd, &QLineEdit::returnPressed, [this]() {
         auto inputCmd = ui->cnt_input_axis_cmd->text();
-        ui->cnt_cmd_given->setText(inputCmd);
+        ui->cnt_axis_cmd_given->setText(inputCmd);
         ui->cnt_input_axis_cmd->clear();
         cntControll.updateLabelAxisResponse(ui->cnt_axis_response, inputCmd );
         });
