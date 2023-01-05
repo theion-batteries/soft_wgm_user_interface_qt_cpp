@@ -31,9 +31,8 @@ function(windeployqt target directory)
     add_custom_command(TARGET ${target} POST_BUILD
         COMMAND "${CMAKE_COMMAND}" -E
             env PATH="${_qt_bin_dir}" "${WINDEPLOYQT_EXECUTABLE}"
-                --verbose 0
+                --verbose 1
                 --no-compiler-runtime
-                #--no-angle
                 --no-opengl-sw
                 \"${directory}/${target}.exe\"
     )
@@ -54,7 +53,6 @@ function(windeployqt target directory)
                 env PATH=\"${_qt_bin_dir}\" \"${WINDEPLOYQT_EXECUTABLE}\"
                     --dry-run
                     --no-compiler-runtime
-                    --no-angle
                     --no-opengl-sw
                     --list mapping
                     \${_file}

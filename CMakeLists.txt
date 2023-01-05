@@ -23,10 +23,8 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
 
 
-set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/bin/$<CONFIG>/) 
+set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_INSTALL_BINDIR}) 
 
-message("cmake_binary_dir: ${CMAKE_BINARY_DIR}")
-message("cmake_runtime_output_dir: ${CMAKE_RUNTIME_OUTPUT_DIRECTORY}")
 set(CMAKE_INCLUDE_CURRENT_DIR ON)
 
 set(CMAKE_AUTOUIC ON)
@@ -42,8 +40,8 @@ endif()
 #add_definitions(-DSINK_SENSOR_MOCK)  
 #add_definitions(-DSINK_AXIS_MOCK)  
 # pass variable of config file to subdir cpp file
-
-add_definitions(-DWHS_CONFIG="${WHS_CONFIG}") 
+message("add config file definition ${WHS_CONFIG} to application")
+#add_definitions(-DWHS_CONFIG="${WHS_CONFIG}") 
 
 find_package(QT NAMES Qt6 REQUIRED COMPONENTS Core Widgets Concurrent )
 find_package(Qt${QT_VERSION_MAJOR} REQUIRED COMPONENTS Core Widgets Concurrent )

@@ -73,13 +73,9 @@ set_target_properties(wgm_app PROPERTIES
 )
 
 
-# copy dlls to target build dir
-copy_dlls_target_dir(wgm_app)
-
-
-
 install(TARGETS wgm_app
-    RUNTIME DESTINATION bin/$<CONFIG>/
+    RUNTIME DESTINATION ${CMAKE_RUNTIME_OUTPUT_DIRECTORY}
+
     LIBRARY DESTINATION ${CMAKE_INSTALL_LIBDIR}
 )
 
@@ -92,5 +88,4 @@ if(QT_VERSION_MAJOR EQUAL 6)
     qt_finalize_executable(wgm_app)
 endif()
 
-message("cmake_runtime_output_dir: ${CMAKE_RUNTIME_OUTPUT_DIRECTORY}")
 windeployqt( wgm_app ${CMAKE_RUNTIME_OUTPUT_DIRECTORY})
