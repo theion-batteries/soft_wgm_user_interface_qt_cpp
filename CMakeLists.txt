@@ -15,8 +15,6 @@ project(wgm_pkg
         LANGUAGES CXX)
 enable_testing()
 
-include(cmake/Windeployqt.cmake)
-
 set(CMAKE_OBJECT_PATH_MAX 300)
 set(CMAKE_CXX_STANDARD 20)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)

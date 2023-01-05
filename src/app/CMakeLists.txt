@@ -18,6 +18,10 @@ if (MSVC)
 endif()
 
 
+# pass variable of config file
+message("whs config file passed: ${WHS_CONFIG}")
+add_definitions(-DWHS_CONFIG="${WHS_CONFIG}") 
+
 find_package(QT NAMES Qt6 REQUIRED COMPONENTS Core Widgets Concurrent )
 find_package(Qt${QT_VERSION_MAJOR} REQUIRED COMPONENTS Core Widgets Concurrent )
 
@@ -88,4 +92,21 @@ if(QT_VERSION_MAJOR EQUAL 6)
     qt_finalize_executable(wgm_app)
 endif()
 
-windeployqt( wgm_app ${CMAKE_RUNTIME_OUTPUT_DIRECTORY})
+add_custom_command(TARGET wgm_app POST_BUILD
+  COMMAND ${CMAKE_COMMAND} -E copy $<TARGET_RUNTIME_DLLS:wgm_app> $<TARGET_FILE_DIR:wgm_app>
+  COMMAND_EXPAND_LISTS
+  )
+#windeployqt( wgm_app ${CMAKE_RUNTIME_OUTPUT_DIRECTORY})
+# Retrieve the absolute path to qmake and then use that path to find
+# the windeployqt executable
+get_target_property(QMAKE_EXE Qt6::qmake IMPORTED_LOCATION)
+get_filename_component(QT_BIN_DIR "${QMAKE_EXE}" DIRECTORY)
+
+find_program(WINDEPLOYQT_ENV_SETUP qtenv2.bat HINTS "${QT_BIN_DIR}")
+find_program(WINDEPLOYQT_EXECUTABLE windeployqt HINTS "${QT_BIN_DIR}")
+
+# Run windeployqt immediately after build
+add_custom_command(TARGET wgm_app
+    POST_BUILD
+    COMMAND "${WINDEPLOYQT_ENV_SETUP}" && "${WINDEPLOYQT_EXECUTABLE}" \"$<TARGET_FILE:wgm_app>\"
+)
