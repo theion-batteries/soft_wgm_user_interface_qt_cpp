@@ -1,26 +1,11 @@
 # wgm user interface
-this repo holds the user interface made with qt. 
-the core app (wgm software) is to be added as dependency inside the correct folder. please read the README.md in each folder for more informations.
+this is the installation of the wafer growing machine user interface.
 
-* Author & Maintainer: Sami dhiab
+* Creator & Maintainer: Sami dhiab
 * contact: sami@theion.de
 
-# vcpkg
-vcpkg is used as a package manager for c/cpp projects.
-please follow the steps described here:
-https://vcpkg.readthedocs.io/en/latest/examples/installing-and-using-packages/
+# Install
 
-
-# src
-
-# includes
-
-# dependencies
-
-# docs
-
-# build
-
-# test
-
-# cmake
+* run the wgm_pkg.exe
+* install the software under C:/program files/wgm_pkg/
+* run the wgm_app.exe inside bin/debug/ as admin the first time. 
