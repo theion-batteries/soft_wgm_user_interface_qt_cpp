@@ -13,7 +13,7 @@
 #include "cntAlignModel.h"
 class cntAlignController : public QObject
 {
-   // Q_OBJECT
+    Q_OBJECT
 public:
     cntAlignController(/* args */);
     ~cntAlignController();
@@ -22,6 +22,9 @@ signals:
     void triggered();
     void returnPressed(); // line edit enter key pressed
     void valueChanged();
+    void axisConnected();
+    void dispenserConnected();
+    void hvConnected();
 public slots:
     void on_cnt_connect_motion_axis_clicked();
     void on_cnt_connect_dispenser_clicked();

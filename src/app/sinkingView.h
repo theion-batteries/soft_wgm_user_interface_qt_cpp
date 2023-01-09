@@ -18,7 +18,7 @@
 
 class sinkingView: public QObject
 {
-    //Q_OBJECT
+    Q_OBJECT
 public:
     sinkingView(Ui::MainWindow* uiPtr);
     ~sinkingView();
@@ -26,6 +26,8 @@ public:
 private:
     Ui::MainWindow* ui;
     sinkingController sinkControll;
+
+
 };
 
 

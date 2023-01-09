@@ -13,46 +13,43 @@ sinkingView::sinkingView(Ui::MainWindow* uiPtr)
         // connect cmd button connect sensor
     connect(ui->sink_connect_distance_sensor, &QAbstractButton::pressed, [this]() {
         auto connectSensorTask = QtConcurrent::run([this]()
-        {
-        sinkControll.on_sink_connect_distance_sensor_clicked();
-        });
-        connectSensorTask.waitForFinished();
+            {sinkControll.on_sink_connect_distance_sensor_clicked();});});
+    connect(&sinkControll, &sinkingController::sensorConnected, [this]() {
         sinkControll.updateLabelSensor(ui->sink_sensor_ready);
-       auto func = QtConcurrent::run(&sinkingController::updateLcdDistance, &sinkControll, ui->sink_distance_head1);
+    auto func = QtConcurrent::run(&sinkingController::updateLcdDistance, &sinkControll, ui->sink_distance_head1);
         });
     // connect cmd button connect axis
     connect(ui->sink_connect_motion_axis, &QAbstractButton::pressed, [this]() {
-        auto connectAxisTask = QtConcurrent::run([this]()
-        {
-        sinkControll.on_sink_connect_motion_axis_clicked();
+        auto connectAxisTask = QtConcurrent::run([this]() {
+            sinkControll.on_sink_connect_motion_axis_clicked();});
         });
-        connectAxisTask.waitForFinished();
+    connect(&sinkControll, &sinkingController::axisConnected, [this]() {
         sinkControll.updateLabelAxis(ui->sink_motion_ready);
-       auto func = QtConcurrent::run(&sinkingController::updateLcdPosition, &sinkControll,ui->sink_axis_pos);
+    auto func = QtConcurrent::run(&sinkingController::updateLcdPosition, &sinkControll, ui->sink_axis_pos);
         });
     // connect cmd button run process sinking
     connect(ui->run_sinking_process, &QAbstractButton::pressed, [this]() {
-    auto func = QtConcurrent::run([this](){sinkControll.on_run_sinking_process_clicked();});
-        sinkControll.updateLabelAxis(ui->sink_motion_ready);        
-        sinkControll.updateLabelSensor(ui->sink_sensor_ready);
-        sinkControll.updateLabelProcess(ui->sinking_finished);
-        sinkControll.updateLcdTime(ui->sink_time);
+        auto func = QtConcurrent::run([this]() {sinkControll.on_run_sinking_process_clicked();});
+    sinkControll.updateLabelAxis(ui->sink_motion_ready);
+    sinkControll.updateLabelSensor(ui->sink_sensor_ready);
+    sinkControll.updateLabelProcess(ui->sinking_finished);
+    sinkControll.updateLcdTime(ui->sink_time);
         });
     // connect cmd button stop process sinking
     connect(ui->stop_sinking_process, &QAbstractButton::pressed, [this]() {
         if (sinkControll.getProcessStatus())
         {
-            std::cout << "process already finished" <<std::endl;
+            std::cout << "process already finished" << std::endl;
             return;
         }
-    auto func = QtConcurrent::run([this](){sinkControll.on_stop_sinking_process_clicked();});
+    auto func = QtConcurrent::run([this]() {sinkControll.on_stop_sinking_process_clicked();});
         });
     // connect enter to send cmd and to clear input
     connect(ui->sink_input_axis_cmd, &QLineEdit::returnPressed, [this]() {
         auto inputCmd = ui->sink_input_axis_cmd->text();
-        ui->sink_cmd_given->setText(inputCmd);
-        sinkControll.updateLabelAxisResponse(ui->sink_axis_response, inputCmd );
-        ui->sink_input_axis_cmd->clear();
+    ui->sink_cmd_given->setText(inputCmd);
+    sinkControll.updateLabelAxisResponse(ui->sink_axis_response, inputCmd);
+    ui->sink_input_axis_cmd->clear();
         });
     // algorithms
     // move down until data valid
@@ -74,11 +71,12 @@ sinkingView::sinkingView(Ui::MainWindow* uiPtr)
 
 }
 
-sinkingView::~sinkingView()
-{
-}
-
 sinkingController* sinkingView::getController()
 {
     return &sinkControll;
 }
+
+sinkingView::~sinkingView()
+{
+}
+

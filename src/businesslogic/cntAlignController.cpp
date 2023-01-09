@@ -15,16 +15,20 @@ cntAlignController::~cntAlignController()
 void cntAlignController::on_cnt_connect_motion_axis_clicked()
 {
     cntModel.aligningProcessHandler->get_sys_ptr()->connect_motion_axis();
+        emit axisConnected();
 }
 
 void cntAlignController::on_cnt_connect_dispenser_clicked()
 {
     cntModel.aligningProcessHandler->get_sys_ptr()->connect_dispenser();
+    emit dispenserConnected();
 }
 
 void cntAlignController::on_cnt_connect_hv_clicked()
 {
     cntModel.aligningProcessHandler->get_sys_ptr()->connect_hv();
+        emit hvConnected();
+
 }
 void cntAlignController::on_run_cnt_aligning_process_clicked()
 {

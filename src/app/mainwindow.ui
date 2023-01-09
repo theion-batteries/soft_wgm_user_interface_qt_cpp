@@ -4601,6 +4601,7 @@
     </property>
     <addaction name="actionwhs_config"/>
     <addaction name="actioncnt_config"/>
+    <addaction name="actionph_config_yaml"/>
    </widget>
    <widget class="QMenu" name="menuView">
     <property name="title">
@@ -4718,6 +4719,11 @@
   <action name="actioncnt_config">
    <property name="text">
     <string>cnt_config.yaml</string>
+   </property>
+  </action>
+  <action name="actionph_config_yaml">
+   <property name="text">
+    <string>ph_config.yaml</string>
    </property>
   </action>
  </widget>

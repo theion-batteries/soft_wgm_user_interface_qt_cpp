@@ -17,6 +17,10 @@ menuFileView::menuFileView(Ui::MainWindow* uiPtr)
     connect(ui->actionlogout, &QAction::triggered, [this]() {
         on_actionlogout_triggered();
         });
+    // exit
+    connect(ui->actionexit, &QAction::triggered, [this]() {
+        on_actionexit_triggered();
+        });
 }
 
 menuFileView::~menuFileView()
@@ -69,6 +73,15 @@ void menuFileView::on_actionlogout_triggered()
 {
     QMessageBox msgBox;
     msgBox.setText("logout user");
+    msgBox.exec();
+
+}
+
+void menuFileView::on_actionexit_triggered()
+{
+    QMessageBox msgBox;
+    msgBox.setText("are you sure to close the app?");
+    connect(&msgBox, &QMessageBox::buttonClicked,  this, &QCoreApplication::quit);
     msgBox.exec();
 
 }

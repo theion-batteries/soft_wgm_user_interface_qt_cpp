@@ -15,11 +15,13 @@ sinkingController::~sinkingController()
 void sinkingController::on_sink_connect_distance_sensor_clicked()
 {
     proc_sinking_model.sinkingProcessHandler->get_sys_ptr()->connect_sensor();
+    emit sensorConnected();
 }
 
 void sinkingController::on_sink_connect_motion_axis_clicked()
 {
 proc_sinking_model.sinkingProcessHandler->get_sys_ptr()->connect_motion_axis();
+    emit axisConnected();
 }
 
 void sinkingController::on_run_sinking_process_clicked()
