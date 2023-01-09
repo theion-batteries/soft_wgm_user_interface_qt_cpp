@@ -20,9 +20,7 @@ if (MSVC)
 endif()
 
 
-# pass variable of config file
-message("whs config file passed: ${WHS_CONFIG}")
-add_definitions(-DWHS_CONFIG="${WHS_CONFIG}") 
+
 
 find_package(QT NAMES Qt6 REQUIRED COMPONENTS Core Widgets Concurrent )
 find_package(Qt${QT_VERSION_MAJOR} REQUIRED COMPONENTS Core Widgets Concurrent )
@@ -73,7 +71,7 @@ PUBLIC ${CMAKE_CURRENT_SOURCE_DIR}/../../includes/businesslogic
 set_target_properties(wgm_app PROPERTIES
     WIN32_EXECUTABLE TRUE
 )
-
+copy_dlls_target_dir(wgm_app)
 
 install(TARGETS wgm_app
     RUNTIME DESTINATION ${CMAKE_RUNTIME_OUTPUT_DIRECTORY}

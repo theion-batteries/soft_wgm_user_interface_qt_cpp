@@ -39,7 +39,6 @@ signals:
     void finished();
 private:
     Ui::MainWindow* ui;
-    QProcess whs_config_editor;
    
 
 public slots:
@@ -47,7 +46,6 @@ public slots:
     void on_actionlogin_triggered();
     void on_actionlogout_triggered();
 
-    QProcess* getWhsConfigProc();
 };
 
 

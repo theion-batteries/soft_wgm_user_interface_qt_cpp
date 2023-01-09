@@ -39,8 +39,11 @@ endif()
 #add_definitions(-DSINK_SENSOR_MOCK)  
 #add_definitions(-DSINK_AXIS_MOCK)  
 # pass variable of config file to subdir cpp file
-message("add config file definition ${WHS_CONFIG} to application")
-#add_definitions(-DWHS_CONFIG="${WHS_CONFIG}") 
+message("whs config file passed: ${WHS_CONFIG}")
+add_definitions(-DWHS_CONFIG="${WHS_CONFIG}") 
+message("cnt config file passed: ${CNT_CONFIG}")
+add_definitions(-DCNT_CONFIG="${CNT_CONFIG}") 
+
 
 find_package(QT NAMES Qt6 REQUIRED COMPONENTS Core Widgets Concurrent )
 find_package(Qt${QT_VERSION_MAJOR} REQUIRED COMPONENTS Core Widgets Concurrent )

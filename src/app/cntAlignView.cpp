@@ -84,6 +84,10 @@ cntAlignView::cntAlignView(Ui::MainWindow* uiPtr)
 }
  
 
+cntAlignController* cntAlignView::getController()
+{
+    return &cntControll;
+}
 
 cntAlignView::~cntAlignView()
 {

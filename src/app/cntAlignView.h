@@ -22,6 +22,8 @@ class cntAlignView: public QObject
 public:
     cntAlignView(Ui::MainWindow* uiPtr);
     ~cntAlignView();
+    cntAlignController* getController();
+
 private:
     Ui::MainWindow* ui;
     cntAlignController cntControll ;

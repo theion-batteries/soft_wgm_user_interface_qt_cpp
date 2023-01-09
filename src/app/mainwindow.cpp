@@ -24,6 +24,12 @@ MainWindow::MainWindow(QWidget* parent)
             sinkView->getController()->reload_whs_config_file();
          });
 
+    /********************* connect tab with menu **************************/
+    connect(editView->getCntConfigProc(), &QProcess::finished,
+        [this]() {
+            std::cout<<"process exit succefully"<<std::endl;
+            cntView->getController()->reload_cnt_config_file();
+         });
 }
 
 MainWindow::~MainWindow()

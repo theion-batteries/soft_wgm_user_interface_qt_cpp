@@ -25,10 +25,6 @@ menuFileView::~menuFileView()
 
 
 
-QProcess* menuFileView::getWhsConfigProc()
-{
-    return &whs_config_editor;
-}
 
 void menuFileView::on_actionnew_user_triggered()
 {

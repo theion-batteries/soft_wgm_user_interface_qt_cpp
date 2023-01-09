@@ -7,7 +7,10 @@ menuEditView::menuEditView(Ui::MainWindow* uiPtr)
          // open whs config
     connect(ui->actionwhs_config, &QAction::triggered, [this]() {
         on_actionwhs_config_triggered();
-        });
+        });         // open cnt config
+   connect(ui->actioncnt_config, &QAction::triggered, [this]() {
+       on_actioncnt_config_triggered();
+       });
 
 }
 
@@ -26,7 +29,22 @@ void  menuEditView::on_actionwhs_config_triggered()
 #endif
 }
 
+void  menuEditView::on_actioncnt_config_triggered()
+{
+#ifdef CNT_CONFIG
+
+    std::cout << "opening CNT config yaml file in notepad: " << CNT_CONFIG<<std::endl;
+    cnt_config_editor.start("C:\\Windows\\system32\\notepad.exe", { CNT_CONFIG });
+
+
+#endif
+}
 QProcess* menuEditView::getWhsConfigProc()
 {
     return &whs_config_editor;
+}
+
+QProcess* menuEditView::getCntConfigProc()
+{
+    return &cnt_config_editor;
 }
