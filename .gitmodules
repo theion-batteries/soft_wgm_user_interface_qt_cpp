@@ -5,3 +5,6 @@
 [submodule "dependencies/database/sqlite3-cmake"]
 	path = dependencies/database/sqlite3-cmake
 	url = https://github.com/alex85k/sqlite3-cmake.git
+[submodule "pkg/soft_wgm_installer_update"]
+	path = pkg/soft_wgm_installer_update
+	url = https://github.com/theion-batteries/soft_wgm_installer_update.git
