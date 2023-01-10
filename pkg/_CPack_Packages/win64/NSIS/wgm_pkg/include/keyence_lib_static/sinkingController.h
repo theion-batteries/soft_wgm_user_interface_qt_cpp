@@ -24,6 +24,9 @@ signals:
     void triggered();
     void returnPressed(); // line edit enter key pressed
     void valueChanged();
+    void finished();
+    void axisConnected();
+    void sensorConnected();
 public slots:
     void on_sink_connect_motion_axis_clicked();
     void on_sink_connect_distance_sensor_clicked();

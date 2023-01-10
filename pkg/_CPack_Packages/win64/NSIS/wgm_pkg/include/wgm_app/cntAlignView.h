@@ -10,21 +10,24 @@
  */
 #pragma once
 // qt
+#include "./ui_mainwindow.h"
 #include <QObject>
 #include <QTConcurrent>
-#include "./ui_mainwindow.h"
 // mvc
 #include "cntAlignController.h"
 
 class cntAlignView: public QObject
 {
-   // Q_OBJECT
+    Q_OBJECT
 public:
     cntAlignView(Ui::MainWindow* uiPtr);
     ~cntAlignView();
+    cntAlignController* getController();
+
 private:
     Ui::MainWindow* ui;
     cntAlignController cntControll ;
+
 
 };
 
