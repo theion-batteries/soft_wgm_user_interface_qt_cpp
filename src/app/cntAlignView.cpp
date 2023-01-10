@@ -13,36 +13,58 @@ cntAlignView::cntAlignView(Ui::MainWindow* uiPtr)
     ui->cnt_proc_finished->setStyleSheet("QLabel { background-color : red; color : black; }");
 
     /**************** signals and slots ********************/
+    // connect cmd button connect axis
+    connect(ui->cnt_connect_motion_axis, &QAbstractButton::pressed, this, [this]() {
+        auto connectAxisTask = QtConcurrent::run([this]() {
+            cntControll.on_cnt_connect_motion_axis_clicked();});
+            },Qt::QueuedConnection);
+    connect(&cntControll, &cntAlignController::axisConnected, this, [this]() {
+        cntControll.updateLabelAxis(ui->cnt_motion_ready);
+    auto func = QtConcurrent::run(&cntAlignController::updateLcdPosition, &cntControll, ui->cnt_axis_pos);
+        },Qt::QueuedConnection);
+
             // connect cmd button connect dispenser
-    connect(ui->cnt_connect_dispenser, &QAbstractButton::pressed, [this]() {
+    connect(ui->cnt_connect_dispenser, &QAbstractButton::pressed, this, [this]() {
         auto connectDispenserTask = QtConcurrent::run([this]() {
-            cntControll.on_cnt_connect_dispenser_clicked();});});
-    connect(&cntControll, &cntAlignController::dispenserConnected, [this]() {
+            cntControll.on_cnt_connect_dispenser_clicked();});},Qt::QueuedConnection);
+    connect(&cntControll, &cntAlignController::dispenserConnected, this, [this]() {
         cntControll.updateLabelDispenser(ui->cnt_dispenser_ready);
     auto func = QtConcurrent::run(&cntAlignController::updateLcdDispenserFreq, &cntControll, ui->cnt_lcd_dispenser_frequency);
-        });
-
-    // connect cmd button connect axis
-    connect(ui->cnt_connect_motion_axis, &QAbstractButton::pressed, [this]() {
-        auto connectAxisTask = QtConcurrent::run([this]() {
-            cntControll.on_cnt_connect_motion_axis_clicked();});});
-    connect(&cntControll, &cntAlignController::axisConnected, [this]() {
-        cntControll.updateLabelAxis(ui->cnt_motion_ready);
-    std::cout << "main thread id: " << QThread::currentThreadId() << std::endl;
-    auto func = QtConcurrent::run(&cntAlignController::updateLcdPosition, &cntControll, ui->cnt_axis_pos);
-        });
+        },Qt::QueuedConnection);
 
     // connect cmd button connect hv
-    connect(ui->cnt_connect_hv, &QAbstractButton::pressed, [this]() {
+    connect(ui->cnt_connect_hv, &QAbstractButton::pressed, this, [this]() {
         auto connectHvTask = QtConcurrent::run([this]() {
-            cntControll.on_cnt_connect_hv_clicked();});});
-    connect(&cntControll, &cntAlignController::hvConnected, [this]() {
+            cntControll.on_cnt_connect_hv_clicked();});},Qt::QueuedConnection);
+    connect(&cntControll, &cntAlignController::hvConnected, this, [this]() {
         cntControll.updateLabelAxis(ui->cnt_hv_ready);
     std::cout << "main thread id: " << QThread::currentThreadId() << std::endl;
     auto func = QtConcurrent::run(&cntAlignController::updateLcdOutputVoltage, &cntControll, ui->cnt_lcd_hv_voltage_out);
-        });
+        },Qt::QueuedConnection);
 
+    // connect enter to send manual cmd to motion axis
+    connect(ui->cnt_input_axis_cmd, &QLineEdit::returnPressed, [this]() {
+        auto inputCmd = ui->cnt_input_axis_cmd->text();
+    ui->cnt_axis_cmd_given->setText(inputCmd);
+    cntControll.updateLabelAxisResponse(ui->cnt_axis_response, inputCmd);
+    ui->cnt_input_axis_cmd->clear();  
+      });
+    // connect enter to send manual cmd to dispenser
+    connect(ui->cnt_input_dispenser, &QLineEdit::returnPressed, [this]() {
+        auto inputCmd = ui->cnt_input_dispenser->text();
+    ui->cnt_dispenser_cmd_given->setText(inputCmd);
+    cntControll.updateLabelAxisResponse(ui->cnt_dispenser_response, inputCmd);
+    ui->cnt_input_dispenser->clear();  
+      });
+    // connect enter to send manual cmd to hv
+    connect(ui->cnt_input_hv_cmd, &QLineEdit::returnPressed, [this]() {
+        auto inputCmd = ui->cnt_input_hv_cmd->text();
+    ui->cnt_hv_cmd_given->setText(inputCmd);
+    cntControll.updateLabelAxisResponse(ui->cnt_hv_response, inputCmd);
+    ui->cnt_input_hv_cmd->clear();  
+      });
 
+    /***********       Process   *****/
     // connect cmd button run process sinking
     connect(ui->run_cnt_aligning_process, &QAbstractButton::pressed, [this]() {
         auto func = QtConcurrent::run([this]() {cntControll.on_run_cnt_aligning_process_clicked();});
@@ -61,13 +83,7 @@ cntAlignView::cntAlignView(Ui::MainWindow* uiPtr)
         }
     auto func = QtConcurrent::run([this]() {cntControll.on_stop_cnt_proc_clicked();});
         });
-    // connect enter to send cmd and to clear input
-    connect(ui->cnt_input_axis_cmd, &QLineEdit::returnPressed, [this]() {
-        auto inputCmd = ui->cnt_input_axis_cmd->text();
-    ui->cnt_axis_cmd_given->setText(inputCmd);
-    cntControll.updateLabelAxisResponse(ui->cnt_axis_response, inputCmd);
-    ui->cnt_input_axis_cmd->clear();  
-      });
+
     // algorithms
     // move down to center
     connect(ui->move_down_to_center, &QAbstractButton::pressed, [this]() {

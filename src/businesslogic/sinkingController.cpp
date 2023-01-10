@@ -174,8 +174,6 @@ void sinkingController::updateLabelAxisResponse(QLabel* label, QString cmd)
     std::cout << "user cmd: " << cmd.toStdString() << std::endl;
     auto strCmd = cmd.toStdString();
     std::string resp = sendAxisCmd(strCmd);
-    std::cout << "axis full response: " << resp << std::endl;
-    label->setStyleSheet("QLabel { background-color : green; color : black; }");
-    label->setText(resp.c_str());
+    emit axisReplied(resp);
 }
 

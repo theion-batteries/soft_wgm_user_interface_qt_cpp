@@ -42,7 +42,7 @@
        <bool>false</bool>
       </property>
       <property name="currentIndex">
-       <number>0</number>
+       <number>3</number>
       </property>
       <widget class="QWidget" name="Main">
        <attribute name="title">
@@ -1688,7 +1688,7 @@
                    </spacer>
                   </item>
                   <item>
-                   <widget class="QLabel" name="cnt_cmd_given">
+                   <widget class="QLabel" name="cnt_dispenser_cmd_given">
                     <property name="sizePolicy">
                      <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
                       <horstretch>0</horstretch>

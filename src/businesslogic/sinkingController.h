@@ -27,6 +27,7 @@ signals:
     void finished();
     void axisConnected();
     void sensorConnected();
+    void axisReplied(std::string reply);
 public slots:
     void on_sink_connect_motion_axis_clicked();
     void on_sink_connect_distance_sensor_clicked();

@@ -63,7 +63,7 @@ void cntAlignController::on_high_voltage_pulse_clicked()
 // loop
 void cntAlignController::updateLcdDispenserFreq(QLCDNumber* Lcd)
 {
-    while (get_dispenser_status()) // while connected, launch thread display
+    if (get_dispenser_status()) // while connected, launch thread display
     {
         std::cout << "updating lcd dispensr freq" << std::endl;
         Lcd->display(cntModel.aligningProcessHandler->get_sys_ptr()->getSubSysController().get_dispenser_frequency());
@@ -118,7 +118,7 @@ void cntAlignController::updateLcdOutputFrequency(QLCDNumber* Lcd)
 bool cntAlignController::get_axis_status()
 {
 
-    return cntModel.aligningProcessHandler->get_sys_ptr()->getSubSysStatus("motion");
+    return cntModel.aligningProcessHandler->get_sys_ptr()->getSubSysStatus("axis_motion");
 
 }
 
@@ -149,7 +149,6 @@ void cntAlignController::updateLabelAxis(QLabel* label)
     {
         label->setText("true");
         label->setStyleSheet("QLabel { background-color : green; color : black; }");
-        return;
     }
 
 }
@@ -159,7 +158,6 @@ void cntAlignController::updateLabelDispenser(QLabel* label)
     {
         label->setText("true");
         label->setStyleSheet("QLabel { background-color : green; color : black; }");
-        return;
     }
 
 }
