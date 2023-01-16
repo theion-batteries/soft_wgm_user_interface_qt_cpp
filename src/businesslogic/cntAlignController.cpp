@@ -32,29 +32,59 @@ void cntAlignController::on_cnt_connect_hv_clicked()
 }
 void cntAlignController::on_run_cnt_aligning_process_clicked()
 {
+    if (!get_axis_status() || !get_dispenser_status() ||!get_hv_status())
+    {
+        std::cout << "device not connected " << std::endl;
+        return;
+    }
     cntModel.aligningProcessHandler->start_process();
     time_elapsed = cntModel.aligningProcessHandler->get_elapsed_time();
 }
 
 void cntAlignController::on_stop_cnt_proc_clicked()
 {
+    if (!get_axis_status() || !get_dispenser_status() ||!get_hv_status())
+    {
+        std::cout << "device not connected " << std::endl;
+        return;
+    }
     cntModel.aligningProcessHandler->stop_process();
     time_elapsed = cntModel.aligningProcessHandler->get_elapsed_time();
 }
 void cntAlignController::on_move_down_to_center_clicked()
 {
+    if (!get_axis_status() || !get_dispenser_status() ||!get_hv_status())
+    {
+        std::cout << "device not connected " << std::endl;
+        return;
+    }
     cntModel.aligningProcessHandler->get_sys_ptr()->getSubSysController().cnt_motion_move_to_center();
 }
 void cntAlignController::on_move_back_home_clicked()
 {
+    if (!get_axis_status() || !get_dispenser_status() ||!get_hv_status())
+    {
+        std::cout << "device not connected " << std::endl;
+        return;
+    }
     cntModel.aligningProcessHandler->get_sys_ptr()->getSubSysController().cnt_motion_move_home();
 }
 void cntAlignController::on_dispenser_vibrate_clicked()
 {
+    if (!get_axis_status() || !get_dispenser_status() ||!get_hv_status())
+    {
+        std::cout << "device not connected " << std::endl;
+        return;
+    }
     cntModel.aligningProcessHandler->get_sys_ptr()->getSubSysController().cnt_dispenser_vibrate();          
 }
 void cntAlignController::on_high_voltage_pulse_clicked()
 {
+    if (!get_axis_status() || !get_dispenser_status() ||!get_hv_status())
+    {
+        std::cout << "device not connected " << std::endl;
+        return;
+    }
     cntModel.aligningProcessHandler->get_sys_ptr()->getSubSysController().get_hv_ptr()->  pulse();
 }
 
@@ -183,14 +213,46 @@ void cntAlignController::updateLabelProcess(QLabel* label)
 }
 void cntAlignController::updateLabelAxisResponse(QLabel* label, QString cmd)
 {
-    auto response = sendAxisCmd(cmd.toStdString());
-    if (response == "ok")
+    if (!get_axis_status())
     {
-        label->setStyleSheet("QLabel { background-color : green; color : black; }");
-        label->setText(response.c_str());
+        std::cout << "device not connected " << std::endl;
         return;
     }
-    label->setText(response.c_str());
+    label->clear();
+    std::cout << "user cmd: " << cmd.toStdString() << std::endl;
+    auto strCmd = cmd.toStdString();
+    std::string resp = sendAxisCmd(strCmd);
+    emit axisReplied(resp);
+
+}
+
+void cntAlignController::updateLabelDispenserResponse(QLabel* label, QString cmd)
+{
+    if (!get_dispenser_status())
+    {
+        std::cout << "device not connected " << std::endl;
+        return;
+    }
+    label->clear();
+    std::cout << "user cmd: " << cmd.toStdString() << std::endl;
+    auto strCmd = cmd.toStdString();
+    std::string resp = sendAxisCmd(strCmd);
+    emit dispenserReplied(resp);
+
+}
+
+void cntAlignController::updateLabelHvResponse(QLabel* label, QString cmd)
+{
+    if (!get_hv_status())
+    {
+        std::cout << "device not connected " << std::endl;
+        return;
+    }
+    label->clear();
+    std::cout << "user cmd: " << cmd.toStdString() << std::endl;
+    auto strCmd = cmd.toStdString();
+    std::string resp = sendAxisCmd(strCmd);
+    emit hvReplied(resp);
 
 }
 

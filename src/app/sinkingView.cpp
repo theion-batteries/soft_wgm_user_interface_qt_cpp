@@ -34,6 +34,7 @@ sinkingView::sinkingView(Ui::MainWindow* uiPtr)
     ui->sink_cmd_given->setText(inputCmd);
     auto func = QtConcurrent::run(&sinkingController::updateLabelAxisResponse, &sinkControll, ui->sink_axis_response, inputCmd);
         }, Qt::QueuedConnection);
+        
     // connect axis reply to update text
     connect(&sinkControll, &sinkingController::axisReplied, this, [this](std::string reply) {
         std::cout << "axis full response: " << reply << std::endl;

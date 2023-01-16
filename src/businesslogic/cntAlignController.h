@@ -22,9 +22,14 @@ signals:
     void triggered();
     void returnPressed(); // line edit enter key pressed
     void valueChanged();
+    void finished();
     void axisConnected();
     void dispenserConnected();
     void hvConnected();
+    void axisReplied(std::string reply);
+    void dispenserReplied(std::string reply);
+    void hvReplied(std::string reply);
+
 public slots:
     void on_cnt_connect_motion_axis_clicked();
     void on_cnt_connect_dispenser_clicked();
@@ -59,7 +64,10 @@ public slots:
     void updateLabelDispenser(QLabel* label);
     void updateLabelHV(QLabel* label);
     void updateLabelProcess(QLabel* label);
+    // response update
     void updateLabelAxisResponse(QLabel* label, QString cmd);
+    void updateLabelDispenserResponse(QLabel* label, QString cmd);
+    void updateLabelHvResponse(QLabel* label, QString cmd);
 
 private:
     cntAlignModel cntModel;
