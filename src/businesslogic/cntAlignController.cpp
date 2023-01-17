@@ -58,7 +58,8 @@ void cntAlignController::on_move_down_to_center_clicked()
         std::cout << "device not connected " << std::endl;
         return;
     }
-    cntModel.aligningProcessHandler->get_sys_ptr()->getSubSysController().cnt_motion_move_to_center();
+    auto cntcontroll = cntModel.aligningProcessHandler->get_sys_ptr()->getSubSysController();
+    cntcontroll.cnt_motion_move_to_center(cntcontroll.get_center_target_distance());
 }
 void cntAlignController::on_move_back_home_clicked()
 {
