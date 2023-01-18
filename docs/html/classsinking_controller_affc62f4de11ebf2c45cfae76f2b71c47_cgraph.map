@@ -1,0 +1,5 @@
+<map id="sinkingController::get_sensor_status" name="sinkingController::get_sensor_status">
+<area shape="rect" id="node1" title=" " alt="" coords="5,43,135,84"/>
+<area shape="rect" id="node2" href="$classwgm__processes_1_1_isinking__process.html#acc0cf72fe5ca2ee7d7723016da15f3f7" title=" " alt="" coords="195,5,363,47"/>
+<area shape="rect" id="node3" href="$classwafer__holder__motion__system_1_1_iwafer__motion__controller.html#a1b03116f70d8a8cb8de0283da77bed58" title=" " alt="" coords="183,71,375,127"/>
+</map>

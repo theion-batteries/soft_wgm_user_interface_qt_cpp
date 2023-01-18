@@ -2,7 +2,7 @@
 
 coolingView::coolingView(Ui::MainWindow* uiPtr)
 {
-    ui=uiPtr;
+    ui = uiPtr;
     ui->tabWidget->setTabText(4, "Cooling");
     ui->ph_connected_status->setStyleSheet("QLabel { background-color : red; color : black; }");
     ui->ph_rotation_ready->setStyleSheet("QLabel { background-color : red; color : black; }");
@@ -11,8 +11,9 @@ coolingView::coolingView(Ui::MainWindow* uiPtr)
     ui->ph_axis_response->setStyleSheet("QLabel { background-color : red; color : black; }");
     ui->ph_rotation_axis_response->setStyleSheet("QLabel { background-color : red; color : black; }");
     ui->ph_response_status->setStyleSheet("QLabel { background-color : red; color : black; }");
-/**************** signals and slots ********************/
-  
+    /**************** signals and slots ********************/
+
+
 
 
 
@@ -23,4 +24,8 @@ coolingView::coolingView(Ui::MainWindow* uiPtr)
 
 coolingView::~coolingView()
 {
+}
+coolingController* coolingView::getController()
+{
+    return &coolControll;
 }

@@ -1,0 +1,15 @@
+<map id="cnt_dispenser_vibration.h" name="cnt_dispenser_vibration.h">
+<area shape="rect" id="node1" title=" " alt="" coords="403,5,571,32"/>
+<area shape="rect" id="node2" title=" " alt="" coords="28,155,146,181"/>
+<area shape="rect" id="node3" title=" " alt="" coords="174,304,246,331"/>
+<area shape="rect" id="node4" title=" " alt="" coords="402,155,457,181"/>
+<area shape="rect" id="node5" title=" " alt="" coords="481,155,642,181"/>
+<area shape="rect" id="node6" title=" " alt="" coords="485,80,572,107"/>
+<area shape="rect" id="node7" title=" " alt="" coords="596,80,674,107"/>
+<area shape="rect" id="node8" title=" " alt="" coords="698,80,745,107"/>
+<area shape="rect" id="node9" title=" " alt="" coords="770,80,828,107"/>
+<area shape="rect" id="node10" title=" " alt="" coords="852,80,914,107"/>
+<area shape="rect" id="node11" href="$_icnt__dispenser_8h.html" title=" " alt="" coords="242,80,359,107"/>
+<area shape="rect" id="node12" href="$soft__cnt__system__submodule__cpp_2includes_2subsystem__feedback_8h.html" title=" " alt="" coords="222,155,378,181"/>
+<area shape="rect" id="node13" href="$hardware__feedback_8h.html" title=" " alt="" coords="272,229,416,256"/>
+</map>

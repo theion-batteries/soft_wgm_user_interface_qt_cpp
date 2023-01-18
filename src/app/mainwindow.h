@@ -36,6 +36,7 @@ private:
     cntAlignView* cntView;
     heatingView* heatView;
     extractingView* extractView;
+    coolingView* coolView;
     mainView* managerView;
     /********** menu View *********************/
     menuEditView* editView;

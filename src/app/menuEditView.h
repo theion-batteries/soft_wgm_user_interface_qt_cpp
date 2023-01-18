@@ -29,12 +29,15 @@ private:
     Ui::MainWindow* ui;
     QProcess whs_config_editor;
     QProcess cnt_config_editor;
+    QProcess ph_config_editor;
 
 public slots:
     void on_actionwhs_config_triggered(); 
     void on_actioncnt_config_triggered(); 
+    void on_actionph_config_yaml_triggered(); 
     QProcess* getWhsConfigProc();
     QProcess* getCntConfigProc();
+    QProcess* getPhConfigProc();
 
 };
 

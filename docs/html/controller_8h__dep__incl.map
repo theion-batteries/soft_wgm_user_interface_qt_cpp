@@ -1,0 +1,6 @@
+<map id="controller.h" name="controller.h">
+<area shape="rect" id="node1" title="template for control layer mvc" alt="" coords="63,5,149,32"/>
+<area shape="rect" id="node2" href="$controller_8cpp.html" title=" " alt="" coords="5,80,105,107"/>
+<area shape="rect" id="node3" href="$view_8h.html" title="template for view layer" alt="" coords="129,80,187,107"/>
+<area shape="rect" id="node4" href="$view_8cpp.html" title=" " alt="" coords="123,155,193,181"/>
+</map>

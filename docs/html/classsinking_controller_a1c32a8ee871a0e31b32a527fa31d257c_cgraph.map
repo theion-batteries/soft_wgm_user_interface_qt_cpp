@@ -1,0 +1,8 @@
+<map id="sinkingController::on_move_down_until_sensor_data_valid_clicked" name="sinkingController::on_move_down_until_sensor_data_valid_clicked">
+<area shape="rect" id="node1" title=" " alt="" coords="5,55,192,111"/>
+<area shape="rect" id="node2" href="$classsinking_controller.html#a7db4db52745d9dde8e4479a39eea8c5f" title=" " alt="" coords="281,29,408,70"/>
+<area shape="rect" id="node3" href="$classwgm__processes_1_1_isinking__process.html#acc0cf72fe5ca2ee7d7723016da15f3f7" title=" " alt="" coords="509,21,677,62"/>
+<area shape="rect" id="node5" href="$classsinking_controller.html#affc62f4de11ebf2c45cfae76f2b71c47" title=" " alt="" coords="280,94,409,136"/>
+<area shape="rect" id="node6" href="$classwafer__holder__motion__system_1_1_iwafer__motion__controller.html#a71d069ac7541692f0158dcd8ef2ac3f7" title=" " alt="" coords="240,160,449,216"/>
+<area shape="rect" id="node4" href="$classwafer__holder__motion__system_1_1_iwafer__motion__controller.html#a1b03116f70d8a8cb8de0283da77bed58" title=" " alt="" coords="497,87,689,143"/>
+</map>

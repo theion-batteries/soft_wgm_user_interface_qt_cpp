@@ -1,0 +1,10 @@
+<map id="coolingController.h" name="coolingController.h">
+<area shape="rect" id="node1" title=" " alt="" coords="85,5,215,32"/>
+<area shape="rect" id="node2" href="$cooling_controller_8cpp.html" title=" " alt="" coords="5,80,148,107"/>
+<area shape="rect" id="node3" href="$cooling_view_8h.html" title=" " alt="" coords="172,80,275,107"/>
+<area shape="rect" id="node4" href="$cooling_view_8cpp.html" title=" " alt="" coords="92,155,208,181"/>
+<area shape="rect" id="node5" href="$process_tab_view_8h.html" title=" " alt="" coords="233,155,361,181"/>
+<area shape="rect" id="node6" href="$mainwindow_8h.html" title=" " alt="" coords="172,229,275,256"/>
+<area shape="rect" id="node8" href="$process_tab_view_8cpp.html" title=" " alt="" coords="299,229,441,256"/>
+<area shape="rect" id="node7" href="$mainwindow_8cpp.html" title=" " alt="" coords="165,304,282,331"/>
+</map>

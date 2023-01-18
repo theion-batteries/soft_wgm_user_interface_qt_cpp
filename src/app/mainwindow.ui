@@ -3497,7 +3497,7 @@
              </widget>
             </item>
             <item>
-             <widget class="QCommandLinkButton" name="ph_move_center_2">
+             <widget class="QCommandLinkButton" name="ph_move_center">
               <property name="text">
                <string>ph_move_center</string>
               </property>

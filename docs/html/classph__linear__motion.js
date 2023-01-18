@@ -1,0 +1,25 @@
+var classph__linear__motion =
+[
+    [ "ph_linear_motion", "classph__linear__motion.html#ae5ddf162396a1330bd0540d30e268b9c", null ],
+    [ "~ph_linear_motion", "classph__linear__motion.html#a9c111089f3c81410cd04de549db16987", null ],
+    [ "connect", "classph__linear__motion.html#a216d456aa1873001cfb828326ea75d26", null ],
+    [ "disconnect", "classph__linear__motion.html#a36c4d94cdf977f13dd8a4019beb084ca", null ],
+    [ "get_position", "classph__linear__motion.html#aebcb7cc0ea7f5f60e6575fc91b37d0d6", null ],
+    [ "get_speed", "classph__linear__motion.html#a6bde1184a35f38121d190b1811748f87", null ],
+    [ "getStatus", "classph__linear__motion.html#a21663a7fe5e80ea1deefb05fcf70e06c", null ],
+    [ "move_center", "classph__linear__motion.html#aa0b936eeb53615b0d36e96b232258685", null ],
+    [ "move_down_by", "classph__linear__motion.html#acce02efd2cae5de69556f345d603d1ce", null ],
+    [ "move_down_to", "classph__linear__motion.html#a7662b7a8c2333e24ad6c4b173f14a0d1", null ],
+    [ "move_home", "classph__linear__motion.html#ad1a42dac80966f0c4d248f6dae1eed86", null ],
+    [ "move_to", "classph__linear__motion.html#ac3851489c87c02ea390fbbfc2b393a8f", null ],
+    [ "move_up_by", "classph__linear__motion.html#aea9d9cc32ed676bd7ff421c8006818bc", null ],
+    [ "move_up_to", "classph__linear__motion.html#a9be4edf09ad5862c27ad8074f4015d91", null ],
+    [ "sendDirectCmd", "classph__linear__motion.html#a77d2377468d98662ff23b5a594508371", null ],
+    [ "set_speed", "classph__linear__motion.html#ab2f297a4d4289cecfc304ba20486608a", null ],
+    [ "unlock", "classph__linear__motion.html#a1487e3aabb7b3eec1582531aab0c7a6e", null ],
+    [ "waitForResponse", "classph__linear__motion.html#a0edcbb96418534b4b1806db1db4e8156", null ],
+    [ "axis_cmds", "classph__linear__motion.html#a8d8388a2954943e4091abcbc8da5df43", null ],
+    [ "axis_data_length", "classph__linear__motion.html#a6429f822f6675232fecb210cc9ca967e", null ],
+    [ "axis_incoming_data", "classph__linear__motion.html#ad7aa6fe664b8b7cace99e0532564ab99", null ],
+    [ "axis_last_position", "classph__linear__motion.html#a6b10e3a79040d443392c30780050c3dd", null ]
+];

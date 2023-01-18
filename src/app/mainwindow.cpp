@@ -16,6 +16,7 @@ MainWindow::MainWindow(QWidget* parent)
     heatView = new heatingView(getUi());
     cntView = new cntAlignView(getUi());
     extractView = new extractingView(getUi());
+    coolView = new coolingView(getUi());
 
     /********************* connect tab with menu **************************/
     connect(editView->getWhsConfigProc(), &QProcess::finished,
@@ -29,6 +30,12 @@ MainWindow::MainWindow(QWidget* parent)
         [this]() {
             std::cout<<"process exit succefully"<<std::endl;
             cntView->getController()->reload_cnt_config_file();
+         });
+  /********************* connect tab with menu **************************/
+    connect(editView->getPhConfigProc(), &QProcess::finished,
+        [this]() {
+            std::cout<<"process exit succefully"<<std::endl;
+            coolView->getController()->reload_ph_config_file();
          });
 }
 

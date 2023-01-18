@@ -1,0 +1,16 @@
+<map id="wafer_holder_motion_system::Iwafer_motion_controller::getSubSysStatus" name="wafer_holder_motion_system::Iwafer_motion_controller::getSubSysStatus">
+<area shape="rect" id="node1" title=" " alt="" coords="417,377,609,433"/>
+<area shape="rect" id="node2" href="$classsinking_controller.html#a7db4db52745d9dde8e4479a39eea8c5f" title=" " alt="" coords="241,424,368,465"/>
+<area shape="rect" id="node12" href="$classsinking_controller.html#affc62f4de11ebf2c45cfae76f2b71c47" title=" " alt="" coords="240,304,369,345"/>
+<area shape="rect" id="node3" href="$classsinking_controller.html#ac9be1b0ed88ad9d8e129f869a2eb7bcd" title=" " alt="" coords="7,377,190,433"/>
+<area shape="rect" id="node4" href="$classsinking_controller.html#a03ba77ef482e042ef74a9bbf522188ce" title=" " alt="" coords="13,457,184,513"/>
+<area shape="rect" id="node5" href="$classsinking_controller.html#afcd072fad601441a112f17f912a94b45" title=" " alt="" coords="10,537,187,593"/>
+<area shape="rect" id="node6" href="$classsinking_controller.html#a1c32a8ee871a0e31b32a527fa31d257c" title=" " alt="" coords="5,137,192,193"/>
+<area shape="rect" id="node7" href="$classsinking_controller.html#aaf2f041a70e3686abba3226b47f3fd22" title=" " alt="" coords="17,217,180,273"/>
+<area shape="rect" id="node8" href="$classsinking_controller.html#a4ca2ccc1f325da4c4c9b5fb5e3dc941e" title=" " alt="" coords="14,297,183,353"/>
+<area shape="rect" id="node9" href="$classsinking_controller.html#a4fdcab1d0162a049eb6164e7762eea86" title=" " alt="" coords="35,617,162,659"/>
+<area shape="rect" id="node10" href="$classsinking_controller.html#a8ac1f8a551295ed9be2814acf8503a1c" title=" " alt="" coords="11,683,187,724"/>
+<area shape="rect" id="node11" href="$classsinking_controller.html#aa1cf92b3323b51c5982b8bcfb1b16612" title=" " alt="" coords="34,748,163,789"/>
+<area shape="rect" id="node13" href="$classsinking_controller.html#aa527b221d9b6c34c4cef713ec871942f" title=" " alt="" coords="32,71,165,112"/>
+<area shape="rect" id="node14" href="$classsinking_controller.html#aadbf57cd5d7e9767f49542014efa4fc5" title=" " alt="" coords="32,5,165,47"/>
+</map>

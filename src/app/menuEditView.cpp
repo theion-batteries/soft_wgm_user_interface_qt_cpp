@@ -7,11 +7,15 @@ menuEditView::menuEditView(Ui::MainWindow* uiPtr)
          // open whs config
     connect(ui->actionwhs_config, &QAction::triggered, [this]() {
         on_actionwhs_config_triggered();
-        });         // open cnt config
+        });         
+        // open cnt config
    connect(ui->actioncnt_config, &QAction::triggered, [this]() {
        on_actioncnt_config_triggered();
        });
-
+        // open ph config
+connect(ui->actionph_config_yaml, &QAction::triggered, [this]() {
+       on_actionph_config_yaml_triggered();
+       });
 }
 
 menuEditView::~menuEditView()
@@ -39,6 +43,17 @@ void  menuEditView::on_actioncnt_config_triggered()
 
 #endif
 }
+
+void  menuEditView::on_actionph_config_yaml_triggered()
+{
+#ifdef PH_CONFIG
+
+    std::cout << "opening PH config yaml file in notepad: " << PH_CONFIG<<std::endl;
+    ph_config_editor.start("C:\\Windows\\system32\\notepad.exe", { PH_CONFIG });
+
+
+#endif
+}
 QProcess* menuEditView::getWhsConfigProc()
 {
     return &whs_config_editor;
@@ -47,4 +62,8 @@ QProcess* menuEditView::getWhsConfigProc()
 QProcess* menuEditView::getCntConfigProc()
 {
     return &cnt_config_editor;
+}
+QProcess* menuEditView::getPhConfigProc()
+{
+    return &ph_config_editor;
 }

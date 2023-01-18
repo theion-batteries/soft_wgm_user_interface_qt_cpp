@@ -1,0 +1,15 @@
+<map id="cooling_process.h" name="cooling_process.h">
+<area shape="rect" id="node1" title=" " alt="" coords="311,5,437,32"/>
+<area shape="rect" id="node2" href="$cooling_model_8h.html" title=" " alt="" coords="170,80,279,107"/>
+<area shape="rect" id="node12" href="$cooling__process_8cpp.html" title=" " alt="" coords="303,80,445,107"/>
+<area shape="rect" id="node13" href="$process__manager_8cpp.html" title=" " alt="" coords="469,80,620,107"/>
+<area shape="rect" id="node3" href="$cooling_controller_8h.html" title=" " alt="" coords="85,155,215,181"/>
+<area shape="rect" id="node11" href="$cooling_model_8cpp.html" title=" " alt="" coords="239,155,362,181"/>
+<area shape="rect" id="node4" href="$cooling_controller_8cpp.html" title=" " alt="" coords="5,229,148,256"/>
+<area shape="rect" id="node5" href="$cooling_view_8h.html" title=" " alt="" coords="172,229,275,256"/>
+<area shape="rect" id="node6" href="$cooling_view_8cpp.html" title=" " alt="" coords="92,304,208,331"/>
+<area shape="rect" id="node7" href="$process_tab_view_8h.html" title=" " alt="" coords="233,304,361,331"/>
+<area shape="rect" id="node8" href="$mainwindow_8h.html" title=" " alt="" coords="172,379,275,405"/>
+<area shape="rect" id="node10" href="$process_tab_view_8cpp.html" title=" " alt="" coords="299,379,441,405"/>
+<area shape="rect" id="node9" href="$mainwindow_8cpp.html" title=" " alt="" coords="165,453,282,480"/>
+</map>

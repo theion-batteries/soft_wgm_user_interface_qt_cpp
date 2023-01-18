@@ -1,0 +1,9 @@
+<map id="coolingController::on_ph_move_center_clicked" name="coolingController::on_ph_move_center_clicked">
+<area shape="rect" id="node1" title=" " alt="" coords="5,95,191,136"/>
+<area shape="rect" id="node2" href="$classcooling_controller.html#ab0af72b22ce78343642d3de7af5999c4" title=" " alt="" coords="251,30,377,71"/>
+<area shape="rect" id="node3" href="$classwgm__processes_1_1_icooling__process.html#a8ee6e3dc4c20f0f3690a013cab29f01d" title=" " alt="" coords="437,30,605,71"/>
+<area shape="rect" id="node5" href="$classcooling_controller.html#a9465f1b2a2df2ad1feee8d0b3750a8b2" title=" " alt="" coords="251,95,377,136"/>
+<area shape="rect" id="node6" href="$classcooling_controller.html#aa5f3c0bd33f2531e012c719fe248243e" title=" " alt="" coords="251,160,377,202"/>
+<area shape="rect" id="node7" href="$classwafer__cooling__system_1_1_icooling__controller.html#ab6160f8c29396c6110e1eb5c89eda359" title=" " alt="" coords="239,226,389,282"/>
+<area shape="rect" id="node4" href="$classwafer__cooling__system_1_1_icooling__controller.html#aee0efaad7862acaa986b9bc7454dac4e" title=" " alt="" coords="446,96,597,152"/>
+</map>
