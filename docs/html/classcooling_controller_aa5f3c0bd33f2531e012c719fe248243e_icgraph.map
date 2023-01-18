@@ -1,5 +1,5 @@
 <map id="coolingController::get_rotary_status" name="coolingController::get_rotary_status">
-<area shape="rect" id="node1" title=" " alt="" coords="239,225,365,266"/>
+<area shape="rect" id="node1" title=" " alt="" coords="239,265,365,306"/>
 <area shape="rect" id="node2" href="$classcooling_controller.html#aadecaa749bb4bd8b17d289b3784b0a4b" title=" " alt="" coords="23,5,173,61"/>
 <area shape="rect" id="node3" href="$classcooling_controller.html#a5b4ee85490ba0269cf0e5ec34aaf82e7" title=" " alt="" coords="5,86,191,127"/>
 <area shape="rect" id="node4" href="$classcooling_controller.html#a930d59205e25101e7a9ee251ab41fc06" title=" " alt="" coords="29,151,167,193"/>
@@ -7,4 +7,5 @@
 <area shape="rect" id="node6" href="$classcooling_controller.html#ace4ebf24497faa869bb0c8cc716efd6e" title=" " alt="" coords="17,297,179,353"/>
 <area shape="rect" id="node7" href="$classcooling_controller.html#a1e9adeb31f2fa4d6de87d032cb80b2f2" title=" " alt="" coords="13,377,183,433"/>
 <area shape="rect" id="node8" href="$classcooling_controller.html#a2c1c3f10a436a92b57e5762b58c4492d" title=" " alt="" coords="13,458,183,499"/>
+<area shape="rect" id="node9" href="$classcooling_controller.html#ab8dad9a53767a0bc7d6c15ea2bf447a2" title=" " alt="" coords="9,523,187,565"/>
 </map>

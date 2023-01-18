@@ -8,6 +8,7 @@ var searchData=
   ['report_5ffeedback_5',['report_feedback',['../classwgm__feedbacks_1_1hw__feedback.html#a476eacad1ac6580fd64998143e52a7d2',1,'wgm_feedbacks::hw_feedback']]],
   ['returnpressed_6',['returnPressed',['../classcnt_align_controller.html#ad2f98316e55a5fbf6a384f5c59db394f',1,'cntAlignController::returnPressed()'],['../classcooling_controller.html#a4049bc0b56874674af9547edcf606247',1,'coolingController::returnPressed()'],['../classsinking_controller.html#a0c837851368bf1622f342648265832ca',1,'sinkingController::returnPressed()']]],
   ['rotaryreplied_7',['rotaryReplied',['../classcooling_controller.html#a93201e127370c0b13b8791e8e1b88e08',1,'coolingController']]],
-  ['run_5fall_5fsubprocesses_8',['run_all_subprocesses',['../classkeyence__sensor.html#a5eaca8d65a318e931519943cfd69ff77',1,'keyence_sensor']]],
-  ['run_5fdelta_5fsubprocess_9',['run_delta_subprocess',['../classdelta__motion.html#a5487a521768a10e82174f878d4fe35fe',1,'delta_motion']]]
+  ['rotationconnected_8',['rotationConnected',['../classcooling_controller.html#ae243323459b1377789ca5dbb74a2210b',1,'coolingController']]],
+  ['run_5fall_5fsubprocesses_9',['run_all_subprocesses',['../classkeyence__sensor.html#a5eaca8d65a318e931519943cfd69ff77',1,'keyence_sensor']]],
+  ['run_5fdelta_5fsubprocess_10',['run_delta_subprocess',['../classdelta__motion.html#a5487a521768a10e82174f878d4fe35fe',1,'delta_motion']]]
 ];
