@@ -16,18 +16,18 @@ coolingController::~coolingController()
 void coolingController::on_connect_motion_axis_ph_clicked()
 {
     coolModel.coolingProcessHandler->get_sys_ptr()->connect_motion_axis();
-    emit sensorConnected();
+    emit axisConnected();
 }
 
 void coolingController::on_connect_rotation_axis_ph_clicked()
 {
 coolModel.coolingProcessHandler->get_sys_ptr()->connect_rotation_axis();
-    emit axisConnected();
+    emit rotationConnected();
 }
 void coolingController::on_connect_ph_clicked()
 {
 coolModel.coolingProcessHandler->get_sys_ptr()->connect_ph();
-    emit axisConnected();
+    emit phConnected();
 }
 
 
@@ -101,7 +101,7 @@ void coolingController::updateLcdTime(QLCDNumber* Lcd)
     time_elapsed = 0;
 }
 
-void coolingController::updateLcdDistance(QLCDNumber* Lcd)
+void coolingController::updateLcdAxisPosition(QLCDNumber* Lcd)
 {
     while (get_axis_status()) // while connected, launch thread display
     {
@@ -112,16 +112,31 @@ void coolingController::updateLcdDistance(QLCDNumber* Lcd)
     }
 
 }
-void coolingController::updateLcdPosition(QLCDNumber* Lcd)
+void coolingController::updateLcdRotationPosition(QLCDNumber* Lcd)
 {
-    while (get_axis_status())
+    while (get_rotary_status())
     {
         std::cout << "updating lcd position " << std::endl;
-        Lcd->display(coolModel.coolingProcessHandler->get_sys_ptr()->getSubSysController()->get_axis_position());
+        Lcd->display(coolModel.coolingProcessHandler->get_sys_ptr()->getSubSysController()->get_rotary_axis_ptr()->get_position());
         std::cout << "lcd position thread id: " << QThread::currentThreadId() << std::endl;
         QThread::currentThread()->sleep(10);
     }
 }
+// TODO :
+void coolingController::updateLcdPhFrequency(QLCDNumber* Lcd)
+{
+    while (get_ph_status())
+    {
+        std::cout << "updating lcd position " << std::endl;
+        Lcd->display(coolModel.coolingProcessHandler->get_sys_ptr()->getSubSysController()->get_rotary_axis_ptr()->get_position());
+        std::cout << "lcd position thread id: " << QThread::currentThreadId() << std::endl;
+        QThread::currentThread()->sleep(10);
+    }
+}
+
+
+
+
 bool coolingController::get_axis_status()
 {
     return coolModel.coolingProcessHandler->get_sys_ptr()->getSubSysStatus("axis_motion");

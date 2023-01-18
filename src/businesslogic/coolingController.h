@@ -24,7 +24,8 @@ signals:
     void valueChanged();
     void finished();
     void axisConnected();
-    void sensorConnected();
+    void rotationConnected();
+    void phConnected();
     void axisReplied(std::string reply);
     void rotaryReplied(std::string reply);
     void phReplied(std::string reply);
@@ -49,8 +50,12 @@ public slots:
     // update simple
     // lcd update
     void updateLcdTime(QLCDNumber* Lcd);
-    void updateLcdDistance(QLCDNumber* Lcd);
-    void updateLcdPosition(QLCDNumber* Lcd);
+    void updateLcdRotationPosition(QLCDNumber* Lcd);
+    void updateLcdAxisPosition(QLCDNumber* Lcd);
+    void updateLcdPhFrequency(QLCDNumber* Lcd);
+
+
+    
     // label update
     void updateLabelAxis(QLabel* label);
     void updateLabelRotation(QLabel* label);

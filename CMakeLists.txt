@@ -43,7 +43,8 @@ message("whs config file passed: ${WHS_CONFIG}")
 add_definitions(-DWHS_CONFIG="${WHS_CONFIG}") 
 message("cnt config file passed: ${CNT_CONFIG}")
 add_definitions(-DCNT_CONFIG="${CNT_CONFIG}") 
-
+message("ph config file passed: ${PH_CONFIG}")
+add_definitions(-DPH_CONFIG="${PH_CONFIG}") 
 
 find_package(QT NAMES Qt6 REQUIRED COMPONENTS Core Widgets Concurrent )
 find_package(Qt${QT_VERSION_MAJOR} REQUIRED COMPONENTS Core Widgets Concurrent )

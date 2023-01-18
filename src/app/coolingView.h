@@ -11,6 +11,7 @@
 #pragma once
 // qt
 #include <QObject>
+#include <QTConcurrent>
 
 #include "./ui_mainwindow.h"
 // mvc
