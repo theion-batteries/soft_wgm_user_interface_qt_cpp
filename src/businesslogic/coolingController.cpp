@@ -60,6 +60,7 @@ void coolingController::on_ph_move_center_clicked()
         return;
     }
     auto def = coolModel.coolingProcessHandler->get_sys_ptr()->getSubSysController();
+    def->ph_rotate_to_center(def->get_rotate_to_center_param());
     def->ph_motion_move_to_center(def->get_center_target_distance());
 }
 void coolingController::on_linear_move_home_clicked()
