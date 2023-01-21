@@ -14,6 +14,12 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v2
+      - name: Fetch submodules
+        run: |
+          git submodule sync --recursive
+          git submodule update --init --recursive
+      - name: Checkout submodule branches
+        run: git submodule foreach --recursive git checkout dev_win_api
       - name: Install Qt
         uses: jurplel/install-qt-action@v3
         with:
@@ -34,12 +40,6 @@ jobs:
           aqtversion: '==2.1.*'
           py7zrversion: '==0.19.*'
           extra: '--external 7z'
-      - name: Fetch submodules
-        run: |
-          git submodule sync --recursive
-          run: git submodule update --init --recursive
-      - name: Checkout submodule branches
-        run: git submodule foreach --recursive git checkout dev_win_api
       - name: Configure CMake
         env:
           CMAKE_PREFIX_PATH: ${{env.Qt6_Dir}}
