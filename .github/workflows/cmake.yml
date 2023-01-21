@@ -2,9 +2,9 @@ name: CMake
 
 on:
   push:
-    branches: [ "dev_test_cnt" ]
+    branches: [ "dev_win_api" ]
   pull_request:
-    branches: [ "dev_test_cnt" ]
+    branches: [ "dev_win_api" ]
 
 env:
   # Customize the CMake build type here (Release, Debug, RelWithDebInfo, etc.)
