@@ -17,10 +17,23 @@ jobs:
       - name: Install Qt
         uses: jurplel/install-qt-action@v3
         with:
-          qt-version: 6.4.0
-          architecture: x86_64
-      - name: Use installed Qt
-        run: qt use ${{ env.QTDIR }}
+          version: '6.4.0'
+          host: 'windows'
+          target: 'desktop'
+          arch: 'win64_msvc2019_64'
+          dir: '${{ github.workspace }}/'
+          install-deps: 'true'
+          modules: 'qtcharts qtwebengine'
+          archives: 'qtbase qtsvg'
+          cache: 'false'
+          cache-key-prefix: 'install-qt-action'
+          setup-python: 'true'
+          tools: 'tools_ifw tools_qtcreator,qt.tools.qtcreator'
+          set-env: 'true'
+          tools-only: 'false'
+          aqtversion: '==2.1.*'
+          py7zrversion: '==0.19.*'
+          extra: '--external 7z'
       - name: Fetch submodules
         run: |
           git submodule sync --recursive
@@ -36,3 +49,6 @@ jobs:
       - name: Test
         working-directory: ${{github.workspace}}/build
         run: ctest -C ${{env.BUILD_TYPE}}
+      - name: Install
+        working-directory: ${{github.workspace}}/build
+        run: cmake --install . --config ${{env.BUILD_TYPE}}
