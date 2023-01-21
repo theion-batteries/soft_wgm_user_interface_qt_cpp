@@ -11,28 +11,28 @@ env:
 jobs:
   build:
     runs-on: windows-latest
-
     steps:
-    - name: Checkout
-      uses: actions/checkout@v2
-    - name: Setup Qt
-      uses: actions/setup-qt@v1
-      with:
-        qt-version: 6.4.0
-        architecture: x86_64
-    - name: Use installed Qt
-      run: qt use ${{ env.QTDIR }}
-    - name: Fetch submodules
-      run: git submodule sync --recursive
-      run: git submodule update --init --recursive
-    - name: Checkout submodule branches
-      run: git submodule foreach --recursive git checkout dev_win_api
-    - name: Configure CMake
-      env:
-        CMAKE_PREFIX_PATH: ${{env.Qt6_Dir}}
-      run: cmake -B ${{github.workspace}}/build -DCMAKE_BUILD_TYPE=${{env.BUILD_TYPE}}
-    - name: Build
-      run: cmake --build ${{github.workspace}}/build --config ${{env.BUILD_TYPE}}
-    - name: Test
-      working-directory: ${{github.workspace}}/build
-      run: ctest -C ${{env.BUILD_TYPE}}
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: Setup Qt
+        uses: actions/setup-qt@v1
+        with:
+          qt-version: 6.4.0
+          architecture: x86_64
+      - name: Use installed Qt
+        run: qt use ${{ env.QTDIR }}
+      - name: Fetch submodules
+        run: |
+          git submodule sync --recursive
+          run: git submodule update --init --recursive
+      - name: Checkout submodule branches
+        run: git submodule foreach --recursive git checkout dev_win_api
+      - name: Configure CMake
+        env:
+          CMAKE_PREFIX_PATH: ${{env.Qt6_Dir}}
+        run: cmake -B ${{github.workspace}}/build -DCMAKE_BUILD_TYPE=${{env.BUILD_TYPE}}
+      - name: Build
+        run: cmake --build ${{github.workspace}}/build --config ${{env.BUILD_TYPE}}
+      - name: Test
+        working-directory: ${{github.workspace}}/build
+        run: ctest -C ${{env.BUILD_TYPE}}
