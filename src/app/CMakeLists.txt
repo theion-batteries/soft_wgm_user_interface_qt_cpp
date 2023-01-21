@@ -71,12 +71,13 @@ PUBLIC ${CMAKE_CURRENT_SOURCE_DIR}/../../includes/businesslogic
 set_target_properties(wgm_app PROPERTIES
     WIN32_EXECUTABLE TRUE
 )
-copy_dlls_target_dir(wgm_app)
+copy_dlls_keyence_target_destination(wgm_app)
+copy_dlls_meteor_target_destination(wgm_app)
 
 install(TARGETS wgm_app
-    RUNTIME DESTINATION ${CMAKE_RUNTIME_OUTPUT_DIRECTORY}
+RUNTIME DESTINATION ${CMAKE_RUNTIME_OUTPUT_DIRECTORY}
 
-    LIBRARY DESTINATION ${CMAKE_INSTALL_LIBDIR}
+LIBRARY DESTINATION ${CMAKE_INSTALL_LIBDIR}
 )
 
 FILE(GLOB files "${CMAKE_CURRENT_SOURCE_DIR}/*.h" 
