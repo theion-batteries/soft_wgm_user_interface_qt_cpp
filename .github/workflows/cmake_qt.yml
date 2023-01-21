@@ -14,8 +14,8 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v2
-      - name: Setup Qt
-        uses: actions/setup-qt@v2
+      - name: Install Qt
+        uses: jurplel/install-qt-action@v3
         with:
           qt-version: 6.4.0
           architecture: x86_64
