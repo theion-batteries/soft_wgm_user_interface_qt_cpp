@@ -13,6 +13,7 @@ set(CMAKE_INCLUDE_CURRENT_DIR ON)
 set(CMAKE_AUTOUIC ON)
 set(CMAKE_AUTOMOC ON)
 set(CMAKE_AUTORCC ON)
+set(CMAKE_PREFIX_PATH "C:/vcpkg/installed/x64-windows/share")
 
 #This is necessary for MSVC to create a symbol file, .lib, besides a shared library, .dll
 if (MSVC)
@@ -21,6 +22,7 @@ endif()
 
 find_package(QT NAMES Qt6 REQUIRED COMPONENTS Core Widgets Concurrent )
 find_package(Qt${QT_VERSION_MAJOR} REQUIRED COMPONENTS Core Widgets Concurrent )
+find_package(yaml-cpp CONFIG REQUIRED)
 
 
 file(GLOB PROJECT_SOURCES
@@ -56,12 +58,15 @@ set_target_properties(wgm_app PROPERTIES
 target_link_libraries(wgm_app PUBLIC Qt${QT_VERSION_MAJOR}::Core
 PUBLIC Qt${QT_VERSION_MAJOR}::Widgets
 PUBLIC Qt${QT_VERSION_MAJOR}::Concurrent
+PUBLIC yaml-cpp
 PUBLIC controller)
 
 target_include_directories(wgm_app 
 PUBLIC ${CMAKE_CURRENT_SOURCE_DIR}
 PUBLIC ${CMAKE_CURRENT_SOURCE_DIR}/../../includes/app
 PUBLIC ${CMAKE_CURRENT_SOURCE_DIR}/../../includes/businesslogic
+PUBLIC ${SOCKPP_INCLUDE_DIRS}
+PUBLIC ${SOCKPP_LIBRARIES}
 
 )
 
@@ -70,6 +75,7 @@ set_target_properties(wgm_app PROPERTIES
 )
 copy_dlls_keyence_target_destination(wgm_app)
 copy_dlls_meteor_target_destination(wgm_app)
+copy_dlls_yaml_target_destination(wgm_app)
 
 install(TARGETS wgm_app
 RUNTIME DESTINATION ${CMAKE_RUNTIME_OUTPUT_DIRECTORY}

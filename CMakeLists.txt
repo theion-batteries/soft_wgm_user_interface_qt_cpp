@@ -23,7 +23,8 @@ message("setting runtime output dir to: ${CMAKE_RUNTIME_OUTPUT_DIRECTORY}")
 
 include(cmake/Windeployqt.cmake)
 set(CMAKE_PREFIX_PATH "C:/vcpkg/installed/x64-windows/share")
-
+set(VCPKG_TARGET_TRIPLET x64-windows) # or x86-windows if you're using 32-bit
+set(CMAKE_TOOLCHAIN_FILE "${VCPKG_ROOT}/scripts/buildsystems/vcpkg.cmake")
 
 set(CMAKE_INCLUDE_CURRENT_DIR ON)
 
