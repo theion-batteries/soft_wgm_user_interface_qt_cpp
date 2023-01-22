@@ -13,7 +13,7 @@ set(CMAKE_INCLUDE_CURRENT_DIR ON)
 set(CMAKE_AUTOUIC ON)
 set(CMAKE_AUTOMOC ON)
 set(CMAKE_AUTORCC ON)
-#set(CMAKE_PREFIX_PATH "${VCPKG_ROOT}/installed/x64-windows/share")
+set(CMAKE_PREFIX_PATH "${VCPKG_ROOT}/installed/x64-windows/share")
 
 #This is necessary for MSVC to create a symbol file, .lib, besides a shared library, .dll
 if (MSVC)

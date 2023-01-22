@@ -53,7 +53,8 @@ message("ph config file passed: ${PH_CONFIG_DIR}")
 
 find_package(QT NAMES Qt6 REQUIRED COMPONENTS Core Widgets Concurrent )
 find_package(Qt${QT_VERSION_MAJOR} REQUIRED COMPONENTS Core Widgets Concurrent )
-
+find_package(sockpp CONFIG REQUIRED)
+find_package(yaml-cpp CONFIG REQUIRED)
 add_subdirectory(dependencies)
 add_subdirectory(src)
 
