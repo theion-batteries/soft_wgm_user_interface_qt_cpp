@@ -2,9 +2,10 @@ name: Docker Build Image CI QT
 
 on:
   push:
-    branches: [ "dev_build_docker_img" ]
+    branches: [ "dev_win_api" ]
   pull_request:
-    branches: [ "dev_build_docker_img" ]
+    branches: [ "dev_win_api" ]
+  workflow_call:
 
 jobs:
   build:
