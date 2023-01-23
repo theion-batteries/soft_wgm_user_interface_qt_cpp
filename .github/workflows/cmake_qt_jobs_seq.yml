@@ -75,10 +75,16 @@ jobs:
         working-directory: ${{github.workspace}}
         run: .\cpack_install_script.bat
 strategy:
-  sequential:
-    - job: prepare
-    - job: configure
-    - job: build
-    - job: test
-    - job: install
-    - job: deploy
+  matrix:
+    prepare:
+      prepare: true
+    configure:
+      configure: true
+    build: 
+      build: true
+    test:
+      test: true
+    install:
+      install: true
+    deploy:
+      deploy: true
