@@ -74,8 +74,6 @@ jobs:
       - name: create installer and update it
         working-directory: ${{github.workspace}}
         run: .\cpack_install_script.bat
-  
-
 strategy:
   sequential:
     - job: prepare
