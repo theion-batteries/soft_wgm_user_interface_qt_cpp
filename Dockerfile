@@ -13,10 +13,10 @@ ENV PERL_VERSION=5.32.0
 #    Start-Process -FilePath PortableGit.exe -ArgumentList '/SILENT' -Wait
 
 # Install CMake
-RUN powershell -Command \
-    $ErrorActionPreference = 'Stop'; \
-    Invoke-WebRequest https://github.com/Kitware/CMake/releases/download/v%CMAKE_VERSION%/cmake-%CMAKE_VERSION%-win64-x64.msi -OutFile cmake.msi ; \
-    Start-Process -FilePath cmake.msi -ArgumentList '/quiet' -Wait
+#RUN powershell -Command \
+#    $ErrorActionPreference = 'Stop'; \
+#    Invoke-WebRequest https://github.com/Kitware/CMake/releases/download/v%CMAKE_VERSION%/cmake-%CMAKE_VERSION%-win64-x64.msi -OutFile cmake.msi ; \
+#    Start-Process -FilePath cmake.msi -ArgumentList '/quiet' -Wait
 
 # Install Ninja
 RUN powershell -Command \

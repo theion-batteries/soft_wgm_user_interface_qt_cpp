@@ -59,6 +59,7 @@ jobs:
         with:
           max_attempts: 3
           retry_on: error
+          timeout_minutes: 10
           command: |
               cmake --build ${{github.workspace}}/build --config ${{env.BUILD_TYPE}} --target wgm_app -j 10 
       - name: Test
