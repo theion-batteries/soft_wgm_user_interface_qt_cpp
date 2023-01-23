@@ -79,7 +79,7 @@ function(windeployqt target build_dir install_dir)
         # so we fall back to one of CMake's own modules for copying them over
         foreach(lib \${CMAKE_INSTALL_SYSTEM_RUNTIME_LIBS})
             get_filename_component(filename \${lib} NAME)
-            message(\" copy \${lib} to install folder \")
+            message(\" copy \${lib} to install folder  \")
             execute_process(
                 COMMAND \"${CMAKE_COMMAND}\" -E
                     copy \${lib} \"\${CMAKE_INSTALL_PREFIX}/\${install_dir}/\"
@@ -91,7 +91,7 @@ function(windeployqt target build_dir install_dir)
 set(CMAKE_INSTALL_UCRT_LIBRARIES TRUE)
 set(CMAKE_INSTALL_SYSTEM_RUNTIME_LIBS_SKIP TRUE)
 include(InstallRequiredSystemLibraries)
-install(PROGRAMS ${CMAKE_INSTALL_SYSTEM_RUNTIME_LIBS} DESTINATION ${install_dir})
+install(PROGRAMS ${CMAKE_INSTALL_SYSTEM_RUNTIME_LIBS} DESTINATION ${CMAKE_INSTALL_PREFIX}/${install_dir})
 
 
 

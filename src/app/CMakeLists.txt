@@ -78,7 +78,7 @@ copy_dlls_meteor_target_destination(wgm_app)
 copy_dlls_yaml_target_destination(wgm_app)
 
 install(TARGETS wgm_app
-RUNTIME DESTINATION ${CMAKE_RUNTIME_OUTPUT_DIRECTORY}
+RUNTIME DESTINATION ${CMAKE_INSTALL_BINDIR}
 
 LIBRARY DESTINATION ${CMAKE_INSTALL_LIBDIR}
 )
@@ -87,9 +87,15 @@ FILE(GLOB files "${CMAKE_CURRENT_SOURCE_DIR}/*.h"
 )
 INSTALL(FILES ${files} DESTINATION include/wgm_app/)
 
+FILE(GLOB dlls  "${CMAKE_CURRENT_BINARY_DIR}/Debug/*.dll"  REQUIRED)
+install(FILES ${dlls} DESTINATION ${CMAKE_INSTALL_PREFIX}/${CMAKE_INSTALL_BINDIR})
+
+FILE(GLOB yamlDll "${CMAKE_RUNTIME_OUTPUT_DIRECTORY}/yaml-cppd.dll" )
+install(FILES ${yamlDll} DESTINATION ${CMAKE_INSTALL_BINDIR})
+
 
 if(QT_VERSION_MAJOR EQUAL 6)
     qt_finalize_executable(wgm_app)
 endif()
 
-windeployqt(wgm_app ${CMAKE_CURRENT_BINARY_DIR}/${CMAKE_RUNTIME_OUTPUT_DIRECTORY} ${CMAKE_RUNTIME_OUTPUT_DIRECTORY})
+windeployqt(wgm_app ${CMAKE_RUNTIME_OUTPUT_DIRECTORY} ${CMAKE_INSTALL_BINDIR})
