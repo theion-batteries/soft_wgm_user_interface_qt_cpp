@@ -5,6 +5,8 @@ on:
     branches: [ "dev_win_api" ]
   pull_request:
     branches: [ "dev_win_api" ]
+    # This action can be manually triggered
+  workflow_call:
 env:
   BUILD_TYPE: Debug
 

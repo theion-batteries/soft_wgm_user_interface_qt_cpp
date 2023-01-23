@@ -1,5 +1,5 @@
 # Use an official Windows Server Core image as the base image
-FROM mcr.microsoft.com/windows/servercore:ltsc2022
+FROM mcr.microsoft.com/windows:ltsc2019
 # Set environment variables for the versions of software to be installed
 ENV QT_VERSION=6.4.0
 ENV GIT_VERSION=2.30.1

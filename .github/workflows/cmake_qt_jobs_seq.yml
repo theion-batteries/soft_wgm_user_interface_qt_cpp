@@ -5,6 +5,8 @@ on:
     branches: [ "dev_win_api" ]
   pull_request:
     branches: [ "dev_win_api" ]
+    # This action can be manually triggered
+  workflow_call:
 env:
   BUILD_TYPE: Debug
 
@@ -56,8 +58,15 @@ jobs:
     runs-on: windows-latest
     needs: configure
     steps:
+      #- name: Build
+      #  run: cmake --build ${{github.workspace}}/build --config ${{env.BUILD_TYPE}} --target wgm_app -j 10  
       - name: Build
-        run: cmake --build ${{github.workspace}}/build --config ${{env.BUILD_TYPE}} --target wgm_app -j 10  
+        uses: nick-fields/retry@v2
+        with:
+          max_attempts: 3
+          retry_on: error
+          command: |
+              cmake --build ${{github.workspace}}/build --config ${{env.BUILD_TYPE}} --target wgm_app -j 10 
   build_again:
     runs-on: windows-latest
     needs: build
