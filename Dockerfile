@@ -1,13 +1,13 @@
+
+
+# Use an official Windows Server Core image as the base image
+FROM mcr.microsoft.com/windows/servercore:ltsc2022
 # Set environment variables for the versions of software to be installed
 ENV QT_VERSION=6.4.0
 ENV GIT_VERSION=2.30.1
 ENV CMAKE_VERSION=3.20.3
 ENV NINJA_VERSION=1.10.2
 ENV PERL_VERSION=5.32.0
-
-# Use an official Windows Server Core image as the base image
-FROM mcr.microsoft.com/windows/servercore:ltsc2022
-
 # Install Git
 RUN powershell -Command \
     $ErrorActionPreference = 'Stop'; \
