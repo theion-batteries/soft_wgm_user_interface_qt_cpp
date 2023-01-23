@@ -1,5 +1,5 @@
 # Use the latest Windows Server Core image as the base image
-FROM mcr.microsoft.com/windows/servercore:latest
+FROM mcr.microsoft.com/windows/servercore:ltsc2022
 
 # Install Git
 RUN powershell.exe -Command "Invoke-WebRequest -Uri 'https://github.com/git-for-windows/git/releases/download/v2.31.1.windows.1/Git-2.31.1-64-bit.exe' -OutFile 'git.exe'"
