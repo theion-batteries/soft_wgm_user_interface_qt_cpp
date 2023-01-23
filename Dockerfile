@@ -2,8 +2,8 @@
 FROM mcr.microsoft.com/windows/servercore:ltsc2022
 
 # Install Git
-RUN powershell.exe -Command "Invoke-WebRequest -Uri 'https://github.com/git-for-windows/git/releases/download/v2.31.1.windows.1/Git-2.31.1-64-bit.exe' -OutFile 'git.exe'"
-RUN powershell.exe -Command "& 'git.exe' /VERYSILENT /NORESTART"
+#RUN powershell.exe -Command "Invoke-WebRequest -Uri 'https://github.com/git-for-windows/git/releases/download/v2.31.1.windows.1/Git-2.31.1-64-bit.exe' -OutFile 'git.exe'"
+#RUN powershell.exe -Command "& 'git.exe' /VERYSILENT /NORESTART"
 
 # Install Qt 6
 RUN powershell.exe -Command "Invoke-WebRequest -Uri 'https://download.qt.io/official_releases/qt/6.4/6.4.0/single/qt-everywhere-src-6.4.0.zip' -OutFile 'qt.zip'"
