@@ -93,6 +93,9 @@ install(FILES ${dlls} DESTINATION ${CMAKE_INSTALL_PREFIX}/${CMAKE_INSTALL_BINDIR
 FILE(GLOB yamlDll "${CMAKE_RUNTIME_OUTPUT_DIRECTORY}/yaml-cppd.dll" )
 install(FILES ${yamlDll} DESTINATION ${CMAKE_INSTALL_BINDIR})
 
+find_path(yamldir NAMES yaml-cppd.dll HINTS ${VCPKG_ROOT}/installed/x64-windows/debug/bin REQUIRED)
+install(FILES ${yamldir}/yaml-cppd.dll DESTINATION bin/debug/)
+
 
 if(QT_VERSION_MAJOR EQUAL 6)
     qt_finalize_executable(wgm_app)

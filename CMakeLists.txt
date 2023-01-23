@@ -28,6 +28,8 @@ message(" parent: vcpkg root folder: ${VCPKG_ROOT}")
 set(VCPKG_TARGET_TRIPLET x64-windows) # or x86-windows if you're using 32-bit
 set(CMAKE_TOOLCHAIN_FILE "${VCPKG_ROOT}/scripts/buildsystems/vcpkg.cmake")
 list(APPEND CMAKE_PREFIX_PATH "${VCPKG_ROOT}/installed/x64-windows/share")
+list(APPEND CMAKE_PREFIX_PATH "${VCPKG_ROOT}/installed/x64-windows/debug/bin")
+list(APPEND CMAKE_PREFIX_PATH "${VCPKG_ROOT}/installed/x64-windows/bin")
 message("CMAKE_PREFIX_PATH: ${CMAKE_PREFIX_PATH}")
 
 set(CMAKE_INCLUDE_CURRENT_DIR ON)
