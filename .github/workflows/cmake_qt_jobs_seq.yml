@@ -1,4 +1,4 @@
-name: CMake_QT_Workflow_SEq
+name: CMake_QT_Workflow_Seq
 
 on:
   push:
@@ -57,6 +57,11 @@ jobs:
     needs: configure
     steps:
       - name: Build
+			  # Use the retry action
+			  uses: nick-fields/retry@v2
+			  with:
+          max_attempts: 3
+          retry_on: error
         run: cmake --build ${{github.workspace}}/build --config ${{env.BUILD_TYPE}} --target wgm_app -j 10  
   test:
     runs-on: windows-latest
