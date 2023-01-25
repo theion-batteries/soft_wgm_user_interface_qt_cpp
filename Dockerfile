@@ -31,31 +31,33 @@ RUN powershell -Command \
     Invoke-WebRequest https://aka.ms/vs/16/release/vs_community.exe -OutFile vs_community.exe ; \
     Start-Process -FilePath vs_community.exe -ArgumentList '--quiet --norestart --wait --nocache --add Microsoft.VisualStudio.Workload.VCTools' -Wait
 
-
+# Download and install Strawberry Perl
+RUN powershell -Command \
+    Invoke-WebRequest -Uri "https://strawberryperl.com/download/5.32.1.1/strawberry-perl-5.32.1.1-64bit.msi" -OutFile "strawberry-perl.msi"; \
+    Start-Process msiexec.exe -ArgumentList '/i strawberry-perl.msi /quiet' -Wait
 # Clone the Qt repository
-RUN git clone git://code.qt.io/qt/qt5.git qt6
+RUN powershell -Command "git clone git://code.qt.io/qt/qt5.git qt6"
 
 # Switch to the v6.4.0 branch
-RUN cd qt6 && git switch %QT_VERSION%
+RUN powershell -Command "cd qt6 ; git switch %QT_VERSION%"
 
 # Run the init-repository script
-RUN cd qt6 && perl init-repository
+RUN powershell -Command "cd qt6 ; .\perl.exe init-repository"
 
 # Create a build directory
-RUN mkdir qt6-build
+RUN powershell -Command "mkdir qt6-build"
 
 # Change to the build directory
 WORKDIR qt6-build
 
 # Configure the build with the prefix set to C:\path\to\install
-RUN ..\qt6\configure.bat -prefix C:\path\to\install
+RUN powershell -Command "..\qt6\configure.bat -prefix C:\path\to\install"
 
 # Build the project
-RUN cmake --build .
+RUN powershell -Command "cmake --build ."
 
 # Install the project
-RUN cmake --install .
-
+RUN powershell -Command "cmake --install ."
 
 ENV QTDIR C:\Qt\6.4.0\msvc2019_64
 # Set the working directory
