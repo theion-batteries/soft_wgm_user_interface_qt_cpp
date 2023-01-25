@@ -1,10 +1,10 @@
-name: CMake_QT_Workflow_Seq
+name: CMake_Workflow_MultiJobs
 
 on:
   push:
-    branches: [ "other" ]
+    branches: [ "dev_win_api" ]
   pull_request:
-    branches: [ "other" ]
+    branches: [ "dev_win_api" ]
     # This action can be manually triggered
   workflow_call:
 env:
@@ -15,7 +15,7 @@ jobs:
     runs-on: windows-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
       - name: Support longpaths
         run: git config --system core.longpaths true
       - name: Fetch submodules
@@ -24,6 +24,11 @@ jobs:
           git submodule update --init --recursive
       - name: Checkout submodule branches
         run: git submodule foreach --recursive git checkout dev_win_api
+      - name: Setup Git
+        run: |
+          git config --global user.name "${{ secrets.USERNAME }}"
+          git config --global user.email "${{ secrets.EMAIL }}"
+          git config --global credential.https://github.com.${{ secrets.USERNAME }} ${{ secrets.GITHUB_TOKEN }}
       - name: vcpkg install
         run: .\vcpkg_install_script.bat
       - name: Install Qt
@@ -33,7 +38,7 @@ jobs:
           host: 'windows'
           target: 'desktop'
           arch: 'win64_msvc2019_64'
-          dir: '${{ github.workspace }}/'
+          dir: 'C:/'
           install-deps: 'true'
           modules: 'qtcharts qtwebengine'
           archives: 'qtbase qtsvg'
@@ -58,21 +63,8 @@ jobs:
     runs-on: windows-latest
     needs: configure
     steps:
-      #- name: Build
-      #  run: cmake --build ${{github.workspace}}/build --config ${{env.BUILD_TYPE}} --target wgm_app -j 10  
       - name: Build
-        uses: nick-fields/retry@v2
-        with:
-          max_attempts: 3
-          retry_on: error
-          command: |
-              cmake --build ${{github.workspace}}/build --config ${{env.BUILD_TYPE}} --target wgm_app -j 10 
-  build_again:
-    runs-on: windows-latest
-    needs: build
-    steps:
-      - name: Build_again
-        run: cmake --build ${{github.workspace}}/build --config ${{env.BUILD_TYPE}} --target wgm_app -j 10  
+        run: cmake --build ${{github.workspace}}/build --config ${{env.BUILD_TYPE}} --target ALL_BUILD -j 10  
   test:
     runs-on: windows-latest
     needs: build
@@ -92,5 +84,18 @@ jobs:
     needs: install
     steps:
       - name: create installer and update it
-        working-directory: ${{github.workspace}}
-        run: .\cpack_install_script.bat
+        working-directory: ${{github.workspace}}/build/
+        run: |
+          cpack -C Debug -v
+          cd ../pkg/
+          XCOPY "wgm_pkg.exe" "soft_wgm_installer_update\" /K /D /H /Y
+          XCOPY "wgm_application_user_manual.pdf" "soft_wgm_installer_update\" /K /D /H /Y
+          cd soft_wgm_installer_update/
+          git add wgm_pkg.exe
+          git add wgm_application_user_manual.pdf
+          git commit -m "updated installer"
+          git log --pretty=oneline -n 10
+          git push
+      - name: run app
+        working-directory: ${{github.workspace}}/build/${{env.BUILD_TYPE}}
+        run: .\wgm_app.exe
