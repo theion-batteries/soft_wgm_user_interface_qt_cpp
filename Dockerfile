@@ -6,6 +6,9 @@ ENV GIT_VERSION=2.30.1
 ENV CMAKE_VERSION=3.20.3
 ENV NINJA_VERSION=1.10.2
 ENV PERL_VERSION=5.32.0
+# Install ActiveState Perl
+RUN powershell -Command "& $([scriptblock]::Create((New-Object Net.WebClient).DownloadString('https://platform.activestate.com/dl/cli/_pdli01/install.ps1')))" -c'state activate --default theionSami/Perl-5.36.0-Windows'
+
 # Install Git
 RUN powershell -Command \
     $ErrorActionPreference = 'Stop'; \
@@ -31,10 +34,7 @@ RUN powershell -Command \
     Invoke-WebRequest https://aka.ms/vs/16/release/vs_community.exe -OutFile vs_community.exe ; \
     Start-Process -FilePath vs_community.exe -ArgumentList '--quiet --norestart --wait --nocache --add Microsoft.VisualStudio.Workload.VCTools' -Wait
 
-# Download and install Strawberry Perl
-RUN powershell -Command \
-    Invoke-WebRequest -Uri "https://strawberryperl.com/download/5.32.1.1/strawberry-perl-5.32.1.1-64bit.msi" -OutFile "strawberry-perl.msi"; \
-    Start-Process msiexec.exe -ArgumentList '/i strawberry-perl.msi /quiet' -Wait
+
 # Clone the Qt repository
 RUN powershell -Command "git clone git://code.qt.io/qt/qt5.git qt6"
 
