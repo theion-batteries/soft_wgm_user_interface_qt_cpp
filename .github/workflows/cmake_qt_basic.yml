@@ -1,4 +1,4 @@
-name: CMake_Workflow
+name: CMake_Workflow_SingleJob
 
 on:
   push:

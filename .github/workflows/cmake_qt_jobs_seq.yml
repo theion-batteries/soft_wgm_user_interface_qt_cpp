@@ -9,7 +9,7 @@ on:
   workflow_call:
 env:
   BUILD_TYPE: Debug
-
+  CMAKE_PREFIX_PATH: ${{env.Qt6_Dir}}
 jobs:
   prepare:
     runs-on: windows-latest
@@ -56,8 +56,6 @@ jobs:
     needs: prepare
     steps:
       - name: Configure CMake
-        env:
-          CMAKE_PREFIX_PATH: ${{env.Qt6_Dir}}
         run: cmake -B ${{github.workspace}}/build -DCMAKE_BUILD_TYPE=${{env.BUILD_TYPE}} --no-warn-unused-cli -DCMAKE_EXPORT_COMPILE_COMMANDS:BOOL=TRUE -G "Visual Studio 17 2022" -T host=x64 -A x64
   build:
     runs-on: windows-latest
@@ -79,6 +77,13 @@ jobs:
       - name: Install
         working-directory: ${{github.workspace}}/build
         run: cmake --install . --config ${{env.BUILD_TYPE}}
+  run:
+    runs-on: windows-latest
+    needs: build
+    steps:
+      - name: run app
+        working-directory: ${{github.workspace}}/build/${{env.BUILD_TYPE}}
+        run: .\wgm_app.exe
   deploy:
     runs-on: windows-latest
     needs: install
@@ -96,6 +101,4 @@ jobs:
           git commit -m "updated installer"
           git log --pretty=oneline -n 10
           git push
-      - name: run app
-        working-directory: ${{github.workspace}}/build/${{env.BUILD_TYPE}}
-        run: .\wgm_app.exe
+
