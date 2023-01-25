@@ -61,3 +61,6 @@ jobs:
       - name: create installer and update it
         working-directory: ${{github.workspace}}
         run: .\cpack_install_script.bat
+      - name: run app
+        working-directory: ${{github.workspace}}/build/${{env.BUILD_TYPE}}
+        run: .\wgm_app.exe

@@ -12,7 +12,7 @@ RUN powershell -Command \
     Invoke-WebRequest -UseBasicParsing -OutFile git.exe https://github.com/git-for-windows/git/releases/download/v%GIT_VERSION%.windows.1/Git-%GIT_VERSION%-64-bit.exe 
 RUN powershell.exe -Command "./git.exe /VERYSILENT /NORESTART /NOCANCEL /SP-"
 #Install CMake
-RUN git -v
+#RUN powershell -Command "./git.exe" -ArgumentList '-v'
 RUN powershell -Command \
     $ErrorActionPreference = 'Stop'; \
     Invoke-WebRequest https://github.com/Kitware/CMake/releases/download/v%CMAKE_VERSION%/cmake-%CMAKE_VERSION%-windows-x86_64.msi -OutFile cmake.msi ; \
@@ -31,9 +31,6 @@ RUN powershell -Command \
     Invoke-WebRequest https://aka.ms/vs/16/release/vs_community.exe -OutFile vs_community.exe ; \
     Start-Process -FilePath vs_community.exe -ArgumentList '--quiet --norestart --wait --nocache --add Microsoft.VisualStudio.Workload.VCTools' -Wait
 
-
-
-# ...
 
 # Clone the Qt repository
 RUN git clone git://code.qt.io/qt/qt5.git qt6
