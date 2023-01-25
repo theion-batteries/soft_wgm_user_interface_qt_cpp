@@ -15,7 +15,7 @@ jobs:
     runs-on: windows-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
       - name: Support longpaths
         run: git config --system core.longpaths true
       - name: Fetch submodules
@@ -33,7 +33,7 @@ jobs:
           host: 'windows'
           target: 'desktop'
           arch: 'win64_msvc2019_64'
-          dir: '${{ github.workspace }}/'
+          dir: 'C:/'
           install-deps: 'true'
           modules: 'qtcharts qtwebengine'
           archives: 'qtbase qtsvg'
@@ -58,6 +58,6 @@ jobs:
       - name: Install
         working-directory: ${{github.workspace}}/build
         run: cmake --install . --config ${{env.BUILD_TYPE}}
-      - name: create installer and update it
-        working-directory: ${{github.workspace}}
-        run: .\cpack_install_script.bat
+      #- name: create installer and update it
+      #  working-directory: ${{github.workspace}}
+      #  run: .\cpack_install_script.bat

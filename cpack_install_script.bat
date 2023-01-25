@@ -1,6 +1,6 @@
 mkdir build 
 cd build
-cpack -C Debug 
+cpack -C Debug -v
 cd ../pkg/
 XCOPY "wgm_pkg.exe" "soft_wgm_installer_update\" /K /D /H /Y
 XCOPY "wgm_application_user_manual.pdf" "soft_wgm_installer_update\" /K /D /H /Y

@@ -87,11 +87,15 @@ FILE(GLOB files "${CMAKE_CURRENT_SOURCE_DIR}/*.h"
 )
 INSTALL(FILES ${files} DESTINATION include/wgm_app/)
 
-FILE(GLOB dlls  "${CMAKE_CURRENT_BINARY_DIR}/Debug/*.dll"  REQUIRED)
-install(FILES ${dlls} DESTINATION ${CMAKE_INSTALL_PREFIX}/${CMAKE_INSTALL_BINDIR})
+message("CMAKE_RUNTIME_OUTPUT_DIRECTORY: ${CMAKE_RUNTIME_OUTPUT_DIRECTORY}
+CMAKE_INSTALL_BINDIR: ${CMAKE_INSTALL_BINDIR}
+CMAKE_INSTALL_PREFIX: ${CMAKE_INSTALL_PREFIX}
+")
+FILE(GLOB dlls "${CMAKE_RUNTIME_OUTPUT_DIRECTORY}/*.dll" )
+install(FILES ${dlls} DESTINATION bin/debug/)
 
-FILE(GLOB yamlDll "${CMAKE_RUNTIME_OUTPUT_DIRECTORY}/yaml-cppd.dll" )
-install(FILES ${yamlDll} DESTINATION ${CMAKE_INSTALL_BINDIR})
+FILE(GLOB files "${CMAKE_CURRENT_SOURCE_DIR}/includes/*.h" )
+INSTALL(FILES ${files} DESTINATION include/ph_cooling_static/)
 
 find_path(yamldir NAMES yaml-cppd.dll HINTS ${VCPKG_ROOT}/installed/x64-windows/debug/bin REQUIRED)
 install(FILES ${yamldir}/yaml-cppd.dll DESTINATION bin/debug/)

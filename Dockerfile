@@ -7,16 +7,15 @@ ENV CMAKE_VERSION=3.20.3
 ENV NINJA_VERSION=1.10.2
 ENV PERL_VERSION=5.32.0
 # Install Git
-#RUN powershell -Command \
-#    $ErrorActionPreference = 'Stop'; \
-#    Invoke-WebRequest https://github.com/git-for-windows/git/releases/download/v%GIT_VERSION%.windows.1/PortableGit-%GIT_VERSION%-64-bit.7z.exe -OutFile PortableGit.exe ; \
-#    Start-Process -FilePath PortableGit.exe -ArgumentList '/SILENT' -Wait
-
-# Install CMake
-#RUN powershell -Command \
-#    $ErrorActionPreference = 'Stop'; \
-#    Invoke-WebRequest https://github.com/Kitware/CMake/releases/download/v%CMAKE_VERSION%/cmake-%CMAKE_VERSION%-win64-x64.msi -OutFile cmake.msi ; \
-#    Start-Process -FilePath cmake.msi -ArgumentList '/quiet' -Wait
+RUN powershell -Command \
+    $ErrorActionPreference = 'Stop'; \
+    Invoke-WebRequest https://github.com/git-for-windows/git/releases/download/v%GIT_VERSION%.windows.1/PortableGit-%GIT_VERSION%-64-bit.7z.exe -OutFile PortableGit.exe ; \
+    Start-Process -FilePath PortableGit.exe -ArgumentList '/SILENT' -Wait
+#Install CMake
+RUN powershell -Command \
+    $ErrorActionPreference = 'Stop'; \
+    Invoke-WebRequest https://github.com/Kitware/CMake/releases/download/v%CMAKE_VERSION%/cmake-%CMAKE_VERSION%-win64-x64.msi -OutFile cmake.msi ; \
+    Start-Process -FilePath cmake.msi -ArgumentList '/quiet' -Wait
 
 # Install Ninja
 RUN powershell -Command \
@@ -31,11 +30,7 @@ RUN powershell -Command \
     Invoke-WebRequest https://aka.ms/vs/16/release/vs_community.exe -OutFile vs_community.exe ; \
     Start-Process -FilePath vs_community.exe -ArgumentList '--quiet --norestart --wait --nocache --add Microsoft.VisualStudio.Workload.VCTools' -Wait
 
-# Install the C++ Build Tools
-RUN powershell -Command \
-    $ErrorActionPreference = 'Stop'; \
-    Add-WindowsCapability -Online -Name "OpenSSH.Server~~~~0.0.1.0" ; \
-    Install-WindowsFeature -Name "VisualStudio.BuildTools.VC.Tools.x86.x64"
+
 
 # ...
 
