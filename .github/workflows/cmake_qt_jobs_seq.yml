@@ -2,9 +2,9 @@ name: CMake_QT_Workflow_Seq
 
 on:
   push:
-    branches: [ "dev_win_api" ]
+    branches: [ "other" ]
   pull_request:
-    branches: [ "dev_win_api" ]
+    branches: [ "other" ]
     # This action can be manually triggered
   workflow_call:
 env:
