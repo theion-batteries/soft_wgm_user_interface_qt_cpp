@@ -9,13 +9,14 @@ ENV PERL_VERSION=5.32.0
 # Install Git
 RUN powershell -Command \
     $ErrorActionPreference = 'Stop'; \
-    Invoke-WebRequest https://github.com/git-for-windows/git/releases/download/v%GIT_VERSION%.windows.1/PortableGit-%GIT_VERSION%-64-bit.7z.exe -OutFile PortableGit.exe ; \
-    Start-Process -FilePath PortableGit.exe -ArgumentList '/SILENT' -Wait
+    Invoke-WebRequest -UseBasicParsing -OutFile git.exe https://github.com/git-for-windows/git/releases/download/v%GIT_VERSION%.windows.1/Git-%GIT_VERSION%-64-bit.exe 
+RUN powershell.exe -Command "./git.exe /VERYSILENT /NORESTART /NOCANCEL /SP-"
 #Install CMake
+RUN git -v
 RUN powershell -Command \
     $ErrorActionPreference = 'Stop'; \
-    Invoke-WebRequest https://github.com/Kitware/CMake/releases/download/v%CMAKE_VERSION%/cmake-%CMAKE_VERSION%-win64-x64.msi -OutFile cmake.msi ; \
-    Start-Process -FilePath cmake.msi -ArgumentList '/quiet' -Wait
+    Invoke-WebRequest https://github.com/Kitware/CMake/releases/download/v%CMAKE_VERSION%/cmake-%CMAKE_VERSION%-windows-x86_64.msi -OutFile cmake.msi ; \
+    Start-Process -FilePath cmake.msi 
 
 # Install Ninja
 RUN powershell -Command \

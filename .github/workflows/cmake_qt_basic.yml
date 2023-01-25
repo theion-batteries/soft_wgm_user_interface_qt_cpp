@@ -1,4 +1,4 @@
-name: CMake_QT_Workflow_basic
+name: CMake_Workflow
 
 on:
   push:
