@@ -37,6 +37,12 @@ MainWindow::MainWindow(QWidget* parent)
             std::cout<<"process exit succefully"<<std::endl;
             coolView->getController()->reload_ph_config_file();
          });
+  /********************* connect tab with menu **************************/
+    connect(editView->getHeatConfigProc(), &QProcess::finished,
+        [this]() {
+            std::cout<<"process exit succefully"<<std::endl;
+            heatView->getController()->reload_heating_config_file();
+         });
 }
 
 MainWindow::~MainWindow()

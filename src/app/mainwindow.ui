@@ -42,7 +42,7 @@
        <bool>false</bool>
       </property>
       <property name="currentIndex">
-       <number>4</number>
+       <number>1</number>
       </property>
       <widget class="QWidget" name="Main">
        <attribute name="title">
@@ -337,7 +337,7 @@
                </spacer>
               </item>
               <item>
-               <widget class="QLineEdit" name="sink_input_axis_cmd_2">
+               <widget class="QLineEdit" name="heat_input_cmd">
                 <property name="contextMenuPolicy">
                  <enum>Qt::NoContextMenu</enum>
                 </property>
@@ -384,7 +384,7 @@
                    </spacer>
                   </item>
                   <item>
-                   <widget class="QLabel" name="sink_cmd_given_2">
+                   <widget class="QLabel" name="heat_cmd_given">
                     <property name="sizePolicy">
                      <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
                       <horstretch>0</horstretch>
@@ -430,7 +430,7 @@
                </spacer>
               </item>
               <item>
-               <widget class="QLabel" name="sink_axis_response_2">
+               <widget class="QLabel" name="heat_cmd_response">
                 <property name="sizePolicy">
                  <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
                   <horstretch>0</horstretch>
@@ -534,7 +534,7 @@
                  </spacer>
                 </item>
                 <item>
-                 <widget class="QLabel" name="heating_process_finish">
+                 <widget class="QLabel" name="heating_process_status">
                   <property name="sizePolicy">
                    <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
                     <horstretch>0</horstretch>
@@ -556,7 +556,45 @@
            </layout>
           </item>
           <item>
-           <spacer name="horizontalSpacer_43">
+           <spacer name="horizontalSpacer_80">
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>40</width>
+              <height>20</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+          <item>
+           <layout class="QVBoxLayout" name="verticalLayout_53">
+            <item>
+             <widget class="QLabel" name="label_65">
+              <property name="text">
+               <string>algorithms</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QCommandLinkButton" name="start_heating">
+              <property name="text">
+               <string>start_heating</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QCommandLinkButton" name="stop_heating">
+              <property name="text">
+               <string>stop_heating</string>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+          <item>
+           <spacer name="horizontalSpacer_81">
             <property name="orientation">
              <enum>Qt::Horizontal</enum>
             </property>
@@ -631,7 +669,7 @@
                </widget>
               </item>
               <item>
-               <widget class="QLCDNumber" name="lcd_heating_time">
+               <widget class="QLCDNumber" name="lcd_proc_heating_time">
                 <property name="sizePolicy">
                  <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
                   <horstretch>0</horstretch>
@@ -4107,7 +4145,7 @@
                </spacer>
               </item>
               <item>
-               <widget class="QLabel" name="extract_motion_ready_2">
+               <widget class="QLabel" name="extract_motion_ready">
                 <property name="sizePolicy">
                  <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
                   <horstretch>0</horstretch>
@@ -4147,7 +4185,7 @@
                </spacer>
               </item>
               <item>
-               <widget class="QLineEdit" name="extract__input_axis_cmd_3">
+               <widget class="QLineEdit" name="extract__input_axis_cmd">
                 <property name="contextMenuPolicy">
                  <enum>Qt::NoContextMenu</enum>
                 </property>
@@ -4194,7 +4232,7 @@
                    </spacer>
                   </item>
                   <item>
-                   <widget class="QLabel" name="extract_cmd_given_3">
+                   <widget class="QLabel" name="extract_cmd_given">
                     <property name="sizePolicy">
                      <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
                       <horstretch>0</horstretch>
@@ -4240,7 +4278,7 @@
                </spacer>
               </item>
               <item>
-               <widget class="QLabel" name="extract_axis_response_3">
+               <widget class="QLabel" name="extract_axis_response">
                 <property name="sizePolicy">
                  <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
                   <horstretch>0</horstretch>
@@ -4266,7 +4304,7 @@
             <item>
              <layout class="QHBoxLayout" name="horizontalLayout_68">
               <item>
-               <widget class="QCommandLinkButton" name="extract_connect_distance_sensor_2">
+               <widget class="QCommandLinkButton" name="extract_connect_distance_sensor">
                 <property name="sizePolicy">
                  <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
                   <horstretch>100</horstretch>
@@ -4318,7 +4356,7 @@
                </spacer>
               </item>
               <item>
-               <widget class="QLabel" name="extract_sensor_ready_2">
+               <widget class="QLabel" name="extract_sensor_ready">
                 <property name="sizePolicy">
                  <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
                   <horstretch>0</horstretch>
@@ -4428,7 +4466,7 @@
                  </spacer>
                 </item>
                 <item>
-                 <widget class="QLabel" name="extract_proc_finished_2">
+                 <widget class="QLabel" name="extract_proc_finished">
                   <property name="sizePolicy">
                    <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
                     <horstretch>0</horstretch>
@@ -4446,6 +4484,37 @@
                </layout>
               </item>
              </layout>
+            </item>
+           </layout>
+          </item>
+          <item>
+           <spacer name="horizontalSpacer_43">
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>40</width>
+              <height>20</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+          <item>
+           <layout class="QVBoxLayout" name="verticalLayout_54">
+            <item>
+             <widget class="QLabel" name="label_66">
+              <property name="text">
+               <string>algorithms</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QCommandLinkButton" name="extract_move_home">
+              <property name="text">
+               <string>move_home</string>
+              </property>
+             </widget>
             </item>
            </layout>
           </item>
@@ -4492,7 +4561,7 @@
                </widget>
               </item>
               <item>
-               <widget class="QLCDNumber" name="extract_axis_pos_2">
+               <widget class="QLCDNumber" name="extract_axis_pos_display">
                 <property name="sizePolicy">
                  <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
                   <horstretch>0</horstretch>
@@ -4546,7 +4615,7 @@
                </widget>
               </item>
               <item>
-               <widget class="QLCDNumber" name="extract_distance_head1_2">
+               <widget class="QLCDNumber" name="extract_distance_head1_view">
                 <property name="sizePolicy">
                  <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
                   <horstretch>0</horstretch>
@@ -4600,7 +4669,7 @@
                </widget>
               </item>
               <item>
-               <widget class="QLCDNumber" name="extract_time_2">
+               <widget class="QLCDNumber" name="extract_time_proc">
                 <property name="sizePolicy">
                  <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
                   <horstretch>0</horstretch>
@@ -4667,6 +4736,7 @@
     <addaction name="actionwhs_config"/>
     <addaction name="actioncnt_config"/>
     <addaction name="actionph_config_yaml"/>
+    <addaction name="actionheat_config_yaml"/>
    </widget>
    <widget class="QMenu" name="menuView">
     <property name="title">
@@ -4789,6 +4859,11 @@
   <action name="actionph_config_yaml">
    <property name="text">
     <string>ph_config.yaml</string>
+   </property>
+  </action>
+  <action name="actionheat_config_yaml">
+   <property name="text">
+    <string>heat_config.yaml</string>
    </property>
   </action>
  </widget>

@@ -11,18 +11,22 @@
 #pragma once
 // qt
 #include <QObject>
+#include <QTConcurrent>
 
 #include "./ui_mainwindow.h"
 // mvc
+#include "heatingController.h"
 
 class heatingView: public QObject
 {
-   // Q_OBJECT
+    Q_OBJECT
 public:
     heatingView(Ui::MainWindow* uiPtr);
     ~heatingView();
+    heatingController* getController();
 private:
     Ui::MainWindow* ui;
+    heatingController heatControll;
 };
 
 

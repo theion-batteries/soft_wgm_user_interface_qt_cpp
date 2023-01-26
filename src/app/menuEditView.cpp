@@ -16,6 +16,10 @@ menuEditView::menuEditView(Ui::MainWindow* uiPtr)
 connect(ui->actionph_config_yaml, &QAction::triggered, [this]() {
        on_actionph_config_yaml_triggered();
        });
+        // open heat config
+connect(ui->actionheat_config_yaml, &QAction::triggered, [this]() {
+       on_actionheat_config_yaml_triggered();
+       });
 }
 
 menuEditView::~menuEditView()
@@ -54,6 +58,17 @@ void  menuEditView::on_actionph_config_yaml_triggered()
 
 #endif
 }
+
+void  menuEditView::on_actionheat_config_yaml_triggered()
+{
+#ifdef HEAT_CONFIG
+
+    std::cout << "opening HEat config yaml file in notepad: " << HEAT_CONFIG<<std::endl;
+    heat_config_editor.start("C:\\Windows\\system32\\notepad.exe", { HEAT_CONFIG });
+
+
+#endif
+}
 QProcess* menuEditView::getWhsConfigProc()
 {
     return &whs_config_editor;
@@ -66,4 +81,8 @@ QProcess* menuEditView::getCntConfigProc()
 QProcess* menuEditView::getPhConfigProc()
 {
     return &ph_config_editor;
+}
+QProcess* menuEditView::getHeatConfigProc()
+{
+    return &heat_config_editor;
 }
