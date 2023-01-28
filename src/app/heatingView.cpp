@@ -4,7 +4,7 @@ heatingView::heatingView(Ui::MainWindow* uiPtr)
 {
     ui = uiPtr;
     ui->tabWidget->setTabText(1, "Heating");
-    ui->heating_ready_label->setStyleSheet("QLabel { background-color : red; color : black; }");
+    ui->heating_ready_bool->setStyleSheet("QLabel { background-color : red; color : black; }");
     ui->heat_cmd_response->setStyleSheet("QLabel { background-color : red; color : black; }");
     ui->heating_process_status->setStyleSheet("QLabel { background-color : red; color : black; }");
 
@@ -15,9 +15,7 @@ heatingView::heatingView(Ui::MainWindow* uiPtr)
             heatControll.on_connect_heating_dev_clicked();});
         }, Qt::QueuedConnection);
     connect(&heatControll, &heatingController::heaterConnected, this, [this]() {
-        heatControll.updateLabelHeater(ui->heating_ready_bool);
-    auto func = QtConcurrent::run(&heatingController::updateLabelHeater, &heatControll, ui->heating_ready_bool);
-        }, Qt::QueuedConnection);
+        heatControll.updateLabelHeater(ui->heating_ready_bool);});
 
     // connect enter to send manual cmd to heater
     connect(ui->heat_input_cmd, &QLineEdit::returnPressed, this, [this]() {

@@ -4,7 +4,6 @@
 
 # author: sami dhiab
 # email: sami@theion.de
-# 
 
 cmake_minimum_required(VERSION 3.1.0)
 
