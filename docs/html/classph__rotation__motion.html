@@ -121,6 +121,8 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:aa2325ee7f611d6339f91294241831de3"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classph__rotation__motion.html#aa2325ee7f611d6339f91294241831de3">move_to</a> (int new_position) override</td></tr>
 <tr class="memdesc:aa2325ee7f611d6339f91294241831de3"><td class="mdescLeft">&#160;</td><td class="mdescRight">TODO: change the function call.  <a href="classph__rotation__motion.html#aa2325ee7f611d6339f91294241831de3">More...</a><br /></td></tr>
 <tr class="separator:aa2325ee7f611d6339f91294241831de3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a12b4cc7313edd7adbf120125fa7f23b5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classph__rotation__motion.html#a12b4cc7313edd7adbf120125fa7f23b5">rotate_to</a> (double new_pos) override</td></tr>
+<tr class="separator:a12b4cc7313edd7adbf120125fa7f23b5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2f39ea6ecfeff8facd3437f3e4829022"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="namespacewgm__feedbacks.html#a7cabdf8521369e5389f3589df1f37ffe">wgm_feedbacks::enum_sub_sys_feedback</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classph__rotation__motion.html#a2f39ea6ecfeff8facd3437f3e4829022">connect</a> () override</td></tr>
 <tr class="separator:a2f39ea6ecfeff8facd3437f3e4829022"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7f5e8dd28d45fa20eb9d15201111ff3e"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classph__rotation__motion.html#a7f5e8dd28d45fa20eb9d15201111ff3e">disconnect</a> () override</td></tr>
@@ -162,6 +164,8 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a37fbd271c4b70f86c87c744bbf8e1b42 inherit pub_methods_class_iph__axis__motion"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af289015dd3c4c5dc260408003675c029 inherit pub_methods_class_iph__axis__motion"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_iph__axis__motion.html#af289015dd3c4c5dc260408003675c029">move_to</a> (int new_position)=0</td></tr>
 <tr class="separator:af289015dd3c4c5dc260408003675c029 inherit pub_methods_class_iph__axis__motion"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0c1ce906ad49d14535d75693b97d8605 inherit pub_methods_class_iph__axis__motion"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_iph__axis__motion.html#a0c1ce906ad49d14535d75693b97d8605">rotate_to</a> (double new_position)</td></tr>
+<tr class="separator:a0c1ce906ad49d14535d75693b97d8605 inherit pub_methods_class_iph__axis__motion"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa98799cb97d8d87628fa183b5a37a3d1 inherit pub_methods_class_iph__axis__motion"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_iph__axis__motion.html#aa98799cb97d8d87628fa183b5a37a3d1">sendCmd</a> (std::string &amp;cmd, sockpp::tcp_connector *client, std::string args=std::string())</td></tr>
 <tr class="separator:aa98799cb97d8d87628fa183b5a37a3d1 inherit pub_methods_class_iph__axis__motion"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa0f8b6f9a8515109aa1a029293e06a49 inherit pub_methods_class_iph__axis__motion"><td class="memItemLeft" align="right" valign="top">virtual std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_iph__axis__motion.html#aa0f8b6f9a8515109aa1a029293e06a49">sendDirectCmd</a> (std::string cmd)=0</td></tr>
@@ -689,6 +693,46 @@ Here is the caller graph for this function:</div>
 
 </div>
 </div>
+<a id="a12b4cc7313edd7adbf120125fa7f23b5" name="a12b4cc7313edd7adbf120125fa7f23b5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a12b4cc7313edd7adbf120125fa7f23b5">&#9670;&nbsp;</a></span>rotate_to()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ph_rotation_motion::rotate_to </td>
+          <td>(</td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>new_pos</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Reimplemented from <a class="el" href="class_iph__axis__motion.html#a0c1ce906ad49d14535d75693b97d8605">Iph_axis_motion</a>.</p>
+
+<p class="definition">Definition at line <a class="el" href="ph__rotation__motion_8cpp_source.html#l00242">242</a> of file <a class="el" href="ph__rotation__motion_8cpp_source.html">ph_rotation_motion.cpp</a>.</p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="classph__rotation__motion_a12b4cc7313edd7adbf120125fa7f23b5_cgraph.png" border="0" usemap="#aclassph__rotation__motion_a12b4cc7313edd7adbf120125fa7f23b5_cgraph" alt=""/></div>
+<map name="aclassph__rotation__motion_a12b4cc7313edd7adbf120125fa7f23b5_cgraph" id="aclassph__rotation__motion_a12b4cc7313edd7adbf120125fa7f23b5_cgraph">
+<area shape="rect" title=" " alt="" coords="5,29,137,71"/>
+<area shape="rect" href="classph__rotation__motion.html#a4de4896198f9d10ba410c6d598cd973a" title=" " alt="" coords="185,29,317,71"/>
+<area shape="rect" href="classph__rotation__motion.html#ac6fa0a91cc1893ec73227cc6fd20051d" title=" " alt="" coords="365,29,497,71"/>
+</map>
+</div>
+
+</div>
+</div>
 <a id="a4de4896198f9d10ba410c6d598cd973a" name="a4de4896198f9d10ba410c6d598cd973a"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a4de4896198f9d10ba410c6d598cd973a">&#9670;&nbsp;</a></span>sendDirectCmd()</h2>
 
@@ -730,14 +774,15 @@ Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="classph__rotation__motion_a4de4896198f9d10ba410c6d598cd973a_icgraph.png" border="0" usemap="#aclassph__rotation__motion_a4de4896198f9d10ba410c6d598cd973a_icgraph" alt=""/></div>
 <map name="aclassph__rotation__motion_a4de4896198f9d10ba410c6d598cd973a_icgraph" id="aclassph__rotation__motion_a4de4896198f9d10ba410c6d598cd973a_icgraph">
-<area shape="rect" title=" " alt="" coords="365,201,497,243"/>
+<area shape="rect" title=" " alt="" coords="365,235,497,276"/>
 <area shape="rect" href="classph__rotation__motion.html#af123763ead6817ad9189b7156676b727" title=" " alt="" coords="185,5,317,47"/>
 <area shape="rect" href="classph__rotation__motion.html#a76bcea5d4d75defd1fe0072a961c60d8" title=" " alt="" coords="185,71,317,112"/>
 <area shape="rect" href="classph__rotation__motion.html#a2203bfa49ceea2664ad64cb725727ad3" title=" " alt="" coords="185,136,317,177"/>
 <area shape="rect" href="classph__rotation__motion.html#a9b09677cc54675e4f4719d116de9de6f" title=" " alt="" coords="185,201,317,243"/>
 <area shape="rect" href="classph__rotation__motion.html#a8f7a62659a7390f797267ec4d55f9e50" title=" " alt="" coords="185,267,317,308"/>
 <area shape="rect" href="classph__rotation__motion.html#a1a2a9d8cb0b0b8c6d665b495ff873797" title=" " alt="" coords="185,332,317,373"/>
-<area shape="rect" href="classph__rotation__motion.html#ab718b1d55b941146c7480a8ed44bb02a" title=" " alt="" coords="185,397,317,439"/>
+<area shape="rect" href="classph__rotation__motion.html#a12b4cc7313edd7adbf120125fa7f23b5" title=" " alt="" coords="185,397,317,439"/>
+<area shape="rect" href="classph__rotation__motion.html#ab718b1d55b941146c7480a8ed44bb02a" title=" " alt="" coords="185,463,317,504"/>
 <area shape="rect" href="classph__rotation__motion.html#aa2325ee7f611d6339f91294241831de3" title="TODO: change the function call." alt="" coords="5,332,137,373"/>
 </map>
 </div>
@@ -789,7 +834,7 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ph__rotation__motion_8cpp_source.html#l00243">243</a> of file <a class="el" href="ph__rotation__motion_8cpp_source.html">ph_rotation_motion.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ph__rotation__motion_8cpp_source.html#l00255">255</a> of file <a class="el" href="ph__rotation__motion_8cpp_source.html">ph_rotation_motion.cpp</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -832,15 +877,16 @@ Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="classph__rotation__motion_ac6fa0a91cc1893ec73227cc6fd20051d_icgraph.png" border="0" usemap="#aclassph__rotation__motion_ac6fa0a91cc1893ec73227cc6fd20051d_icgraph" alt=""/></div>
 <map name="aclassph__rotation__motion_ac6fa0a91cc1893ec73227cc6fd20051d_icgraph" id="aclassph__rotation__motion_ac6fa0a91cc1893ec73227cc6fd20051d_icgraph">
-<area shape="rect" title=" " alt="" coords="545,201,677,243"/>
-<area shape="rect" href="classph__rotation__motion.html#a4de4896198f9d10ba410c6d598cd973a" title=" " alt="" coords="365,201,497,243"/>
+<area shape="rect" title=" " alt="" coords="545,235,677,276"/>
+<area shape="rect" href="classph__rotation__motion.html#a4de4896198f9d10ba410c6d598cd973a" title=" " alt="" coords="365,235,497,276"/>
 <area shape="rect" href="classph__rotation__motion.html#af123763ead6817ad9189b7156676b727" title=" " alt="" coords="185,5,317,47"/>
 <area shape="rect" href="classph__rotation__motion.html#a76bcea5d4d75defd1fe0072a961c60d8" title=" " alt="" coords="185,71,317,112"/>
 <area shape="rect" href="classph__rotation__motion.html#a2203bfa49ceea2664ad64cb725727ad3" title=" " alt="" coords="185,136,317,177"/>
 <area shape="rect" href="classph__rotation__motion.html#a9b09677cc54675e4f4719d116de9de6f" title=" " alt="" coords="185,201,317,243"/>
 <area shape="rect" href="classph__rotation__motion.html#a8f7a62659a7390f797267ec4d55f9e50" title=" " alt="" coords="185,267,317,308"/>
 <area shape="rect" href="classph__rotation__motion.html#a1a2a9d8cb0b0b8c6d665b495ff873797" title=" " alt="" coords="185,332,317,373"/>
-<area shape="rect" href="classph__rotation__motion.html#ab718b1d55b941146c7480a8ed44bb02a" title=" " alt="" coords="185,397,317,439"/>
+<area shape="rect" href="classph__rotation__motion.html#a12b4cc7313edd7adbf120125fa7f23b5" title=" " alt="" coords="185,397,317,439"/>
+<area shape="rect" href="classph__rotation__motion.html#ab718b1d55b941146c7480a8ed44bb02a" title=" " alt="" coords="185,463,317,504"/>
 <area shape="rect" href="classph__rotation__motion.html#aa2325ee7f611d6339f91294241831de3" title="TODO: change the function call." alt="" coords="5,332,137,373"/>
 </map>
 </div>

@@ -1,0 +1,8 @@
+<map id="hardware_feedback.h" name="hardware_feedback.h">
+<area shape="rect" id="node1" title=" " alt="" coords="88,5,232,32"/>
+<area shape="rect" id="node2" href="$soft__heating__system__submodule_2includes_2subsystem__feedback_8h.html" title=" " alt="" coords="82,80,238,107"/>
+<area shape="rect" id="node3" href="$heating__controller_8h.html" title=" " alt="" coords="93,155,227,181"/>
+<area shape="rect" id="node4" href="$heating__controller_8cpp.html" title=" " alt="" coords="5,229,155,256"/>
+<area shape="rect" id="node5" href="$heating__system_8h.html" title="heating system package" alt="" coords="179,229,304,256"/>
+<area shape="rect" id="node6" href="$heating__system_8cpp.html" title="heating system package" alt="" coords="172,304,311,331"/>
+</map>

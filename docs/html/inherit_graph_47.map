@@ -1,14 +1,4 @@
 <map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
-<area shape="rect" id="node1" href="$classwgm__processes_1_1_iprocesses__managment.html" title="interface process managemnt for user do not modify!" alt="" coords="5,169,192,211"/>
-<area shape="rect" id="node2" href="$classwgm__processes_1_1_ialigning__process.html" title=" " alt="" coords="247,5,417,47"/>
-<area shape="rect" id="node4" href="$classwgm__processes_1_1_icooling__process.html" title=" " alt="" coords="248,71,416,112"/>
-<area shape="rect" id="node6" href="$classwgm__processes_1_1_iextracting__process.html" title=" " alt="" coords="240,136,424,177"/>
-<area shape="rect" id="node8" href="$classwgm__processes_1_1_iheating__process.html" title=" " alt="" coords="247,201,417,243"/>
-<area shape="rect" id="node10" href="$classwgm__processes_1_1_isinking__process.html" title=" " alt="" coords="248,267,416,308"/>
-<area shape="rect" id="node12" href="$classwgm__processes_1_1process__management.html" title="implementation process managemnt add new process inside constructor later will be possible to add new..." alt="" coords="247,332,417,373"/>
-<area shape="rect" id="node3" href="$classwgm__processes_1_1aligning__process.html" title=" " alt="" coords="479,5,647,47"/>
-<area shape="rect" id="node5" href="$classwgm__processes_1_1cooling__process.html" title=" " alt="" coords="480,71,645,112"/>
-<area shape="rect" id="node7" href="$classwgm__processes_1_1extracting__process.html" title=" " alt="" coords="472,136,653,177"/>
-<area shape="rect" id="node9" href="$classwgm__processes_1_1heating__process.html" title=" " alt="" coords="479,201,646,243"/>
-<area shape="rect" id="node11" href="$classwgm__processes_1_1sinking__process.html" title=" " alt="" coords="480,267,645,308"/>
+<area shape="rect" id="node1" href="$classwafer__holder__motion__system_1_1_iwafer__motion__controller.html" title=" " alt="" coords="5,5,164,61"/>
+<area shape="rect" id="node2" href="$classwafer__holder__motion__system_1_1wafer__motion__controller.html" title=" " alt="" coords="212,5,368,61"/>
 </map>

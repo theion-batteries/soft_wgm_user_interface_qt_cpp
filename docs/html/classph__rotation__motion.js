@@ -14,6 +14,7 @@ var classph__rotation__motion =
     [ "move_to", "classph__rotation__motion.html#aa2325ee7f611d6339f91294241831de3", null ],
     [ "move_up_by", "classph__rotation__motion.html#a1a2a9d8cb0b0b8c6d665b495ff873797", null ],
     [ "move_up_to", "classph__rotation__motion.html#a44d321a93e0332dddfc1ac96e6d8c1b3", null ],
+    [ "rotate_to", "classph__rotation__motion.html#a12b4cc7313edd7adbf120125fa7f23b5", null ],
     [ "sendDirectCmd", "classph__rotation__motion.html#a4de4896198f9d10ba410c6d598cd973a", null ],
     [ "set_speed", "classph__rotation__motion.html#ab3f9fa335104c552dc12ea98a2c43850", null ],
     [ "unlock", "classph__rotation__motion.html#ab718b1d55b941146c7480a8ed44bb02a", null ],

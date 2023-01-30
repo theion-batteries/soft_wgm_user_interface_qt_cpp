@@ -85,7 +85,6 @@ $(document).ready(function(){initNavTree('classcnt__linear__motion.html',''); in
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pub-attribs">Public Attributes</a> &#124;
-<a href="#pro-attribs">Protected Attributes</a> &#124;
 <a href="classcnt__linear__motion-members.html">List of all members</a>  </div>
   <div class="headertitle"><div class="title">cnt_linear_motion Class Reference</div></div>
 </div><!--header-->
@@ -115,7 +114,7 @@ Collaboration diagram for cnt_linear_motion:</div>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a33efb10d727cbc40a619a8e24b516e20"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcnt__linear__motion.html#a33efb10d727cbc40a619a8e24b516e20">cnt_linear_motion</a> ()</td></tr>
 <tr class="separator:a33efb10d727cbc40a619a8e24b516e20"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad97244844739422a4cd7826a5d4ca90f"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcnt__linear__motion.html#ad97244844739422a4cd7826a5d4ca90f">~cnt_linear_motion</a> ()</td></tr>
+<tr class="memitem:ad97244844739422a4cd7826a5d4ca90f"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcnt__linear__motion.html#ad97244844739422a4cd7826a5d4ca90f">~cnt_linear_motion</a> ()</td></tr>
 <tr class="separator:ad97244844739422a4cd7826a5d4ca90f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6210eb8d53ab1aa9c8ae969fc2f00f38"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcnt__linear__motion.html#a6210eb8d53ab1aa9c8ae969fc2f00f38">move_home</a> () override</td></tr>
 <tr class="separator:a6210eb8d53ab1aa9c8ae969fc2f00f38"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -190,23 +189,12 @@ Public Member Functions</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
-<tr class="memitem:a625bce25fb62934cc51d415d75f58b69"><td class="memItemLeft" align="right" valign="top">sockpp::tcp_connector *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcnt__linear__motion.html#a625bce25fb62934cc51d415d75f58b69">axis_client_sock</a></td></tr>
+<tr class="memitem:a625bce25fb62934cc51d415d75f58b69"><td class="memItemLeft" align="right" valign="top">sockpp::tcp_connector *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcnt__linear__motion.html#a625bce25fb62934cc51d415d75f58b69">axis_client_sock</a> =nullptr</td></tr>
 <tr class="separator:a625bce25fb62934cc51d415d75f58b69"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-attribs" name="pro-attribs"></a>
-Protected Attributes</h2></td></tr>
-<tr class="memitem:ad2d557e7f9bfed71c0a8cca5669e9825"><td class="memItemLeft" align="right" valign="top">std::map&lt; u_int, std::string &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcnt__linear__motion.html#ad2d557e7f9bfed71c0a8cca5669e9825">axis_cmds</a></td></tr>
-<tr class="separator:ad2d557e7f9bfed71c0a8cca5669e9825"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a556b3da380741ccf4ad2069fa9d8fc2d"><td class="memItemLeft" align="right" valign="top">std::deque&lt; double &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcnt__linear__motion.html#a556b3da380741ccf4ad2069fa9d8fc2d">axis_last_position</a></td></tr>
-<tr class="separator:a556b3da380741ccf4ad2069fa9d8fc2d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8ab611e97d5ff43b04216fb5add0700d"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcnt__linear__motion.html#a8ab611e97d5ff43b04216fb5add0700d">axis_incoming_data</a></td></tr>
-<tr class="separator:a8ab611e97d5ff43b04216fb5add0700d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a218e6cc8e0d1ae2fc8154ca1c41dc07c"><td class="memItemLeft" align="right" valign="top">u_int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcnt__linear__motion.html#a218e6cc8e0d1ae2fc8154ca1c41dc07c">axis_data_length</a> = 1024</td></tr>
-<tr class="separator:a218e6cc8e0d1ae2fc8154ca1c41dc07c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock">
-<p class="definition">Definition at line <a class="el" href="cnt__linear__motion_8h_source.html#l00033">33</a> of file <a class="el" href="cnt__linear__motion_8h_source.html">cnt_linear_motion.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="cnt__linear__motion_8h_source.html#l00034">34</a> of file <a class="el" href="cnt__linear__motion_8h_source.html">cnt_linear_motion.h</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a33efb10d727cbc40a619a8e24b516e20" name="a33efb10d727cbc40a619a8e24b516e20"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a33efb10d727cbc40a619a8e24b516e20">&#9670;&nbsp;</a></span>cnt_linear_motion()</h2>
@@ -232,6 +220,9 @@ Protected Attributes</h2></td></tr>
 
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">cnt_linear_motion::~cnt_linear_motion </td>
@@ -240,6 +231,11 @@ Protected Attributes</h2></td></tr>
           <td></td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="cnt__linear__motion_8cpp_source.html#l00019">19</a> of file <a class="el" href="cnt__linear__motion_8cpp_source.html">cnt_linear_motion.cpp</a>.</p>
@@ -877,114 +873,12 @@ Here is the caller graph for this function:</div>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">sockpp::tcp_connector* cnt_linear_motion::axis_client_sock</td>
+          <td class="memname">sockpp::tcp_connector* cnt_linear_motion::axis_client_sock =nullptr</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="cnt__linear__motion_8h_source.html#l00056">56</a> of file <a class="el" href="cnt__linear__motion_8h_source.html">cnt_linear_motion.h</a>.</p>
-
-</div>
-</div>
-<a id="ad2d557e7f9bfed71c0a8cca5669e9825" name="ad2d557e7f9bfed71c0a8cca5669e9825"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad2d557e7f9bfed71c0a8cca5669e9825">&#9670;&nbsp;</a></span>axis_cmds</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">std::map&lt;u_int, std::string&gt; cnt_linear_motion::axis_cmds</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<b>Initial value:</b><div class="fragment"><div class="line">= {</div>
-<div class="line">        {0,<span class="stringliteral">&quot;$X&quot;</span>}, {1,<span class="stringliteral">&quot;?&quot;</span>}, {2,<span class="stringliteral">&quot;x160&quot;</span>},</div>
-<div class="line">        {3,<span class="stringliteral">&quot;x&quot;</span>}, {4,<span class="stringliteral">&quot;x&quot;</span>},</div>
-<div class="line">        {5,<span class="stringliteral">&quot;x&quot;</span>}, {6,<span class="stringliteral">&quot;x&quot;</span>},</div>
-<div class="line">        {7,<span class="stringliteral">&quot;$H&quot;</span>}</div>
-<div class="line">    }</div>
-</div><!-- fragment -->
-<p class="definition">Definition at line <a class="el" href="cnt__linear__motion_8h_source.html#l00046">46</a> of file <a class="el" href="cnt__linear__motion_8h_source.html">cnt_linear_motion.h</a>.</p>
-
-</div>
-</div>
-<a id="a218e6cc8e0d1ae2fc8154ca1c41dc07c" name="a218e6cc8e0d1ae2fc8154ca1c41dc07c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a218e6cc8e0d1ae2fc8154ca1c41dc07c">&#9670;&nbsp;</a></span>axis_data_length</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">u_int cnt_linear_motion::axis_data_length = 1024</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="cnt__linear__motion_8h_source.html#l00054">54</a> of file <a class="el" href="cnt__linear__motion_8h_source.html">cnt_linear_motion.h</a>.</p>
-
-</div>
-</div>
-<a id="a8ab611e97d5ff43b04216fb5add0700d" name="a8ab611e97d5ff43b04216fb5add0700d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8ab611e97d5ff43b04216fb5add0700d">&#9670;&nbsp;</a></span>axis_incoming_data</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">std::string cnt_linear_motion::axis_incoming_data</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="cnt__linear__motion_8h_source.html#l00053">53</a> of file <a class="el" href="cnt__linear__motion_8h_source.html">cnt_linear_motion.h</a>.</p>
-
-</div>
-</div>
-<a id="a556b3da380741ccf4ad2069fa9d8fc2d" name="a556b3da380741ccf4ad2069fa9d8fc2d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a556b3da380741ccf4ad2069fa9d8fc2d">&#9670;&nbsp;</a></span>axis_last_position</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">std::deque&lt;double&gt; cnt_linear_motion::axis_last_position</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="cnt__linear__motion_8h_source.html#l00052">52</a> of file <a class="el" href="cnt__linear__motion_8h_source.html">cnt_linear_motion.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="cnt__linear__motion_8h_source.html#l00057">57</a> of file <a class="el" href="cnt__linear__motion_8h_source.html">cnt_linear_motion.h</a>.</p>
 
 </div>
 </div>

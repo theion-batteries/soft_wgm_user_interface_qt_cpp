@@ -1,0 +1,7 @@
+<map id="heatingController::on_start_heating_clicked" name="heatingController::on_start_heating_clicked">
+<area shape="rect" id="node1" title=" " alt="" coords="5,64,172,105"/>
+<area shape="rect" id="node2" href="$classheating_controller.html#a35bc4b22308722e7202566ce5dd67730" title=" " alt="" coords="241,64,373,105"/>
+<area shape="rect" id="node3" href="$classwgm__processes_1_1_iheating__process.html#a2610c08705356ea10a2c710d1a59ef91" title=" " alt="" coords="443,5,613,47"/>
+<area shape="rect" id="node5" href="$classsulfur__heating__system_1_1_isulfur__heating__controller.html#aa0317a371c31f14ae0c3c41be15daf91" title=" " alt="" coords="220,130,393,186"/>
+<area shape="rect" id="node4" href="$classsulfur__heating__system_1_1_isulfur__heating__controller.html#af98c557b63a92d05761853b5b37e6aaf" title=" " alt="" coords="441,71,615,127"/>
+</map>

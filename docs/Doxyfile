@@ -907,13 +907,15 @@ WARN_LOGFILE           =
 # Note: If this tag is empty the current directory is searched.
 
 INPUT                  = ../src \
-                         C:/Users/SamiDhiab/Theion_Repos/soft_wgm_user_interface_qt_cpp/dependencies/software_wgm_v2_cpp/src \
-                         C:/Users/SamiDhiab/Theion_Repos/soft_wgm_user_interface_qt_cpp/dependencies/software_wgm_v2_cpp/dependencies/soft_cnt_system_submodule_cpp/includes \
-                         C:/Users/SamiDhiab/Theion_Repos/soft_wgm_user_interface_qt_cpp/dependencies/software_wgm_v2_cpp/dependencies/soft_cnt_system_submodule_cpp/src \
-                         C:/Users/SamiDhiab/Theion_Repos/soft_wgm_user_interface_qt_cpp/dependencies/software_wgm_v2_cpp/dependencies/soft_cooling_system_submodule_cpp/includes \
-                         C:/Users/SamiDhiab/Theion_Repos/soft_wgm_user_interface_qt_cpp/dependencies/software_wgm_v2_cpp/dependencies/soft_cooling_system_submodule_cpp/src \
-                         C:/Users/SamiDhiab/Theion_Repos/soft_wgm_user_interface_qt_cpp/dependencies/software_wgm_v2_cpp/dependencies/soft_wafer_holder_system_controller/includes \
-                         C:/Users/SamiDhiab/Theion_Repos/soft_wgm_user_interface_qt_cpp/dependencies/software_wgm_v2_cpp/dependencies/soft_wafer_holder_system_controller/src \
+                         ../dependencies/software_wgm_v2_cpp/src \
+                         ../dependencies/software_wgm_v2_cpp/dependencies/soft_cnt_system_submodule_cpp/includes \
+                         ../dependencies/software_wgm_v2_cpp/dependencies/soft_cnt_system_submodule_cpp/src \
+                         ../dependencies/software_wgm_v2_cpp/dependencies/soft_cooling_system_submodule_cpp/includes \
+                         ../dependencies/software_wgm_v2_cpp/dependencies/soft_cooling_system_submodule_cpp/src \
+                         ../dependencies/software_wgm_v2_cpp/dependencies/soft_wafer_holder_system_controller/includes \
+                         ../dependencies/software_wgm_v2_cpp/dependencies/soft_wafer_holder_system_controller/src \
+                         ../dependencies/software_wgm_v2_cpp/dependencies/soft_heating_system_submodule/includes \
+                         ../dependencies/software_wgm_v2_cpp/dependencies/soft_heating_system_submodule/src \
                          ../dependencies/soft_cooling_system_submodule_cpp/dependencies/software_printhead_module/includes \
                          ../dependencies/soft_cooling_system_submodule_cpp/dependencies/software_printhead_module/src \
                          ../dependencies/soft_wafer_holder_system_controller/dependencies/lib_keyence_sdk/includes \

@@ -1,0 +1,4 @@
+<map id="sulfur_heating_system::Isulfur_heating_controller::turn_on_heating" name="sulfur_heating_system::Isulfur_heating_controller::turn_on_heating">
+<area shape="rect" id="node1" title=" " alt="" coords="220,5,393,61"/>
+<area shape="rect" id="node2" href="$classheating_controller.html#ac11b048e22d708d4918f42b4dd928789" title=" " alt="" coords="5,13,172,54"/>
+</map>

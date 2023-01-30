@@ -124,6 +124,10 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:adbe9d55a4129e99e0037b902a6633bb4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af87539aa0fb363688e9d383ed36f08fc"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classwgm__processes_1_1_iheating__process.html#af87539aa0fb363688e9d383ed36f08fc">is_proc_success</a> ()=0</td></tr>
 <tr class="separator:af87539aa0fb363688e9d383ed36f08fc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a02d17cb32397fa389389bf65a9e18b9c"><td class="memItemLeft" align="right" valign="top">virtual long long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classwgm__processes_1_1_iheating__process.html#a02d17cb32397fa389389bf65a9e18b9c">get_elapsed_time</a> ()=0</td></tr>
+<tr class="separator:a02d17cb32397fa389389bf65a9e18b9c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2610c08705356ea10a2c710d1a59ef91"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classsulfur__heating__system_1_1_isulfur__heating__controller.html">sulfur_heating_system::Isulfur_heating_controller</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classwgm__processes_1_1_iheating__process.html#a2610c08705356ea10a2c710d1a59ef91">get_sys_ptr</a> ()=0</td></tr>
+<tr class="separator:a2610c08705356ea10a2c710d1a59ef91"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_classwgm__processes_1_1_iprocesses__managment"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classwgm__processes_1_1_iprocesses__managment')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="classwgm__processes_1_1_iprocesses__managment.html">wgm_processes::Iprocesses_managment</a></td></tr>
 <tr class="memitem:a1e12a75939a38e0279bf27046ebd24a7 inherit pub_methods_classwgm__processes_1_1_iprocesses__managment"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classwgm__processes_1_1_iprocesses__managment.html#a1e12a75939a38e0279bf27046ebd24a7">Iprocesses_managment</a> ()</td></tr>
 <tr class="separator:a1e12a75939a38e0279bf27046ebd24a7 inherit pub_methods_classwgm__processes_1_1_iprocesses__managment"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -197,6 +201,43 @@ Public Member Functions</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
+<a id="a02d17cb32397fa389389bf65a9e18b9c" name="a02d17cb32397fa389389bf65a9e18b9c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a02d17cb32397fa389389bf65a9e18b9c">&#9670;&nbsp;</a></span>get_elapsed_time()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual long long wgm_processes::Iheating_process::get_elapsed_time </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Implemented in <a class="el" href="classwgm__processes_1_1heating__process.html#aeced3742d1ac9d7742dcb04bfa03d66a">wgm_processes::heating_process</a>.</p>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="classwgm__processes_1_1_iheating__process_a02d17cb32397fa389389bf65a9e18b9c_icgraph.png" border="0" usemap="#aclasswgm__processes_1_1_iheating__process_a02d17cb32397fa389389bf65a9e18b9c_icgraph" alt=""/></div>
+<map name="aclasswgm__processes_1_1_iheating__process_a02d17cb32397fa389389bf65a9e18b9c_icgraph" id="aclasswgm__processes_1_1_iheating__process_a02d17cb32397fa389389bf65a9e18b9c_icgraph">
+<area shape="rect" title=" " alt="" coords="216,53,401,94"/>
+<area shape="rect" href="classheating_controller.html#a997f7e9fbde054543def7f7cf4e6717c" title=" " alt="" coords="5,5,168,61"/>
+<area shape="rect" href="classheating_controller.html#a2cb3cd277bdec5d1bf07ffcd8c66e699" title=" " alt="" coords="12,85,161,141"/>
+</map>
+</div>
+
+</div>
+</div>
 <a id="adbe9d55a4129e99e0037b902a6633bb4" name="adbe9d55a4129e99e0037b902a6633bb4"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#adbe9d55a4129e99e0037b902a6633bb4">&#9670;&nbsp;</a></span>get_name()</h2>
 
@@ -222,7 +263,53 @@ Public Member Functions</h2></td></tr>
 
 <p>Implements <a class="el" href="classwgm__processes_1_1_iprocesses__managment.html#abe0e18ac8c47e496bb6de11df39b0117">wgm_processes::Iprocesses_managment</a>.</p>
 
-<p>Implemented in <a class="el" href="classwgm__processes_1_1heating__process.html#aa384a7f672ee35032e61e5c147dc814d">wgm_processes::heating_process</a>.</p>
+<p>Implemented in <a class="el" href="classwgm__processes_1_1heating__process.html#adf5dbb1397ef149a21cf58884a213785">wgm_processes::heating_process</a>.</p>
+
+</div>
+</div>
+<a id="a2610c08705356ea10a2c710d1a59ef91" name="a2610c08705356ea10a2c710d1a59ef91"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2610c08705356ea10a2c710d1a59ef91">&#9670;&nbsp;</a></span>get_sys_ptr()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual <a class="el" href="classsulfur__heating__system_1_1_isulfur__heating__controller.html">sulfur_heating_system::Isulfur_heating_controller</a> * wgm_processes::Iheating_process::get_sys_ptr </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Implemented in <a class="el" href="classwgm__processes_1_1heating__process.html#a5e72aca4cfedb7b52c43cd18bc633a17">wgm_processes::heating_process</a>.</p>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="classwgm__processes_1_1_iheating__process_a2610c08705356ea10a2c710d1a59ef91_icgraph.png" border="0" usemap="#aclasswgm__processes_1_1_iheating__process_a2610c08705356ea10a2c710d1a59ef91_icgraph" alt=""/></div>
+<map name="aclasswgm__processes_1_1_iheating__process_a2610c08705356ea10a2c710d1a59ef91_icgraph" id="aclasswgm__processes_1_1_iheating__process_a2610c08705356ea10a2c710d1a59ef91_icgraph">
+<area shape="rect" title=" " alt="" coords="460,353,629,395"/>
+<area shape="rect" href="classheating_controller.html#a35bc4b22308722e7202566ce5dd67730" title=" " alt="" coords="261,232,393,273"/>
+<area shape="rect" href="classheating_controller.html#ac11b048e22d708d4918f42b4dd928789" title=" " alt="" coords="16,5,183,47"/>
+<area shape="rect" href="classheating_controller.html#ace40642c12306003fbe881c967a2b1df" title=" " alt="" coords="17,297,182,339"/>
+<area shape="rect" href="classheating_controller.html#a3e82e0388dfa96d2152f01ae25668bbe" title=" " alt="" coords="245,419,409,475"/>
+<area shape="rect" href="classheating_controller.html#a93766a4a66db236a3084f2c4a7710136" title=" " alt="" coords="241,500,412,541"/>
+<area shape="rect" href="classheating_controller.html#a5841413530f190dce55eb449e1f5526c" title=" " alt="" coords="263,353,390,395"/>
+<area shape="rect" href="classheating_controller.html#ae0fcfb4714f85496cd7e1a257882c7d7" title=" " alt="" coords="249,565,404,607"/>
+<area shape="rect" href="classheating_controller.html#a997f7e9fbde054543def7f7cf4e6717c" title=" " alt="" coords="18,71,181,127"/>
+<area shape="rect" href="classheating_controller.html#a2cb3cd277bdec5d1bf07ffcd8c66e699" title=" " alt="" coords="25,151,174,207"/>
+<area shape="rect" href="classheating_controller.html#a225bc98d2e5725ae2700a248ff3fa0ba" title=" " alt="" coords="34,232,165,273"/>
+<area shape="rect" href="classheating_controller.html#a29baaea8e0b3a3afd3e697589b9e9825" title=" " alt="" coords="5,363,193,404"/>
+</map>
+</div>
 
 </div>
 </div>
@@ -251,7 +338,17 @@ Public Member Functions</h2></td></tr>
 
 <p>Implements <a class="el" href="classwgm__processes_1_1_iprocesses__managment.html#a65d124c3c28e74f11311269545796c4b">wgm_processes::Iprocesses_managment</a>.</p>
 
-<p>Implemented in <a class="el" href="classwgm__processes_1_1heating__process.html#abb1995ce24fcdea1d32503ef6d843336">wgm_processes::heating_process</a>.</p>
+<p>Implemented in <a class="el" href="classwgm__processes_1_1heating__process.html#a562766a73d5ab75d6d5fbf33978803f5">wgm_processes::heating_process</a>.</p>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="classwgm__processes_1_1_iheating__process_af87539aa0fb363688e9d383ed36f08fc_icgraph.png" border="0" usemap="#aclasswgm__processes_1_1_iheating__process_af87539aa0fb363688e9d383ed36f08fc_icgraph" alt=""/></div>
+<map name="aclasswgm__processes_1_1_iheating__process_af87539aa0fb363688e9d383ed36f08fc_icgraph" id="aclasswgm__processes_1_1_iheating__process_af87539aa0fb363688e9d383ed36f08fc_icgraph">
+<area shape="rect" title=" " alt="" coords="368,5,549,47"/>
+<area shape="rect" href="classheating_controller.html#aa5c172fef37658daf7d53a81aae3def3" title=" " alt="" coords="193,5,320,47"/>
+<area shape="rect" href="classheating_controller.html#acb8c8dadb3bdd9e8bad406e6708408e0" title=" " alt="" coords="5,5,145,47"/>
+</map>
+</div>
 
 </div>
 </div>
@@ -280,7 +377,16 @@ Public Member Functions</h2></td></tr>
 
 <p>Implements <a class="el" href="classwgm__processes_1_1_iprocesses__managment.html#a8192eb0f5674c1881accf41dc5c5f4c7">wgm_processes::Iprocesses_managment</a>.</p>
 
-<p>Implemented in <a class="el" href="classwgm__processes_1_1heating__process.html#a835192b6c967e6c8377df46f5367d79e">wgm_processes::heating_process</a>.</p>
+<p>Implemented in <a class="el" href="classwgm__processes_1_1heating__process.html#a88306a8c8575737c36b0304a5a81ef9b">wgm_processes::heating_process</a>.</p>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="classwgm__processes_1_1_iheating__process_af0bf314989901e7aaa22b8673fd6dc39_icgraph.png" border="0" usemap="#aclasswgm__processes_1_1_iheating__process_af0bf314989901e7aaa22b8673fd6dc39_icgraph" alt=""/></div>
+<map name="aclasswgm__processes_1_1_iheating__process_af0bf314989901e7aaa22b8673fd6dc39_icgraph" id="aclasswgm__processes_1_1_iheating__process_af0bf314989901e7aaa22b8673fd6dc39_icgraph">
+<area shape="rect" title=" " alt="" coords="216,13,385,54"/>
+<area shape="rect" href="classheating_controller.html#a997f7e9fbde054543def7f7cf4e6717c" title=" " alt="" coords="5,5,168,61"/>
+</map>
+</div>
 
 </div>
 </div>
@@ -309,7 +415,16 @@ Public Member Functions</h2></td></tr>
 
 <p>Implements <a class="el" href="classwgm__processes_1_1_iprocesses__managment.html#acb0c16f381eb8c4beee172e72c03bd56">wgm_processes::Iprocesses_managment</a>.</p>
 
-<p>Implemented in <a class="el" href="classwgm__processes_1_1heating__process.html#a11362226aaf088e3383ec3a663be20fa">wgm_processes::heating_process</a>.</p>
+<p>Implemented in <a class="el" href="classwgm__processes_1_1heating__process.html#aa71dd6dbc6f54a60d4138d35e2f5e2b3">wgm_processes::heating_process</a>.</p>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="classwgm__processes_1_1_iheating__process_a422d2faaee6b31101f030a73183a49e9_icgraph.png" border="0" usemap="#aclasswgm__processes_1_1_iheating__process_a422d2faaee6b31101f030a73183a49e9_icgraph" alt=""/></div>
+<map name="aclasswgm__processes_1_1_iheating__process_a422d2faaee6b31101f030a73183a49e9_icgraph" id="aclasswgm__processes_1_1_iheating__process_a422d2faaee6b31101f030a73183a49e9_icgraph">
+<area shape="rect" title=" " alt="" coords="203,13,372,54"/>
+<area shape="rect" href="classheating_controller.html#a2cb3cd277bdec5d1bf07ffcd8c66e699" title=" " alt="" coords="5,5,155,61"/>
+</map>
+</div>
 
 </div>
 </div>

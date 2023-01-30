@@ -1,5 +1,26 @@
 var classheating_controller =
 [
     [ "heatingController", "classheating_controller.html#a295999a2728337c64c226f1c78408f59", null ],
-    [ "~heatingController", "classheating_controller.html#ae274b89e0d20905fb4938f50e9814ce1", null ]
+    [ "~heatingController", "classheating_controller.html#ae274b89e0d20905fb4938f50e9814ce1", null ],
+    [ "finished", "classheating_controller.html#a3f105b9d9f9d7aec2c2d862fe0f80cfa", null ],
+    [ "get_heating_status", "classheating_controller.html#a35bc4b22308722e7202566ce5dd67730", null ],
+    [ "getProcessStatus", "classheating_controller.html#aa5c172fef37658daf7d53a81aae3def3", null ],
+    [ "heaterConnected", "classheating_controller.html#a100bb5db9638b7228af2e834bfe42036", null ],
+    [ "heaterReplied", "classheating_controller.html#a1e3ad273b61534659e3c5f3ae86c3fd0", null ],
+    [ "on_connect_heating_dev_clicked", "classheating_controller.html#a3e82e0388dfa96d2152f01ae25668bbe", null ],
+    [ "on_run_heating_process_clicked", "classheating_controller.html#a997f7e9fbde054543def7f7cf4e6717c", null ],
+    [ "on_start_heating_clicked", "classheating_controller.html#ac11b048e22d708d4918f42b4dd928789", null ],
+    [ "on_stop_heating_clicked", "classheating_controller.html#ace40642c12306003fbe881c967a2b1df", null ],
+    [ "on_stop_heating_proc_clicked", "classheating_controller.html#a2cb3cd277bdec5d1bf07ffcd8c66e699", null ],
+    [ "pressed", "classheating_controller.html#ab06860d12711771ea72a10c5b695774a", null ],
+    [ "reload_heating_config_file", "classheating_controller.html#a93766a4a66db236a3084f2c4a7710136", null ],
+    [ "returnPressed", "classheating_controller.html#a080af8d70c1626ef88736d48b9ea08f5", null ],
+    [ "sendDirectCmd", "classheating_controller.html#a5841413530f190dce55eb449e1f5526c", null ],
+    [ "triggered", "classheating_controller.html#aa2ab9bb8a98b9df8cdedcc62c1da00b3", null ],
+    [ "updateLabelHeater", "classheating_controller.html#a225bc98d2e5725ae2700a248ff3fa0ba", null ],
+    [ "updateLabelHeaterResponse", "classheating_controller.html#a29baaea8e0b3a3afd3e697589b9e9825", null ],
+    [ "updateLabelProcess", "classheating_controller.html#acb8c8dadb3bdd9e8bad406e6708408e0", null ],
+    [ "updateLcdTemperature", "classheating_controller.html#ae0fcfb4714f85496cd7e1a257882c7d7", null ],
+    [ "updateLcdTime", "classheating_controller.html#afc3dea59b151532d1b056856047c533b", null ],
+    [ "valueChanged", "classheating_controller.html#aa0b291bee80ba396bc386c1a30bbfd47", null ]
 ];

@@ -7,13 +7,14 @@ var searchData=
   ['ph_5fmotion_5fmove_5fhome_4',['ph_motion_move_home',['../classph__cooling__controller.html#ae75b58309fa6246a3dc127b4ca70c6a6',1,'ph_cooling_controller']]],
   ['ph_5fmotion_5fmove_5fto_5fcenter_5',['ph_motion_move_to_center',['../classph__cooling__controller.html#abefc0f525821838ef1afccb9ef3f93d0',1,'ph_cooling_controller']]],
   ['ph_5frotate_6',['ph_rotate',['../classwafer__cooling__system_1_1_icooling__rotation.html#a45b1022d0ebacda6f34d17d410a87f41',1,'wafer_cooling_system::Icooling_rotation::ph_rotate()'],['../classwafer__cooling__system_1_1cooling__rotation.html#ada15e5d7c31ef704f5958cf9424b593e',1,'wafer_cooling_system::cooling_rotation::ph_rotate()']]],
-  ['ph_5frotation_5fmotion_7',['ph_rotation_motion',['../classph__rotation__motion.html#a2e6a5aeecf0d033d585297a657481f29',1,'ph_rotation_motion']]],
-  ['ph_5fspit_8',['ph_spit',['../classwafer__cooling__system_1_1_icooling__spitting.html#a36fc1dd7f06c3d7466a1b1ac11fba6d5',1,'wafer_cooling_system::Icooling_spitting']]],
-  ['phconnected_9',['phConnected',['../classcooling_controller.html#a44c802a1877bad5df34c988fbdc15f6f',1,'coolingController']]],
-  ['phreplied_10',['phReplied',['../classcooling_controller.html#a25842d07fde7f168cf2fa3f427865056',1,'coolingController']]],
-  ['pressed_11',['pressed',['../classcnt_align_controller.html#a75decd51c5d1a042f2283808b0c2037b',1,'cntAlignController::pressed()'],['../classcooling_controller.html#a3f06d67a3d74dcddfcc8829c997feb9b',1,'coolingController::pressed()'],['../classsinking_controller.html#a1c37117ccb5f8d656bb33553b64ca926',1,'sinkingController::pressed()']]],
-  ['printtable_12',['printTable',['../structtable.html#a69e960f5b30606893694ee389d01e285',1,'table']]],
-  ['process_5fmanagement_13',['process_management',['../classwgm__processes_1_1process__management.html#a4a911f96a655574c9bbf9e2b25bd3206',1,'wgm_processes::process_management']]],
-  ['processtabview_14',['processTabView',['../classprocess_tab_view.html#a55f3063f69ecf80b7f7f3efdd6301fb0',1,'processTabView']]],
-  ['pulse_15',['pulse',['../classcnt__high__voltage__gbs.html#a6241571c32144e51b5ae64003129194e',1,'cnt_high_voltage_gbs::pulse()'],['../class_icnt__high__voltage.html#aa3888c7d3e885b0e2c167e667fe73361',1,'Icnt_high_voltage::pulse()']]]
+  ['ph_5frotate_5fto_5fcenter_7',['ph_rotate_to_center',['../classph__cooling__controller.html#a3c207da2f11714df3d9d5d529e38c5b2',1,'ph_cooling_controller']]],
+  ['ph_5frotation_5fmotion_8',['ph_rotation_motion',['../classph__rotation__motion.html#a2e6a5aeecf0d033d585297a657481f29',1,'ph_rotation_motion']]],
+  ['ph_5fspit_9',['ph_spit',['../classwafer__cooling__system_1_1_icooling__spitting.html#a36fc1dd7f06c3d7466a1b1ac11fba6d5',1,'wafer_cooling_system::Icooling_spitting']]],
+  ['phconnected_10',['phConnected',['../classcooling_controller.html#a44c802a1877bad5df34c988fbdc15f6f',1,'coolingController']]],
+  ['phreplied_11',['phReplied',['../classcooling_controller.html#a25842d07fde7f168cf2fa3f427865056',1,'coolingController']]],
+  ['pressed_12',['pressed',['../classcnt_align_controller.html#a75decd51c5d1a042f2283808b0c2037b',1,'cntAlignController::pressed()'],['../classcooling_controller.html#a3f06d67a3d74dcddfcc8829c997feb9b',1,'coolingController::pressed()'],['../classheating_controller.html#ab06860d12711771ea72a10c5b695774a',1,'heatingController::pressed()'],['../classsinking_controller.html#a1c37117ccb5f8d656bb33553b64ca926',1,'sinkingController::pressed()']]],
+  ['printtable_13',['printTable',['../structtable.html#a69e960f5b30606893694ee389d01e285',1,'table']]],
+  ['process_5fmanagement_14',['process_management',['../classwgm__processes_1_1process__management.html#a4a911f96a655574c9bbf9e2b25bd3206',1,'wgm_processes::process_management']]],
+  ['processtabview_15',['processTabView',['../classprocess_tab_view.html#a55f3063f69ecf80b7f7f3efdd6301fb0',1,'processTabView']]],
+  ['pulse_16',['pulse',['../classcnt__high__voltage__gbs.html#a6241571c32144e51b5ae64003129194e',1,'cnt_high_voltage_gbs::pulse()'],['../class_icnt__high__voltage.html#aa3888c7d3e885b0e2c167e667fe73361',1,'Icnt_high_voltage::pulse()']]]
 ];

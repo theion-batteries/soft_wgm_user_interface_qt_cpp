@@ -14,8 +14,10 @@ var classwhs__controller =
     [ "move_down_to_surface", "classwhs__controller.html#a20714bcee02208d76c24f92bd8af7027", null ],
     [ "move_down_until_data_availble", "classwhs__controller.html#af4f69dfb23179940eec4f208599bfef7", null ],
     [ "reload_config_file", "classwhs__controller.html#aea9133032e7f558f92df57c4e5a58cc3", null ],
+    [ "reset_config_file", "classwhs__controller.html#a318b9650df3de4bcd621299ea136b0b4", null ],
     [ "sendDirectCmdAxis", "classwhs__controller.html#ab7196396974648aaa52d7c4c83e30e85", null ],
     [ "sendDirectCmdSensor", "classwhs__controller.html#afbd9725eaef1830643d078cf5d694e68", null ],
     [ "_whs_params", "classwhs__controller.html#a337c5502e2e6334916354d97be0015f5", null ],
+    [ "_whs_params_default", "classwhs__controller.html#ae9b41e43ced748ea906d171a3304c42c", null ],
     [ "config", "classwhs__controller.html#a50c5f4f19ae7034f8ae4a1aa13dd7dda", null ]
 ];

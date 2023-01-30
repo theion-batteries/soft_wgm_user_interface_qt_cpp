@@ -1,0 +1,5 @@
+<map id="heatingController::get_heating_status" name="heatingController::get_heating_status">
+<area shape="rect" id="node1" title=" " alt="" coords="5,43,137,84"/>
+<area shape="rect" id="node2" href="$classwgm__processes_1_1_iheating__process.html#a2610c08705356ea10a2c710d1a59ef91" title=" " alt="" coords="187,5,357,47"/>
+<area shape="rect" id="node3" href="$classsulfur__heating__system_1_1_isulfur__heating__controller.html#af98c557b63a92d05761853b5b37e6aaf" title=" " alt="" coords="185,71,359,127"/>
+</map>

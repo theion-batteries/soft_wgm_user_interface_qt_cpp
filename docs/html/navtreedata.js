@@ -30,6 +30,8 @@ var NAVTREE =
     [ "sources", "md__c___users__sami_dhiab__theion__repos_soft_wgm_user_interface_qt_cpp_dependencies_software_wg4f6fb06d1492ba2c0d949fa97a10ab49.html", null ],
     [ "includes", "md__c___users__sami_dhiab__theion__repos_soft_wgm_user_interface_qt_cpp_dependencies_software_wg04b996649e4b1925ab52469d0bdf3def.html", null ],
     [ "sources", "md__c___users__sami_dhiab__theion__repos_soft_wgm_user_interface_qt_cpp_dependencies_software_wg8607d6fddc8bee5c97e5946811d0e44e.html", null ],
+    [ "includes", "md__c___users__sami_dhiab__theion__repos_soft_wgm_user_interface_qt_cpp_dependencies_software_wg9e29b8d8624cc473ea3924c9000d84e7.html", null ],
+    [ "sources", "md__c___users__sami_dhiab__theion__repos_soft_wgm_user_interface_qt_cpp_dependencies_software_wgbb20b376d283041cd0f009a205d1930e.html", null ],
     [ "Namespaces", "namespaces.html", [
       [ "Namespace List", "namespaces.html", "namespaces_dup" ],
       [ "Namespace Members", "namespacemembers.html", [
@@ -62,12 +64,12 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "_iaxis__motion_8cpp.html",
-"classcnt__alignment__system_1_1cnt__dispensing.html#a61f6bf26d50cf34b5823926a39ed092b",
-"classes.html",
-"classsulfur__heating__system_1_1_itemperature__sensor.html#aed86714d2729f7dd6869907479e52378",
-"classwgm__processes_1_1_iheating__process.html#adbe9d55a4129e99e0037b902a6633bb4",
-"dir_98bccbe8d71a3047b1a0ad20fd095296.html",
-"soft__cnt__system__submodule__cpp_2includes_2subsystem__feedback_8h_source.html"
+"classcnt__alignment__system_1_1cnt__dispensing.html#a57ef4ba6d652d7c06782b6cd2ac4bcc6",
+"classextracting_controller.html#ae25a1e4757b1fa6ab006d29c3ab89153",
+"classsinking_view.html#a2b97681ee4999c47bb4739468ae906a6",
+"classwgm__processes_1_1_ialigning__process.html#a28a9afd2e9b61cb3e23066800a314f7d",
+"cnt__linear__motion_8cpp.html",
+"namespacewgm__feedbacks.html#a7cabdf8521369e5389f3589df1f37ffea03230092630572beb16f043bf325c2f8"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

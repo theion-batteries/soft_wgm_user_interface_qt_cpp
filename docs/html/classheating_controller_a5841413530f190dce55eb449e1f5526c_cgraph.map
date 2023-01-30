@@ -1,0 +1,7 @@
+<map id="heatingController::sendDirectCmd" name="heatingController::sendDirectCmd">
+<area shape="rect" id="node1" title=" " alt="" coords="5,79,132,120"/>
+<area shape="rect" id="node2" href="$classwgm__processes_1_1_iheating__process.html#a2610c08705356ea10a2c710d1a59ef91" title=" " alt="" coords="182,5,351,47"/>
+<area shape="rect" id="node3" href="$classsulfur__heating__system_1_1_isulfur__heating__controller.html#a3dc4b8d9a1122630084a277fc935dfc6" title=" " alt="" coords="180,71,353,127"/>
+<area shape="rect" id="node4" href="$classheating__controller.html#ac753fcf49ace04a5127cc3662428ee43" title=" " alt="" coords="205,152,329,193"/>
+<area shape="rect" id="node5" href="$classheating__controller.html#ad9e7279c39b02345d2f3a28ec25ee94f" title=" " alt="" coords="401,152,532,193"/>
+</map>

@@ -11,9 +11,11 @@ var classph__cooling__controller =
     [ "get_ph_status", "classph__cooling__controller.html#aab33848cec7b335ed2e7158c90fa2aa4", null ],
     [ "get_rotary_axis_ptr", "classph__cooling__controller.html#aae1815d5ce5aa6d32aade0b18d5f3d12", null ],
     [ "get_rotary_mover_status", "classph__cooling__controller.html#a3d5ec6e9a62c882dd61c93eba7a597b9", null ],
+    [ "get_rotate_to_center_param", "classph__cooling__controller.html#afe7d5ab91cea46f9bbf821c1b6e5ca1b", null ],
     [ "ph_controller_connect", "classph__cooling__controller.html#ab9bec5eb5064a8c23428eede034f35b5", null ],
     [ "ph_motion_move_home", "classph__cooling__controller.html#ae75b58309fa6246a3dc127b4ca70c6a6", null ],
     [ "ph_motion_move_to_center", "classph__cooling__controller.html#abefc0f525821838ef1afccb9ef3f93d0", null ],
+    [ "ph_rotate_to_center", "classph__cooling__controller.html#a3c207da2f11714df3d9d5d529e38c5b2", null ],
     [ "reload_config_file", "classph__cooling__controller.html#a010621b2bd158c0e753d63a42ce57259", null ],
     [ "sendDirectCmdAxis", "classph__cooling__controller.html#a08932a04bdeadd3bd39b34cc19def765", null ],
     [ "sendDirectCmdSensor", "classph__cooling__controller.html#a624ecf066fc4c9a2379a2991980c67e9", null ]

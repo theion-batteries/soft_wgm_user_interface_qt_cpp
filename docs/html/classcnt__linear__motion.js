@@ -18,9 +18,5 @@ var classcnt__linear__motion =
     [ "set_speed", "classcnt__linear__motion.html#aa487248c1e1803f2e206aac0f95184e5", null ],
     [ "unlock", "classcnt__linear__motion.html#a43005459e2053ce7b44cdc97b704f594", null ],
     [ "waitForResponse", "classcnt__linear__motion.html#af84b5ee04a985d562b96d566546de3c0", null ],
-    [ "axis_client_sock", "classcnt__linear__motion.html#a625bce25fb62934cc51d415d75f58b69", null ],
-    [ "axis_cmds", "classcnt__linear__motion.html#ad2d557e7f9bfed71c0a8cca5669e9825", null ],
-    [ "axis_data_length", "classcnt__linear__motion.html#a218e6cc8e0d1ae2fc8154ca1c41dc07c", null ],
-    [ "axis_incoming_data", "classcnt__linear__motion.html#a8ab611e97d5ff43b04216fb5add0700d", null ],
-    [ "axis_last_position", "classcnt__linear__motion.html#a556b3da380741ccf4ad2069fa9d8fc2d", null ]
+    [ "axis_client_sock", "classcnt__linear__motion.html#a625bce25fb62934cc51d415d75f58b69", null ]
 ];

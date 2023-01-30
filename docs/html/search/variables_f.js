@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['v_0',['V',['../classcnt__alignment__system_1_1cnt__aligning__controller.html#a0a8a5fce067cc225499f85d94b1c10fb',1,'cnt_alignment_system::cnt_aligning_controller']]],
-  ['vin_1',['Vin',['../structcnt__alignment__system_1_1voltage.html#ac6f077a126654dd68a0fcd73a85399e5',1,'cnt_alignment_system::voltage']]],
-  ['vout_2',['Vout',['../structcnt__alignment__system_1_1voltage.html#a966f1bf8fb4d169b00262ba4107ce188',1,'cnt_alignment_system::voltage']]]
+  ['wafer_5fmax_5fspeed_0',['wafer_max_speed',['../structwhs__config__yaml__params.html#aadefc32bb2e5fb567260c0032480cfba',1,'whs_config_yaml_params']]],
+  ['wafer_5fmax_5ftravel_1',['wafer_max_travel',['../structwhs__config__yaml__params.html#a491d887353823d88b7f0bcdcbf1a492c',1,'whs_config_yaml_params']]],
+  ['wafer_5ftravel_2',['wafer_travel',['../structwhs__config__yaml__params.html#af2ab64a09bda37dac59997bf163624cc',1,'whs_config_yaml_params']]]
 ];

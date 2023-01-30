@@ -12,6 +12,9 @@ var hierarchy =
     [ "cnt_alignment_system::current", "structcnt__alignment__system_1_1current.html", null ],
     [ "delta_server", "structdelta__server.html", null ],
     [ "extractingModel", "classextracting_model.html", null ],
+    [ "heating_config_yaml_params", "structheating__config__yaml__params.html", null ],
+    [ "heating_controller", "classheating__controller.html", null ],
+    [ "heating_server", "structheating__server.html", null ],
     [ "heatingModel", "classheating_model.html", null ],
     [ "wgm_feedbacks::hw_feedback", "classwgm__feedbacks_1_1hw__feedback.html", null ],
     [ "Iaxis_motion", "class_iaxis__motion.html", [

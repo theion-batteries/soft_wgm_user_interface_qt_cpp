@@ -8,6 +8,8 @@ var soft__cooling__system__submodule__cpp_2includes_2subsystem__feedback_8h =
       [ "sub_success", "soft__cooling__system__submodule__cpp_2includes_2subsystem__feedback_8h.html#a7cabdf8521369e5389f3589df1f37ffeab1bd75281b403ec566b92a2282e0ed77", null ],
       [ "sub_error", "soft__cooling__system__submodule__cpp_2includes_2subsystem__feedback_8h.html#a7cabdf8521369e5389f3589df1f37ffea03230092630572beb16f043bf325c2f8", null ],
       [ "sub_success", "soft__cooling__system__submodule__cpp_2includes_2subsystem__feedback_8h.html#a7cabdf8521369e5389f3589df1f37ffeab1bd75281b403ec566b92a2282e0ed77", null ],
+      [ "sub_error", "soft__cooling__system__submodule__cpp_2includes_2subsystem__feedback_8h.html#a7cabdf8521369e5389f3589df1f37ffea03230092630572beb16f043bf325c2f8", null ],
+      [ "sub_success", "soft__cooling__system__submodule__cpp_2includes_2subsystem__feedback_8h.html#a7cabdf8521369e5389f3589df1f37ffeab1bd75281b403ec566b92a2282e0ed77", null ],
       [ "sub_error", "soft__cooling__system__submodule__cpp_2includes_2subsystem__feedback_8h.html#a7cabdf8521369e5389f3589df1f37ffea03230092630572beb16f043bf325c2f8", null ]
     ] ]
 ];

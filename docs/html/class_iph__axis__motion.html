@@ -115,6 +115,8 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a37fbd271c4b70f86c87c744bbf8e1b42"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af289015dd3c4c5dc260408003675c029"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_iph__axis__motion.html#af289015dd3c4c5dc260408003675c029">move_to</a> (int new_position)=0</td></tr>
 <tr class="separator:af289015dd3c4c5dc260408003675c029"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0c1ce906ad49d14535d75693b97d8605"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_iph__axis__motion.html#a0c1ce906ad49d14535d75693b97d8605">rotate_to</a> (double new_position)</td></tr>
+<tr class="separator:a0c1ce906ad49d14535d75693b97d8605"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa98799cb97d8d87628fa183b5a37a3d1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_iph__axis__motion.html#aa98799cb97d8d87628fa183b5a37a3d1">sendCmd</a> (std::string &amp;cmd, sockpp::tcp_connector *client, std::string args=std::string())</td></tr>
 <tr class="separator:aa98799cb97d8d87628fa183b5a37a3d1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa0f8b6f9a8515109aa1a029293e06a49"><td class="memItemLeft" align="right" valign="top">virtual std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_iph__axis__motion.html#aa0f8b6f9a8515109aa1a029293e06a49">sendDirectCmd</a> (std::string cmd)=0</td></tr>
@@ -486,6 +488,36 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Implemented in <a class="el" href="classph__linear__motion.html#a9be4edf09ad5862c27ad8074f4015d91">ph_linear_motion</a>, and <a class="el" href="classph__rotation__motion.html#a44d321a93e0332dddfc1ac96e6d8c1b3">ph_rotation_motion</a>.</p>
+
+</div>
+</div>
+<a id="a0c1ce906ad49d14535d75693b97d8605" name="a0c1ce906ad49d14535d75693b97d8605"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0c1ce906ad49d14535d75693b97d8605">&#9670;&nbsp;</a></span>rotate_to()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void Iph_axis_motion::rotate_to </td>
+          <td>(</td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>new_position</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Reimplemented in <a class="el" href="classph__rotation__motion.html#a12b4cc7313edd7adbf120125fa7f23b5">ph_rotation_motion</a>.</p>
+
+<p class="definition">Definition at line <a class="el" href="_iph__axis__motion_8h_source.html#l00028">28</a> of file <a class="el" href="_iph__axis__motion_8h_source.html">Iph_axis_motion.h</a>.</p>
 
 </div>
 </div>

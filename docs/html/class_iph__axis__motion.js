@@ -13,6 +13,7 @@ var class_iph__axis__motion =
     [ "move_to", "class_iph__axis__motion.html#af289015dd3c4c5dc260408003675c029", null ],
     [ "move_up_by", "class_iph__axis__motion.html#a45918357bbe2576f671a59d582a81038", null ],
     [ "move_up_to", "class_iph__axis__motion.html#aad6648cd79c9a7d3686ce1d0a5a646bd", null ],
+    [ "rotate_to", "class_iph__axis__motion.html#a0c1ce906ad49d14535d75693b97d8605", null ],
     [ "sendCmd", "class_iph__axis__motion.html#aa98799cb97d8d87628fa183b5a37a3d1", null ],
     [ "sendDirectCmd", "class_iph__axis__motion.html#aa0f8b6f9a8515109aa1a029293e06a49", null ],
     [ "set_speed", "class_iph__axis__motion.html#a4ef3b21cdd344a38197ecb99f9f322ec", null ]

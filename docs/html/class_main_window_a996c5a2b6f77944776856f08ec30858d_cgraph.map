@@ -1,7 +1,8 @@
 <map id="MainWindow::MainWindow" name="MainWindow::MainWindow">
-<area shape="rect" id="node1" title=" " alt="" coords="5,81,184,108"/>
+<area shape="rect" id="node1" title=" " alt="" coords="5,107,184,133"/>
 <area shape="rect" id="node2" href="$classmenu_edit_view.html#aa87d18dad8da93e442244ee3c57d8122" title=" " alt="" coords="235,5,450,32"/>
-<area shape="rect" id="node3" href="$classmenu_edit_view.html#abcfba65ac3f94de7c9028d27b2d14b56" title=" " alt="" coords="237,56,448,83"/>
-<area shape="rect" id="node4" href="$class_main_window.html#ae560f8c66af6bc7dc502df5b9de25d40" title=" " alt="" coords="275,107,410,133"/>
-<area shape="rect" id="node5" href="$classmenu_edit_view.html#ad8e63f5a545fb65d0a6105b2c1107fd8" title=" " alt="" coords="232,157,453,184"/>
+<area shape="rect" id="node3" href="$classmenu_edit_view.html#a21ef395dd1dcaa58883d810e2eb8ca0c" title=" " alt="" coords="232,56,453,83"/>
+<area shape="rect" id="node4" href="$classmenu_edit_view.html#abcfba65ac3f94de7c9028d27b2d14b56" title=" " alt="" coords="237,107,448,133"/>
+<area shape="rect" id="node5" href="$class_main_window.html#ae560f8c66af6bc7dc502df5b9de25d40" title=" " alt="" coords="275,157,410,184"/>
+<area shape="rect" id="node6" href="$classmenu_edit_view.html#ad8e63f5a545fb65d0a6105b2c1107fd8" title=" " alt="" coords="232,208,453,235"/>
 </map>

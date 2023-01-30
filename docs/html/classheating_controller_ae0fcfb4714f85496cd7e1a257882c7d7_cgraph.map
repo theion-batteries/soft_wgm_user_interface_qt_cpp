@@ -1,0 +1,8 @@
+<map id="heatingController::updateLcdTemperature" name="heatingController::updateLcdTemperature">
+<area shape="rect" id="node1" title=" " alt="" coords="5,103,160,144"/>
+<area shape="rect" id="node2" href="$classheating__controller.html#a1c4a0b795072c2b371ae35440620518a" title=" " alt="" coords="227,22,362,78"/>
+<area shape="rect" id="node5" href="$classwgm__processes_1_1_iheating__process.html#a2610c08705356ea10a2c710d1a59ef91" title=" " alt="" coords="210,103,379,144"/>
+<area shape="rect" id="node6" href="$classsulfur__heating__system_1_1_isulfur__heating__controller.html#a3dc4b8d9a1122630084a277fc935dfc6" title=" " alt="" coords="208,169,381,225"/>
+<area shape="rect" id="node3" href="$classheating__controller.html#ac753fcf49ace04a5127cc3662428ee43" title=" " alt="" coords="429,29,553,71"/>
+<area shape="rect" id="node4" href="$classheating__controller.html#ad9e7279c39b02345d2f3a28ec25ee94f" title=" " alt="" coords="601,29,732,71"/>
+</map>
