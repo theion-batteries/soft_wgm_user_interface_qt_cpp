@@ -19,5 +19,5 @@ class mainModel
 public:
   mainModel();
   ~mainModel();
-  wgm_processes::Iprocesses_managment* processManager;
+  wgm_processes::Iprocess_manager* processManager;
 };

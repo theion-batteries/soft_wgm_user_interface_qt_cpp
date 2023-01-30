@@ -18,5 +18,5 @@ public:
   model();
   ~model();
 private:
-  wgm_processes::Iprocesses_managment* processManager;
+  wgm_processes::Iprocess_manager* processManager;
 };

@@ -1,4 +1,4 @@
-<map id="wgm_processes::Iprocesses_managment" name="wgm_processes::Iprocesses_managment">
+<map id="wgm_processes::Iprocess_manager" name="wgm_processes::Iprocess_manager">
 <area shape="rect" id="node1" title="interface process managemnt for user do not modify!" alt="" coords="5,169,192,211"/>
 <area shape="rect" id="node2" href="$classwgm__processes_1_1_ialigning__process.html" title=" " alt="" coords="247,5,417,47"/>
 <area shape="rect" id="node4" href="$classwgm__processes_1_1_icooling__process.html" title=" " alt="" coords="248,71,416,112"/>

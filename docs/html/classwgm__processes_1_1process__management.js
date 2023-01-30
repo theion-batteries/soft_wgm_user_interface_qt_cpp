@@ -1,7 +1,7 @@
 var classwgm__processes_1_1process__management =
 [
-    [ "process_management", "classwgm__processes_1_1process__management.html#a4a911f96a655574c9bbf9e2b25bd3206", null ],
-    [ "~process_management", "classwgm__processes_1_1process__management.html#a8b1c53ef803f30ef1b45f4d7647440e1", null ],
+    [ "process_manager", "classwgm__processes_1_1process__management.html#a4a911f96a655574c9bbf9e2b25bd3206", null ],
+    [ "~process_manager", "classwgm__processes_1_1process__management.html#a8b1c53ef803f30ef1b45f4d7647440e1", null ],
     [ "add_process_to_scheduler", "classwgm__processes_1_1process__management.html#a47ef28c8dcc2fbaf712830539b2cb350", null ],
     [ "delete_last_process_from_scheduler", "classwgm__processes_1_1process__management.html#a1cb61d08e363c4bb79f9521f15f7158b", null ],
     [ "get_name", "classwgm__processes_1_1process__management.html#a3b6db503f6e0c1e463748f525520e57d", null ],

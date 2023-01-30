@@ -8,8 +8,8 @@ var namespacewgm__processes =
     [ "Icooling_process", "classwgm__processes_1_1_icooling__process.html", "classwgm__processes_1_1_icooling__process" ],
     [ "Iextracting_process", "classwgm__processes_1_1_iextracting__process.html", "classwgm__processes_1_1_iextracting__process" ],
     [ "Iheating_process", "classwgm__processes_1_1_iheating__process.html", "classwgm__processes_1_1_iheating__process" ],
-    [ "Iprocesses_managment", "classwgm__processes_1_1_iprocesses__managment.html", "classwgm__processes_1_1_iprocesses__managment" ],
+    [ "Iprocess_manager", "classwgm__processes_1_1_iprocesses__managment.html", "classwgm__processes_1_1_iprocesses__managment" ],
     [ "Isinking_process", "classwgm__processes_1_1_isinking__process.html", "classwgm__processes_1_1_isinking__process" ],
-    [ "process_management", "classwgm__processes_1_1process__management.html", "classwgm__processes_1_1process__management" ],
+    [ "process_manager", "classwgm__processes_1_1process__management.html", "classwgm__processes_1_1process__management" ],
     [ "sinking_process", "classwgm__processes_1_1sinking__process.html", "classwgm__processes_1_1sinking__process" ]
 ];

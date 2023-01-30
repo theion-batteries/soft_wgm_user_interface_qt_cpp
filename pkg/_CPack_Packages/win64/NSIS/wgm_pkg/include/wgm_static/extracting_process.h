@@ -17,7 +17,7 @@ namespace wgm_processes
 {
   
     /******************* interface wafer extraction process***************/
-    class Iextracting_process : public Iprocesses_managment
+    class Iextracting_process : public Iprocess_manager
     {
     public:
         Iextracting_process();

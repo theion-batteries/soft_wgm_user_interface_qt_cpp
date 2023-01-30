@@ -78,7 +78,7 @@ var hierarchy =
       [ "ph_linear_motion", "classph__linear__motion.html", null ],
       [ "ph_rotation_motion", "classph__rotation__motion.html", null ]
     ] ],
-    [ "wgm_processes::Iprocesses_managment", "classwgm__processes_1_1_iprocesses__managment.html", [
+    [ "wgm_processes::Iprocess_manager", "classwgm__processes_1_1_iprocesses__managment.html", [
       [ "wgm_processes::Ialigning_process", "classwgm__processes_1_1_ialigning__process.html", [
         [ "wgm_processes::aligning_process", "classwgm__processes_1_1aligning__process.html", null ]
       ] ],
@@ -94,7 +94,7 @@ var hierarchy =
       [ "wgm_processes::Isinking_process", "classwgm__processes_1_1_isinking__process.html", [
         [ "wgm_processes::sinking_process", "classwgm__processes_1_1sinking__process.html", null ]
       ] ],
-      [ "wgm_processes::process_management", "classwgm__processes_1_1process__management.html", null ]
+      [ "wgm_processes::process_manager", "classwgm__processes_1_1process__management.html", null ]
     ] ],
     [ "sulfur_heating_system::Isulfur_heating_controller", "classsulfur__heating__system_1_1_isulfur__heating__controller.html", [
       [ "sulfur_heating_system::sulfur_heating_controller", "classsulfur__heating__system_1_1sulfur__heating__controller.html", null ]

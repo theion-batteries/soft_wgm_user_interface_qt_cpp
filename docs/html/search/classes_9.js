@@ -5,7 +5,7 @@ var searchData=
   ['ph_5flinear_5fmotion_5fserver_2',['ph_linear_motion_server',['../structph__linear__motion__server.html',1,'']]],
   ['ph_5frotation_5fmotion_3',['ph_rotation_motion',['../classph__rotation__motion.html',1,'']]],
   ['ph_5frotation_5fmotion_5fserver_4',['ph_rotation_motion_server',['../structph__rotation__motion__server.html',1,'']]],
-  ['process_5fmanagement_5',['process_management',['../classwgm__processes_1_1process__management.html',1,'wgm_processes']]],
+  ['process_5fmanagement_5',['process_manager',['../classwgm__processes_1_1process__management.html',1,'wgm_processes']]],
   ['processcontroller_6',['processController',['../classprocess_controller.html',1,'']]],
   ['processtabview_7',['processTabView',['../classprocess_tab_view.html',1,'']]]
 ];

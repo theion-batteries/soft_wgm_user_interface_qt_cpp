@@ -1,7 +1,7 @@
 var searchData=
 [
   ['activate_0',['activate',['../classcnt__dispenser__vibration.html#ae7389b47db60b78fb08a0b945c9da3b8',1,'cnt_dispenser_vibration::activate()'],['../class_icnt__dispenser.html#aa1d7499fa2e5918b45328dddf65f4eb1',1,'Icnt_dispenser::activate()']]],
-  ['add_5fprocess_5fto_5fscheduler_1',['add_process_to_scheduler',['../classwgm__processes_1_1_iprocesses__managment.html#abdc7a6bc5139e736b2564b616dd0a55c',1,'wgm_processes::Iprocesses_managment::add_process_to_scheduler()'],['../classwgm__processes_1_1process__management.html#a47ef28c8dcc2fbaf712830539b2cb350',1,'wgm_processes::process_management::add_process_to_scheduler()']]],
+  ['add_5fprocess_5fto_5fscheduler_1',['add_process_to_scheduler',['../classwgm__processes_1_1_iprocesses__managment.html#abdc7a6bc5139e736b2564b616dd0a55c',1,'wgm_processes::Iprocess_manager::add_process_to_scheduler()'],['../classwgm__processes_1_1process__management.html#a47ef28c8dcc2fbaf712830539b2cb350',1,'wgm_processes::process_manager::add_process_to_scheduler()']]],
   ['addcolumn_2',['addColumn',['../structtable.html#aae961caa4645de0ce0c44c2f2d50c4ca',1,'table']]],
   ['aligning_5fprocess_3',['aligning_process',['../classwgm__processes_1_1aligning__process.html#a77c82a6e1f83714e0266a810a52ffd35',1,'wgm_processes::aligning_process']]],
   ['aligningdb_4',['aligningDB',['../classaligning_d_b.html#ae929f2f31f299663e94d908c3969ced8',1,'aligningDB']]],

@@ -14,7 +14,7 @@ var searchData=
   ['phreplied_11',['phReplied',['../classcooling_controller.html#a25842d07fde7f168cf2fa3f427865056',1,'coolingController']]],
   ['pressed_12',['pressed',['../classcnt_align_controller.html#a75decd51c5d1a042f2283808b0c2037b',1,'cntAlignController::pressed()'],['../classcooling_controller.html#a3f06d67a3d74dcddfcc8829c997feb9b',1,'coolingController::pressed()'],['../classheating_controller.html#ab06860d12711771ea72a10c5b695774a',1,'heatingController::pressed()'],['../classsinking_controller.html#a1c37117ccb5f8d656bb33553b64ca926',1,'sinkingController::pressed()']]],
   ['printtable_13',['printTable',['../structtable.html#a69e960f5b30606893694ee389d01e285',1,'table']]],
-  ['process_5fmanagement_14',['process_management',['../classwgm__processes_1_1process__management.html#a4a911f96a655574c9bbf9e2b25bd3206',1,'wgm_processes::process_management']]],
+  ['process_5fmanagement_14',['process_manager',['../classwgm__processes_1_1process__management.html#a4a911f96a655574c9bbf9e2b25bd3206',1,'wgm_processes::process_manager']]],
   ['processtabview_15',['processTabView',['../classprocess_tab_view.html#a55f3063f69ecf80b7f7f3efdd6301fb0',1,'processTabView']]],
   ['pulse_16',['pulse',['../classcnt__high__voltage__gbs.html#a6241571c32144e51b5ae64003129194e',1,'cnt_high_voltage_gbs::pulse()'],['../class_icnt__high__voltage.html#aa3888c7d3e885b0e2c167e667fe73361',1,'Icnt_high_voltage::pulse()']]]
 ];

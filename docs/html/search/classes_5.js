@@ -20,7 +20,7 @@ var searchData=
   ['iheating_5fprocess_17',['Iheating_process',['../classwgm__processes_1_1_iheating__process.html',1,'wgm_processes']]],
   ['ihv_5fcontroller_18',['Ihv_controller',['../classcnt__alignment__system_1_1_ihv__controller.html',1,'cnt_alignment_system']]],
   ['iph_5faxis_5fmotion_19',['Iph_axis_motion',['../class_iph__axis__motion.html',1,'']]],
-  ['iprocesses_5fmanagment_20',['Iprocesses_managment',['../classwgm__processes_1_1_iprocesses__managment.html',1,'wgm_processes']]],
+  ['iprocesses_5fmanagment_20',['Iprocess_manager',['../classwgm__processes_1_1_iprocesses__managment.html',1,'wgm_processes']]],
   ['isinking_5fprocess_21',['Isinking_process',['../classwgm__processes_1_1_isinking__process.html',1,'wgm_processes']]],
   ['isulfur_5fheating_5fcontroller_22',['Isulfur_heating_controller',['../classsulfur__heating__system_1_1_isulfur__heating__controller.html',1,'sulfur_heating_system']]],
   ['itemperature_5fsensor_23',['Itemperature_sensor',['../classsulfur__heating__system_1_1_itemperature__sensor.html',1,'sulfur_heating_system']]],
