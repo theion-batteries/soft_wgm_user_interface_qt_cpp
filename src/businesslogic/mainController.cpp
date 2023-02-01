@@ -16,12 +16,16 @@ void mainController::on_execute_process_clicked()
 {
 
     modelManager.processManager->start_process();
+    time_elapsed = modelManager.processManager->get_elapsed_time();
+
     emit finishedProc();
 }
 
 void mainController::on_execute_all_clicked()
 {
     modelManager.processManager->start_all();
+    time_elapsed = modelManager.processManager->get_elapsed_time();
+
     emit finishedAll();
 }
 
