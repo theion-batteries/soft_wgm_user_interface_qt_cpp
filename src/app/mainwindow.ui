@@ -42,7 +42,7 @@
        <bool>false</bool>
       </property>
       <property name="currentIndex">
-       <number>1</number>
+       <number>5</number>
       </property>
       <widget class="QWidget" name="Main">
        <attribute name="title">
@@ -4089,7 +4089,7 @@
                 <item>
                  <layout class="QHBoxLayout" name="horizontalLayout_64">
                   <item>
-                   <widget class="QCommandLinkButton" name="extract_connect_motion_axis_2">
+                   <widget class="QCommandLinkButton" name="extract_connect_motion_axis">
                     <property name="sizePolicy">
                      <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
                       <horstretch>0</horstretch>
@@ -4378,7 +4378,7 @@
               <item>
                <layout class="QVBoxLayout" name="verticalLayout_45">
                 <item>
-                 <widget class="QCommandLinkButton" name="run_extracting_proc">
+                 <widget class="QCommandLinkButton" name="run_extracting_process">
                   <property name="sizePolicy">
                    <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
                     <horstretch>0</horstretch>

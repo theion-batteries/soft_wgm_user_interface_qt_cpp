@@ -28,15 +28,11 @@ signals:
     void sensorConnected();
     void axisReplied(std::string reply);
 public slots:
-    void on_sink_connect_motion_axis_clicked();
-    void on_sink_connect_distance_sensor_clicked();
+    void on_extract_connect_motion_axis_clicked();
+    void on_extract_connect_distance_sensor_clicked();
     void on_run_extracting_process_clicked();
     void on_stop_extracting_process_clicked();
-    void on_move_down_until_sensor_data_valid_clicked();
-    void on_move_down_to_surface_contact_clicked();
-    void on_deep_wafer_holder_desired_thickness_clicked();
-    void on_monitor_and_calibrate_clicked();
-
+    void on_extract_move_home_clicked();
 
     bool get_axis_status();
     bool get_sensor_status();
