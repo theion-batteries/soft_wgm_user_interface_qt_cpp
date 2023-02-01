@@ -14,15 +14,16 @@
 
 #include "./ui_mainwindow.h"
 // mvc
-
+#include "mainController.h"
 class mainView : public QObject
 {
-    // Q_OBJECT
+     Q_OBJECT
 public:
     mainView(Ui::MainWindow* uiPtr);
     ~mainView();
 private:
     Ui::MainWindow* ui;
+    mainController mainControll;
 };
 
 
