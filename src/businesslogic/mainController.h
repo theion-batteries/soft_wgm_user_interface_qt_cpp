@@ -26,21 +26,26 @@ signals:
     void pressed();
     void triggered();
     void returnPressed(); // line edit enter key pressed
-    void valueChanged();
+    void valueChanged(int new_value);
     void finishedProc();
     void finishedAll();
     void selected();
+    void resetProgressBar();
 public slots:
     void on_execute_process_clicked();
     void on_execute_all_clicked();
 
+
     void execute_process(std::string name);
     void execute_process(int id);
     void updateLcdTime(QLCDNumber* Lcd);
-    void updateProgressBar(QProgressBar* ProgBar);
+    void updateProgressBar(QProgressBar* ProgBar, int value);
+    void getProgressUpdate(int proc_id);
+    void setProgressUpdate(int prog);
 
 private:
     mainModel modelManager;
     double time_elapsed;
+    int progress;
 
 };

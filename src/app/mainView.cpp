@@ -13,41 +13,58 @@ mainView::mainView(Ui::MainWindow* uiPtr)
         }, Qt::QueuedConnection);
     // connect double clik item
     connect(ui->processList, &QListWidget::itemDoubleClicked, this, [this](QListWidgetItem* item) {
+                mainControll.updateLcdTime(ui->time_processes);
+
         std::cout << "process: " << ui->processList->currentItem()->text().toStdString() << " with id: " << ui->processList->currentRow() << " is double clicked and will be executed next.." << std::endl;
     auto func = QtConcurrent::run([this]() {mainControll.execute_process(ui->processList->currentRow());});
         }, Qt::QueuedConnection); // needed for multithreading
     // connect finsihed to update time and bar
     connect(&mainControll, &mainController::finishedProc, this, [this]() {
         mainControll.updateLcdTime(ui->time_processes);
-    mainControll.updateProgressBar(ui->progressBar);
         }, Qt::QueuedConnection);
 
     /**************** On press button exec ***************/
     // connect execute single proc
     connect(ui->execute_process, &QAbstractButton::pressed, this, [this]() {
-        if (ui->processList->currentItem() == nullptr) 
+        mainControll.updateLcdTime(ui->time_processes);
+
+        if (ui->processList->currentItem() == nullptr)
         {
-         std::cout << "no process selected " << std::endl;
-        return;
+            std::cout << "no process selected " << std::endl;
+            return;
         }
-        if (ui->processList->currentItem()->isSelected()) // if item selected, execute it
-        {
-            std::cout << "process: " << ui->processList->currentItem()->text().toStdString() << " with id: " << ui->processList->currentRow() << " will be executed" << std::endl;
-            auto func = QtConcurrent::run([this]() {mainControll.execute_process(ui->processList->currentRow());});
-        }
+    if (ui->processList->currentItem()->isSelected()) // if item selected, execute it
+    {
+        std::cout << "process: " << ui->processList->currentItem()->text().toStdString() << " with id: " << ui->processList->currentRow() << " will be executed" << std::endl;
+        auto func = QtConcurrent::run([this]() {mainControll.execute_process(ui->processList->currentRow());});
+    }
         }, Qt::QueuedConnection);
     // connect execute all proc
     connect(ui->execute_all_processes, &QAbstractButton::pressed, this, [this]() {
+        mainControll.updateLcdTime(ui->time_processes);
+
         auto func = QtConcurrent::run([this]() {mainControll.on_execute_all_clicked();});
         }, Qt::QueuedConnection);
 
-    // connect finsihed to update time and bar
+    // connect update bar 
+    connect(&mainControll, &mainController::valueChanged, this, [this](int proc_id) {
+        auto numberOfPRoc = ui->processList->count();
+    auto progress = ((proc_id+1) * 100)/numberOfPRoc;
+    std::cout << " current progress: " << progress << "%" << std::endl;
+    ui->progressBar->setValue(progress);
+        });
+    // connect finsihed to bar
+    connect(&mainControll, &mainController::finishedProc, this, [this]() {
+    ui->progressBar->setValue(100);
+        });
+    // connect finsihed to bar
+    connect(&mainControll, &mainController::resetProgressBar, this, [this]() {
+    ui->progressBar->setValue(0);
+        });
+    // connect finsihed to bar
     connect(&mainControll, &mainController::finishedAll, this, [this]() {
         mainControll.updateLcdTime(ui->time_processes);
-    mainControll.updateProgressBar(ui->progressBar);
         }, Qt::QueuedConnection);
-
-
 }
 
 mainView::~mainView()
