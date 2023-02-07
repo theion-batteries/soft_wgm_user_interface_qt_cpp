@@ -20,7 +20,7 @@ RUN powershell -NoProfile -ExecutionPolicy Bypass -Command \
     $Env:chocolateyUseWindowsCompression = 'false' ; \
     "[Net.ServicePointManager]::SecurityProtocol = \"tls12, tls11, tls\"; iex ((New-Object System.Net.WebClient).DownloadString('http://chocolatey.org/install.ps1'))" && SET "PATH=%PATH%;%ALLUSERSPROFILE%\chocolatey\bin"
 
-ARG QBS_VERSION
+ARG QBS_VERSION=1.18.2
 RUN choco install -y python && \
     choco install -y 7zip --version 19.0 && \
     choco install -y git --version 2.24.0 --params "/GitAndUnixToolsOnPath" && \
@@ -38,7 +38,7 @@ RUN certutil -generateSSTFromWU roots.sst && \
         git+https://github.com/frerich/clcache.git@cae73d8255d78db8ba11e23c51fd2c9a89e7475b
 
 ########### Install Qt #############
-ARG QT_VERSION
+ARG QT_VERSION=6.4.0
 COPY scripts/install-qt.sh install-qt.sh
 
 RUN bash -c "./install-qt.sh -d /c/Qt --version ${QT_VERSION} --toolchain win64_msvc2019_64 qtbase qtdeclarative qttools"
