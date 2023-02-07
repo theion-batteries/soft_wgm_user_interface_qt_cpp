@@ -10,6 +10,10 @@ on:
 env:
   BUILD_TYPE: Debug
   BUILD_TARGET: wgmApp
+  GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+  OWNER_REPO_INSTALLER: theion-batteries
+  BRANCH_REPO_INSTALLER: dev_win_api
+
 
 jobs:
   build_install_deploy:
@@ -62,11 +66,15 @@ jobs:
       - name: Install
         working-directory: ${{github.workspace}}/build
         run: cmake --install . --config ${{env.BUILD_TYPE}}
-      - name: Setup Git
+      - name: Configure Git
         run: |
-          git config --global user.name "${{ secrets.USERNAME }}"
-          git config --global user.email "${{ secrets.EMAIL }}"
-          git config --global credential.https://github.com.${{ secrets.USERNAME }} ${{ secrets.GITHUB_TOKEN }}
+          git config --global user.email "action@github.com"
+          git config --global user.name "GitHub Actions"
+#      - name: Setup Git
+#        run: |
+#          git config --global user.name "${{ secrets.USERNAME }}"
+#          git config --global user.email "${{ secrets.EMAIL }}"
+#          git config --global credential.https://github.com.${{ secrets.USERNAME }} ${{ secrets.GITHUB_TOKEN }}
       - name: create installer and update it
         working-directory: ${{github.workspace}}/build/
         run: |
@@ -76,9 +84,11 @@ jobs:
           XCOPY "wgm_application_user_manual.pdf" "soft_wgm_installer_update\" /K /D /H /Y
           cd soft_wgm_installer_update/
           git add wgm_pkg.exe wgm_application_user_manual.pdf
-# git commit -m "updated installer"
-# git log --pretty=oneline -n 10
-# git push
+          git commit -m "updated installer"
+          git log --pretty=oneline -n 10
+          REPO_URL=https://${GITHUB_TOKEN}@github.com/${OWNER}/soft_wgm_installer_update.git
+          git remote set-url origin $REPO_URL
+          git push origin HEAD:${BRANCH_NAME}
       - name: run app
         working-directory: ${{github.workspace}}/build/${{env.BUILD_TYPE}}
         run: .\wgm_app.exe
