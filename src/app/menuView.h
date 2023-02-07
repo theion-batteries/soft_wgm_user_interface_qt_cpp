@@ -17,6 +17,7 @@
 #include "menuDebugView.h"
 #include "menuEditView.h"
 #include "menuFileView.h"
+#include "menuHelpView.h"
 
 
 

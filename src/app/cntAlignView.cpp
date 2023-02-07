@@ -13,6 +13,7 @@ cntAlignView::cntAlignView(Ui::MainWindow* uiPtr)
     ui->cnt_proc_finished->setStyleSheet("QLabel { background-color : red; color : black; }");
 
     /**************** signals and slots ********************/
+    /************  connect methods           ***********/
     // connect cmd button connect axis
     connect(ui->cnt_connect_motion_axis, &QAbstractButton::pressed, this, [this]() {
         auto connectAxisTask = QtConcurrent::run([this]() {
@@ -42,6 +43,7 @@ cntAlignView::cntAlignView(Ui::MainWindow* uiPtr)
     auto func = QtConcurrent::run(&cntAlignController::updateLcdOutputVoltage, &cntControll, ui->cnt_lcd_hv_voltage_out);
         }, Qt::QueuedConnection);
 
+/*****************  manual commands section *******************/
 
     // connect enter to send manual cmd to motion axis
     connect(ui->cnt_input_axis_cmd, &QLineEdit::returnPressed, this, [this]() {

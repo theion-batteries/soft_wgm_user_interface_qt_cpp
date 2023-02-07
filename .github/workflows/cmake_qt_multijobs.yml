@@ -2,9 +2,9 @@ name: CMake_Workflow_MultiJobs
 
 on:
   push:
-    branches: [ "dev_win_api" ]
+    branches: [ "dev_win_multi" ]
   pull_request:
-    branches: [ "dev_win_api" ]
+    branches: [ "dev_win_multi" ]
     # This action can be manually triggered
   workflow_call:
 env:

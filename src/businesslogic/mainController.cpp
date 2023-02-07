@@ -30,6 +30,13 @@ void mainController::on_execute_all_clicked()
 
     emit finishedAll();
 }
+void mainController::on_abort_all_clicked()
+{
+    modelManager.processManager->stop_all();
+    time_elapsed = modelManager.processManager->get_elapsed_time();
+
+    emit finishedAll();
+}
 void mainController::getProgressUpdate(int proc_id) // x porc from proc list
 {
     // emit proc id
@@ -64,7 +71,16 @@ void mainController::execute_process(int id)
     emit finishedProc();
 
 }
+void mainController::abort_current_process(int id)
+{
+        emit resetProgressBar();
 
+    modelManager.processManager->stop_process(id);
+    time_elapsed = modelManager.processManager->get_elapsed_time();
+
+    emit finishedProc();
+
+}
 void mainController::setProgressUpdate(int prog)
 {
     progress =   prog;

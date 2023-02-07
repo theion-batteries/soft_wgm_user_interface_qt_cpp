@@ -10,6 +10,7 @@ MainWindow::MainWindow(QWidget* parent)
     fileView = new menuFileView(getUi());
     editView = new menuEditView(getUi());
     debugView = new menuDebugView(getUi());
+    helpView = new menuHelpView(getUi());
     /********** process Tab View *********************/
     managerView = new mainView(getUi());
     sinkView = new sinkingView(getUi());

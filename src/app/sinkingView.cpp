@@ -9,6 +9,8 @@ sinkingView::sinkingView(Ui::MainWindow* uiPtr)
     ui->sinking_finished->setStyleSheet("QLabel { background-color : red; color : black; }");
     ui->sink_axis_response->setStyleSheet("QLabel { background-color : red; color : black; }");
     /**************** signals and slots ********************/
+    /************  connect methods           ***********/
+
     // connect cmd button connect axis
     connect(ui->sink_connect_motion_axis, &QAbstractButton::pressed, this, [this]() {
         auto connectAxisTask = QtConcurrent::run([this]() {
@@ -27,6 +29,7 @@ sinkingView::sinkingView(Ui::MainWindow* uiPtr)
         sinkControll.updateLabelSensor(ui->sink_sensor_ready);
     auto func = QtConcurrent::run(&sinkingController::updateLcdDistance, &sinkControll, ui->sink_distance_head1);
         }, Qt::QueuedConnection);
+/*****************  manual commands section *******************/
 
     // connect enter to send cmd manually
     connect(ui->sink_input_axis_cmd, &QLineEdit::returnPressed, this, [this]() {

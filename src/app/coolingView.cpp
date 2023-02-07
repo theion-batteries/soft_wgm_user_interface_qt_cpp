@@ -12,7 +12,7 @@ coolingView::coolingView(Ui::MainWindow* uiPtr)
     ui->ph_rotation_axis_response->setStyleSheet("QLabel { background-color : red; color : black; }");
     ui->ph_response_status->setStyleSheet("QLabel { background-color : red; color : black; }");
     /**************** signals and slots ********************/
-
+    /************  connect methods           ***********/
     // connect cmd button connect axis
     connect(ui->connect_motion_axis_ph, &QAbstractButton::pressed, this, [this]() {
         auto connectAxisTask = QtConcurrent::run([this]() {
@@ -37,66 +37,66 @@ coolingView::coolingView(Ui::MainWindow* uiPtr)
         auto connectPhTask = QtConcurrent::run([this]() {
             coolControll.on_connect_ph_clicked();});}, Qt::QueuedConnection);
     connect(&coolControll, &coolingController::phConnected, this, [this]() {
-        coolControll.updateLabelPh(ui->cnt_hv_ready);
+        coolControll.updateLabelPh(ui->ph_connected_status);
     std::cout << "main thread id: " << QThread::currentThreadId() << std::endl;
     auto func = QtConcurrent::run(&coolingController::updateLcdPhFrequency, &coolControll, ui->ph_ejet_frequency);
         }, Qt::QueuedConnection);
 
-
+/*****************  manual commands section *******************/
     // connect enter to send manual cmd to motion axis
-    connect(ui->cnt_input_axis_cmd, &QLineEdit::returnPressed, this, [this]() {
-        auto inputCmd = ui->cnt_input_axis_cmd->text();
-    ui->cnt_axis_cmd_given->setText(inputCmd);
-    auto func = QtConcurrent::run( &coolingController::updateLabelAxisResponse, &coolControll,ui->cnt_axis_response, inputCmd);
+    connect(ui->ph_input_axis_cmd, &QLineEdit::returnPressed, this, [this]() {
+        auto inputCmd = ui->ph_input_axis_cmd->text();
+    ui->ph_axis_cmd_given->setText(inputCmd);
+    auto func = QtConcurrent::run( &coolingController::updateLabelAxisResponse, &coolControll,ui->ph_axis_response, inputCmd);
         }, Qt::QueuedConnection);
     // connect axis reply to update text
     connect(&coolControll, &coolingController::axisReplied, this, [this](std::string reply) {
         std::cout << "axis full response: " << reply << std::endl;
-    ui->cnt_input_axis_cmd->setStyleSheet("QLabel { background-color : green; color : black; }");
-    ui->cnt_input_axis_cmd->setText(reply.c_str());
-    ui->cnt_input_axis_cmd->clear();
+    ui->ph_input_axis_cmd->setStyleSheet("QLabel { background-color : green; color : black; }");
+    ui->ph_input_axis_cmd->setText(reply.c_str());
+    ui->ph_input_axis_cmd->clear();
         }, Qt::QueuedConnection);
 
     // connect enter to send manual cmd to rotation
-    connect(ui->cnt_input_dispenser, &QLineEdit::returnPressed,this, [this]() {
-        auto inputCmd = ui->cnt_input_dispenser->text();
-    ui->cnt_dispenser_cmd_given->setText(inputCmd);
-    auto func = QtConcurrent::run( &coolingController::updateLabelRotResponse, &coolControll,ui->cnt_dispenser_response, inputCmd);
+    connect(ui->ph_input_rotation_cmd, &QLineEdit::returnPressed,this, [this]() {
+        auto inputCmd = ui->ph_input_rotation_cmd->text();
+    ui->ph_rotation_cmd_given->setText(inputCmd);
+    auto func = QtConcurrent::run( &coolingController::updateLabelRotResponse, &coolControll,ui->ph_rotation_axis_response, inputCmd);
         }, Qt::QueuedConnection);
    // connect dispenser reply to update text
     connect(&coolControll, &coolingController::rotaryReplied, this, [this](std::string reply) {
         std::cout << "axis full response: " << reply << std::endl;
-    ui->cnt_input_dispenser->setStyleSheet("QLabel { background-color : green; color : black; }");
-    ui->cnt_input_dispenser->setText(reply.c_str());
-    ui->cnt_input_dispenser->clear();
+    ui->ph_input_rotation_cmd->setStyleSheet("QLabel { background-color : green; color : black; }");
+    ui->ph_input_rotation_cmd->setText(reply.c_str());
+    ui->ph_input_rotation_cmd->clear();
         }, Qt::QueuedConnection);
 
     // connect enter to send manual cmd to ph
-    connect(ui->cnt_input_hv_cmd, &QLineEdit::returnPressed,this, [this]() {
-        auto inputCmd = ui->cnt_input_hv_cmd->text();
-    ui->cnt_hv_cmd_given->setText(inputCmd);
-    auto func = QtConcurrent::run( &coolingController::updateLabelPhResponse, &coolControll,ui->cnt_hv_response, inputCmd);
+    connect(ui->ph_input_cmd_field, &QLineEdit::returnPressed,this, [this]() {
+        auto inputCmd = ui->ph_input_cmd_field->text();
+    ui->ph_given_cmd->setText(inputCmd);
+    auto func = QtConcurrent::run( &coolingController::updateLabelPhResponse, &coolControll,ui->ph_response_status, inputCmd);
         }, Qt::QueuedConnection);
    // connect hv reply to update text
     connect(&coolControll, &coolingController::phReplied, this, [this](std::string reply) {
         std::cout << "axis full response: " << reply << std::endl;
-    ui->cnt_input_hv_cmd->setStyleSheet("QLabel { background-color : green; color : black; }");
-    ui->cnt_input_hv_cmd->setText(reply.c_str());
-    ui->cnt_input_hv_cmd->clear();
+    ui->ph_input_cmd_field->setStyleSheet("QLabel { background-color : green; color : black; }");
+    ui->ph_input_cmd_field->setText(reply.c_str());
+    ui->ph_input_cmd_field->clear();
         }, Qt::QueuedConnection);
 
     /***********       Process   *****/
     // connect cmd button run process sinking
-    connect(ui->run_cnt_aligning_process, &QAbstractButton::pressed, [this]() {
+    connect(ui->run_cooling_process, &QAbstractButton::pressed, [this]() {
         auto func = QtConcurrent::run([this]() {coolControll.on_run_cooling_process_clicked();});
-    coolControll.updateLabelAxis(ui->cnt_motion_ready);
-    coolControll.updateLabelRotation(ui->cnt_dispenser_ready);
-    coolControll.updateLabelPh(ui->cnt_hv_ready);
-    coolControll.updateLabelProcess(ui->cnt_proc_finished);
-    coolControll.updateLcdTime(ui->cnt_proc_tim_lcd);
+    coolControll.updateLabelAxis(ui->ph_motion_ready);
+    coolControll.updateLabelRotation(ui->ph_rotation_ready);
+    coolControll.updateLabelPh(ui->ph_connected_status);
+    coolControll.updateLabelProcess(ui->cooling_proc_status);
+    coolControll.updateLcdTime(ui->cool_time);
         });
     // connect cmd button stop process sinking
-    connect(ui->stop_cnt_proc, &QAbstractButton::pressed, [this]() {
+    connect(ui->stop_cooling_process, &QAbstractButton::pressed, [this]() {
         if (coolControll.getProcessStatus())
         {
             std::cout << "process already finished" << std::endl;

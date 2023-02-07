@@ -11,6 +11,7 @@ extractingView::extractingView(Ui::MainWindow* uiPtr)
     ui->extract_proc_finished->setStyleSheet("QLabel { background-color : red; color : black; }");
     ui->extract_axis_response->setStyleSheet("QLabel { background-color : red; color : black; }");
     /**************** signals and slots ********************/
+    /************  connect methods           ***********/
     // connect cmd button connect axis
     connect(ui->extract_connect_motion_axis, &QAbstractButton::pressed, this, [this]() {
         auto connectAxisTask = QtConcurrent::run([this]() {
@@ -29,6 +30,7 @@ extractingView::extractingView(Ui::MainWindow* uiPtr)
         extractControll.updateLabelSensor(ui->extract_sensor_ready);
     auto func = QtConcurrent::run(&extractingController::updateLcdDistance, &extractControll, ui->extract_distance_head1_view);
         }, Qt::QueuedConnection);
+/*****************  manual commands section *******************/
 
     // connect enter to send cmd manually
     connect(ui->extract__input_axis_cmd, &QLineEdit::returnPressed, this, [this]() {

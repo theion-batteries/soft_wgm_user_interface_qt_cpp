@@ -20,7 +20,7 @@
    <bool>false</bool>
   </property>
   <widget class="QWidget" name="centralwidget">
-   <layout class="QVBoxLayout" name="verticalLayout_5">
+   <layout class="QHBoxLayout" name="horizontalLayout">
     <item>
      <widget class="QTabWidget" name="tabWidget">
       <property name="maximumSize">
@@ -42,39 +42,62 @@
        <bool>false</bool>
       </property>
       <property name="currentIndex">
-       <number>0</number>
+       <number>4</number>
       </property>
       <widget class="QWidget" name="Main">
        <attribute name="title">
         <string>Main</string>
        </attribute>
-       <layout class="QVBoxLayout" name="verticalLayout_56">
+       <layout class="QHBoxLayout" name="horizontalLayout_75">
         <item>
-         <layout class="QGridLayout" name="gridLayout">
-          <item row="0" column="0">
-           <layout class="QGridLayout" name="gridLayout_2">
-            <item row="0" column="0">
-             <layout class="QGridLayout" name="gridLayout_3">
-              <item row="0" column="0">
-               <widget class="QCommandLinkButton" name="execute_process">
-                <property name="sizePolicy">
-                 <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
-                  <horstretch>0</horstretch>
-                  <verstretch>0</verstretch>
-                 </sizepolicy>
-                </property>
-                <property name="maximumSize">
-                 <size>
-                  <width>200</width>
-                  <height>200</height>
-                 </size>
-                </property>
-                <property name="text">
-                 <string>execute process:</string>
-                </property>
-               </widget>
+         <layout class="QVBoxLayout" name="verticalLayout_56">
+          <item>
+           <layout class="QHBoxLayout" name="horizontalLayout_74">
+            <item>
+             <layout class="QHBoxLayout" name="horizontalLayout_73">
+              <item>
+               <layout class="QVBoxLayout" name="verticalLayout_4">
+                <item>
+                 <widget class="QCommandLinkButton" name="execute_process">
+                  <property name="sizePolicy">
+                   <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
+                    <horstretch>0</horstretch>
+                    <verstretch>0</verstretch>
+                   </sizepolicy>
+                  </property>
+                  <property name="maximumSize">
+                   <size>
+                    <width>200</width>
+                    <height>200</height>
+                   </size>
+                  </property>
+                  <property name="text">
+                   <string>execute process:</string>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QCommandLinkButton" name="abort_current">
+                  <property name="sizePolicy">
+                   <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
+                    <horstretch>0</horstretch>
+                    <verstretch>0</verstretch>
+                   </sizepolicy>
+                  </property>
+                  <property name="maximumSize">
+                   <size>
+                    <width>200</width>
+                    <height>200</height>
+                   </size>
+                  </property>
+                  <property name="text">
+                   <string>abort current</string>
+                  </property>
+                 </widget>
+                </item>
+               </layout>
               </item>
-              <item row="0" column="1">
+              <item>
                <widget class="QListWidget" name="processList">
                 <property name="sizePolicy">
                  <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
@@ -130,22 +153,45 @@
                 </item>
                </widget>
               </item>
-              <item row="0" column="2">
-               <widget class="QCommandLinkButton" name="execute_all_processes">
-                <property name="maximumSize">
-                 <size>
-                  <width>200</width>
-                  <height>200</height>
-                 </size>
-                </property>
-                <property name="text">
-                 <string>execute all</string>
-                </property>
-               </widget>
+              <item>
+               <layout class="QVBoxLayout" name="verticalLayout_5">
+                <item>
+                 <widget class="QCommandLinkButton" name="execute_all_processes">
+                  <property name="maximumSize">
+                   <size>
+                    <width>200</width>
+                    <height>200</height>
+                   </size>
+                  </property>
+                  <property name="text">
+                   <string>execute all</string>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QCommandLinkButton" name="abort_all">
+                  <property name="sizePolicy">
+                   <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
+                    <horstretch>0</horstretch>
+                    <verstretch>0</verstretch>
+                   </sizepolicy>
+                  </property>
+                  <property name="maximumSize">
+                   <size>
+                    <width>200</width>
+                    <height>200</height>
+                   </size>
+                  </property>
+                  <property name="text">
+                   <string>abort all</string>
+                  </property>
+                 </widget>
+                </item>
+               </layout>
               </item>
              </layout>
             </item>
-            <item row="0" column="1">
+            <item>
              <spacer name="horizontalSpacer_82">
               <property name="orientation">
                <enum>Qt::Horizontal</enum>
@@ -161,7 +207,7 @@
               </property>
              </spacer>
             </item>
-            <item row="0" column="2">
+            <item>
              <layout class="QVBoxLayout" name="verticalLayout_55">
               <item>
                <widget class="QLabel" name="label_67">
@@ -217,7 +263,7 @@
             </item>
            </layout>
           </item>
-          <item row="1" column="0">
+          <item>
            <spacer name="verticalSpacer_7">
             <property name="orientation">
              <enum>Qt::Vertical</enum>
@@ -230,7 +276,7 @@
             </property>
            </spacer>
           </item>
-          <item row="2" column="0">
+          <item>
            <layout class="QVBoxLayout" name="verticalLayout">
             <item>
              <widget class="QProgressBar" name="progressBar">
@@ -3447,7 +3493,7 @@
                    </size>
                   </property>
                   <property name="text">
-                   <string>run aligning process</string>
+                   <string>run cooling process</string>
                   </property>
                  </widget>
                 </item>
@@ -3476,7 +3522,7 @@
                    </sizepolicy>
                   </property>
                   <property name="text">
-                   <string>stop aligning process</string>
+                   <string>stop cooling process</string>
                   </property>
                  </widget>
                 </item>
@@ -4830,9 +4876,9 @@
     <property name="title">
      <string>Help</string>
     </property>
-    <addaction name="actiondocumentation"/>
-    <addaction name="actiongrbl"/>
-    <addaction name="actionhelp"/>
+    <addaction name="actionuser_manual"/>
+    <addaction name="actiondevelopper_docs"/>
+    <addaction name="actioncheck_update"/>
    </widget>
    <addaction name="menuMain"/>
    <addaction name="menuEdit"/>
@@ -4858,14 +4904,14 @@
     <string>whs_config.yaml</string>
    </property>
   </action>
-  <action name="actiondocumentation">
+  <action name="actionuser_manual">
    <property name="text">
-    <string>documentation</string>
+    <string>user manual</string>
    </property>
   </action>
-  <action name="actiongrbl">
+  <action name="actiondevelopper_docs">
    <property name="text">
-    <string>grbl</string>
+    <string>developper docs</string>
    </property>
   </action>
   <action name="actionopen_debug_console">
@@ -4903,9 +4949,9 @@
     <string>logout</string>
    </property>
   </action>
-  <action name="actionhelp">
+  <action name="actioncheck_update">
    <property name="text">
-    <string>update</string>
+    <string>check update</string>
    </property>
   </action>
   <action name="actioncnt_config">

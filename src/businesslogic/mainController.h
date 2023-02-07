@@ -34,10 +34,12 @@ signals:
 public slots:
     void on_execute_process_clicked();
     void on_execute_all_clicked();
+    void on_abort_all_clicked();
 
 
     void execute_process(std::string name);
     void execute_process(int id);
+    void abort_current_process(int id);
     void updateLcdTime(QLCDNumber* Lcd);
     void updateProgressBar(QProgressBar* ProgBar, int value);
     void getProgressUpdate(int proc_id);

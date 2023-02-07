@@ -9,6 +9,8 @@ heatingView::heatingView(Ui::MainWindow* uiPtr)
     ui->heating_process_status->setStyleSheet("QLabel { background-color : red; color : black; }");
 
     /**************** signals and slots ********************/
+    /************  connect methods           ***********/
+
           // connect cmd button connect heater
     connect(ui->connect_heating_dev, &QAbstractButton::pressed, this, [this]() {
         auto connectTask = QtConcurrent::run([this]() {
@@ -16,6 +18,7 @@ heatingView::heatingView(Ui::MainWindow* uiPtr)
         }, Qt::QueuedConnection);
     connect(&heatControll, &heatingController::heaterConnected, this, [this]() {
         heatControll.updateLabelHeater(ui->heating_ready_bool);});
+/*****************  manual commands section *******************/
 
     // connect enter to send manual cmd to heater
     connect(ui->heat_input_cmd, &QLineEdit::returnPressed, this, [this]() {

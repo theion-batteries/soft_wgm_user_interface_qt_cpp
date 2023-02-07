@@ -39,11 +39,33 @@ mainView::mainView(Ui::MainWindow* uiPtr)
         auto func = QtConcurrent::run([this]() {mainControll.execute_process(ui->processList->currentRow());});
     }
         }, Qt::QueuedConnection);
+ /**************** On press button abort ***************/
+    // connect abort current proc
+    connect(ui->abort_current, &QAbstractButton::pressed, this, [this]() {
+        mainControll.updateLcdTime(ui->time_processes);
+
+        if (ui->processList->currentItem() == nullptr)
+        {
+            std::cout << "no process selected " << std::endl;
+            return;
+        }
+    if (ui->processList->currentItem()->isSelected()) // if item selected, execute it
+    {
+        std::cout << "process: " << ui->processList->currentItem()->text().toStdString() << " with id: " << ui->processList->currentRow() << " will be aborted" << std::endl;
+        auto func = QtConcurrent::run([this]() {mainControll.abort_current_process(ui->processList->currentRow());});
+    }
+        }, Qt::QueuedConnection);
     // connect execute all proc
     connect(ui->execute_all_processes, &QAbstractButton::pressed, this, [this]() {
         mainControll.updateLcdTime(ui->time_processes);
 
         auto func = QtConcurrent::run([this]() {mainControll.on_execute_all_clicked();});
+        }, Qt::QueuedConnection);
+    // connect abort all proc
+    connect(ui->abort_all, &QAbstractButton::pressed, this, [this]() {
+        mainControll.updateLcdTime(ui->time_processes);
+
+        auto func = QtConcurrent::run([this]() {mainControll.on_abort_all_clicked();});
         }, Qt::QueuedConnection);
 
     // connect update bar 
