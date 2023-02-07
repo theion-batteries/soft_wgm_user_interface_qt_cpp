@@ -88,7 +88,8 @@ jobs:
           git commit -m "updated installer"
           git log --pretty=oneline -n 10
           git remote set-url origin https://${GITHUB_TOKEN}@github.com/${OWNER_REPO_INSTALLER}/soft_wgm_installer_update.git
-          git push origin HEAD:${BRANCH_REPO_INSTALLER}
+          git push 
+      #origin HEAD:${BRANCH_REPO_INSTALLER}
       - name: run app
         working-directory: ${{github.workspace}}/build/${{env.BUILD_TYPE}}
         run: .\wgm_app.exe
