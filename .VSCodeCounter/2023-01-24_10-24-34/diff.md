@@ -364,12 +364,12 @@ Total : 3034 files,  -324958 codes, -101568 comments, -76936 blanks, all -503462
 | pkg\\_CPack_Packages\\win64\\NSIS\\wgm_pkg | 24 | 1,907 | 1,278 | 326 | 3,511 |
 | pkg\\_CPack_Packages\\win64\\NSIS\\wgm_pkg\\config | 2 | 12 | 0 | 0 | 12 |
 | pkg\\_CPack_Packages\\win64\\NSIS\\wgm_pkg\\include | 22 | 1,895 | 1,278 | 326 | 3,499 |
-| pkg\\_CPack_Packages\\win64\\NSIS\\wgm_pkg\\include\\cnt_system_static | 1 | 1 | 0 | 0 | 1 |
-| pkg\\_CPack_Packages\\win64\\NSIS\\wgm_pkg\\include\\keyence_lib_static | 2 | 45 | 2 | 5 | 52 |
-| pkg\\_CPack_Packages\\win64\\NSIS\\wgm_pkg\\include\\ph_cooling_static | 5 | 218 | 55 | 63 | 336 |
-| pkg\\_CPack_Packages\\win64\\NSIS\\wgm_pkg\\include\\ph_interface_lib | 9 | 1,607 | 1,221 | 255 | 3,083 |
-| pkg\\_CPack_Packages\\win64\\NSIS\\wgm_pkg\\include\\wgm_app | 3 | 8 | 0 | 0 | 8 |
-| pkg\\_CPack_Packages\\win64\\NSIS\\wgm_pkg\\include\\wgm_static | 2 | 16 | 0 | 3 | 19 |
+| pkg\\_CPack_Packages\\win64\\NSIS\\wgm_pkg\\include\\cntLib | 1 | 1 | 0 | 0 | 1 |
+| pkg\\_CPack_Packages\\win64\\NSIS\\wgm_pkg\\include\\keyenceLib | 2 | 45 | 2 | 5 | 52 |
+| pkg\\_CPack_Packages\\win64\\NSIS\\wgm_pkg\\include\\coolingLib | 5 | 218 | 55 | 63 | 336 |
+| pkg\\_CPack_Packages\\win64\\NSIS\\wgm_pkg\\include\\meteorLib | 9 | 1,607 | 1,221 | 255 | 3,083 |
+| pkg\\_CPack_Packages\\win64\\NSIS\\wgm_pkg\\include\\wgmAppBin| 3 | 8 | 0 | 0 | 8 |
+| pkg\\_CPack_Packages\\win64\\NSIS\\wgm_pkg\\include\\wgmCoreLib | 2 | 16 | 0 | 3 | 19 |
 | pkg\\soft_wgm_installer_update | 1 | 6 | 0 | 0 | 6 |
 | src | 8 | 371 | 23 | 43 | 437 |
 | src\\app | 6 | 123 | 20 | 15 | 158 |

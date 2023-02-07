@@ -9,7 +9,7 @@ on:
   workflow_call:
 env:
   BUILD_TYPE: Debug
-  BUILD_TARGET: wgm_app
+  BUILD_TARGET: wgmApp
 
 jobs:
   build_install_deploy:

@@ -1,3 +1,3 @@
 
-add_subdirectory(businesslogic)
-add_subdirectory(app)
+add_subdirectory(viewLayer)
+add_subdirectory(controlLayer)

@@ -4,7 +4,7 @@ if (MSVC)
 set(CMAKE_WINDOWS_EXPORT_ALL_SYMBOLS ON)
 endif()
 
-add_library(database STATIC
+add_library(databaseLib STATIC
 Idatabase.h
 Idatabase.cpp
 sinkingDB.h
@@ -21,18 +21,18 @@ dbIncludeAll.h
 userDB.h
 userDB.cpp
 )
-target_link_libraries(database PUBLIC sqlite3)
-target_include_directories(database 
-PUBLIC ${CMAKE_CURRENT_SOURCE_DIR}/sqlite3-cmake/src
+target_link_libraries(databaseLib PUBLIC sqlite3Lib)
+target_include_directories(databaseLib 
+PUBLIC ${CMAKE_CURRENT_SOURCE_DIR}/sqlite3-cmake/src/
 PUBLIC ${CMAKE_CURRENT_SOURCE_DIR}
 )
 
-install(TARGETS database DESTINATION lib)
+install(TARGETS databaseLib DESTINATION lib)
 FILE(GLOB files "${CMAKE_CURRENT_SOURCE_DIR}/*.h")
 INSTALL(FILES ${files} DESTINATION include/database/)
 
 
-add_executable(dbTest
+add_executable(dbBin
 Idatabase.h
 Idatabase.cpp
 sinkingDB.h
@@ -50,9 +50,9 @@ userDB.h
 userDB.cpp
 main.cpp
 )
-target_link_libraries(dbTest PUBLIC sqlite3)
-target_include_directories(dbTest 
-PUBLIC ${CMAKE_CURRENT_SOURCE_DIR}/sqlite3-cmake/src
+target_link_libraries(dbBin PUBLIC sqlite3Lib)
+target_include_directories(dbBin 
+PUBLIC ${CMAKE_CURRENT_SOURCE_DIR}/sqlite3-cmake/src/
 PUBLIC ${CMAKE_CURRENT_SOURCE_DIR}
 )
 

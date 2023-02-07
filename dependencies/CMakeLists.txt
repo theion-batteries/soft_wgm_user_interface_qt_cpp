@@ -1,4 +1,4 @@
 add_subdirectory(database)
-add_subdirectory(software_wgm_v2_cpp)
-add_subdirectory(model)
+add_subdirectory(software_wgm_v2_cpp) # Core
+add_subdirectory(modelLayer)
 
