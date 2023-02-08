@@ -92,21 +92,185 @@ $(document).ready(function(){initNavTree('extracting_controller_8cpp_source.html
 <div class="line"><a id="l00005" name="l00005"></a><span class="lineno"><a class="line" href="classextracting_controller.html#a82b8ca24938c7798119d9abab7caf2e5">    5</a></span><a class="code hl_function" href="classextracting_controller.html#a82b8ca24938c7798119d9abab7caf2e5">extractingController::extractingController</a>()</div>
 <div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span>{</div>
 <div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span>    std::cout &lt;&lt; <span class="stringliteral">&quot;extracting controller constructed&quot;</span> &lt;&lt; std::endl;</div>
-<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span>}</div>
-<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span> </div>
-<div class="line"><a id="l00010" name="l00010"></a><span class="lineno"><a class="line" href="classextracting_controller.html#ae25a1e4757b1fa6ab006d29c3ab89153">   10</a></span><a class="code hl_function" href="classextracting_controller.html#ae25a1e4757b1fa6ab006d29c3ab89153">extractingController::~extractingController</a>()</div>
-<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span>{</div>
-<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span>    std::cout &lt;&lt; <span class="stringliteral">&quot;extracting controller desctructed&quot;</span> &lt;&lt; std::endl;</div>
-<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>}</div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span>    extractModel = <span class="keyword">new</span> extractingModel( <span class="keyword">new</span> <a class="code hl_class" href="classwgm__processes_1_1sinking__process.html">wgm_processes::sinking_process</a>() );</div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span>}</div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span> </div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno"><a class="line" href="classextracting_controller.html#ae25a1e4757b1fa6ab006d29c3ab89153">   11</a></span><a class="code hl_function" href="classextracting_controller.html#ae25a1e4757b1fa6ab006d29c3ab89153">extractingController::~extractingController</a>()</div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span>{</div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>    std::cout &lt;&lt; <span class="stringliteral">&quot;extracting controller desctructed&quot;</span> &lt;&lt; std::endl;</div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>    <span class="keyword">delete</span> extractModel;</div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>}</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span> </div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span> </div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno"><a class="line" href="classextracting_controller.html#a4de460ab8294845355f0553bdad0c4ea">   18</a></span><span class="keywordtype">void</span> <a class="code hl_slot" href="classextracting_controller.html#a4de460ab8294845355f0553bdad0c4ea">extractingController::on_extract_connect_distance_sensor_clicked</a>()</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>{</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>    extractModel-&gt;extractingProcessHandler-&gt;get_sys_ptr()-&gt;connect_sensor();</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>    emit <a class="code hl_signal" href="classextracting_controller.html#a5eedc552072fd1ebdadbe8ef46bc3c7c">sensorConnected</a>();</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>}</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span> </div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno"><a class="line" href="classextracting_controller.html#a156c217960cf4a409dd1b94fba7e8297">   24</a></span><span class="keywordtype">void</span> <a class="code hl_slot" href="classextracting_controller.html#a156c217960cf4a409dd1b94fba7e8297">extractingController::on_extract_connect_motion_axis_clicked</a>()</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>{</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>extractModel-&gt;extractingProcessHandler-&gt;get_sys_ptr()-&gt;connect_motion_axis();</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>    emit <a class="code hl_signal" href="classextracting_controller.html#a5e1557bb95a1fbccb4765afe2da4cdd6">axisConnected</a>();</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>}</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span> </div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno"><a class="line" href="classextracting_controller.html#a1501c2a06f2e4890b7a47ecd4b417857">   30</a></span><span class="keywordtype">void</span> <a class="code hl_slot" href="classextracting_controller.html#a1501c2a06f2e4890b7a47ecd4b417857">extractingController::on_run_extracting_process_clicked</a>()</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>{</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>    <span class="keywordflow">if</span> (!<a class="code hl_slot" href="classextracting_controller.html#a6bc00da577363b46e6a227f5db2dbb45">get_axis_status</a>() || !<a class="code hl_slot" href="classextracting_controller.html#a6b1b0631158de1773d06717d5ab59663">get_sensor_status</a>())</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>    {</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>        std::cout &lt;&lt; <span class="stringliteral">&quot;device not connected &quot;</span> &lt;&lt; std::endl;</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>        <span class="keywordflow">return</span>;</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>    }</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>    extractModel-&gt;extractingProcessHandler-&gt;start_process();</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>    time_elapsed = extractModel-&gt;extractingProcessHandler-&gt;get_elapsed_time();</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>}</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span> </div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno"><a class="line" href="classextracting_controller.html#a1be58f33b2d00dd565370e03fb7c5f96">   41</a></span><span class="keywordtype">void</span> <a class="code hl_slot" href="classextracting_controller.html#a1be58f33b2d00dd565370e03fb7c5f96">extractingController::on_stop_extracting_process_clicked</a>()</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>{</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>    <span class="keywordflow">if</span> (!<a class="code hl_slot" href="classextracting_controller.html#a6bc00da577363b46e6a227f5db2dbb45">get_axis_status</a>() || !<a class="code hl_slot" href="classextracting_controller.html#a6b1b0631158de1773d06717d5ab59663">get_sensor_status</a>())</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>    {</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>        std::cout &lt;&lt; <span class="stringliteral">&quot;device not connected &quot;</span> &lt;&lt; std::endl;</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>        <span class="keywordflow">return</span>;</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>    }</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>    extractModel-&gt;extractingProcessHandler-&gt;stop_process();</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>    time_elapsed = extractModel-&gt;extractingProcessHandler-&gt;get_elapsed_time();</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>}</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno"><a class="line" href="classextracting_controller.html#a1a7297e03d84c9719d735b77e4561616">   51</a></span><span class="keywordtype">void</span> <a class="code hl_slot" href="classextracting_controller.html#a1a7297e03d84c9719d735b77e4561616">extractingController::on_extract_move_home_clicked</a>()</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>{</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>    <span class="keywordflow">if</span> (!<a class="code hl_slot" href="classextracting_controller.html#a6bc00da577363b46e6a227f5db2dbb45">get_axis_status</a>() || !<a class="code hl_slot" href="classextracting_controller.html#a6b1b0631158de1773d06717d5ab59663">get_sensor_status</a>())</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>    {</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>        std::cout &lt;&lt; <span class="stringliteral">&quot;device not connected &quot;</span> &lt;&lt; std::endl;</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>        <span class="keywordflow">return</span>;</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>    }</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>    extractModel-&gt;extractingProcessHandler-&gt;get_sys_ptr()-&gt;getSubSysController()-&gt;extract_move_home();</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>}</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span> </div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno"><a class="line" href="classextracting_controller.html#a3efea34ce1719451986ce23f8f3673a6">   61</a></span><span class="keywordtype">void</span> <a class="code hl_slot" href="classextracting_controller.html#a3efea34ce1719451986ce23f8f3673a6">extractingController::updateLcdTime</a>(QLCDNumber* Lcd)</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>{</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>    Lcd-&gt;display(time_elapsed);</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>    time_elapsed = 0;</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>}</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span> </div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno"><a class="line" href="classextracting_controller.html#a246a53c5eb45ded54fbed31211644bf7">   67</a></span><span class="keywordtype">void</span> <a class="code hl_slot" href="classextracting_controller.html#a246a53c5eb45ded54fbed31211644bf7">extractingController::updateLcdDistance</a>(QLCDNumber* Lcd)</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>{</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>    <span class="keywordflow">while</span> (<a class="code hl_slot" href="classextracting_controller.html#a6b1b0631158de1773d06717d5ab59663">get_sensor_status</a>()) <span class="comment">// while connected, launch thread display</span></div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>    {</div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>        std::cout &lt;&lt; <span class="stringliteral">&quot;updating lcd distance &quot;</span> &lt;&lt; std::endl;</div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>        Lcd-&gt;display(extractModel-&gt;extractingProcessHandler-&gt;get_sys_ptr()-&gt;getSubSysController()-&gt;get_sensor_values());</div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>        std::cout &lt;&lt; <span class="stringliteral">&quot;lcd distance thread id: &quot;</span> &lt;&lt; QThread::currentThreadId() &lt;&lt; std::endl;</div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>        QThread::currentThread()-&gt;sleep(10);</div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>    }</div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span> </div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>}</div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno"><a class="line" href="classextracting_controller.html#a56bec63fbb2165d55f775c5e386cb860">   78</a></span><span class="keywordtype">void</span> <a class="code hl_slot" href="classextracting_controller.html#a56bec63fbb2165d55f775c5e386cb860">extractingController::updateLcdPosition</a>(QLCDNumber* Lcd)</div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>{</div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>    <span class="keywordflow">while</span> (<a class="code hl_slot" href="classextracting_controller.html#a6bc00da577363b46e6a227f5db2dbb45">get_axis_status</a>())</div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>    {</div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>        std::cout &lt;&lt; <span class="stringliteral">&quot;updating lcd position &quot;</span> &lt;&lt; std::endl;</div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>        Lcd-&gt;display(extractModel-&gt;extractingProcessHandler-&gt;get_sys_ptr()-&gt;getSubSysController()-&gt;get_axis_position());</div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>        std::cout &lt;&lt; <span class="stringliteral">&quot;lcd position thread id: &quot;</span> &lt;&lt; QThread::currentThreadId() &lt;&lt; std::endl;</div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>        QThread::currentThread()-&gt;sleep(10);</div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>    }</div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>}</div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno"><a class="line" href="classextracting_controller.html#a6bc00da577363b46e6a227f5db2dbb45">   88</a></span><span class="keywordtype">bool</span> <a class="code hl_slot" href="classextracting_controller.html#a6bc00da577363b46e6a227f5db2dbb45">extractingController::get_axis_status</a>()</div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>{</div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>    <span class="keywordflow">return</span> extractModel-&gt;extractingProcessHandler-&gt;get_sys_ptr()-&gt;getSubSysStatus(<span class="stringliteral">&quot;axis_motion&quot;</span>);</div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>}</div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span> </div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno"><a class="line" href="classextracting_controller.html#a6b1b0631158de1773d06717d5ab59663">   93</a></span><span class="keywordtype">bool</span> <a class="code hl_slot" href="classextracting_controller.html#a6b1b0631158de1773d06717d5ab59663">extractingController::get_sensor_status</a>()</div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>{</div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>    <span class="keywordflow">return</span> extractModel-&gt;extractingProcessHandler-&gt;get_sys_ptr()-&gt;getSubSysStatus(<span class="stringliteral">&quot;distance_sensor&quot;</span>);</div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>}</div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span> </div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno"><a class="line" href="classextracting_controller.html#ae301e3017a37943e46d443b8d41df599">   98</a></span>std::string <a class="code hl_slot" href="classextracting_controller.html#ae301e3017a37943e46d443b8d41df599">extractingController::sendAxisCmd</a>(std::string Cmd)</div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>{</div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>    <span class="keywordflow">return</span> extractModel-&gt;extractingProcessHandler-&gt;get_sys_ptr()-&gt;getSubSysController()-&gt;sendDirectCmdAxis(Cmd);</div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span>}</div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span> </div>
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno"><a class="line" href="classextracting_controller.html#aa9c2fa2993ce4b4c3db0713e6a4a657f">  103</a></span><span class="keywordtype">void</span> <a class="code hl_slot" href="classextracting_controller.html#aa9c2fa2993ce4b4c3db0713e6a4a657f">extractingController::reload_whs_config_file</a>()</div>
+<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span>{</div>
+<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span>    std::cout &lt;&lt; <span class="stringliteral">&quot;file closed succefuly, updating parameters&quot;</span> &lt;&lt; std::endl;</div>
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span>    extractModel-&gt;extractingProcessHandler-&gt;get_sys_ptr()-&gt;getSubSysController()-&gt;reload_config_file();</div>
+<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span>}</div>
+<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span> </div>
+<div class="line"><a id="l00109" name="l00109"></a><span class="lineno"><a class="line" href="classextracting_controller.html#a4250a0f2731226396464df34d8ed2797">  109</a></span><span class="keywordtype">bool</span> <a class="code hl_slot" href="classextracting_controller.html#a4250a0f2731226396464df34d8ed2797">extractingController::getProcessStatus</a>()</div>
+<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span>{</div>
+<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span>    std::cout &lt;&lt; <span class="stringliteral">&quot;getting process status&quot;</span> &lt;&lt; std::endl;</div>
+<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span>    <span class="keywordflow">return</span> extractModel-&gt;extractingProcessHandler-&gt;is_proc_success();</div>
+<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span>}</div>
+<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span> </div>
+<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span><span class="comment">// label update</span></div>
+<div class="line"><a id="l00116" name="l00116"></a><span class="lineno"><a class="line" href="classextracting_controller.html#af312c28334bd178fa45b934af000f9c7">  116</a></span><span class="keywordtype">void</span> <a class="code hl_slot" href="classextracting_controller.html#af312c28334bd178fa45b934af000f9c7">extractingController::updateLabelAxis</a>(QLabel* label)</div>
+<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span>{</div>
+<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span>    <span class="keywordflow">if</span> (<a class="code hl_slot" href="classextracting_controller.html#a6bc00da577363b46e6a227f5db2dbb45">get_axis_status</a>())</div>
+<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span>    {</div>
+<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span>        label-&gt;setText(<span class="stringliteral">&quot;true&quot;</span>);</div>
+<div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span>        label-&gt;setStyleSheet(<span class="stringliteral">&quot;QLabel { background-color : green; color : black; }&quot;</span>);</div>
+<div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span>        <span class="keywordflow">return</span>;</div>
+<div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span>    }</div>
+<div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span>}</div>
+<div class="line"><a id="l00125" name="l00125"></a><span class="lineno"><a class="line" href="classextracting_controller.html#a30452317b1c0239577536aecce691366">  125</a></span><span class="keywordtype">void</span> <a class="code hl_slot" href="classextracting_controller.html#a30452317b1c0239577536aecce691366">extractingController::updateLabelSensor</a>(QLabel* label)</div>
+<div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span>{</div>
+<div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span>    <span class="keywordflow">if</span> (<a class="code hl_slot" href="classextracting_controller.html#a6b1b0631158de1773d06717d5ab59663">get_sensor_status</a>())</div>
+<div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span>    {</div>
+<div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span>        label-&gt;setText(<span class="stringliteral">&quot;true&quot;</span>);</div>
+<div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span>        label-&gt;setStyleSheet(<span class="stringliteral">&quot;QLabel { background-color : green; color : black; }&quot;</span>);</div>
+<div class="line"><a id="l00131" name="l00131"></a><span class="lineno">  131</span>        <span class="keywordflow">return</span>;</div>
+<div class="line"><a id="l00132" name="l00132"></a><span class="lineno">  132</span>    }</div>
+<div class="line"><a id="l00133" name="l00133"></a><span class="lineno">  133</span>}</div>
+<div class="line"><a id="l00134" name="l00134"></a><span class="lineno"><a class="line" href="classextracting_controller.html#a65799dac9a351c7a5631d2787cd2bc4f">  134</a></span><span class="keywordtype">void</span> <a class="code hl_slot" href="classextracting_controller.html#a65799dac9a351c7a5631d2787cd2bc4f">extractingController::updateLabelProcess</a>(QLabel* label)</div>
+<div class="line"><a id="l00135" name="l00135"></a><span class="lineno">  135</span>{</div>
+<div class="line"><a id="l00136" name="l00136"></a><span class="lineno">  136</span>    <span class="keywordflow">if</span> (<a class="code hl_slot" href="classextracting_controller.html#a4250a0f2731226396464df34d8ed2797">getProcessStatus</a>())</div>
+<div class="line"><a id="l00137" name="l00137"></a><span class="lineno">  137</span>    {</div>
+<div class="line"><a id="l00138" name="l00138"></a><span class="lineno">  138</span>        label-&gt;setText(<span class="stringliteral">&quot;true&quot;</span>);</div>
+<div class="line"><a id="l00139" name="l00139"></a><span class="lineno">  139</span>        label-&gt;setStyleSheet(<span class="stringliteral">&quot;QLabel { background-color : green; color : black; }&quot;</span>);</div>
+<div class="line"><a id="l00140" name="l00140"></a><span class="lineno">  140</span>        <span class="keywordflow">return</span>;</div>
+<div class="line"><a id="l00141" name="l00141"></a><span class="lineno">  141</span>    }</div>
+<div class="line"><a id="l00142" name="l00142"></a><span class="lineno">  142</span>}</div>
+<div class="line"><a id="l00143" name="l00143"></a><span class="lineno"><a class="line" href="classextracting_controller.html#a4082f337006a59fbefd88e47a736358c">  143</a></span><span class="keywordtype">void</span> <a class="code hl_slot" href="classextracting_controller.html#a4082f337006a59fbefd88e47a736358c">extractingController::updateLabelAxisResponse</a>(QLabel* label, QString cmd)</div>
+<div class="line"><a id="l00144" name="l00144"></a><span class="lineno">  144</span>{</div>
+<div class="line"><a id="l00145" name="l00145"></a><span class="lineno">  145</span>    <span class="keywordflow">if</span> (!<a class="code hl_slot" href="classextracting_controller.html#a6bc00da577363b46e6a227f5db2dbb45">get_axis_status</a>())</div>
+<div class="line"><a id="l00146" name="l00146"></a><span class="lineno">  146</span>    {</div>
+<div class="line"><a id="l00147" name="l00147"></a><span class="lineno">  147</span>        std::cout &lt;&lt; <span class="stringliteral">&quot;device not connected &quot;</span> &lt;&lt; std::endl;</div>
+<div class="line"><a id="l00148" name="l00148"></a><span class="lineno">  148</span>        <span class="keywordflow">return</span>;</div>
+<div class="line"><a id="l00149" name="l00149"></a><span class="lineno">  149</span>    }</div>
+<div class="line"><a id="l00150" name="l00150"></a><span class="lineno">  150</span>    label-&gt;clear();</div>
+<div class="line"><a id="l00151" name="l00151"></a><span class="lineno">  151</span>    std::cout &lt;&lt; <span class="stringliteral">&quot;user cmd: &quot;</span> &lt;&lt; cmd.toStdString() &lt;&lt; std::endl;</div>
+<div class="line"><a id="l00152" name="l00152"></a><span class="lineno">  152</span>    <span class="keyword">auto</span> strCmd = cmd.toStdString();</div>
+<div class="line"><a id="l00153" name="l00153"></a><span class="lineno">  153</span>    std::string resp = <a class="code hl_slot" href="classextracting_controller.html#ae301e3017a37943e46d443b8d41df599">sendAxisCmd</a>(strCmd);</div>
+<div class="line"><a id="l00154" name="l00154"></a><span class="lineno">  154</span>    emit <a class="code hl_signal" href="classextracting_controller.html#a29cbcebb8e6407db332553145bbd47ce">axisReplied</a>(resp);</div>
+<div class="line"><a id="l00155" name="l00155"></a><span class="lineno">  155</span>}</div>
+<div class="line"><a id="l00156" name="l00156"></a><span class="lineno">  156</span> </div>
+<div class="ttc" id="aclassextracting_controller_html_a1501c2a06f2e4890b7a47ecd4b417857"><div class="ttname"><a href="classextracting_controller.html#a1501c2a06f2e4890b7a47ecd4b417857">extractingController::on_run_extracting_process_clicked</a></div><div class="ttdeci">void on_run_extracting_process_clicked()</div><div class="ttdef"><b>Definition:</b> <a href="extracting_controller_8cpp_source.html#l00030">extractingController.cpp:30</a></div></div>
+<div class="ttc" id="aclassextracting_controller_html_a156c217960cf4a409dd1b94fba7e8297"><div class="ttname"><a href="classextracting_controller.html#a156c217960cf4a409dd1b94fba7e8297">extractingController::on_extract_connect_motion_axis_clicked</a></div><div class="ttdeci">void on_extract_connect_motion_axis_clicked()</div><div class="ttdef"><b>Definition:</b> <a href="extracting_controller_8cpp_source.html#l00024">extractingController.cpp:24</a></div></div>
+<div class="ttc" id="aclassextracting_controller_html_a1a7297e03d84c9719d735b77e4561616"><div class="ttname"><a href="classextracting_controller.html#a1a7297e03d84c9719d735b77e4561616">extractingController::on_extract_move_home_clicked</a></div><div class="ttdeci">void on_extract_move_home_clicked()</div><div class="ttdef"><b>Definition:</b> <a href="extracting_controller_8cpp_source.html#l00051">extractingController.cpp:51</a></div></div>
+<div class="ttc" id="aclassextracting_controller_html_a1be58f33b2d00dd565370e03fb7c5f96"><div class="ttname"><a href="classextracting_controller.html#a1be58f33b2d00dd565370e03fb7c5f96">extractingController::on_stop_extracting_process_clicked</a></div><div class="ttdeci">void on_stop_extracting_process_clicked()</div><div class="ttdef"><b>Definition:</b> <a href="extracting_controller_8cpp_source.html#l00041">extractingController.cpp:41</a></div></div>
+<div class="ttc" id="aclassextracting_controller_html_a246a53c5eb45ded54fbed31211644bf7"><div class="ttname"><a href="classextracting_controller.html#a246a53c5eb45ded54fbed31211644bf7">extractingController::updateLcdDistance</a></div><div class="ttdeci">void updateLcdDistance(QLCDNumber *Lcd)</div><div class="ttdef"><b>Definition:</b> <a href="extracting_controller_8cpp_source.html#l00067">extractingController.cpp:67</a></div></div>
+<div class="ttc" id="aclassextracting_controller_html_a29cbcebb8e6407db332553145bbd47ce"><div class="ttname"><a href="classextracting_controller.html#a29cbcebb8e6407db332553145bbd47ce">extractingController::axisReplied</a></div><div class="ttdeci">void axisReplied(std::string reply)</div></div>
+<div class="ttc" id="aclassextracting_controller_html_a30452317b1c0239577536aecce691366"><div class="ttname"><a href="classextracting_controller.html#a30452317b1c0239577536aecce691366">extractingController::updateLabelSensor</a></div><div class="ttdeci">void updateLabelSensor(QLabel *label)</div><div class="ttdef"><b>Definition:</b> <a href="extracting_controller_8cpp_source.html#l00125">extractingController.cpp:125</a></div></div>
+<div class="ttc" id="aclassextracting_controller_html_a3efea34ce1719451986ce23f8f3673a6"><div class="ttname"><a href="classextracting_controller.html#a3efea34ce1719451986ce23f8f3673a6">extractingController::updateLcdTime</a></div><div class="ttdeci">void updateLcdTime(QLCDNumber *Lcd)</div><div class="ttdef"><b>Definition:</b> <a href="extracting_controller_8cpp_source.html#l00061">extractingController.cpp:61</a></div></div>
+<div class="ttc" id="aclassextracting_controller_html_a4082f337006a59fbefd88e47a736358c"><div class="ttname"><a href="classextracting_controller.html#a4082f337006a59fbefd88e47a736358c">extractingController::updateLabelAxisResponse</a></div><div class="ttdeci">void updateLabelAxisResponse(QLabel *label, QString cmd)</div><div class="ttdef"><b>Definition:</b> <a href="extracting_controller_8cpp_source.html#l00143">extractingController.cpp:143</a></div></div>
+<div class="ttc" id="aclassextracting_controller_html_a4250a0f2731226396464df34d8ed2797"><div class="ttname"><a href="classextracting_controller.html#a4250a0f2731226396464df34d8ed2797">extractingController::getProcessStatus</a></div><div class="ttdeci">bool getProcessStatus()</div><div class="ttdef"><b>Definition:</b> <a href="extracting_controller_8cpp_source.html#l00109">extractingController.cpp:109</a></div></div>
+<div class="ttc" id="aclassextracting_controller_html_a4de460ab8294845355f0553bdad0c4ea"><div class="ttname"><a href="classextracting_controller.html#a4de460ab8294845355f0553bdad0c4ea">extractingController::on_extract_connect_distance_sensor_clicked</a></div><div class="ttdeci">void on_extract_connect_distance_sensor_clicked()</div><div class="ttdef"><b>Definition:</b> <a href="extracting_controller_8cpp_source.html#l00018">extractingController.cpp:18</a></div></div>
+<div class="ttc" id="aclassextracting_controller_html_a56bec63fbb2165d55f775c5e386cb860"><div class="ttname"><a href="classextracting_controller.html#a56bec63fbb2165d55f775c5e386cb860">extractingController::updateLcdPosition</a></div><div class="ttdeci">void updateLcdPosition(QLCDNumber *Lcd)</div><div class="ttdef"><b>Definition:</b> <a href="extracting_controller_8cpp_source.html#l00078">extractingController.cpp:78</a></div></div>
+<div class="ttc" id="aclassextracting_controller_html_a5e1557bb95a1fbccb4765afe2da4cdd6"><div class="ttname"><a href="classextracting_controller.html#a5e1557bb95a1fbccb4765afe2da4cdd6">extractingController::axisConnected</a></div><div class="ttdeci">void axisConnected()</div></div>
+<div class="ttc" id="aclassextracting_controller_html_a5eedc552072fd1ebdadbe8ef46bc3c7c"><div class="ttname"><a href="classextracting_controller.html#a5eedc552072fd1ebdadbe8ef46bc3c7c">extractingController::sensorConnected</a></div><div class="ttdeci">void sensorConnected()</div></div>
+<div class="ttc" id="aclassextracting_controller_html_a65799dac9a351c7a5631d2787cd2bc4f"><div class="ttname"><a href="classextracting_controller.html#a65799dac9a351c7a5631d2787cd2bc4f">extractingController::updateLabelProcess</a></div><div class="ttdeci">void updateLabelProcess(QLabel *label)</div><div class="ttdef"><b>Definition:</b> <a href="extracting_controller_8cpp_source.html#l00134">extractingController.cpp:134</a></div></div>
+<div class="ttc" id="aclassextracting_controller_html_a6b1b0631158de1773d06717d5ab59663"><div class="ttname"><a href="classextracting_controller.html#a6b1b0631158de1773d06717d5ab59663">extractingController::get_sensor_status</a></div><div class="ttdeci">bool get_sensor_status()</div><div class="ttdef"><b>Definition:</b> <a href="extracting_controller_8cpp_source.html#l00093">extractingController.cpp:93</a></div></div>
+<div class="ttc" id="aclassextracting_controller_html_a6bc00da577363b46e6a227f5db2dbb45"><div class="ttname"><a href="classextracting_controller.html#a6bc00da577363b46e6a227f5db2dbb45">extractingController::get_axis_status</a></div><div class="ttdeci">bool get_axis_status()</div><div class="ttdef"><b>Definition:</b> <a href="extracting_controller_8cpp_source.html#l00088">extractingController.cpp:88</a></div></div>
 <div class="ttc" id="aclassextracting_controller_html_a82b8ca24938c7798119d9abab7caf2e5"><div class="ttname"><a href="classextracting_controller.html#a82b8ca24938c7798119d9abab7caf2e5">extractingController::extractingController</a></div><div class="ttdeci">extractingController()</div><div class="ttdef"><b>Definition:</b> <a href="extracting_controller_8cpp_source.html#l00005">extractingController.cpp:5</a></div></div>
-<div class="ttc" id="aclassextracting_controller_html_ae25a1e4757b1fa6ab006d29c3ab89153"><div class="ttname"><a href="classextracting_controller.html#ae25a1e4757b1fa6ab006d29c3ab89153">extractingController::~extractingController</a></div><div class="ttdeci">~extractingController()</div><div class="ttdef"><b>Definition:</b> <a href="extracting_controller_8cpp_source.html#l00010">extractingController.cpp:10</a></div></div>
+<div class="ttc" id="aclassextracting_controller_html_aa9c2fa2993ce4b4c3db0713e6a4a657f"><div class="ttname"><a href="classextracting_controller.html#aa9c2fa2993ce4b4c3db0713e6a4a657f">extractingController::reload_whs_config_file</a></div><div class="ttdeci">void reload_whs_config_file()</div><div class="ttdef"><b>Definition:</b> <a href="extracting_controller_8cpp_source.html#l00103">extractingController.cpp:103</a></div></div>
+<div class="ttc" id="aclassextracting_controller_html_ae25a1e4757b1fa6ab006d29c3ab89153"><div class="ttname"><a href="classextracting_controller.html#ae25a1e4757b1fa6ab006d29c3ab89153">extractingController::~extractingController</a></div><div class="ttdeci">~extractingController()</div><div class="ttdef"><b>Definition:</b> <a href="extracting_controller_8cpp_source.html#l00011">extractingController.cpp:11</a></div></div>
+<div class="ttc" id="aclassextracting_controller_html_ae301e3017a37943e46d443b8d41df599"><div class="ttname"><a href="classextracting_controller.html#ae301e3017a37943e46d443b8d41df599">extractingController::sendAxisCmd</a></div><div class="ttdeci">std::string sendAxisCmd(std::string Cmd)</div><div class="ttdef"><b>Definition:</b> <a href="extracting_controller_8cpp_source.html#l00098">extractingController.cpp:98</a></div></div>
+<div class="ttc" id="aclassextracting_controller_html_af312c28334bd178fa45b934af000f9c7"><div class="ttname"><a href="classextracting_controller.html#af312c28334bd178fa45b934af000f9c7">extractingController::updateLabelAxis</a></div><div class="ttdeci">void updateLabelAxis(QLabel *label)</div><div class="ttdef"><b>Definition:</b> <a href="extracting_controller_8cpp_source.html#l00116">extractingController.cpp:116</a></div></div>
+<div class="ttc" id="aclasswgm__processes_1_1sinking__process_html"><div class="ttname"><a href="classwgm__processes_1_1sinking__process.html">wgm_processes::sinking_process</a></div><div class="ttdef"><b>Definition:</b> <a href="sinking__process_8h_source.html#l00035">sinking_process.h:36</a></div></div>
 <div class="ttc" id="aextracting_controller_8h_html"><div class="ttname"><a href="extracting_controller_8h.html">extractingController.h</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_90d9f2b4df80eae2766d7cbfca3c6953.html">businesslogic</a></li><li class="navelem"><a class="el" href="extracting_controller_8cpp.html">extractingController.cpp</a></li>
+    <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_553aeb687019a45c031da74abc987059.html">controlLayer</a></li><li class="navelem"><a class="el" href="extracting_controller_8cpp.html">extractingController.cpp</a></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.4 </li>
   </ul>
 </div>

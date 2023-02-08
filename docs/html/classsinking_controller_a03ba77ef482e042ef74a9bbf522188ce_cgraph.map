@@ -1,8 +1,5 @@
 <map id="sinkingController::on_monitor_and_calibrate_clicked" name="sinkingController::on_monitor_and_calibrate_clicked">
-<area shape="rect" id="node1" title=" " alt="" coords="5,56,176,112"/>
-<area shape="rect" id="node2" href="$classsinking_controller.html#a7db4db52745d9dde8e4479a39eea8c5f" title=" " alt="" coords="265,30,392,71"/>
-<area shape="rect" id="node3" href="$classwgm__processes_1_1_isinking__process.html#acc0cf72fe5ca2ee7d7723016da15f3f7" title=" " alt="" coords="493,22,661,63"/>
-<area shape="rect" id="node5" href="$classsinking_controller.html#affc62f4de11ebf2c45cfae76f2b71c47" title=" " alt="" coords="264,95,393,136"/>
-<area shape="rect" id="node6" href="$classwafer__holder__motion__system_1_1_iwafer__motion__controller.html#a71d069ac7541692f0158dcd8ef2ac3f7" title=" " alt="" coords="224,161,433,217"/>
-<area shape="rect" id="node4" href="$classwafer__holder__motion__system_1_1_iwafer__motion__controller.html#a1b03116f70d8a8cb8de0283da77bed58" title=" " alt="" coords="481,88,673,144"/>
+<area shape="rect" id="node1" title=" " alt="" coords="5,31,176,87"/>
+<area shape="rect" id="node2" href="$classsinking_controller.html#a7db4db52745d9dde8e4479a39eea8c5f" title=" " alt="" coords="225,5,352,47"/>
+<area shape="rect" id="node3" href="$classsinking_controller.html#affc62f4de11ebf2c45cfae76f2b71c47" title=" " alt="" coords="224,71,353,112"/>
 </map>

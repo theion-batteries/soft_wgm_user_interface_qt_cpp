@@ -116,6 +116,10 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:ace16991375124e8033b54e48ab4cfd8f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac42b013869f45707876bef5c56c318fe"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsulfur__heating__system_1_1_isulfur__heating__controller.html#ac42b013869f45707876bef5c56c318fe">setSulfurTemperatur</a> (double targetTemp)=0</td></tr>
 <tr class="separator:ac42b013869f45707876bef5c56c318fe"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9480d8f3fcdfc33c6714288adebb260d"><td class="memItemLeft" align="right" valign="top">virtual wgm_feedbacks::enum_sys_feedback&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsulfur__heating__system_1_1_isulfur__heating__controller.html#a9480d8f3fcdfc33c6714288adebb260d">stop_heating_sys</a> ()=0</td></tr>
+<tr class="separator:a9480d8f3fcdfc33c6714288adebb260d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6dce49147dee6a9fab88a3ebe3825ef8"><td class="memItemLeft" align="right" valign="top">virtual wgm_feedbacks::enum_sys_feedback&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsulfur__heating__system_1_1_isulfur__heating__controller.html#a6dce49147dee6a9fab88a3ebe3825ef8">start_heating_sys</a> ()=0</td></tr>
+<tr class="separator:a6dce49147dee6a9fab88a3ebe3825ef8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3dc4b8d9a1122630084a277fc935dfc6"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classheating__controller.html">heating_controller</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsulfur__heating__system_1_1_isulfur__heating__controller.html#a3dc4b8d9a1122630084a277fc935dfc6">getSubSysController</a> ()=0</td></tr>
 <tr class="separator:a3dc4b8d9a1122630084a277fc935dfc6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af98c557b63a92d05761853b5b37e6aaf"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsulfur__heating__system_1_1_isulfur__heating__controller.html#af98c557b63a92d05761853b5b37e6aaf">getSubSysStatus</a> (std::string Subsystem)=0</td></tr>
@@ -123,7 +127,7 @@ Public Member Functions</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock">
-<p class="definition">Definition at line <a class="el" href="heating__system_8h_source.html#l00050">50</a> of file <a class="el" href="heating__system_8h_source.html">heating_system.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="heating__system_8h_source.html#l00022">22</a> of file <a class="el" href="heating__system_8h_source.html">heating_system.h</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a9bcaedbb02cbc0fd0d1251f1053efa1d" name="a9bcaedbb02cbc0fd0d1251f1053efa1d"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a9bcaedbb02cbc0fd0d1251f1053efa1d">&#9670;&nbsp;</a></span>Isulfur_heating_controller()</h2>
@@ -140,7 +144,7 @@ Public Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="heating__system_8cpp_source.html#l00046">46</a> of file <a class="el" href="heating__system_8cpp_source.html">heating_system.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="heating__system_8cpp_source.html#l00014">14</a> of file <a class="el" href="heating__system_8cpp_source.html">heating_system.cpp</a>.</p>
 
 </div>
 </div>
@@ -167,7 +171,7 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="heating__system_8cpp_source.html#l00050">50</a> of file <a class="el" href="heating__system_8cpp_source.html">heating_system.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="heating__system_8cpp_source.html#l00017">17</a> of file <a class="el" href="heating__system_8cpp_source.html">heating_system.cpp</a>.</p>
 
 </div>
 </div>
@@ -223,19 +227,6 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Implemented in <a class="el" href="classsulfur__heating__system_1_1sulfur__heating__controller.html#a680dc56654e9c033220be6f67131fae0">sulfur_heating_system::sulfur_heating_controller</a>.</p>
-<div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="classsulfur__heating__system_1_1_isulfur__heating__controller_a3dc4b8d9a1122630084a277fc935dfc6_icgraph.png" border="0" usemap="#aclasssulfur__heating__system_1_1_isulfur__heating__controller_a3dc4b8d9a1122630084a277fc935dfc6_icgraph" alt=""/></div>
-<map name="aclasssulfur__heating__system_1_1_isulfur__heating__controller_a3dc4b8d9a1122630084a277fc935dfc6_icgraph" id="aclasssulfur__heating__system_1_1_isulfur__heating__controller_a3dc4b8d9a1122630084a277fc935dfc6_icgraph">
-<area shape="rect" title=" " alt="" coords="460,112,633,168"/>
-<area shape="rect" href="classheating_controller.html#a3e82e0388dfa96d2152f01ae25668bbe" title=" " alt="" coords="245,5,409,61"/>
-<area shape="rect" href="classheating_controller.html#a93766a4a66db236a3084f2c4a7710136" title=" " alt="" coords="241,86,412,127"/>
-<area shape="rect" href="classheating_controller.html#a5841413530f190dce55eb449e1f5526c" title=" " alt="" coords="263,151,390,193"/>
-<area shape="rect" href="classheating_controller.html#ae0fcfb4714f85496cd7e1a257882c7d7" title=" " alt="" coords="249,217,404,258"/>
-<area shape="rect" href="classheating_controller.html#a29baaea8e0b3a3afd3e697589b9e9825" title=" " alt="" coords="5,151,193,193"/>
-</map>
-</div>
 
 </div>
 </div>
@@ -264,21 +255,6 @@ Here is the caller graph for this function:</div>
 </div><div class="memdoc">
 
 <p>Implemented in <a class="el" href="classsulfur__heating__system_1_1sulfur__heating__controller.html#a4c430b81afba7a35ee3d592eff535352">sulfur_heating_system::sulfur_heating_controller</a>.</p>
-<div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="classsulfur__heating__system_1_1_isulfur__heating__controller_af98c557b63a92d05761853b5b37e6aaf_icgraph.png" border="0" usemap="#aclasssulfur__heating__system_1_1_isulfur__heating__controller_af98c557b63a92d05761853b5b37e6aaf_icgraph" alt=""/></div>
-<map name="aclasssulfur__heating__system_1_1_isulfur__heating__controller_af98c557b63a92d05761853b5b37e6aaf_icgraph" id="aclasssulfur__heating__system_1_1_isulfur__heating__controller_af98c557b63a92d05761853b5b37e6aaf_icgraph">
-<area shape="rect" title=" " alt="" coords="421,181,595,237"/>
-<area shape="rect" href="classheating_controller.html#a35bc4b22308722e7202566ce5dd67730" title=" " alt="" coords="241,189,373,230"/>
-<area shape="rect" href="classheating_controller.html#a997f7e9fbde054543def7f7cf4e6717c" title=" " alt="" coords="18,5,181,61"/>
-<area shape="rect" href="classheating_controller.html#ac11b048e22d708d4918f42b4dd928789" title=" " alt="" coords="16,86,183,127"/>
-<area shape="rect" href="classheating_controller.html#ace40642c12306003fbe881c967a2b1df" title=" " alt="" coords="17,151,182,193"/>
-<area shape="rect" href="classheating_controller.html#a2cb3cd277bdec5d1bf07ffcd8c66e699" title=" " alt="" coords="25,217,174,273"/>
-<area shape="rect" href="classheating_controller.html#a225bc98d2e5725ae2700a248ff3fa0ba" title=" " alt="" coords="34,298,165,339"/>
-<area shape="rect" href="classheating_controller.html#a29baaea8e0b3a3afd3e697589b9e9825" title=" " alt="" coords="5,363,193,405"/>
-</map>
-</div>
 
 </div>
 </div>
@@ -337,6 +313,60 @@ Here is the caller graph for this function:</div>
 
 </div>
 </div>
+<a id="a6dce49147dee6a9fab88a3ebe3825ef8" name="a6dce49147dee6a9fab88a3ebe3825ef8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6dce49147dee6a9fab88a3ebe3825ef8">&#9670;&nbsp;</a></span>start_heating_sys()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual wgm_feedbacks::enum_sys_feedback sulfur_heating_system::Isulfur_heating_controller::start_heating_sys </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Implemented in <a class="el" href="classsulfur__heating__system_1_1sulfur__heating__controller.html#a4a4437a25d884dcc260c3654dadd5ee9">sulfur_heating_system::sulfur_heating_controller</a>.</p>
+
+</div>
+</div>
+<a id="a9480d8f3fcdfc33c6714288adebb260d" name="a9480d8f3fcdfc33c6714288adebb260d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9480d8f3fcdfc33c6714288adebb260d">&#9670;&nbsp;</a></span>stop_heating_sys()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual wgm_feedbacks::enum_sys_feedback sulfur_heating_system::Isulfur_heating_controller::stop_heating_sys </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Implemented in <a class="el" href="classsulfur__heating__system_1_1sulfur__heating__controller.html#a590dc3b5642f10a4a3f22a33b0420260">sulfur_heating_system::sulfur_heating_controller</a>.</p>
+
+</div>
+</div>
 <a id="a1a4e4e501b837b610e992fa4b8f16e23" name="a1a4e4e501b837b610e992fa4b8f16e23"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a1a4e4e501b837b610e992fa4b8f16e23">&#9670;&nbsp;</a></span>turn_off_heating()</h2>
 
@@ -361,15 +391,6 @@ Here is the caller graph for this function:</div>
 </div><div class="memdoc">
 
 <p>Implemented in <a class="el" href="classsulfur__heating__system_1_1sulfur__heating__controller.html#a0272ccf552066751ef958ed184f4d175">sulfur_heating_system::sulfur_heating_controller</a>.</p>
-<div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="classsulfur__heating__system_1_1_isulfur__heating__controller_a1a4e4e501b837b610e992fa4b8f16e23_icgraph.png" border="0" usemap="#aclasssulfur__heating__system_1_1_isulfur__heating__controller_a1a4e4e501b837b610e992fa4b8f16e23_icgraph" alt=""/></div>
-<map name="aclasssulfur__heating__system_1_1_isulfur__heating__controller_a1a4e4e501b837b610e992fa4b8f16e23_icgraph" id="aclasssulfur__heating__system_1_1_isulfur__heating__controller_a1a4e4e501b837b610e992fa4b8f16e23_icgraph">
-<area shape="rect" title=" " alt="" coords="219,5,392,61"/>
-<area shape="rect" href="classheating_controller.html#ace40642c12306003fbe881c967a2b1df" title=" " alt="" coords="5,13,171,54"/>
-</map>
-</div>
 
 </div>
 </div>
@@ -397,15 +418,6 @@ Here is the caller graph for this function:</div>
 </div><div class="memdoc">
 
 <p>Implemented in <a class="el" href="classsulfur__heating__system_1_1sulfur__heating__controller.html#a6ff25ff1e1d2494a073b85288a5ebbb0">sulfur_heating_system::sulfur_heating_controller</a>.</p>
-<div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="classsulfur__heating__system_1_1_isulfur__heating__controller_aa0317a371c31f14ae0c3c41be15daf91_icgraph.png" border="0" usemap="#aclasssulfur__heating__system_1_1_isulfur__heating__controller_aa0317a371c31f14ae0c3c41be15daf91_icgraph" alt=""/></div>
-<map name="aclasssulfur__heating__system_1_1_isulfur__heating__controller_aa0317a371c31f14ae0c3c41be15daf91_icgraph" id="aclasssulfur__heating__system_1_1_isulfur__heating__controller_aa0317a371c31f14ae0c3c41be15daf91_icgraph">
-<area shape="rect" title=" " alt="" coords="220,5,393,61"/>
-<area shape="rect" href="classheating_controller.html#ac11b048e22d708d4918f42b4dd928789" title=" " alt="" coords="5,13,172,54"/>
-</map>
-</div>
 
 </div>
 </div>

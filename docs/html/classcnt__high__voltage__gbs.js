@@ -2,7 +2,7 @@ var classcnt__high__voltage__gbs =
 [
     [ "cnt_high_voltage_gbs", "classcnt__high__voltage__gbs.html#af87fc6c45c97346636cd080fa352a87d", null ],
     [ "~cnt_high_voltage_gbs", "classcnt__high__voltage__gbs.html#a2b90625b2433dfa3773a5c46b2a8ed9e", null ],
-    [ "connect", "classcnt__high__voltage__gbs.html#ac4df6db1fc1b2b46caf564795d21a056", null ],
+    [ "connect", "classcnt__high__voltage__gbs.html#aa1e59d9813c34903b292aad7a70e75a0", null ],
     [ "disconnect", "classcnt__high__voltage__gbs.html#a03a84b7fc08394fc07986708fbecd1ce", null ],
     [ "get_input_current", "classcnt__high__voltage__gbs.html#a20ccdf12a9c1ac450d31575abba40bec", null ],
     [ "get_input_frequency", "classcnt__high__voltage__gbs.html#a2a9b5e343a49f0a2bda09a9893578589", null ],

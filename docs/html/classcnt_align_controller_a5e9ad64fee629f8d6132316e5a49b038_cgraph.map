@@ -1,10 +1,6 @@
 <map id="cntAlignController::on_dispenser_vibrate_clicked" name="cntAlignController::on_dispenser_vibrate_clicked">
-<area shape="rect" id="node1" title=" " alt="" coords="5,149,156,205"/>
-<area shape="rect" id="node2" href="$classcnt__controller.html#a6b6015e468d0bd2507e523fb1cb6ba52" title=" " alt="" coords="221,5,350,47"/>
-<area shape="rect" id="node3" href="$classcnt_align_controller.html#aa88b63041bf5d4831540412fd1d7e7ab" title=" " alt="" coords="223,123,347,164"/>
-<area shape="rect" id="node4" href="$classwgm__processes_1_1_ialigning__process.html#a7dd10f6cfc80cf6774b3dc571f436eaf" title=" " alt="" coords="415,123,585,164"/>
-<area shape="rect" id="node6" href="$classcnt_align_controller.html#a508bc135d13e34403efc6c53d3c382e8" title=" " alt="" coords="208,188,363,229"/>
-<area shape="rect" id="node7" href="$classcnt_align_controller.html#a2f66f1549d13def766adac7dd37370cf" title=" " alt="" coords="223,253,347,295"/>
-<area shape="rect" id="node8" href="$classcnt__alignment__system_1_1_icnt__aligning__controller.html#a46cc8286c226e2cc981da4e49664e916" title=" " alt="" coords="204,319,367,375"/>
-<area shape="rect" id="node5" href="$classcnt__alignment__system_1_1_icnt__aligning__controller.html#ad270931c540dd40038cbb15112395482" title=" " alt="" coords="419,189,581,245"/>
+<area shape="rect" id="node1" title=" " alt="" coords="5,63,156,119"/>
+<area shape="rect" id="node2" href="$classcnt_align_controller.html#aa88b63041bf5d4831540412fd1d7e7ab" title=" " alt="" coords="219,5,343,47"/>
+<area shape="rect" id="node3" href="$classcnt_align_controller.html#a508bc135d13e34403efc6c53d3c382e8" title=" " alt="" coords="204,71,359,112"/>
+<area shape="rect" id="node4" href="$classcnt_align_controller.html#a2f66f1549d13def766adac7dd37370cf" title=" " alt="" coords="219,136,343,177"/>
 </map>

@@ -1,10 +1,5 @@
 <map id="heatingController::updateLabelHeaterResponse" name="heatingController::updateLabelHeaterResponse">
-<area shape="rect" id="node1" title=" " alt="" coords="5,123,193,165"/>
-<area shape="rect" id="node2" href="$classheating_controller.html#a35bc4b22308722e7202566ce5dd67730" title=" " alt="" coords="241,86,373,127"/>
-<area shape="rect" id="node5" href="$classheating_controller.html#a5841413530f190dce55eb449e1f5526c" title=" " alt="" coords="244,155,371,197"/>
-<area shape="rect" id="node3" href="$classwgm__processes_1_1_iheating__process.html#a2610c08705356ea10a2c710d1a59ef91" title=" " alt="" coords="423,86,593,127"/>
-<area shape="rect" id="node4" href="$classsulfur__heating__system_1_1_isulfur__heating__controller.html#af98c557b63a92d05761853b5b37e6aaf" title=" " alt="" coords="421,5,595,61"/>
-<area shape="rect" id="node6" href="$classsulfur__heating__system_1_1_isulfur__heating__controller.html#a3dc4b8d9a1122630084a277fc935dfc6" title=" " alt="" coords="421,152,595,208"/>
-<area shape="rect" id="node7" href="$classheating__controller.html#ac753fcf49ace04a5127cc3662428ee43" title=" " alt="" coords="446,233,570,274"/>
-<area shape="rect" id="node8" href="$classheating__controller.html#ad9e7279c39b02345d2f3a28ec25ee94f" title=" " alt="" coords="643,233,773,274"/>
+<area shape="rect" id="node1" title=" " alt="" coords="5,39,193,80"/>
+<area shape="rect" id="node2" href="$classheating_controller.html#a35bc4b22308722e7202566ce5dd67730" title=" " alt="" coords="241,5,373,47"/>
+<area shape="rect" id="node3" href="$classheating_controller.html#a5841413530f190dce55eb449e1f5526c" title=" " alt="" coords="244,71,371,112"/>
 </map>

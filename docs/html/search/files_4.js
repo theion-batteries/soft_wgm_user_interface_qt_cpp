@@ -10,8 +10,6 @@ var searchData=
   ['heatingcontroller_2eh_7',['heatingController.h',['../heating_controller_8h.html',1,'']]],
   ['heatingdb_2ecpp_8',['heatingDB.cpp',['../heating_d_b_8cpp.html',1,'']]],
   ['heatingdb_2eh_9',['heatingDB.h',['../heating_d_b_8h.html',1,'']]],
-  ['heatingmodel_2ecpp_10',['heatingModel.cpp',['../heating_model_8cpp.html',1,'']]],
-  ['heatingmodel_2eh_11',['heatingModel.h',['../heating_model_8h.html',1,'']]],
-  ['heatingview_2ecpp_12',['heatingView.cpp',['../heating_view_8cpp.html',1,'']]],
-  ['heatingview_2eh_13',['heatingView.h',['../heating_view_8h.html',1,'']]]
+  ['heatingview_2ecpp_10',['heatingView.cpp',['../heating_view_8cpp.html',1,'']]],
+  ['heatingview_2eh_11',['heatingView.h',['../heating_view_8h.html',1,'']]]
 ];

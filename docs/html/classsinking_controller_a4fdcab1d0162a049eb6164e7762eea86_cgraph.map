@@ -1,6 +1,4 @@
 <map id="sinkingController::updateLabelAxis" name="sinkingController::updateLabelAxis">
-<area shape="rect" id="node1" title=" " alt="" coords="5,43,132,84"/>
-<area shape="rect" id="node2" href="$classsinking_controller.html#a7db4db52745d9dde8e4479a39eea8c5f" title=" " alt="" coords="180,43,307,84"/>
-<area shape="rect" id="node3" href="$classwgm__processes_1_1_isinking__process.html#acc0cf72fe5ca2ee7d7723016da15f3f7" title=" " alt="" coords="367,5,535,47"/>
-<area shape="rect" id="node4" href="$classwafer__holder__motion__system_1_1_iwafer__motion__controller.html#a1b03116f70d8a8cb8de0283da77bed58" title=" " alt="" coords="355,71,547,127"/>
+<area shape="rect" id="node1" title=" " alt="" coords="5,5,132,47"/>
+<area shape="rect" id="node2" href="$classsinking_controller.html#a7db4db52745d9dde8e4479a39eea8c5f" title=" " alt="" coords="180,5,307,47"/>
 </map>

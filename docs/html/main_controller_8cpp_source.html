@@ -98,15 +98,102 @@ $(document).ready(function(){initNavTree('main_controller_8cpp_source.html','');
 <div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span>{</div>
 <div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span>    std::cout &lt;&lt; <span class="stringliteral">&quot;main controller desctructed&quot;</span> &lt;&lt; std::endl;</div>
 <div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>}</div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span> </div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno"><a class="line" href="classmain_controller.html#a1c5a25b3485b7e7373bd5c9f98b9ed8f">   15</a></span><span class="keywordtype">void</span> <a class="code hl_slot" href="classmain_controller.html#a1c5a25b3485b7e7373bd5c9f98b9ed8f">mainController::on_execute_process_clicked</a>()</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>{</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>    emit <a class="code hl_signal" href="classmain_controller.html#aeb92d90ad0a440f4d422a4225c1601b6">resetProgressBar</a>();</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span> </div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>    modelManager.processManager-&gt;start_process();</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>    time_elapsed = modelManager.processManager-&gt;get_elapsed_time();</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span> </div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>    emit <a class="code hl_signal" href="classmain_controller.html#a29be4f6b5f011b7425e97a60a1321574">finishedProc</a>();</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>}</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span> </div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno"><a class="line" href="classmain_controller.html#a1d826f95cb28e66db2ee667c6e0c630b">   25</a></span><span class="keywordtype">void</span> <a class="code hl_slot" href="classmain_controller.html#a1d826f95cb28e66db2ee667c6e0c630b">mainController::on_execute_all_clicked</a>()</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>{</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>    <span class="keyword">auto</span> callback = std::bind(&amp;<a class="code hl_slot" href="classmain_controller.html#ad629c0d3ec2f8a56dcd6f3de6f43ce23">mainController::getProgressUpdate</a>, <span class="keyword">this</span>, std::placeholders::_1);</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>    modelManager.processManager-&gt;start_all(callback);</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>    time_elapsed = modelManager.processManager-&gt;get_elapsed_time();</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span> </div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>    emit <a class="code hl_signal" href="classmain_controller.html#a0051e9746b4a492c5dec841581c5a8e5">finishedAll</a>();</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>}</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno"><a class="line" href="classmain_controller.html#aed94a66b7f933229448374d4828ada42">   33</a></span><span class="keywordtype">void</span> <a class="code hl_slot" href="classmain_controller.html#aed94a66b7f933229448374d4828ada42">mainController::on_abort_all_clicked</a>()</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>{</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>    modelManager.processManager-&gt;stop_all();</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>    time_elapsed = modelManager.processManager-&gt;get_elapsed_time();</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span> </div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>    emit <a class="code hl_signal" href="classmain_controller.html#a0051e9746b4a492c5dec841581c5a8e5">finishedAll</a>();</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>}</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno"><a class="line" href="classmain_controller.html#ad629c0d3ec2f8a56dcd6f3de6f43ce23">   40</a></span><span class="keywordtype">void</span> <a class="code hl_slot" href="classmain_controller.html#ad629c0d3ec2f8a56dcd6f3de6f43ce23">mainController::getProgressUpdate</a>(<span class="keywordtype">int</span> proc_id) <span class="comment">// x porc from proc list</span></div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>{</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>    <span class="comment">// emit proc id</span></div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>    emit <a class="code hl_signal" href="classmain_controller.html#a7da64c3fee4410ebe62ef55d0fcb6160">valueChanged</a>(proc_id);</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>}</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span> </div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno"><a class="line" href="classmain_controller.html#a1b8637378ed5f26b1e7eede82aed5884">   46</a></span><span class="keywordtype">void</span> <a class="code hl_slot" href="classmain_controller.html#a1b8637378ed5f26b1e7eede82aed5884">mainController::updateLcdTime</a>(QLCDNumber* Lcd)</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>{</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>    Lcd-&gt;display(time_elapsed);</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>    time_elapsed = 0;</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>}</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno"><a class="line" href="classmain_controller.html#a0dd37bd9d00ba610ff7aeb2fc0b7d9fb">   51</a></span><span class="keywordtype">void</span> <a class="code hl_slot" href="classmain_controller.html#a0dd37bd9d00ba610ff7aeb2fc0b7d9fb">mainController::updateProgressBar</a>(QProgressBar* ProgBar, <span class="keywordtype">int</span> value)</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>{</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>    ProgBar-&gt;setValue(value);</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>}</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span> </div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno"><a class="line" href="classmain_controller.html#a51a679ffd8b7b6b867c97a8dd40d30ca">   56</a></span><span class="keywordtype">void</span> <a class="code hl_slot" href="classmain_controller.html#a51a679ffd8b7b6b867c97a8dd40d30ca">mainController::execute_process</a>(std::string name)</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>{</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>    modelManager.processManager-&gt;start_process(name);</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>    time_elapsed = modelManager.processManager-&gt;get_elapsed_time();</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span> </div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>    emit <a class="code hl_signal" href="classmain_controller.html#a29be4f6b5f011b7425e97a60a1321574">finishedProc</a>();</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span> </div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>}</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno"><a class="line" href="classmain_controller.html#a9b14d7da0237896c5cf8784a5307a7c6">   64</a></span><span class="keywordtype">void</span> <a class="code hl_slot" href="classmain_controller.html#a51a679ffd8b7b6b867c97a8dd40d30ca">mainController::execute_process</a>(<span class="keywordtype">int</span> <span class="keywordtype">id</span>)</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>{</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>        emit <a class="code hl_signal" href="classmain_controller.html#aeb92d90ad0a440f4d422a4225c1601b6">resetProgressBar</a>();</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span> </div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>    modelManager.processManager-&gt;start_process(<span class="keywordtype">id</span>);</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>    time_elapsed = modelManager.processManager-&gt;get_elapsed_time();</div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span> </div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>    emit <a class="code hl_signal" href="classmain_controller.html#a29be4f6b5f011b7425e97a60a1321574">finishedProc</a>();</div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span> </div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>}</div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno"><a class="line" href="classmain_controller.html#a4aa894b6b21f1ada28915ea30ec0c6f2">   74</a></span><span class="keywordtype">void</span> <a class="code hl_slot" href="classmain_controller.html#a4aa894b6b21f1ada28915ea30ec0c6f2">mainController::abort_current_process</a>(<span class="keywordtype">int</span> <span class="keywordtype">id</span>)</div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>{</div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>        emit <a class="code hl_signal" href="classmain_controller.html#aeb92d90ad0a440f4d422a4225c1601b6">resetProgressBar</a>();</div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span> </div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>    modelManager.processManager-&gt;stop_process(<span class="keywordtype">id</span>);</div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>    time_elapsed = modelManager.processManager-&gt;get_elapsed_time();</div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span> </div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>    emit <a class="code hl_signal" href="classmain_controller.html#a29be4f6b5f011b7425e97a60a1321574">finishedProc</a>();</div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span> </div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>}</div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno"><a class="line" href="classmain_controller.html#aa35f1396e3e09746654b911a350263e1">   84</a></span><span class="keywordtype">void</span> <a class="code hl_slot" href="classmain_controller.html#aa35f1396e3e09746654b911a350263e1">mainController::setProgressUpdate</a>(<span class="keywordtype">int</span> prog)</div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>{</div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>    progress =   prog;</div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>}</div>
+<div class="ttc" id="aclassmain_controller_html_a0051e9746b4a492c5dec841581c5a8e5"><div class="ttname"><a href="classmain_controller.html#a0051e9746b4a492c5dec841581c5a8e5">mainController::finishedAll</a></div><div class="ttdeci">void finishedAll()</div></div>
+<div class="ttc" id="aclassmain_controller_html_a0dd37bd9d00ba610ff7aeb2fc0b7d9fb"><div class="ttname"><a href="classmain_controller.html#a0dd37bd9d00ba610ff7aeb2fc0b7d9fb">mainController::updateProgressBar</a></div><div class="ttdeci">void updateProgressBar(QProgressBar *ProgBar, int value)</div><div class="ttdef"><b>Definition:</b> <a href="main_controller_8cpp_source.html#l00051">mainController.cpp:51</a></div></div>
+<div class="ttc" id="aclassmain_controller_html_a1b8637378ed5f26b1e7eede82aed5884"><div class="ttname"><a href="classmain_controller.html#a1b8637378ed5f26b1e7eede82aed5884">mainController::updateLcdTime</a></div><div class="ttdeci">void updateLcdTime(QLCDNumber *Lcd)</div><div class="ttdef"><b>Definition:</b> <a href="main_controller_8cpp_source.html#l00046">mainController.cpp:46</a></div></div>
+<div class="ttc" id="aclassmain_controller_html_a1c5a25b3485b7e7373bd5c9f98b9ed8f"><div class="ttname"><a href="classmain_controller.html#a1c5a25b3485b7e7373bd5c9f98b9ed8f">mainController::on_execute_process_clicked</a></div><div class="ttdeci">void on_execute_process_clicked()</div><div class="ttdef"><b>Definition:</b> <a href="main_controller_8cpp_source.html#l00015">mainController.cpp:15</a></div></div>
+<div class="ttc" id="aclassmain_controller_html_a1d826f95cb28e66db2ee667c6e0c630b"><div class="ttname"><a href="classmain_controller.html#a1d826f95cb28e66db2ee667c6e0c630b">mainController::on_execute_all_clicked</a></div><div class="ttdeci">void on_execute_all_clicked()</div><div class="ttdef"><b>Definition:</b> <a href="main_controller_8cpp_source.html#l00025">mainController.cpp:25</a></div></div>
+<div class="ttc" id="aclassmain_controller_html_a29be4f6b5f011b7425e97a60a1321574"><div class="ttname"><a href="classmain_controller.html#a29be4f6b5f011b7425e97a60a1321574">mainController::finishedProc</a></div><div class="ttdeci">void finishedProc()</div></div>
+<div class="ttc" id="aclassmain_controller_html_a4aa894b6b21f1ada28915ea30ec0c6f2"><div class="ttname"><a href="classmain_controller.html#a4aa894b6b21f1ada28915ea30ec0c6f2">mainController::abort_current_process</a></div><div class="ttdeci">void abort_current_process(int id)</div><div class="ttdef"><b>Definition:</b> <a href="main_controller_8cpp_source.html#l00074">mainController.cpp:74</a></div></div>
+<div class="ttc" id="aclassmain_controller_html_a51a679ffd8b7b6b867c97a8dd40d30ca"><div class="ttname"><a href="classmain_controller.html#a51a679ffd8b7b6b867c97a8dd40d30ca">mainController::execute_process</a></div><div class="ttdeci">void execute_process(std::string name)</div><div class="ttdef"><b>Definition:</b> <a href="main_controller_8cpp_source.html#l00056">mainController.cpp:56</a></div></div>
 <div class="ttc" id="aclassmain_controller_html_a799da4acd9644d6262d9b86d41a30748"><div class="ttname"><a href="classmain_controller.html#a799da4acd9644d6262d9b86d41a30748">mainController::~mainController</a></div><div class="ttdeci">~mainController()</div><div class="ttdef"><b>Definition:</b> <a href="main_controller_8cpp_source.html#l00010">mainController.cpp:10</a></div></div>
+<div class="ttc" id="aclassmain_controller_html_a7da64c3fee4410ebe62ef55d0fcb6160"><div class="ttname"><a href="classmain_controller.html#a7da64c3fee4410ebe62ef55d0fcb6160">mainController::valueChanged</a></div><div class="ttdeci">void valueChanged(int new_value)</div></div>
+<div class="ttc" id="aclassmain_controller_html_aa35f1396e3e09746654b911a350263e1"><div class="ttname"><a href="classmain_controller.html#aa35f1396e3e09746654b911a350263e1">mainController::setProgressUpdate</a></div><div class="ttdeci">void setProgressUpdate(int prog)</div><div class="ttdef"><b>Definition:</b> <a href="main_controller_8cpp_source.html#l00084">mainController.cpp:84</a></div></div>
+<div class="ttc" id="aclassmain_controller_html_ad629c0d3ec2f8a56dcd6f3de6f43ce23"><div class="ttname"><a href="classmain_controller.html#ad629c0d3ec2f8a56dcd6f3de6f43ce23">mainController::getProgressUpdate</a></div><div class="ttdeci">void getProgressUpdate(int proc_id)</div><div class="ttdef"><b>Definition:</b> <a href="main_controller_8cpp_source.html#l00040">mainController.cpp:40</a></div></div>
 <div class="ttc" id="aclassmain_controller_html_ae0c5ca7c1d9a3f776bab725d09c6c6c9"><div class="ttname"><a href="classmain_controller.html#ae0c5ca7c1d9a3f776bab725d09c6c6c9">mainController::mainController</a></div><div class="ttdeci">mainController()</div><div class="ttdef"><b>Definition:</b> <a href="main_controller_8cpp_source.html#l00005">mainController.cpp:5</a></div></div>
+<div class="ttc" id="aclassmain_controller_html_aeb92d90ad0a440f4d422a4225c1601b6"><div class="ttname"><a href="classmain_controller.html#aeb92d90ad0a440f4d422a4225c1601b6">mainController::resetProgressBar</a></div><div class="ttdeci">void resetProgressBar()</div></div>
+<div class="ttc" id="aclassmain_controller_html_aed94a66b7f933229448374d4828ada42"><div class="ttname"><a href="classmain_controller.html#aed94a66b7f933229448374d4828ada42">mainController::on_abort_all_clicked</a></div><div class="ttdeci">void on_abort_all_clicked()</div><div class="ttdef"><b>Definition:</b> <a href="main_controller_8cpp_source.html#l00033">mainController.cpp:33</a></div></div>
 <div class="ttc" id="amain_controller_8h_html"><div class="ttname"><a href="main_controller_8h.html">mainController.h</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_90d9f2b4df80eae2766d7cbfca3c6953.html">businesslogic</a></li><li class="navelem"><a class="el" href="main_controller_8cpp.html">mainController.cpp</a></li>
+    <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_553aeb687019a45c031da74abc987059.html">controlLayer</a></li><li class="navelem"><a class="el" href="main_controller_8cpp.html">mainController.cpp</a></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.4 </li>
   </ul>
 </div>

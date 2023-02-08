@@ -1,7 +1,6 @@
 var searchData=
 [
-  ['table_5fname_0',['Table_name',['../structtable.html#af689a3d0dad154088d1b7ecb8e96beb7',1,'table']]],
-  ['tablehandler_1',['tableHandler',['../class_idatabase.html#a7768253b18469f33f21f6866bf69ad0c',1,'Idatabase']]],
-  ['tabletosend_2',['TableToSend',['../structtable.html#ae0cab6e1adcd7826bd78b9fbb770ad0f',1,'table']]],
-  ['thickness_3',['thickness',['../structwhs__config__yaml__params.html#a558af77236d45cd2a27305cb91f7b4db',1,'whs_config_yaml_params']]]
+  ['wafer_5fmax_5fspeed_0',['wafer_max_speed',['../structwhs__config__yaml__params.html#aadefc32bb2e5fb567260c0032480cfba',1,'whs_config_yaml_params']]],
+  ['wafer_5fmax_5ftravel_1',['wafer_max_travel',['../structwhs__config__yaml__params.html#a491d887353823d88b7f0bcdcbf1a492c',1,'whs_config_yaml_params']]],
+  ['wafer_5ftravel_2',['wafer_travel',['../structwhs__config__yaml__params.html#af2ab64a09bda37dac59997bf163624cc',1,'whs_config_yaml_params']]]
 ];

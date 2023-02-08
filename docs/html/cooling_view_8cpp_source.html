@@ -99,7 +99,7 @@ $(document).ready(function(){initNavTree('cooling_view_8cpp_source.html',''); in
 <div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span>    ui-&gt;ph_rotation_axis_response-&gt;setStyleSheet(<span class="stringliteral">&quot;QLabel { background-color : red; color : black; }&quot;</span>);</div>
 <div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>    ui-&gt;ph_response_status-&gt;setStyleSheet(<span class="stringliteral">&quot;QLabel { background-color : red; color : black; }&quot;</span>);</div>
 <div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="comment">    /**************** signals and slots ********************/</span></div>
-<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span> </div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="comment">    /************  connect methods           ***********/</span></div>
 <div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>    <span class="comment">// connect cmd button connect axis</span></div>
 <div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>    connect(ui-&gt;connect_motion_axis_ph, &amp;QAbstractButton::pressed, <span class="keyword">this</span>, [<span class="keyword">this</span>]() {</div>
 <div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>        auto connectAxisTask = QtConcurrent::run([this]() {</div>
@@ -124,66 +124,66 @@ $(document).ready(function(){initNavTree('cooling_view_8cpp_source.html',''); in
 <div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>        auto connectPhTask = QtConcurrent::run([this]() {</div>
 <div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>            coolControll.on_connect_ph_clicked();});}, Qt::QueuedConnection);</div>
 <div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>    connect(&amp;coolControll, &amp;<a class="code hl_signal" href="classcooling_controller.html#a44c802a1877bad5df34c988fbdc15f6f">coolingController::phConnected</a>, <span class="keyword">this</span>, [<span class="keyword">this</span>]() {</div>
-<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>        coolControll.updateLabelPh(ui-&gt;cnt_hv_ready);</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>        coolControll.updateLabelPh(ui-&gt;ph_connected_status);</div>
 <div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>    std::cout &lt;&lt; <span class="stringliteral">&quot;main thread id: &quot;</span> &lt;&lt; QThread::currentThreadId() &lt;&lt; std::endl;</div>
 <div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>    <span class="keyword">auto</span> func = QtConcurrent::run(&amp;<a class="code hl_slot" href="classcooling_controller.html#ab94e0e7037d905b8550150343d77bff9">coolingController::updateLcdPhFrequency</a>, &amp;coolControll, ui-&gt;ph_ejet_frequency);</div>
 <div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>        }, Qt::QueuedConnection);</div>
 <div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span> </div>
-<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span> </div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span><span class="comment">/*****************  manual commands section *******************/</span></div>
 <div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>    <span class="comment">// connect enter to send manual cmd to motion axis</span></div>
-<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>    connect(ui-&gt;cnt_input_axis_cmd, &amp;QLineEdit::returnPressed, <span class="keyword">this</span>, [<span class="keyword">this</span>]() {</div>
-<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>        auto inputCmd = ui-&gt;cnt_input_axis_cmd-&gt;text();</div>
-<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>    ui-&gt;cnt_axis_cmd_given-&gt;setText(inputCmd);</div>
-<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>    auto func = QtConcurrent::run( &amp;coolingController::updateLabelAxisResponse, &amp;coolControll,ui-&gt;cnt_axis_response, inputCmd);</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>    connect(ui-&gt;ph_input_axis_cmd, &amp;QLineEdit::returnPressed, <span class="keyword">this</span>, [<span class="keyword">this</span>]() {</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>        auto inputCmd = ui-&gt;ph_input_axis_cmd-&gt;text();</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>    ui-&gt;ph_axis_cmd_given-&gt;setText(inputCmd);</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>    auto func = QtConcurrent::run( &amp;coolingController::updateLabelAxisResponse, &amp;coolControll,ui-&gt;ph_axis_response, inputCmd);</div>
 <div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>        }, Qt::QueuedConnection);</div>
 <div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>    <span class="comment">// connect axis reply to update text</span></div>
 <div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>    connect(&amp;coolControll, &amp;<a class="code hl_signal" href="classcooling_controller.html#ab64314e88ae1e4d79515ac7a1abc0bde">coolingController::axisReplied</a>, <span class="keyword">this</span>, [<span class="keyword">this</span>](std::string reply) {</div>
 <div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>        std::cout &lt;&lt; <span class="stringliteral">&quot;axis full response: &quot;</span> &lt;&lt; reply &lt;&lt; std::endl;</div>
-<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>    ui-&gt;cnt_input_axis_cmd-&gt;setStyleSheet(<span class="stringliteral">&quot;QLabel { background-color : green; color : black; }&quot;</span>);</div>
-<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>    ui-&gt;cnt_input_axis_cmd-&gt;setText(reply.c_str());</div>
-<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>    ui-&gt;cnt_input_axis_cmd-&gt;clear();</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>    ui-&gt;ph_input_axis_cmd-&gt;setStyleSheet(<span class="stringliteral">&quot;QLabel { background-color : green; color : black; }&quot;</span>);</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>    ui-&gt;ph_input_axis_cmd-&gt;setText(reply.c_str());</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>    ui-&gt;ph_input_axis_cmd-&gt;clear();</div>
 <div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>        }, Qt::QueuedConnection);</div>
 <div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span> </div>
 <div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>    <span class="comment">// connect enter to send manual cmd to rotation</span></div>
-<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>    connect(ui-&gt;cnt_input_dispenser, &amp;QLineEdit::returnPressed,<span class="keyword">this</span>, [<span class="keyword">this</span>]() {</div>
-<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>        auto inputCmd = ui-&gt;cnt_input_dispenser-&gt;text();</div>
-<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>    ui-&gt;cnt_dispenser_cmd_given-&gt;setText(inputCmd);</div>
-<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>    auto func = QtConcurrent::run( &amp;coolingController::updateLabelRotResponse, &amp;coolControll,ui-&gt;cnt_dispenser_response, inputCmd);</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>    connect(ui-&gt;ph_input_rotation_cmd, &amp;QLineEdit::returnPressed,<span class="keyword">this</span>, [<span class="keyword">this</span>]() {</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>        auto inputCmd = ui-&gt;ph_input_rotation_cmd-&gt;text();</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>    ui-&gt;ph_rotation_cmd_given-&gt;setText(inputCmd);</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>    auto func = QtConcurrent::run( &amp;coolingController::updateLabelRotResponse, &amp;coolControll,ui-&gt;ph_rotation_axis_response, inputCmd);</div>
 <div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>        }, Qt::QueuedConnection);</div>
 <div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>   <span class="comment">// connect dispenser reply to update text</span></div>
 <div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>    connect(&amp;coolControll, &amp;<a class="code hl_signal" href="classcooling_controller.html#a93201e127370c0b13b8791e8e1b88e08">coolingController::rotaryReplied</a>, <span class="keyword">this</span>, [<span class="keyword">this</span>](std::string reply) {</div>
 <div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>        std::cout &lt;&lt; <span class="stringliteral">&quot;axis full response: &quot;</span> &lt;&lt; reply &lt;&lt; std::endl;</div>
-<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>    ui-&gt;cnt_input_dispenser-&gt;setStyleSheet(<span class="stringliteral">&quot;QLabel { background-color : green; color : black; }&quot;</span>);</div>
-<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>    ui-&gt;cnt_input_dispenser-&gt;setText(reply.c_str());</div>
-<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>    ui-&gt;cnt_input_dispenser-&gt;clear();</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>    ui-&gt;ph_input_rotation_cmd-&gt;setStyleSheet(<span class="stringliteral">&quot;QLabel { background-color : green; color : black; }&quot;</span>);</div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>    ui-&gt;ph_input_rotation_cmd-&gt;setText(reply.c_str());</div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>    ui-&gt;ph_input_rotation_cmd-&gt;clear();</div>
 <div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>        }, Qt::QueuedConnection);</div>
 <div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span> </div>
 <div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>    <span class="comment">// connect enter to send manual cmd to ph</span></div>
-<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>    connect(ui-&gt;cnt_input_hv_cmd, &amp;QLineEdit::returnPressed,<span class="keyword">this</span>, [<span class="keyword">this</span>]() {</div>
-<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>        auto inputCmd = ui-&gt;cnt_input_hv_cmd-&gt;text();</div>
-<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>    ui-&gt;cnt_hv_cmd_given-&gt;setText(inputCmd);</div>
-<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>    auto func = QtConcurrent::run( &amp;coolingController::updateLabelPhResponse, &amp;coolControll,ui-&gt;cnt_hv_response, inputCmd);</div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>    connect(ui-&gt;ph_input_cmd_field, &amp;QLineEdit::returnPressed,<span class="keyword">this</span>, [<span class="keyword">this</span>]() {</div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>        auto inputCmd = ui-&gt;ph_input_cmd_field-&gt;text();</div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>    ui-&gt;ph_given_cmd-&gt;setText(inputCmd);</div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>    auto func = QtConcurrent::run( &amp;coolingController::updateLabelPhResponse, &amp;coolControll,ui-&gt;ph_response_status, inputCmd);</div>
 <div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>        }, Qt::QueuedConnection);</div>
 <div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>   <span class="comment">// connect hv reply to update text</span></div>
 <div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>    connect(&amp;coolControll, &amp;<a class="code hl_signal" href="classcooling_controller.html#a25842d07fde7f168cf2fa3f427865056">coolingController::phReplied</a>, <span class="keyword">this</span>, [<span class="keyword">this</span>](std::string reply) {</div>
 <div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>        std::cout &lt;&lt; <span class="stringliteral">&quot;axis full response: &quot;</span> &lt;&lt; reply &lt;&lt; std::endl;</div>
-<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>    ui-&gt;cnt_input_hv_cmd-&gt;setStyleSheet(<span class="stringliteral">&quot;QLabel { background-color : green; color : black; }&quot;</span>);</div>
-<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>    ui-&gt;cnt_input_hv_cmd-&gt;setText(reply.c_str());</div>
-<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>    ui-&gt;cnt_input_hv_cmd-&gt;clear();</div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>    ui-&gt;ph_input_cmd_field-&gt;setStyleSheet(<span class="stringliteral">&quot;QLabel { background-color : green; color : black; }&quot;</span>);</div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>    ui-&gt;ph_input_cmd_field-&gt;setText(reply.c_str());</div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>    ui-&gt;ph_input_cmd_field-&gt;clear();</div>
 <div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>        }, Qt::QueuedConnection);</div>
 <div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span> </div>
 <div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span><span class="comment">    /***********       Process   *****/</span></div>
 <div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>    <span class="comment">// connect cmd button run process sinking</span></div>
-<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>    connect(ui-&gt;run_cnt_aligning_process, &amp;QAbstractButton::pressed, [<span class="keyword">this</span>]() {</div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>    connect(ui-&gt;run_cooling_process, &amp;QAbstractButton::pressed, [<span class="keyword">this</span>]() {</div>
 <div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>        auto func = QtConcurrent::run([this]() {coolControll.on_run_cooling_process_clicked();});</div>
-<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>    coolControll.updateLabelAxis(ui-&gt;cnt_motion_ready);</div>
-<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>    coolControll.updateLabelRotation(ui-&gt;cnt_dispenser_ready);</div>
-<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>    coolControll.updateLabelPh(ui-&gt;cnt_hv_ready);</div>
-<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>    coolControll.updateLabelProcess(ui-&gt;cnt_proc_finished);</div>
-<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>    coolControll.updateLcdTime(ui-&gt;cnt_proc_tim_lcd);</div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>    coolControll.updateLabelAxis(ui-&gt;ph_motion_ready);</div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>    coolControll.updateLabelRotation(ui-&gt;ph_rotation_ready);</div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>    coolControll.updateLabelPh(ui-&gt;ph_connected_status);</div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>    coolControll.updateLabelProcess(ui-&gt;cooling_proc_status);</div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>    coolControll.updateLcdTime(ui-&gt;cool_time);</div>
 <div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>        });</div>
 <div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>    <span class="comment">// connect cmd button stop process sinking</span></div>
-<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>    connect(ui-&gt;stop_cnt_proc, &amp;QAbstractButton::pressed, [<span class="keyword">this</span>]() {</div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>    connect(ui-&gt;stop_cooling_process, &amp;QAbstractButton::pressed, [<span class="keyword">this</span>]() {</div>
 <div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>        if (coolControll.getProcessStatus())</div>
 <div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span>        {</div>
 <div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>            std::cout &lt;&lt; <span class="stringliteral">&quot;process already finished&quot;</span> &lt;&lt; std::endl;</div>
@@ -244,7 +244,7 @@ $(document).ready(function(){initNavTree('cooling_view_8cpp_source.html',''); in
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_5194e5fea318fda12687127c23f8aba1.html">app</a></li><li class="navelem"><a class="el" href="cooling_view_8cpp.html">coolingView.cpp</a></li>
+    <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_9e8ccc4a7b50647947c687aaf0682f16.html">viewLayer</a></li><li class="navelem"><a class="el" href="cooling_view_8cpp.html">coolingView.cpp</a></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.4 </li>
   </ul>
 </div>

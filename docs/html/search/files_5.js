@@ -13,5 +13,6 @@ var searchData=
   ['idistance_5fsensor_2ecpp_10',['Idistance_sensor.cpp',['../_idistance__sensor_8cpp.html',1,'']]],
   ['idistance_5fsensor_2eh_11',['Idistance_sensor.h',['../_idistance__sensor_8h.html',1,'']]],
   ['iph_5faxis_5fmotion_2ecpp_12',['Iph_axis_motion.cpp',['../_iph__axis__motion_8cpp.html',1,'']]],
-  ['iph_5faxis_5fmotion_2eh_13',['Iph_axis_motion.h',['../_iph__axis__motion_8h.html',1,'']]]
+  ['iph_5faxis_5fmotion_2eh_13',['Iph_axis_motion.h',['../_iph__axis__motion_8h.html',1,'']]],
+  ['iprocess_5fmanager_2eh_14',['Iprocess_manager.h',['../_iprocess__manager_8h.html',1,'']]]
 ];

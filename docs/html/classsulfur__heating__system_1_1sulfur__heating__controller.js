@@ -7,6 +7,8 @@ var classsulfur__heating__system_1_1sulfur__heating__controller =
     [ "getSubSysStatus", "classsulfur__heating__system_1_1sulfur__heating__controller.html#a4c430b81afba7a35ee3d592eff535352", null ],
     [ "getSulfurTemperatur", "classsulfur__heating__system_1_1sulfur__heating__controller.html#ae1c7a28cf334eac4a78beb8874128cc9", null ],
     [ "setSulfurTemperatur", "classsulfur__heating__system_1_1sulfur__heating__controller.html#ab69e77fa56589f950b6258ad5fd8a68c", null ],
+    [ "start_heating_sys", "classsulfur__heating__system_1_1sulfur__heating__controller.html#a4a4437a25d884dcc260c3654dadd5ee9", null ],
+    [ "stop_heating_sys", "classsulfur__heating__system_1_1sulfur__heating__controller.html#a590dc3b5642f10a4a3f22a33b0420260", null ],
     [ "turn_off_heating", "classsulfur__heating__system_1_1sulfur__heating__controller.html#a0272ccf552066751ef958ed184f4d175", null ],
     [ "turn_on_heating", "classsulfur__heating__system_1_1sulfur__heating__controller.html#a6ff25ff1e1d2494a073b85288a5ebbb0", null ]
 ];

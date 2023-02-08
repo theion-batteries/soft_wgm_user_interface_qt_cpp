@@ -1,6 +1,4 @@
 <map id="sinkingController::updateLabelSensor" name="sinkingController::updateLabelSensor">
-<area shape="rect" id="node1" title=" " alt="" coords="5,43,139,84"/>
-<area shape="rect" id="node2" href="$classsinking_controller.html#affc62f4de11ebf2c45cfae76f2b71c47" title=" " alt="" coords="187,43,316,84"/>
-<area shape="rect" id="node3" href="$classwgm__processes_1_1_isinking__process.html#acc0cf72fe5ca2ee7d7723016da15f3f7" title=" " alt="" coords="376,5,544,47"/>
-<area shape="rect" id="node4" href="$classwafer__holder__motion__system_1_1_iwafer__motion__controller.html#a1b03116f70d8a8cb8de0283da77bed58" title=" " alt="" coords="364,71,556,127"/>
+<area shape="rect" id="node1" title=" " alt="" coords="5,5,139,47"/>
+<area shape="rect" id="node2" href="$classsinking_controller.html#affc62f4de11ebf2c45cfae76f2b71c47" title=" " alt="" coords="187,5,316,47"/>
 </map>

@@ -2,7 +2,7 @@ var class_icnt__high__voltage =
 [
     [ "Icnt_high_voltage", "class_icnt__high__voltage.html#a7701ef496255b564a613f94970e4a69a", null ],
     [ "~Icnt_high_voltage", "class_icnt__high__voltage.html#a74aad3b1508dd52b241dc9700418909b", null ],
-    [ "connect", "class_icnt__high__voltage.html#a7bc95c65d32c35caea728dc79ee49a80", null ],
+    [ "connect", "class_icnt__high__voltage.html#a5345ed9ab3b1b05308c51eaa2d060222", null ],
     [ "disconnect", "class_icnt__high__voltage.html#a5c2dea3809b3cebbe470e2830d8887c7", null ],
     [ "get_input_current", "class_icnt__high__voltage.html#a6deeae6e354dbac0b1cf3defa0b8bed4", null ],
     [ "get_input_frequency", "class_icnt__high__voltage.html#a5fdfa8f1465b0b40a985e77791fcca31", null ],

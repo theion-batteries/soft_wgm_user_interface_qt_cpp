@@ -95,9 +95,9 @@ Inheritance diagram for wgm_processes::Iheating_process:</div>
 <div class="dyncontent">
 <div class="center"><img src="classwgm__processes_1_1_iheating__process__inherit__graph.png" border="0" usemap="#awgm__processes_1_1_iheating__process_inherit__map" alt="Inheritance graph"/></div>
 <map name="awgm__processes_1_1_iheating__process_inherit__map" id="awgm__processes_1_1_iheating__process_inherit__map">
-<area shape="rect" title=" " alt="" coords="14,95,183,136"/>
-<area shape="rect" href="classwgm__processes_1_1heating__process.html" title=" " alt="" coords="15,184,182,225"/>
-<area shape="rect" href="classwgm__processes_1_1_iprocesses__managment.html" title="interface process managemnt for user do not modify!" alt="" coords="5,5,192,47"/>
+<area shape="rect" title=" " alt="" coords="7,95,177,136"/>
+<area shape="rect" href="classwgm__processes_1_1heating__process.html" title=" " alt="" coords="9,184,175,225"/>
+<area shape="rect" href="classwgm__processes_1_1_iprocess__manager.html" title="interface process managemnt for user do not modify!" alt="" coords="5,5,179,47"/>
 </map>
 <center><span class="legend">[<a target="top" href="graph_legend.html">legend</a>]</span></center></div>
 <div class="dynheader">
@@ -105,8 +105,8 @@ Collaboration diagram for wgm_processes::Iheating_process:</div>
 <div class="dyncontent">
 <div class="center"><img src="classwgm__processes_1_1_iheating__process__coll__graph.png" border="0" usemap="#awgm__processes_1_1_iheating__process_coll__map" alt="Collaboration graph"/></div>
 <map name="awgm__processes_1_1_iheating__process_coll__map" id="awgm__processes_1_1_iheating__process_coll__map">
-<area shape="rect" title=" " alt="" coords="14,95,183,136"/>
-<area shape="rect" href="classwgm__processes_1_1_iprocesses__managment.html" title="interface process managemnt for user do not modify!" alt="" coords="5,5,192,47"/>
+<area shape="rect" title=" " alt="" coords="7,95,177,136"/>
+<area shape="rect" href="classwgm__processes_1_1_iprocess__manager.html" title="interface process managemnt for user do not modify!" alt="" coords="5,5,179,47"/>
 </map>
 <center><span class="legend">[<a target="top" href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
@@ -116,39 +116,57 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a550a2253546f51988333b9ce531ceb70"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aae6f08424244ac9c2cdfd5b9bfe8d41a"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classwgm__processes_1_1_iheating__process.html#aae6f08424244ac9c2cdfd5b9bfe8d41a">~Iheating_process</a> ()</td></tr>
 <tr class="separator:aae6f08424244ac9c2cdfd5b9bfe8d41a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af0bf314989901e7aaa22b8673fd6dc39"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classwgm__processes_1_1_iheating__process.html#af0bf314989901e7aaa22b8673fd6dc39">start_process</a> ()=0</td></tr>
-<tr class="separator:af0bf314989901e7aaa22b8673fd6dc39"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a422d2faaee6b31101f030a73183a49e9"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classwgm__processes_1_1_iheating__process.html#a422d2faaee6b31101f030a73183a49e9">stop_process</a> ()=0</td></tr>
-<tr class="separator:a422d2faaee6b31101f030a73183a49e9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac01f431a8e4d7de76bd0992565a083b3"><td class="memItemLeft" align="right" valign="top">virtual wgm_feedbacks::enum_proc_feedback&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classwgm__processes_1_1_iheating__process.html#ac01f431a8e4d7de76bd0992565a083b3">start_process</a> ()=0</td></tr>
+<tr class="separator:ac01f431a8e4d7de76bd0992565a083b3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adafd3236a277a961bcacefd5cc700a4d"><td class="memItemLeft" align="right" valign="top">virtual wgm_feedbacks::enum_proc_feedback&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classwgm__processes_1_1_iheating__process.html#adafd3236a277a961bcacefd5cc700a4d">stop_process</a> ()=0</td></tr>
+<tr class="separator:adafd3236a277a961bcacefd5cc700a4d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adbe9d55a4129e99e0037b902a6633bb4"><td class="memItemLeft" align="right" valign="top">virtual std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classwgm__processes_1_1_iheating__process.html#adbe9d55a4129e99e0037b902a6633bb4">get_name</a> ()=0</td></tr>
 <tr class="separator:adbe9d55a4129e99e0037b902a6633bb4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af87539aa0fb363688e9d383ed36f08fc"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classwgm__processes_1_1_iheating__process.html#af87539aa0fb363688e9d383ed36f08fc">is_proc_success</a> ()=0</td></tr>
 <tr class="separator:af87539aa0fb363688e9d383ed36f08fc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a39bba87b580b54add62906d9242b0244"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classwgm__processes_1_1_iheating__process.html#a39bba87b580b54add62906d9242b0244">get_id</a> ()=0</td></tr>
+<tr class="separator:a39bba87b580b54add62906d9242b0244"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a02d17cb32397fa389389bf65a9e18b9c"><td class="memItemLeft" align="right" valign="top">virtual long long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classwgm__processes_1_1_iheating__process.html#a02d17cb32397fa389389bf65a9e18b9c">get_elapsed_time</a> ()=0</td></tr>
 <tr class="separator:a02d17cb32397fa389389bf65a9e18b9c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2610c08705356ea10a2c710d1a59ef91"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classsulfur__heating__system_1_1_isulfur__heating__controller.html">sulfur_heating_system::Isulfur_heating_controller</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classwgm__processes_1_1_iheating__process.html#a2610c08705356ea10a2c710d1a59ef91">get_sys_ptr</a> ()=0</td></tr>
 <tr class="separator:a2610c08705356ea10a2c710d1a59ef91"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="inherit_header pub_methods_classwgm__processes_1_1_iprocesses__managment"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classwgm__processes_1_1_iprocesses__managment')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="classwgm__processes_1_1_iprocesses__managment.html">wgm_processes::Iprocess_manager</a></td></tr>
-<tr class="memitem:a1e12a75939a38e0279bf27046ebd24a7 inherit pub_methods_classwgm__processes_1_1_iprocesses__managment"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classwgm__processes_1_1_iprocesses__managment.html#a1e12a75939a38e0279bf27046ebd24a7">Iprocess_manager</a> ()</td></tr>
-<tr class="separator:a1e12a75939a38e0279bf27046ebd24a7 inherit pub_methods_classwgm__processes_1_1_iprocesses__managment"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8192eb0f5674c1881accf41dc5c5f4c7 inherit pub_methods_classwgm__processes_1_1_iprocesses__managment"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classwgm__processes_1_1_iprocesses__managment.html#a8192eb0f5674c1881accf41dc5c5f4c7">start_process</a> ()=0</td></tr>
-<tr class="separator:a8192eb0f5674c1881accf41dc5c5f4c7 inherit pub_methods_classwgm__processes_1_1_iprocesses__managment"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:acb0c16f381eb8c4beee172e72c03bd56 inherit pub_methods_classwgm__processes_1_1_iprocesses__managment"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classwgm__processes_1_1_iprocesses__managment.html#acb0c16f381eb8c4beee172e72c03bd56">stop_process</a> ()=0</td></tr>
-<tr class="separator:acb0c16f381eb8c4beee172e72c03bd56 inherit pub_methods_classwgm__processes_1_1_iprocesses__managment"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abdc7a6bc5139e736b2564b616dd0a55c inherit pub_methods_classwgm__processes_1_1_iprocesses__managment"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classwgm__processes_1_1_iprocesses__managment.html#abdc7a6bc5139e736b2564b616dd0a55c">add_process_to_scheduler</a> (<a class="el" href="classwgm__processes_1_1_iprocesses__managment.html">Iprocess_manager</a> *process)</td></tr>
-<tr class="separator:abdc7a6bc5139e736b2564b616dd0a55c inherit pub_methods_classwgm__processes_1_1_iprocesses__managment"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a06b91e528f143140794e46c0603886d8 inherit pub_methods_classwgm__processes_1_1_iprocesses__managment"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classwgm__processes_1_1_iprocesses__managment.html#a06b91e528f143140794e46c0603886d8">delete_last_process_from_scheduler</a> ()</td></tr>
-<tr class="separator:a06b91e528f143140794e46c0603886d8 inherit pub_methods_classwgm__processes_1_1_iprocesses__managment"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8af9ebff2a2c5526d2d4bec88fcfc118 inherit pub_methods_classwgm__processes_1_1_iprocesses__managment"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classwgm__processes_1_1_iprocesses__managment.html#a8af9ebff2a2c5526d2d4bec88fcfc118">stop_all</a> ()</td></tr>
-<tr class="separator:a8af9ebff2a2c5526d2d4bec88fcfc118 inherit pub_methods_classwgm__processes_1_1_iprocesses__managment"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad5a0ff20637a307d40a0a8e0b9b06c9f inherit pub_methods_classwgm__processes_1_1_iprocesses__managment"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classwgm__processes_1_1_iprocesses__managment.html#ad5a0ff20637a307d40a0a8e0b9b06c9f">start_all</a> ()</td></tr>
-<tr class="separator:ad5a0ff20637a307d40a0a8e0b9b06c9f inherit pub_methods_classwgm__processes_1_1_iprocesses__managment"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abe0e18ac8c47e496bb6de11df39b0117 inherit pub_methods_classwgm__processes_1_1_iprocesses__managment"><td class="memItemLeft" align="right" valign="top">virtual std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classwgm__processes_1_1_iprocesses__managment.html#abe0e18ac8c47e496bb6de11df39b0117">get_name</a> ()=0</td></tr>
-<tr class="separator:abe0e18ac8c47e496bb6de11df39b0117 inherit pub_methods_classwgm__processes_1_1_iprocesses__managment"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a65d124c3c28e74f11311269545796c4b inherit pub_methods_classwgm__processes_1_1_iprocesses__managment"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classwgm__processes_1_1_iprocesses__managment.html#a65d124c3c28e74f11311269545796c4b">is_proc_success</a> ()=0</td></tr>
-<tr class="separator:a65d124c3c28e74f11311269545796c4b inherit pub_methods_classwgm__processes_1_1_iprocesses__managment"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3f0bef20a611e53c6300e46c15cefea8 inherit pub_methods_classwgm__processes_1_1_iprocesses__managment"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classwgm__processes_1_1_iprocesses__managment.html#a3f0bef20a611e53c6300e46c15cefea8">~Iprocess_manager</a> ()</td></tr>
-<tr class="separator:a3f0bef20a611e53c6300e46c15cefea8 inherit pub_methods_classwgm__processes_1_1_iprocesses__managment"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_methods_classwgm__processes_1_1_iprocess__manager"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classwgm__processes_1_1_iprocess__manager')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="classwgm__processes_1_1_iprocess__manager.html">wgm_processes::Iprocess_manager</a></td></tr>
+<tr class="memitem:aa6a78b2e2a9bf305569295a54d7001e0 inherit pub_methods_classwgm__processes_1_1_iprocess__manager"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classwgm__processes_1_1_iprocess__manager.html#aa6a78b2e2a9bf305569295a54d7001e0">Iprocess_manager</a> ()</td></tr>
+<tr class="separator:aa6a78b2e2a9bf305569295a54d7001e0 inherit pub_methods_classwgm__processes_1_1_iprocess__manager"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a52e0f878dcdc0a4283be86825549b201 inherit pub_methods_classwgm__processes_1_1_iprocess__manager"><td class="memItemLeft" align="right" valign="top">virtual wgm_feedbacks::enum_proc_feedback&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classwgm__processes_1_1_iprocess__manager.html#a52e0f878dcdc0a4283be86825549b201">start_process</a> ()=0</td></tr>
+<tr class="separator:a52e0f878dcdc0a4283be86825549b201 inherit pub_methods_classwgm__processes_1_1_iprocess__manager"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3ceb2e27bab62427b24392ae2fd79c67 inherit pub_methods_classwgm__processes_1_1_iprocess__manager"><td class="memItemLeft" align="right" valign="top">virtual wgm_feedbacks::enum_proc_feedback&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classwgm__processes_1_1_iprocess__manager.html#a3ceb2e27bab62427b24392ae2fd79c67">stop_process</a> ()=0</td></tr>
+<tr class="separator:a3ceb2e27bab62427b24392ae2fd79c67 inherit pub_methods_classwgm__processes_1_1_iprocess__manager"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab77a1f720bb66cb9743b1e76dfb243c5 inherit pub_methods_classwgm__processes_1_1_iprocess__manager"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classwgm__processes_1_1_iprocess__manager.html#ab77a1f720bb66cb9743b1e76dfb243c5">start_process</a> (<a class="el" href="classwgm__processes_1_1_iprocess__manager.html">Iprocess_manager</a> *process)</td></tr>
+<tr class="separator:ab77a1f720bb66cb9743b1e76dfb243c5 inherit pub_methods_classwgm__processes_1_1_iprocess__manager"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aae8cb91f7b6d91651ded0c9fba61b192 inherit pub_methods_classwgm__processes_1_1_iprocess__manager"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classwgm__processes_1_1_iprocess__manager.html#aae8cb91f7b6d91651ded0c9fba61b192">stop_process</a> (<a class="el" href="classwgm__processes_1_1_iprocess__manager.html">Iprocess_manager</a> *process)</td></tr>
+<tr class="separator:aae8cb91f7b6d91651ded0c9fba61b192 inherit pub_methods_classwgm__processes_1_1_iprocess__manager"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af034a19e30781682219789f124e8b1df inherit pub_methods_classwgm__processes_1_1_iprocess__manager"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classwgm__processes_1_1_iprocess__manager.html#af034a19e30781682219789f124e8b1df">start_process</a> (std::string processName)</td></tr>
+<tr class="separator:af034a19e30781682219789f124e8b1df inherit pub_methods_classwgm__processes_1_1_iprocess__manager"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac54f8a75aa36ce2f03beb9f8008d19d6 inherit pub_methods_classwgm__processes_1_1_iprocess__manager"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classwgm__processes_1_1_iprocess__manager.html#ac54f8a75aa36ce2f03beb9f8008d19d6">stop_process</a> (std::string processName)</td></tr>
+<tr class="separator:ac54f8a75aa36ce2f03beb9f8008d19d6 inherit pub_methods_classwgm__processes_1_1_iprocess__manager"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a24742be8758b588da992ef947cee0101 inherit pub_methods_classwgm__processes_1_1_iprocess__manager"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classwgm__processes_1_1_iprocess__manager.html#a24742be8758b588da992ef947cee0101">start_process</a> (int processID)</td></tr>
+<tr class="separator:a24742be8758b588da992ef947cee0101 inherit pub_methods_classwgm__processes_1_1_iprocess__manager"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4725c8d87af2468379740cffcf0f9fd8 inherit pub_methods_classwgm__processes_1_1_iprocess__manager"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classwgm__processes_1_1_iprocess__manager.html#a4725c8d87af2468379740cffcf0f9fd8">stop_process</a> (int processID)</td></tr>
+<tr class="separator:a4725c8d87af2468379740cffcf0f9fd8 inherit pub_methods_classwgm__processes_1_1_iprocess__manager"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7f9f42b1c7b358bdea082a3377d709d8 inherit pub_methods_classwgm__processes_1_1_iprocess__manager"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classwgm__processes_1_1_iprocess__manager.html#a7f9f42b1c7b358bdea082a3377d709d8">add_process_to_scheduler</a> (<a class="el" href="classwgm__processes_1_1_iprocess__manager.html">Iprocess_manager</a> *process)</td></tr>
+<tr class="separator:a7f9f42b1c7b358bdea082a3377d709d8 inherit pub_methods_classwgm__processes_1_1_iprocess__manager"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9146c4444d4b14be5db47ab24e3f7fb4 inherit pub_methods_classwgm__processes_1_1_iprocess__manager"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classwgm__processes_1_1_iprocess__manager.html#a9146c4444d4b14be5db47ab24e3f7fb4">delete_last_process_from_scheduler</a> ()</td></tr>
+<tr class="separator:a9146c4444d4b14be5db47ab24e3f7fb4 inherit pub_methods_classwgm__processes_1_1_iprocess__manager"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a68523f25cdc5915862e7ccfc3e2011e1 inherit pub_methods_classwgm__processes_1_1_iprocess__manager"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classwgm__processes_1_1_iprocess__manager.html#a68523f25cdc5915862e7ccfc3e2011e1">stop_all</a> ()</td></tr>
+<tr class="separator:a68523f25cdc5915862e7ccfc3e2011e1 inherit pub_methods_classwgm__processes_1_1_iprocess__manager"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9a72b64154d1db0b33a47fd77c6e3f44 inherit pub_methods_classwgm__processes_1_1_iprocess__manager"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classwgm__processes_1_1_iprocess__manager.html#a9a72b64154d1db0b33a47fd77c6e3f44">start_all</a> (std::function&lt; void(int)&gt; callback)</td></tr>
+<tr class="separator:a9a72b64154d1db0b33a47fd77c6e3f44 inherit pub_methods_classwgm__processes_1_1_iprocess__manager"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a49610f9349e76bb656a778aa14844be7 inherit pub_methods_classwgm__processes_1_1_iprocess__manager"><td class="memItemLeft" align="right" valign="top">virtual std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classwgm__processes_1_1_iprocess__manager.html#a49610f9349e76bb656a778aa14844be7">get_name</a> ()=0</td></tr>
+<tr class="separator:a49610f9349e76bb656a778aa14844be7 inherit pub_methods_classwgm__processes_1_1_iprocess__manager"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9ab2f59a18f2871935e54be77a46fe68 inherit pub_methods_classwgm__processes_1_1_iprocess__manager"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classwgm__processes_1_1_iprocess__manager.html#a9ab2f59a18f2871935e54be77a46fe68">get_id</a> ()=0</td></tr>
+<tr class="separator:a9ab2f59a18f2871935e54be77a46fe68 inherit pub_methods_classwgm__processes_1_1_iprocess__manager"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0d8023b85fcab502ec7cbfc14e7c2ef7 inherit pub_methods_classwgm__processes_1_1_iprocess__manager"><td class="memItemLeft" align="right" valign="top">virtual long long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classwgm__processes_1_1_iprocess__manager.html#a0d8023b85fcab502ec7cbfc14e7c2ef7">get_elapsed_time</a> ()=0</td></tr>
+<tr class="separator:a0d8023b85fcab502ec7cbfc14e7c2ef7 inherit pub_methods_classwgm__processes_1_1_iprocess__manager"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af18410cf7ae7f3f067a1d9050798bf1a inherit pub_methods_classwgm__processes_1_1_iprocess__manager"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classwgm__processes_1_1_iprocess__manager.html#af18410cf7ae7f3f067a1d9050798bf1a">is_proc_success</a> ()=0</td></tr>
+<tr class="separator:af18410cf7ae7f3f067a1d9050798bf1a inherit pub_methods_classwgm__processes_1_1_iprocess__manager"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adbfe32a163bac0de7fda13c63024a469 inherit pub_methods_classwgm__processes_1_1_iprocess__manager"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classwgm__processes_1_1_iprocess__manager.html#adbfe32a163bac0de7fda13c63024a469">~Iprocess_manager</a> ()</td></tr>
+<tr class="separator:adbfe32a163bac0de7fda13c63024a469 inherit pub_methods_classwgm__processes_1_1_iprocess__manager"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock">
@@ -196,7 +214,7 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="heating__process_8cpp_source.html#l00019">19</a> of file <a class="el" href="heating__process_8cpp_source.html">heating_process.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="heating__process_8cpp_source.html#l00016">16</a> of file <a class="el" href="heating__process_8cpp_source.html">heating_process.cpp</a>.</p>
 
 </div>
 </div>
@@ -224,17 +242,38 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Implements <a class="el" href="classwgm__processes_1_1_iprocess__manager.html#a0d8023b85fcab502ec7cbfc14e7c2ef7">wgm_processes::Iprocess_manager</a>.</p>
+
 <p>Implemented in <a class="el" href="classwgm__processes_1_1heating__process.html#aeced3742d1ac9d7742dcb04bfa03d66a">wgm_processes::heating_process</a>.</p>
-<div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="classwgm__processes_1_1_iheating__process_a02d17cb32397fa389389bf65a9e18b9c_icgraph.png" border="0" usemap="#aclasswgm__processes_1_1_iheating__process_a02d17cb32397fa389389bf65a9e18b9c_icgraph" alt=""/></div>
-<map name="aclasswgm__processes_1_1_iheating__process_a02d17cb32397fa389389bf65a9e18b9c_icgraph" id="aclasswgm__processes_1_1_iheating__process_a02d17cb32397fa389389bf65a9e18b9c_icgraph">
-<area shape="rect" title=" " alt="" coords="216,53,401,94"/>
-<area shape="rect" href="classheating_controller.html#a997f7e9fbde054543def7f7cf4e6717c" title=" " alt="" coords="5,5,168,61"/>
-<area shape="rect" href="classheating_controller.html#a2cb3cd277bdec5d1bf07ffcd8c66e699" title=" " alt="" coords="12,85,161,141"/>
-</map>
+
 </div>
+</div>
+<a id="a39bba87b580b54add62906d9242b0244" name="a39bba87b580b54add62906d9242b0244"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a39bba87b580b54add62906d9242b0244">&#9670;&nbsp;</a></span>get_id()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual int wgm_processes::Iheating_process::get_id </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Implements <a class="el" href="classwgm__processes_1_1_iprocess__manager.html#a9ab2f59a18f2871935e54be77a46fe68">wgm_processes::Iprocess_manager</a>.</p>
+
+<p>Implemented in <a class="el" href="classwgm__processes_1_1heating__process.html#a7736ac42a895764ec5da5de345a82e40">wgm_processes::heating_process</a>.</p>
 
 </div>
 </div>
@@ -261,7 +300,7 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p>Implements <a class="el" href="classwgm__processes_1_1_iprocesses__managment.html#abe0e18ac8c47e496bb6de11df39b0117">wgm_processes::Iprocess_manager</a>.</p>
+<p>Implements <a class="el" href="classwgm__processes_1_1_iprocess__manager.html#a49610f9349e76bb656a778aa14844be7">wgm_processes::Iprocess_manager</a>.</p>
 
 <p>Implemented in <a class="el" href="classwgm__processes_1_1heating__process.html#adf5dbb1397ef149a21cf58884a213785">wgm_processes::heating_process</a>.</p>
 
@@ -291,25 +330,6 @@ Here is the caller graph for this function:</div>
 </div><div class="memdoc">
 
 <p>Implemented in <a class="el" href="classwgm__processes_1_1heating__process.html#a5e72aca4cfedb7b52c43cd18bc633a17">wgm_processes::heating_process</a>.</p>
-<div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="classwgm__processes_1_1_iheating__process_a2610c08705356ea10a2c710d1a59ef91_icgraph.png" border="0" usemap="#aclasswgm__processes_1_1_iheating__process_a2610c08705356ea10a2c710d1a59ef91_icgraph" alt=""/></div>
-<map name="aclasswgm__processes_1_1_iheating__process_a2610c08705356ea10a2c710d1a59ef91_icgraph" id="aclasswgm__processes_1_1_iheating__process_a2610c08705356ea10a2c710d1a59ef91_icgraph">
-<area shape="rect" title=" " alt="" coords="460,353,629,395"/>
-<area shape="rect" href="classheating_controller.html#a35bc4b22308722e7202566ce5dd67730" title=" " alt="" coords="261,232,393,273"/>
-<area shape="rect" href="classheating_controller.html#ac11b048e22d708d4918f42b4dd928789" title=" " alt="" coords="16,5,183,47"/>
-<area shape="rect" href="classheating_controller.html#ace40642c12306003fbe881c967a2b1df" title=" " alt="" coords="17,297,182,339"/>
-<area shape="rect" href="classheating_controller.html#a3e82e0388dfa96d2152f01ae25668bbe" title=" " alt="" coords="245,419,409,475"/>
-<area shape="rect" href="classheating_controller.html#a93766a4a66db236a3084f2c4a7710136" title=" " alt="" coords="241,500,412,541"/>
-<area shape="rect" href="classheating_controller.html#a5841413530f190dce55eb449e1f5526c" title=" " alt="" coords="263,353,390,395"/>
-<area shape="rect" href="classheating_controller.html#ae0fcfb4714f85496cd7e1a257882c7d7" title=" " alt="" coords="249,565,404,607"/>
-<area shape="rect" href="classheating_controller.html#a997f7e9fbde054543def7f7cf4e6717c" title=" " alt="" coords="18,71,181,127"/>
-<area shape="rect" href="classheating_controller.html#a2cb3cd277bdec5d1bf07ffcd8c66e699" title=" " alt="" coords="25,151,174,207"/>
-<area shape="rect" href="classheating_controller.html#a225bc98d2e5725ae2700a248ff3fa0ba" title=" " alt="" coords="34,232,165,273"/>
-<area shape="rect" href="classheating_controller.html#a29baaea8e0b3a3afd3e697589b9e9825" title=" " alt="" coords="5,363,193,404"/>
-</map>
-</div>
 
 </div>
 </div>
@@ -336,24 +356,14 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p>Implements <a class="el" href="classwgm__processes_1_1_iprocesses__managment.html#a65d124c3c28e74f11311269545796c4b">wgm_processes::Iprocess_manager</a>.</p>
+<p>Implements <a class="el" href="classwgm__processes_1_1_iprocess__manager.html#af18410cf7ae7f3f067a1d9050798bf1a">wgm_processes::Iprocess_manager</a>.</p>
 
 <p>Implemented in <a class="el" href="classwgm__processes_1_1heating__process.html#a562766a73d5ab75d6d5fbf33978803f5">wgm_processes::heating_process</a>.</p>
-<div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="classwgm__processes_1_1_iheating__process_af87539aa0fb363688e9d383ed36f08fc_icgraph.png" border="0" usemap="#aclasswgm__processes_1_1_iheating__process_af87539aa0fb363688e9d383ed36f08fc_icgraph" alt=""/></div>
-<map name="aclasswgm__processes_1_1_iheating__process_af87539aa0fb363688e9d383ed36f08fc_icgraph" id="aclasswgm__processes_1_1_iheating__process_af87539aa0fb363688e9d383ed36f08fc_icgraph">
-<area shape="rect" title=" " alt="" coords="368,5,549,47"/>
-<area shape="rect" href="classheating_controller.html#aa5c172fef37658daf7d53a81aae3def3" title=" " alt="" coords="193,5,320,47"/>
-<area shape="rect" href="classheating_controller.html#acb8c8dadb3bdd9e8bad406e6708408e0" title=" " alt="" coords="5,5,145,47"/>
-</map>
-</div>
 
 </div>
 </div>
-<a id="af0bf314989901e7aaa22b8673fd6dc39" name="af0bf314989901e7aaa22b8673fd6dc39"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af0bf314989901e7aaa22b8673fd6dc39">&#9670;&nbsp;</a></span>start_process()</h2>
+<a id="ac01f431a8e4d7de76bd0992565a083b3" name="ac01f431a8e4d7de76bd0992565a083b3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac01f431a8e4d7de76bd0992565a083b3">&#9670;&nbsp;</a></span>start_process()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -362,7 +372,7 @@ Here is the caller graph for this function:</div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">virtual void wgm_processes::Iheating_process::start_process </td>
+          <td class="memname">virtual wgm_feedbacks::enum_proc_feedback wgm_processes::Iheating_process::start_process </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -375,23 +385,14 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p>Implements <a class="el" href="classwgm__processes_1_1_iprocesses__managment.html#a8192eb0f5674c1881accf41dc5c5f4c7">wgm_processes::Iprocess_manager</a>.</p>
+<p>Implements <a class="el" href="classwgm__processes_1_1_iprocess__manager.html#a52e0f878dcdc0a4283be86825549b201">wgm_processes::Iprocess_manager</a>.</p>
 
-<p>Implemented in <a class="el" href="classwgm__processes_1_1heating__process.html#a88306a8c8575737c36b0304a5a81ef9b">wgm_processes::heating_process</a>.</p>
-<div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="classwgm__processes_1_1_iheating__process_af0bf314989901e7aaa22b8673fd6dc39_icgraph.png" border="0" usemap="#aclasswgm__processes_1_1_iheating__process_af0bf314989901e7aaa22b8673fd6dc39_icgraph" alt=""/></div>
-<map name="aclasswgm__processes_1_1_iheating__process_af0bf314989901e7aaa22b8673fd6dc39_icgraph" id="aclasswgm__processes_1_1_iheating__process_af0bf314989901e7aaa22b8673fd6dc39_icgraph">
-<area shape="rect" title=" " alt="" coords="216,13,385,54"/>
-<area shape="rect" href="classheating_controller.html#a997f7e9fbde054543def7f7cf4e6717c" title=" " alt="" coords="5,5,168,61"/>
-</map>
-</div>
+<p>Implemented in <a class="el" href="classwgm__processes_1_1heating__process.html#aae84fbfa2b0d1b655d7f3e4fd97ccc1d">wgm_processes::heating_process</a>.</p>
 
 </div>
 </div>
-<a id="a422d2faaee6b31101f030a73183a49e9" name="a422d2faaee6b31101f030a73183a49e9"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a422d2faaee6b31101f030a73183a49e9">&#9670;&nbsp;</a></span>stop_process()</h2>
+<a id="adafd3236a277a961bcacefd5cc700a4d" name="adafd3236a277a961bcacefd5cc700a4d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adafd3236a277a961bcacefd5cc700a4d">&#9670;&nbsp;</a></span>stop_process()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -400,7 +401,7 @@ Here is the caller graph for this function:</div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">virtual void wgm_processes::Iheating_process::stop_process </td>
+          <td class="memname">virtual wgm_feedbacks::enum_proc_feedback wgm_processes::Iheating_process::stop_process </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -413,18 +414,9 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p>Implements <a class="el" href="classwgm__processes_1_1_iprocesses__managment.html#acb0c16f381eb8c4beee172e72c03bd56">wgm_processes::Iprocess_manager</a>.</p>
+<p>Implements <a class="el" href="classwgm__processes_1_1_iprocess__manager.html#a3ceb2e27bab62427b24392ae2fd79c67">wgm_processes::Iprocess_manager</a>.</p>
 
-<p>Implemented in <a class="el" href="classwgm__processes_1_1heating__process.html#aa71dd6dbc6f54a60d4138d35e2f5e2b3">wgm_processes::heating_process</a>.</p>
-<div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="classwgm__processes_1_1_iheating__process_a422d2faaee6b31101f030a73183a49e9_icgraph.png" border="0" usemap="#aclasswgm__processes_1_1_iheating__process_a422d2faaee6b31101f030a73183a49e9_icgraph" alt=""/></div>
-<map name="aclasswgm__processes_1_1_iheating__process_a422d2faaee6b31101f030a73183a49e9_icgraph" id="aclasswgm__processes_1_1_iheating__process_a422d2faaee6b31101f030a73183a49e9_icgraph">
-<area shape="rect" title=" " alt="" coords="203,13,372,54"/>
-<area shape="rect" href="classheating_controller.html#a2cb3cd277bdec5d1bf07ffcd8c66e699" title=" " alt="" coords="5,5,155,61"/>
-</map>
-</div>
+<p>Implemented in <a class="el" href="classwgm__processes_1_1heating__process.html#a86bfb3585c879a47063141cae25e12d3">wgm_processes::heating_process</a>.</p>
 
 </div>
 </div>

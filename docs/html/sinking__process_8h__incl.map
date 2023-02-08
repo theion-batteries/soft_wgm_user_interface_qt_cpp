@@ -1,7 +1,9 @@
 <map id="sinking_process.h" name="sinking_process.h">
-<area shape="rect" id="node1" title=" " alt="" coords="86,5,213,32"/>
-<area shape="rect" id="node2" href="$process__manager_8h.html" title="process management package" alt="" coords="81,80,217,107"/>
+<area shape="rect" id="node1" title=" " alt="" coords="243,5,370,32"/>
+<area shape="rect" id="node2" href="$_iprocess__manager_8h.html" title=" " alt="" coords="237,80,376,107"/>
 <area shape="rect" id="node3" title=" " alt="" coords="5,155,61,181"/>
 <area shape="rect" id="node4" title=" " alt="" coords="86,155,213,181"/>
 <area shape="rect" id="node5" title=" " alt="" coords="237,155,376,181"/>
+<area shape="rect" id="node6" title=" " alt="" coords="400,155,475,181"/>
+<area shape="rect" id="node7" title=" " alt="" coords="499,155,576,181"/>
 </map>

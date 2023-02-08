@@ -1,16 +1,20 @@
 <map id="hardware_feedback.h" name="hardware_feedback.h">
-<area shape="rect" id="node1" title=" " alt="" coords="249,5,393,32"/>
-<area shape="rect" id="node2" href="$soft__cnt__system__submodule__cpp_2includes_2subsystem__feedback_8h.html" title=" " alt="" coords="243,80,399,107"/>
+<area shape="rect" id="node1" title=" " alt="" coords="433,5,577,32"/>
+<area shape="rect" id="node2" href="$soft__cnt__system__submodule__cpp_2includes_2subsystem__feedback_8h.html" title=" " alt="" coords="427,80,583,107"/>
 <area shape="rect" id="node3" href="$_icnt__axis__motion_8h.html" title=" " alt="" coords="177,155,307,181"/>
-<area shape="rect" id="node11" href="$_icnt__dispenser_8h.html" title=" " alt="" coords="341,155,458,181"/>
+<area shape="rect" id="node11" href="$_icnt__dispenser_8h.html" title=" " alt="" coords="446,155,563,181"/>
+<area shape="rect" id="node15" href="$_icnt__high__voltage_8h.html" title=" " alt="" coords="693,155,825,181"/>
 <area shape="rect" id="node4" href="$_icnt__axis__motion_8cpp.html" title=" " alt="" coords="5,229,151,256"/>
 <area shape="rect" id="node5" href="$cnt__linear__motion_8h.html" title="this class is usefull if the cnt_linear_motion is interfaced seperatly" alt="" coords="175,229,309,256"/>
-<area shape="rect" id="node6" href="$cnt__controller_8h.html" title=" " alt="" coords="344,304,455,331"/>
-<area shape="rect" id="node10" href="$cnt__linear__motion_8cpp.html" title=" " alt="" coords="167,304,317,331"/>
-<area shape="rect" id="node7" href="$cnt__alignment__system_8h.html" title="cnt alignment system package" alt="" coords="232,379,396,405"/>
-<area shape="rect" id="node9" href="$cnt__controller_8cpp.html" title=" " alt="" coords="421,379,546,405"/>
-<area shape="rect" id="node8" href="$cnt__alignment__system_8cpp.html" title="cnt alignment system package" alt="" coords="225,453,403,480"/>
-<area shape="rect" id="node12" href="$_icnt__dispenser_8cpp.html" title=" " alt="" coords="334,229,465,256"/>
-<area shape="rect" id="node13" href="$cnt__dispenser__vibration_8h.html" title=" " alt="" coords="489,229,657,256"/>
-<area shape="rect" id="node14" href="$cnt__dispenser__vibration_8cpp.html" title=" " alt="" coords="481,304,664,331"/>
+<area shape="rect" id="node6" href="$cnt__controller_8h.html" title=" " alt="" coords="337,304,448,331"/>
+<area shape="rect" id="node10" href="$cnt__linear__motion_8cpp.html" title=" " alt="" coords="163,304,313,331"/>
+<area shape="rect" id="node7" href="$cnt__alignment__system_8h.html" title="cnt alignment system package" alt="" coords="225,379,389,405"/>
+<area shape="rect" id="node9" href="$cnt__controller_8cpp.html" title=" " alt="" coords="414,379,539,405"/>
+<area shape="rect" id="node8" href="$cnt__alignment__system_8cpp.html" title="cnt alignment system package" alt="" coords="218,453,397,480"/>
+<area shape="rect" id="node12" href="$_icnt__dispenser_8cpp.html" title=" " alt="" coords="526,229,657,256"/>
+<area shape="rect" id="node13" href="$cnt__dispenser__vibration_8h.html" title=" " alt="" coords="334,229,502,256"/>
+<area shape="rect" id="node14" href="$cnt__dispenser__vibration_8cpp.html" title=" " alt="" coords="472,304,655,331"/>
+<area shape="rect" id="node16" href="$_icnt__high__voltage_8cpp.html" title=" " alt="" coords="862,229,1009,256"/>
+<area shape="rect" id="node17" href="$cnt__high__voltage__gbs_8h.html" title=" " alt="" coords="681,229,838,256"/>
+<area shape="rect" id="node18" href="$cnt__high__voltage__gbs_8cpp.html" title=" " alt="" coords="679,304,850,331"/>
 </map>

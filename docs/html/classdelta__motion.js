@@ -9,7 +9,7 @@ var classdelta__motion =
     [ "getStatus", "classdelta__motion.html#a67d7970ca36f0c28cb36bc4769bbde74", null ],
     [ "move_down_by", "classdelta__motion.html#ac17da1e40c25feb4630f271763e9215a", null ],
     [ "move_down_to", "classdelta__motion.html#ae2cce264807b5f66367def38a760cee9", null ],
-    [ "move_home", "classdelta__motion.html#ae25463e72b414777494cdb7e179a5631", null ],
+    [ "move_home", "classdelta__motion.html#abd9077d09ebc3849166c5fe85af523c7", null ],
     [ "move_to", "classdelta__motion.html#aadf9eb6f3f698bc9b14f0ec8a4cf85b7", null ],
     [ "move_up_by", "classdelta__motion.html#a5f4b4f872be812f97df8fe06498805cc", null ],
     [ "move_up_to", "classdelta__motion.html#ad1f6ec59724437b1e9057b35232294e3", null ],

@@ -7,6 +7,6 @@ var classwafer__cooling__system_1_1_icooling__controller =
     [ "connect_rotation_axis", "classwafer__cooling__system_1_1_icooling__controller.html#ada239bb248befda1ff996d02ec45cc2b", null ],
     [ "getSubSysController", "classwafer__cooling__system_1_1_icooling__controller.html#ab6160f8c29396c6110e1eb5c89eda359", null ],
     [ "getSubSysStatus", "classwafer__cooling__system_1_1_icooling__controller.html#aee0efaad7862acaa986b9bc7454dac4e", null ],
-    [ "start_cooling", "classwafer__cooling__system_1_1_icooling__controller.html#a00fd6adae9178072b5c15efab21e0ae5", null ],
-    [ "stop_cooling", "classwafer__cooling__system_1_1_icooling__controller.html#a24f708b9240f91f1159b1df36bf4d2e1", null ]
+    [ "start_cooling", "classwafer__cooling__system_1_1_icooling__controller.html#a069c376a5c4ebd88019f3b7714bcaee1", null ],
+    [ "stop_cooling", "classwafer__cooling__system_1_1_icooling__controller.html#abf0a16b2664ccf6fcd8563a5d09f4d53", null ]
 ];

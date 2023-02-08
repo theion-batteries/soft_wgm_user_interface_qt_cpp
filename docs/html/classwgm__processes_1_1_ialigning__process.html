@@ -95,9 +95,9 @@ Inheritance diagram for wgm_processes::Ialigning_process:</div>
 <div class="dyncontent">
 <div class="center"><img src="classwgm__processes_1_1_ialigning__process__inherit__graph.png" border="0" usemap="#awgm__processes_1_1_ialigning__process_inherit__map" alt="Inheritance graph"/></div>
 <map name="awgm__processes_1_1_ialigning__process_inherit__map" id="awgm__processes_1_1_ialigning__process_inherit__map">
-<area shape="rect" title=" " alt="" coords="13,95,184,136"/>
-<area shape="rect" href="classwgm__processes_1_1aligning__process.html" title=" " alt="" coords="15,184,183,225"/>
-<area shape="rect" href="classwgm__processes_1_1_iprocesses__managment.html" title="interface process managemnt for user do not modify!" alt="" coords="5,5,192,47"/>
+<area shape="rect" title=" " alt="" coords="7,95,177,136"/>
+<area shape="rect" href="classwgm__processes_1_1aligning__process.html" title=" " alt="" coords="8,184,176,225"/>
+<area shape="rect" href="classwgm__processes_1_1_iprocess__manager.html" title="interface process managemnt for user do not modify!" alt="" coords="5,5,179,47"/>
 </map>
 <center><span class="legend">[<a target="top" href="graph_legend.html">legend</a>]</span></center></div>
 <div class="dynheader">
@@ -105,8 +105,8 @@ Collaboration diagram for wgm_processes::Ialigning_process:</div>
 <div class="dyncontent">
 <div class="center"><img src="classwgm__processes_1_1_ialigning__process__coll__graph.png" border="0" usemap="#awgm__processes_1_1_ialigning__process_coll__map" alt="Collaboration graph"/></div>
 <map name="awgm__processes_1_1_ialigning__process_coll__map" id="awgm__processes_1_1_ialigning__process_coll__map">
-<area shape="rect" title=" " alt="" coords="13,95,184,136"/>
-<area shape="rect" href="classwgm__processes_1_1_iprocesses__managment.html" title="interface process managemnt for user do not modify!" alt="" coords="5,5,192,47"/>
+<area shape="rect" title=" " alt="" coords="7,95,177,136"/>
+<area shape="rect" href="classwgm__processes_1_1_iprocess__manager.html" title="interface process managemnt for user do not modify!" alt="" coords="5,5,179,47"/>
 </map>
 <center><span class="legend">[<a target="top" href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
@@ -116,39 +116,57 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a6831f92f7a04073793921c3380545579"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae2a5485ad22a4720ffff091e2089ff28"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classwgm__processes_1_1_ialigning__process.html#ae2a5485ad22a4720ffff091e2089ff28">~Ialigning_process</a> ()</td></tr>
 <tr class="separator:ae2a5485ad22a4720ffff091e2089ff28"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a73e21911b3da5836d770fe9a561ae93c"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classwgm__processes_1_1_ialigning__process.html#a73e21911b3da5836d770fe9a561ae93c">start_process</a> ()=0</td></tr>
-<tr class="separator:a73e21911b3da5836d770fe9a561ae93c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a508232cf9630251bc6d503de05851ad9"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classwgm__processes_1_1_ialigning__process.html#a508232cf9630251bc6d503de05851ad9">stop_process</a> ()=0</td></tr>
-<tr class="separator:a508232cf9630251bc6d503de05851ad9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab0b246c58fcf76812d313743307069ab"><td class="memItemLeft" align="right" valign="top">virtual wgm_feedbacks::enum_proc_feedback&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classwgm__processes_1_1_ialigning__process.html#ab0b246c58fcf76812d313743307069ab">start_process</a> ()=0</td></tr>
+<tr class="separator:ab0b246c58fcf76812d313743307069ab"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a42ba31e07d030037ba981fa7e6fb2a9f"><td class="memItemLeft" align="right" valign="top">virtual wgm_feedbacks::enum_proc_feedback&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classwgm__processes_1_1_ialigning__process.html#a42ba31e07d030037ba981fa7e6fb2a9f">stop_process</a> ()=0</td></tr>
+<tr class="separator:a42ba31e07d030037ba981fa7e6fb2a9f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a28a9afd2e9b61cb3e23066800a314f7d"><td class="memItemLeft" align="right" valign="top">virtual std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classwgm__processes_1_1_ialigning__process.html#a28a9afd2e9b61cb3e23066800a314f7d">get_name</a> ()=0</td></tr>
 <tr class="separator:a28a9afd2e9b61cb3e23066800a314f7d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa772ca3adf4eda94a7488c23f85d6661"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classwgm__processes_1_1_ialigning__process.html#aa772ca3adf4eda94a7488c23f85d6661">get_id</a> ()=0</td></tr>
+<tr class="separator:aa772ca3adf4eda94a7488c23f85d6661"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4523f38cb36e9603ff124d481ae5fb3f"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classwgm__processes_1_1_ialigning__process.html#a4523f38cb36e9603ff124d481ae5fb3f">is_proc_success</a> ()=0</td></tr>
 <tr class="separator:a4523f38cb36e9603ff124d481ae5fb3f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1a013583a8818d3a0df6e1cce82b7497"><td class="memItemLeft" align="right" valign="top">virtual long long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classwgm__processes_1_1_ialigning__process.html#a1a013583a8818d3a0df6e1cce82b7497">get_elapsed_time</a> ()=0</td></tr>
 <tr class="separator:a1a013583a8818d3a0df6e1cce82b7497"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7dd10f6cfc80cf6774b3dc571f436eaf"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classcnt__alignment__system_1_1_icnt__aligning__controller.html">cnt_alignment_system::Icnt_aligning_controller</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classwgm__processes_1_1_ialigning__process.html#a7dd10f6cfc80cf6774b3dc571f436eaf">get_sys_ptr</a> ()=0</td></tr>
 <tr class="separator:a7dd10f6cfc80cf6774b3dc571f436eaf"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="inherit_header pub_methods_classwgm__processes_1_1_iprocesses__managment"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classwgm__processes_1_1_iprocesses__managment')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="classwgm__processes_1_1_iprocesses__managment.html">wgm_processes::Iprocess_manager</a></td></tr>
-<tr class="memitem:a1e12a75939a38e0279bf27046ebd24a7 inherit pub_methods_classwgm__processes_1_1_iprocesses__managment"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classwgm__processes_1_1_iprocesses__managment.html#a1e12a75939a38e0279bf27046ebd24a7">Iprocess_manager</a> ()</td></tr>
-<tr class="separator:a1e12a75939a38e0279bf27046ebd24a7 inherit pub_methods_classwgm__processes_1_1_iprocesses__managment"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8192eb0f5674c1881accf41dc5c5f4c7 inherit pub_methods_classwgm__processes_1_1_iprocesses__managment"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classwgm__processes_1_1_iprocesses__managment.html#a8192eb0f5674c1881accf41dc5c5f4c7">start_process</a> ()=0</td></tr>
-<tr class="separator:a8192eb0f5674c1881accf41dc5c5f4c7 inherit pub_methods_classwgm__processes_1_1_iprocesses__managment"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:acb0c16f381eb8c4beee172e72c03bd56 inherit pub_methods_classwgm__processes_1_1_iprocesses__managment"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classwgm__processes_1_1_iprocesses__managment.html#acb0c16f381eb8c4beee172e72c03bd56">stop_process</a> ()=0</td></tr>
-<tr class="separator:acb0c16f381eb8c4beee172e72c03bd56 inherit pub_methods_classwgm__processes_1_1_iprocesses__managment"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abdc7a6bc5139e736b2564b616dd0a55c inherit pub_methods_classwgm__processes_1_1_iprocesses__managment"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classwgm__processes_1_1_iprocesses__managment.html#abdc7a6bc5139e736b2564b616dd0a55c">add_process_to_scheduler</a> (<a class="el" href="classwgm__processes_1_1_iprocesses__managment.html">Iprocess_manager</a> *process)</td></tr>
-<tr class="separator:abdc7a6bc5139e736b2564b616dd0a55c inherit pub_methods_classwgm__processes_1_1_iprocesses__managment"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a06b91e528f143140794e46c0603886d8 inherit pub_methods_classwgm__processes_1_1_iprocesses__managment"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classwgm__processes_1_1_iprocesses__managment.html#a06b91e528f143140794e46c0603886d8">delete_last_process_from_scheduler</a> ()</td></tr>
-<tr class="separator:a06b91e528f143140794e46c0603886d8 inherit pub_methods_classwgm__processes_1_1_iprocesses__managment"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8af9ebff2a2c5526d2d4bec88fcfc118 inherit pub_methods_classwgm__processes_1_1_iprocesses__managment"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classwgm__processes_1_1_iprocesses__managment.html#a8af9ebff2a2c5526d2d4bec88fcfc118">stop_all</a> ()</td></tr>
-<tr class="separator:a8af9ebff2a2c5526d2d4bec88fcfc118 inherit pub_methods_classwgm__processes_1_1_iprocesses__managment"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad5a0ff20637a307d40a0a8e0b9b06c9f inherit pub_methods_classwgm__processes_1_1_iprocesses__managment"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classwgm__processes_1_1_iprocesses__managment.html#ad5a0ff20637a307d40a0a8e0b9b06c9f">start_all</a> ()</td></tr>
-<tr class="separator:ad5a0ff20637a307d40a0a8e0b9b06c9f inherit pub_methods_classwgm__processes_1_1_iprocesses__managment"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abe0e18ac8c47e496bb6de11df39b0117 inherit pub_methods_classwgm__processes_1_1_iprocesses__managment"><td class="memItemLeft" align="right" valign="top">virtual std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classwgm__processes_1_1_iprocesses__managment.html#abe0e18ac8c47e496bb6de11df39b0117">get_name</a> ()=0</td></tr>
-<tr class="separator:abe0e18ac8c47e496bb6de11df39b0117 inherit pub_methods_classwgm__processes_1_1_iprocesses__managment"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a65d124c3c28e74f11311269545796c4b inherit pub_methods_classwgm__processes_1_1_iprocesses__managment"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classwgm__processes_1_1_iprocesses__managment.html#a65d124c3c28e74f11311269545796c4b">is_proc_success</a> ()=0</td></tr>
-<tr class="separator:a65d124c3c28e74f11311269545796c4b inherit pub_methods_classwgm__processes_1_1_iprocesses__managment"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3f0bef20a611e53c6300e46c15cefea8 inherit pub_methods_classwgm__processes_1_1_iprocesses__managment"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classwgm__processes_1_1_iprocesses__managment.html#a3f0bef20a611e53c6300e46c15cefea8">~Iprocess_manager</a> ()</td></tr>
-<tr class="separator:a3f0bef20a611e53c6300e46c15cefea8 inherit pub_methods_classwgm__processes_1_1_iprocesses__managment"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_methods_classwgm__processes_1_1_iprocess__manager"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classwgm__processes_1_1_iprocess__manager')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="classwgm__processes_1_1_iprocess__manager.html">wgm_processes::Iprocess_manager</a></td></tr>
+<tr class="memitem:aa6a78b2e2a9bf305569295a54d7001e0 inherit pub_methods_classwgm__processes_1_1_iprocess__manager"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classwgm__processes_1_1_iprocess__manager.html#aa6a78b2e2a9bf305569295a54d7001e0">Iprocess_manager</a> ()</td></tr>
+<tr class="separator:aa6a78b2e2a9bf305569295a54d7001e0 inherit pub_methods_classwgm__processes_1_1_iprocess__manager"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a52e0f878dcdc0a4283be86825549b201 inherit pub_methods_classwgm__processes_1_1_iprocess__manager"><td class="memItemLeft" align="right" valign="top">virtual wgm_feedbacks::enum_proc_feedback&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classwgm__processes_1_1_iprocess__manager.html#a52e0f878dcdc0a4283be86825549b201">start_process</a> ()=0</td></tr>
+<tr class="separator:a52e0f878dcdc0a4283be86825549b201 inherit pub_methods_classwgm__processes_1_1_iprocess__manager"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3ceb2e27bab62427b24392ae2fd79c67 inherit pub_methods_classwgm__processes_1_1_iprocess__manager"><td class="memItemLeft" align="right" valign="top">virtual wgm_feedbacks::enum_proc_feedback&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classwgm__processes_1_1_iprocess__manager.html#a3ceb2e27bab62427b24392ae2fd79c67">stop_process</a> ()=0</td></tr>
+<tr class="separator:a3ceb2e27bab62427b24392ae2fd79c67 inherit pub_methods_classwgm__processes_1_1_iprocess__manager"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab77a1f720bb66cb9743b1e76dfb243c5 inherit pub_methods_classwgm__processes_1_1_iprocess__manager"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classwgm__processes_1_1_iprocess__manager.html#ab77a1f720bb66cb9743b1e76dfb243c5">start_process</a> (<a class="el" href="classwgm__processes_1_1_iprocess__manager.html">Iprocess_manager</a> *process)</td></tr>
+<tr class="separator:ab77a1f720bb66cb9743b1e76dfb243c5 inherit pub_methods_classwgm__processes_1_1_iprocess__manager"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aae8cb91f7b6d91651ded0c9fba61b192 inherit pub_methods_classwgm__processes_1_1_iprocess__manager"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classwgm__processes_1_1_iprocess__manager.html#aae8cb91f7b6d91651ded0c9fba61b192">stop_process</a> (<a class="el" href="classwgm__processes_1_1_iprocess__manager.html">Iprocess_manager</a> *process)</td></tr>
+<tr class="separator:aae8cb91f7b6d91651ded0c9fba61b192 inherit pub_methods_classwgm__processes_1_1_iprocess__manager"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af034a19e30781682219789f124e8b1df inherit pub_methods_classwgm__processes_1_1_iprocess__manager"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classwgm__processes_1_1_iprocess__manager.html#af034a19e30781682219789f124e8b1df">start_process</a> (std::string processName)</td></tr>
+<tr class="separator:af034a19e30781682219789f124e8b1df inherit pub_methods_classwgm__processes_1_1_iprocess__manager"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac54f8a75aa36ce2f03beb9f8008d19d6 inherit pub_methods_classwgm__processes_1_1_iprocess__manager"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classwgm__processes_1_1_iprocess__manager.html#ac54f8a75aa36ce2f03beb9f8008d19d6">stop_process</a> (std::string processName)</td></tr>
+<tr class="separator:ac54f8a75aa36ce2f03beb9f8008d19d6 inherit pub_methods_classwgm__processes_1_1_iprocess__manager"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a24742be8758b588da992ef947cee0101 inherit pub_methods_classwgm__processes_1_1_iprocess__manager"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classwgm__processes_1_1_iprocess__manager.html#a24742be8758b588da992ef947cee0101">start_process</a> (int processID)</td></tr>
+<tr class="separator:a24742be8758b588da992ef947cee0101 inherit pub_methods_classwgm__processes_1_1_iprocess__manager"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4725c8d87af2468379740cffcf0f9fd8 inherit pub_methods_classwgm__processes_1_1_iprocess__manager"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classwgm__processes_1_1_iprocess__manager.html#a4725c8d87af2468379740cffcf0f9fd8">stop_process</a> (int processID)</td></tr>
+<tr class="separator:a4725c8d87af2468379740cffcf0f9fd8 inherit pub_methods_classwgm__processes_1_1_iprocess__manager"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7f9f42b1c7b358bdea082a3377d709d8 inherit pub_methods_classwgm__processes_1_1_iprocess__manager"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classwgm__processes_1_1_iprocess__manager.html#a7f9f42b1c7b358bdea082a3377d709d8">add_process_to_scheduler</a> (<a class="el" href="classwgm__processes_1_1_iprocess__manager.html">Iprocess_manager</a> *process)</td></tr>
+<tr class="separator:a7f9f42b1c7b358bdea082a3377d709d8 inherit pub_methods_classwgm__processes_1_1_iprocess__manager"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9146c4444d4b14be5db47ab24e3f7fb4 inherit pub_methods_classwgm__processes_1_1_iprocess__manager"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classwgm__processes_1_1_iprocess__manager.html#a9146c4444d4b14be5db47ab24e3f7fb4">delete_last_process_from_scheduler</a> ()</td></tr>
+<tr class="separator:a9146c4444d4b14be5db47ab24e3f7fb4 inherit pub_methods_classwgm__processes_1_1_iprocess__manager"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a68523f25cdc5915862e7ccfc3e2011e1 inherit pub_methods_classwgm__processes_1_1_iprocess__manager"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classwgm__processes_1_1_iprocess__manager.html#a68523f25cdc5915862e7ccfc3e2011e1">stop_all</a> ()</td></tr>
+<tr class="separator:a68523f25cdc5915862e7ccfc3e2011e1 inherit pub_methods_classwgm__processes_1_1_iprocess__manager"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9a72b64154d1db0b33a47fd77c6e3f44 inherit pub_methods_classwgm__processes_1_1_iprocess__manager"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classwgm__processes_1_1_iprocess__manager.html#a9a72b64154d1db0b33a47fd77c6e3f44">start_all</a> (std::function&lt; void(int)&gt; callback)</td></tr>
+<tr class="separator:a9a72b64154d1db0b33a47fd77c6e3f44 inherit pub_methods_classwgm__processes_1_1_iprocess__manager"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a49610f9349e76bb656a778aa14844be7 inherit pub_methods_classwgm__processes_1_1_iprocess__manager"><td class="memItemLeft" align="right" valign="top">virtual std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classwgm__processes_1_1_iprocess__manager.html#a49610f9349e76bb656a778aa14844be7">get_name</a> ()=0</td></tr>
+<tr class="separator:a49610f9349e76bb656a778aa14844be7 inherit pub_methods_classwgm__processes_1_1_iprocess__manager"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9ab2f59a18f2871935e54be77a46fe68 inherit pub_methods_classwgm__processes_1_1_iprocess__manager"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classwgm__processes_1_1_iprocess__manager.html#a9ab2f59a18f2871935e54be77a46fe68">get_id</a> ()=0</td></tr>
+<tr class="separator:a9ab2f59a18f2871935e54be77a46fe68 inherit pub_methods_classwgm__processes_1_1_iprocess__manager"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0d8023b85fcab502ec7cbfc14e7c2ef7 inherit pub_methods_classwgm__processes_1_1_iprocess__manager"><td class="memItemLeft" align="right" valign="top">virtual long long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classwgm__processes_1_1_iprocess__manager.html#a0d8023b85fcab502ec7cbfc14e7c2ef7">get_elapsed_time</a> ()=0</td></tr>
+<tr class="separator:a0d8023b85fcab502ec7cbfc14e7c2ef7 inherit pub_methods_classwgm__processes_1_1_iprocess__manager"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af18410cf7ae7f3f067a1d9050798bf1a inherit pub_methods_classwgm__processes_1_1_iprocess__manager"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classwgm__processes_1_1_iprocess__manager.html#af18410cf7ae7f3f067a1d9050798bf1a">is_proc_success</a> ()=0</td></tr>
+<tr class="separator:af18410cf7ae7f3f067a1d9050798bf1a inherit pub_methods_classwgm__processes_1_1_iprocess__manager"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adbfe32a163bac0de7fda13c63024a469 inherit pub_methods_classwgm__processes_1_1_iprocess__manager"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classwgm__processes_1_1_iprocess__manager.html#adbfe32a163bac0de7fda13c63024a469">~Iprocess_manager</a> ()</td></tr>
+<tr class="separator:adbfe32a163bac0de7fda13c63024a469 inherit pub_methods_classwgm__processes_1_1_iprocess__manager"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock">
@@ -196,7 +214,7 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="aligning__process_8cpp_source.html#l00018">18</a> of file <a class="el" href="aligning__process_8cpp_source.html">aligning_process.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="aligning__process_8cpp_source.html#l00016">16</a> of file <a class="el" href="aligning__process_8cpp_source.html">aligning_process.cpp</a>.</p>
 
 </div>
 </div>
@@ -224,17 +242,38 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Implements <a class="el" href="classwgm__processes_1_1_iprocess__manager.html#a0d8023b85fcab502ec7cbfc14e7c2ef7">wgm_processes::Iprocess_manager</a>.</p>
+
 <p>Implemented in <a class="el" href="classwgm__processes_1_1aligning__process.html#aa9a7178166d1b88414c5f50f28f66f1c">wgm_processes::aligning_process</a>.</p>
-<div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="classwgm__processes_1_1_ialigning__process_a1a013583a8818d3a0df6e1cce82b7497_icgraph.png" border="0" usemap="#aclasswgm__processes_1_1_ialigning__process_a1a013583a8818d3a0df6e1cce82b7497_icgraph" alt=""/></div>
-<map name="aclasswgm__processes_1_1_ialigning__process_a1a013583a8818d3a0df6e1cce82b7497_icgraph" id="aclasswgm__processes_1_1_ialigning__process_a1a013583a8818d3a0df6e1cce82b7497_icgraph">
-<area shape="rect" title=" " alt="" coords="235,50,420,91"/>
-<area shape="rect" href="classcnt_align_controller.html#a01526468b474e81a733b33f7b8c09c1d" title=" " alt="" coords="23,5,169,61"/>
-<area shape="rect" href="classcnt_align_controller.html#ab5d8b823359b3eae380b7a9075c969b1" title=" " alt="" coords="5,86,187,127"/>
-</map>
+
 </div>
+</div>
+<a id="aa772ca3adf4eda94a7488c23f85d6661" name="aa772ca3adf4eda94a7488c23f85d6661"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa772ca3adf4eda94a7488c23f85d6661">&#9670;&nbsp;</a></span>get_id()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual int wgm_processes::Ialigning_process::get_id </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Implements <a class="el" href="classwgm__processes_1_1_iprocess__manager.html#a9ab2f59a18f2871935e54be77a46fe68">wgm_processes::Iprocess_manager</a>.</p>
+
+<p>Implemented in <a class="el" href="classwgm__processes_1_1aligning__process.html#add2a799b9cbb4a6cd2462542a61e23cf">wgm_processes::aligning_process</a>.</p>
 
 </div>
 </div>
@@ -261,7 +300,7 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p>Implements <a class="el" href="classwgm__processes_1_1_iprocesses__managment.html#abe0e18ac8c47e496bb6de11df39b0117">wgm_processes::Iprocess_manager</a>.</p>
+<p>Implements <a class="el" href="classwgm__processes_1_1_iprocess__manager.html#a49610f9349e76bb656a778aa14844be7">wgm_processes::Iprocess_manager</a>.</p>
 
 <p>Implemented in <a class="el" href="classwgm__processes_1_1aligning__process.html#ad489daec13c3486d21a250af5fff8d3d">wgm_processes::aligning_process</a>.</p>
 
@@ -291,42 +330,6 @@ Here is the caller graph for this function:</div>
 </div><div class="memdoc">
 
 <p>Implemented in <a class="el" href="classwgm__processes_1_1aligning__process.html#af3fc0a6f674b3854750b4f40bbc5e88a">wgm_processes::aligning_process</a>.</p>
-<div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="classwgm__processes_1_1_ialigning__process_a7dd10f6cfc80cf6774b3dc571f436eaf_icgraph.png" border="0" usemap="#aclasswgm__processes_1_1_ialigning__process_a7dd10f6cfc80cf6774b3dc571f436eaf_icgraph" alt=""/></div>
-<map name="aclasswgm__processes_1_1_ialigning__process_a7dd10f6cfc80cf6774b3dc571f436eaf_icgraph" id="aclasswgm__processes_1_1_ialigning__process_a7dd10f6cfc80cf6774b3dc571f436eaf_icgraph">
-<area shape="rect" title=" " alt="" coords="508,687,679,728"/>
-<area shape="rect" href="classcnt_align_controller.html#aa88b63041bf5d4831540412fd1d7e7ab" title=" " alt="" coords="303,325,427,367"/>
-<area shape="rect" href="classcnt_align_controller.html#a5e9ad64fee629f8d6132316e5a49b038" title=" " alt="" coords="38,297,189,353"/>
-<area shape="rect" href="classcnt_align_controller.html#ab7c444afd5fa2e636c36747336005e37" title=" " alt="" coords="33,137,193,193"/>
-<area shape="rect" href="classcnt_align_controller.html#addc029bd37cf34fd10b274a492a89c63" title=" " alt="" coords="36,217,191,273"/>
-<area shape="rect" href="classcnt_align_controller.html#a7078f873b59bdc07628ca7712f0dfba3" title=" " alt="" coords="24,377,203,433"/>
-<area shape="rect" href="classcnt_align_controller.html#a134cf20bc62a093d353dc47db629b9ec" title=" " alt="" coords="45,5,182,47"/>
-<area shape="rect" href="classcnt_align_controller.html#a508bc135d13e34403efc6c53d3c382e8" title=" " alt="" coords="287,508,442,549"/>
-<area shape="rect" href="classcnt_align_controller.html#ac87fdea0592116f394b0ef8f54aa6fc5" title=" " alt="" coords="26,935,201,976"/>
-<area shape="rect" href="classcnt_align_controller.html#a2f66f1549d13def766adac7dd37370cf" title=" " alt="" coords="303,443,427,484"/>
-<area shape="rect" href="classcnt_align_controller.html#aae0c191d4c76912d6de3cb06fadc8e9f" title=" " alt="" coords="272,639,457,695"/>
-<area shape="rect" href="classcnt_align_controller.html#ab195f3f8ed9093e63feb9c4b87e23875" title=" " alt="" coords="294,719,435,775"/>
-<area shape="rect" href="classcnt_align_controller.html#ab50236071b038314cf8c868de3bf6536" title=" " alt="" coords="281,799,449,855"/>
-<area shape="rect" href="classcnt_align_controller.html#a0fcfa05527ae2c0c28665b1a1346a87f" title=" " alt="" coords="287,880,442,921"/>
-<area shape="rect" href="classcnt_align_controller.html#a5ec1fa403f029922ac201511d72c3398" title=" " alt="" coords="303,573,427,615"/>
-<area shape="rect" href="classcnt_align_controller.html#aee76dd69825aa0e24ae295009e45eb48" title=" " alt="" coords="285,997,445,1039"/>
-<area shape="rect" href="classcnt_align_controller.html#a5710677859e21be1320edd0be26cb1db" title=" " alt="" coords="275,1063,454,1104"/>
-<area shape="rect" href="classcnt_align_controller.html#a29b94386bbfc980939152fb6faad76c0" title=" " alt="" coords="283,1128,446,1169"/>
-<area shape="rect" href="classcnt_align_controller.html#ac852b9a5e734842645ad0f273883fde7" title=" " alt="" coords="279,1193,450,1235"/>
-<area shape="rect" href="classcnt_align_controller.html#acfddbbbb754cff1fed3a912943c81c2a" title=" " alt="" coords="269,1259,460,1300"/>
-<area shape="rect" href="classcnt_align_controller.html#abbf36e9be33b03f273d227c0191937d0" title=" " alt="" coords="278,1324,451,1365"/>
-<area shape="rect" href="classcnt_align_controller.html#a01526468b474e81a733b33f7b8c09c1d" title=" " alt="" coords="41,523,186,579"/>
-<area shape="rect" href="classcnt_align_controller.html#ab5d8b823359b3eae380b7a9075c969b1" title=" " alt="" coords="23,457,204,499"/>
-<area shape="rect" href="classcnt_align_controller.html#a57945dab8d9bf30d00ea28cc10acffc1" title=" " alt="" coords="50,71,177,112"/>
-<area shape="rect" href="classcnt_align_controller.html#a61d6eb0fd5be14642c41333af49e7638" title=" " alt="" coords="21,735,205,776"/>
-<area shape="rect" href="classcnt_align_controller.html#a81a5ecab6ce0b07f3a05ad29ba4a4738" title=" " alt="" coords="34,669,193,711"/>
-<area shape="rect" href="classcnt_align_controller.html#a7ca181165f2182f8bb9ea666a4548719" title=" " alt="" coords="5,865,221,907"/>
-<area shape="rect" href="classcnt_align_controller.html#a56f208976fe0be07be64fac065c2735a" title=" " alt="" coords="51,604,175,645"/>
-<area shape="rect" href="classcnt_align_controller.html#aa2289ea94d042524f88b33c079da81e7" title=" " alt="" coords="27,800,199,841"/>
-</map>
-</div>
 
 </div>
 </div>
@@ -353,24 +356,14 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p>Implements <a class="el" href="classwgm__processes_1_1_iprocesses__managment.html#a65d124c3c28e74f11311269545796c4b">wgm_processes::Iprocess_manager</a>.</p>
+<p>Implements <a class="el" href="classwgm__processes_1_1_iprocess__manager.html#af18410cf7ae7f3f067a1d9050798bf1a">wgm_processes::Iprocess_manager</a>.</p>
 
 <p>Implemented in <a class="el" href="classwgm__processes_1_1aligning__process.html#a3a7b51e1d3386bd434f2cd515b479eb6">wgm_processes::aligning_process</a>.</p>
-<div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="classwgm__processes_1_1_ialigning__process_a4523f38cb36e9603ff124d481ae5fb3f_icgraph.png" border="0" usemap="#aclasswgm__processes_1_1_ialigning__process_a4523f38cb36e9603ff124d481ae5fb3f_icgraph" alt=""/></div>
-<map name="aclasswgm__processes_1_1_ialigning__process_a4523f38cb36e9603ff124d481ae5fb3f_icgraph" id="aclasswgm__processes_1_1_ialigning__process_a4523f38cb36e9603ff124d481ae5fb3f_icgraph">
-<area shape="rect" title=" " alt="" coords="384,5,565,47"/>
-<area shape="rect" href="classcnt_align_controller.html#ad0b514044f26f61181479bb5eac1a924" title=" " alt="" coords="201,5,336,47"/>
-<area shape="rect" href="classcnt_align_controller.html#a20976f13f525bfa02eb3c15c6a8ac472" title=" " alt="" coords="5,5,153,47"/>
-</map>
-</div>
 
 </div>
 </div>
-<a id="a73e21911b3da5836d770fe9a561ae93c" name="a73e21911b3da5836d770fe9a561ae93c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a73e21911b3da5836d770fe9a561ae93c">&#9670;&nbsp;</a></span>start_process()</h2>
+<a id="ab0b246c58fcf76812d313743307069ab" name="ab0b246c58fcf76812d313743307069ab"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab0b246c58fcf76812d313743307069ab">&#9670;&nbsp;</a></span>start_process()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -379,7 +372,7 @@ Here is the caller graph for this function:</div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">virtual void wgm_processes::Ialigning_process::start_process </td>
+          <td class="memname">virtual wgm_feedbacks::enum_proc_feedback wgm_processes::Ialigning_process::start_process </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -392,23 +385,14 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p>Implements <a class="el" href="classwgm__processes_1_1_iprocesses__managment.html#a8192eb0f5674c1881accf41dc5c5f4c7">wgm_processes::Iprocess_manager</a>.</p>
+<p>Implements <a class="el" href="classwgm__processes_1_1_iprocess__manager.html#a52e0f878dcdc0a4283be86825549b201">wgm_processes::Iprocess_manager</a>.</p>
 
-<p>Implemented in <a class="el" href="classwgm__processes_1_1aligning__process.html#ab981c4572c1515ec0637221f95062ae6">wgm_processes::aligning_process</a>.</p>
-<div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="classwgm__processes_1_1_ialigning__process_a73e21911b3da5836d770fe9a561ae93c_icgraph.png" border="0" usemap="#aclasswgm__processes_1_1_ialigning__process_a73e21911b3da5836d770fe9a561ae93c_icgraph" alt=""/></div>
-<map name="aclasswgm__processes_1_1_ialigning__process_a73e21911b3da5836d770fe9a561ae93c_icgraph" id="aclasswgm__processes_1_1_ialigning__process_a73e21911b3da5836d770fe9a561ae93c_icgraph">
-<area shape="rect" title=" " alt="" coords="199,13,369,54"/>
-<area shape="rect" href="classcnt_align_controller.html#a01526468b474e81a733b33f7b8c09c1d" title=" " alt="" coords="5,5,151,61"/>
-</map>
-</div>
+<p>Implemented in <a class="el" href="classwgm__processes_1_1aligning__process.html#a0f8c25ec31ceaaee0675b53084d63e0d">wgm_processes::aligning_process</a>.</p>
 
 </div>
 </div>
-<a id="a508232cf9630251bc6d503de05851ad9" name="a508232cf9630251bc6d503de05851ad9"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a508232cf9630251bc6d503de05851ad9">&#9670;&nbsp;</a></span>stop_process()</h2>
+<a id="a42ba31e07d030037ba981fa7e6fb2a9f" name="a42ba31e07d030037ba981fa7e6fb2a9f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a42ba31e07d030037ba981fa7e6fb2a9f">&#9670;&nbsp;</a></span>stop_process()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -417,7 +401,7 @@ Here is the caller graph for this function:</div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">virtual void wgm_processes::Ialigning_process::stop_process </td>
+          <td class="memname">virtual wgm_feedbacks::enum_proc_feedback wgm_processes::Ialigning_process::stop_process </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -430,18 +414,9 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p>Implements <a class="el" href="classwgm__processes_1_1_iprocesses__managment.html#acb0c16f381eb8c4beee172e72c03bd56">wgm_processes::Iprocess_manager</a>.</p>
+<p>Implements <a class="el" href="classwgm__processes_1_1_iprocess__manager.html#a3ceb2e27bab62427b24392ae2fd79c67">wgm_processes::Iprocess_manager</a>.</p>
 
-<p>Implemented in <a class="el" href="classwgm__processes_1_1aligning__process.html#a9f5be36483e6df7eae9877bdc0754125">wgm_processes::aligning_process</a>.</p>
-<div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="classwgm__processes_1_1_ialigning__process_a508232cf9630251bc6d503de05851ad9_icgraph.png" border="0" usemap="#aclasswgm__processes_1_1_ialigning__process_a508232cf9630251bc6d503de05851ad9_icgraph" alt=""/></div>
-<map name="aclasswgm__processes_1_1_ialigning__process_a508232cf9630251bc6d503de05851ad9_icgraph" id="aclasswgm__processes_1_1_ialigning__process_a508232cf9630251bc6d503de05851ad9_icgraph">
-<area shape="rect" title=" " alt="" coords="235,5,405,47"/>
-<area shape="rect" href="classcnt_align_controller.html#ab5d8b823359b3eae380b7a9075c969b1" title=" " alt="" coords="5,5,187,47"/>
-</map>
-</div>
+<p>Implemented in <a class="el" href="classwgm__processes_1_1aligning__process.html#af75947c648849e190c3189c4ce24056a">wgm_processes::aligning_process</a>.</p>
 
 </div>
 </div>

@@ -1,8 +1,5 @@
 <map id="sinkingController::on_deep_wafer_holder_desired_thickness_clicked" name="sinkingController::on_deep_wafer_holder_desired_thickness_clicked">
-<area shape="rect" id="node1" title=" " alt="" coords="5,55,188,111"/>
-<area shape="rect" id="node2" href="$classsinking_controller.html#a7db4db52745d9dde8e4479a39eea8c5f" title=" " alt="" coords="277,29,404,71"/>
-<area shape="rect" id="node3" href="$classwgm__processes_1_1_isinking__process.html#acc0cf72fe5ca2ee7d7723016da15f3f7" title=" " alt="" coords="505,21,673,63"/>
-<area shape="rect" id="node5" href="$classsinking_controller.html#affc62f4de11ebf2c45cfae76f2b71c47" title=" " alt="" coords="276,95,405,136"/>
-<area shape="rect" id="node6" href="$classwafer__holder__motion__system_1_1_iwafer__motion__controller.html#a71d069ac7541692f0158dcd8ef2ac3f7" title=" " alt="" coords="236,161,445,217"/>
-<area shape="rect" id="node4" href="$classwafer__holder__motion__system_1_1_iwafer__motion__controller.html#a1b03116f70d8a8cb8de0283da77bed58" title=" " alt="" coords="493,87,685,143"/>
+<area shape="rect" id="node1" title=" " alt="" coords="5,31,188,87"/>
+<area shape="rect" id="node2" href="$classsinking_controller.html#a7db4db52745d9dde8e4479a39eea8c5f" title=" " alt="" coords="237,5,364,47"/>
+<area shape="rect" id="node3" href="$classsinking_controller.html#affc62f4de11ebf2c45cfae76f2b71c47" title=" " alt="" coords="236,71,365,112"/>
 </map>

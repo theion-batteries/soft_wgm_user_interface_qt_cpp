@@ -96,72 +96,75 @@ $(document).ready(function(){initNavTree('heating_view_8cpp_source.html',''); in
 <div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span>    ui-&gt;heating_process_status-&gt;setStyleSheet(<span class="stringliteral">&quot;QLabel { background-color : red; color : black; }&quot;</span>);</div>
 <div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span> </div>
 <div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="comment">    /**************** signals and slots ********************/</span></div>
-<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span>          <span class="comment">// connect cmd button connect heater</span></div>
-<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>    connect(ui-&gt;connect_heating_dev, &amp;QAbstractButton::pressed, <span class="keyword">this</span>, [<span class="keyword">this</span>]() {</div>
-<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>        auto connectTask = QtConcurrent::run([this]() {</div>
-<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>            heatControll.on_connect_heating_dev_clicked();});</div>
-<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>        }, Qt::QueuedConnection);</div>
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>    connect(&amp;heatControll, &amp;<a class="code hl_signal" href="classheating_controller.html#a100bb5db9638b7228af2e834bfe42036">heatingController::heaterConnected</a>, <span class="keyword">this</span>, [<span class="keyword">this</span>]() {</div>
-<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>        heatControll.updateLabelHeater(ui-&gt;heating_ready_bool);});</div>
-<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span> </div>
-<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>    <span class="comment">// connect enter to send manual cmd to heater</span></div>
-<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>    connect(ui-&gt;heat_input_cmd, &amp;QLineEdit::returnPressed, <span class="keyword">this</span>, [<span class="keyword">this</span>]() {</div>
-<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>        auto inputCmd = ui-&gt;heat_input_cmd-&gt;text();</div>
-<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>    ui-&gt;heat_cmd_given-&gt;setText(inputCmd);</div>
-<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>    auto func = QtConcurrent::run(&amp;heatingController::updateLabelHeater, &amp;heatControll, ui-&gt;heat_cmd_response);</div>
-<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>        }, Qt::QueuedConnection);</div>
-<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>    <span class="comment">// connect heater reply to update text</span></div>
-<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>    connect(&amp;heatControll, &amp;<a class="code hl_signal" href="classheating_controller.html#a1e3ad273b61534659e3c5f3ae86c3fd0">heatingController::heaterReplied</a>, <span class="keyword">this</span>, [<span class="keyword">this</span>](std::string reply) {</div>
-<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>        std::cout &lt;&lt; <span class="stringliteral">&quot; full response: &quot;</span> &lt;&lt; reply &lt;&lt; std::endl;</div>
-<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>    ui-&gt;heat_input_cmd-&gt;setStyleSheet(<span class="stringliteral">&quot;QLabel { background-color : green; color : black; }&quot;</span>);</div>
-<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>    ui-&gt;heat_input_cmd-&gt;setText(reply.c_str());</div>
-<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>    ui-&gt;heat_input_cmd-&gt;clear();</div>
-<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>        }, Qt::QueuedConnection);</div>
-<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span> </div>
-<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span><span class="comment">    /***********       Process   *****/</span></div>
-<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>    <span class="comment">// connect cmd button run process heating</span></div>
-<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>    connect(ui-&gt;run_heating_process, &amp;QAbstractButton::pressed, [<span class="keyword">this</span>]() {</div>
-<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>        auto func = QtConcurrent::run([this]() {heatControll.on_run_heating_process_clicked();});</div>
-<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>    heatControll.updateLabelHeater(ui-&gt;heating_ready_label);</div>
-<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>    heatControll.updateLabelProcess(ui-&gt;heating_process_status);</div>
-<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>    heatControll.updateLcdTime(ui-&gt;lcd_proc_heating_time);</div>
-<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>        });</div>
-<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>    <span class="comment">// connect cmd button stop process heating</span></div>
-<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>    connect(ui-&gt;stop_heating_proc, &amp;QAbstractButton::pressed, [<span class="keyword">this</span>]() {</div>
-<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>        if (heatControll.getProcessStatus())</div>
-<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>        {</div>
-<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>            std::cout &lt;&lt; <span class="stringliteral">&quot;process already finished&quot;</span> &lt;&lt; std::endl;</div>
-<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>            return;</div>
-<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>        }</div>
-<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>    <span class="keyword">auto</span> func = QtConcurrent::run([<span class="keyword">this</span>]() {heatControll.on_stop_heating_proc_clicked();});</div>
-<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>        });</div>
-<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span> </div>
-<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>    <span class="comment">// algorithms</span></div>
-<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>    <span class="comment">// on</span></div>
-<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>    connect(ui-&gt;start_heating, &amp;QAbstractButton::pressed, [<span class="keyword">this</span>]() {</div>
-<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>        auto func = QtConcurrent::run(&amp;heatingController::on_start_heating_clicked, &amp;heatControll);</div>
-<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>        });</div>
-<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>    <span class="comment">// off</span></div>
-<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>    connect(ui-&gt;stop_heating, &amp;QAbstractButton::pressed, [<span class="keyword">this</span>]() {</div>
-<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>        auto func = QtConcurrent::run(&amp;heatingController::on_stop_heating_clicked, &amp;heatControll);</div>
-<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>        });</div>
-<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span> </div>
-<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span> </div>
-<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>}</div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="comment">    /************  connect methods           ***********/</span></div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span> </div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>          <span class="comment">// connect cmd button connect heater</span></div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>    connect(ui-&gt;connect_heating_dev, &amp;QAbstractButton::pressed, <span class="keyword">this</span>, [<span class="keyword">this</span>]() {</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>        auto connectTask = QtConcurrent::run([this]() {</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>            heatControll.on_connect_heating_dev_clicked();});</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>        }, Qt::QueuedConnection);</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>    connect(&amp;heatControll, &amp;<a class="code hl_signal" href="classheating_controller.html#a100bb5db9638b7228af2e834bfe42036">heatingController::heaterConnected</a>, <span class="keyword">this</span>, [<span class="keyword">this</span>]() {</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>        heatControll.updateLabelHeater(ui-&gt;heating_ready_bool);});</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="comment">/*****************  manual commands section *******************/</span></div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span> </div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>    <span class="comment">// connect enter to send manual cmd to heater</span></div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>    connect(ui-&gt;heat_input_cmd, &amp;QLineEdit::returnPressed, <span class="keyword">this</span>, [<span class="keyword">this</span>]() {</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>        auto inputCmd = ui-&gt;heat_input_cmd-&gt;text();</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>    ui-&gt;heat_cmd_given-&gt;setText(inputCmd);</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>    auto func = QtConcurrent::run(&amp;heatingController::updateLabelHeater, &amp;heatControll, ui-&gt;heat_cmd_response);</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>        }, Qt::QueuedConnection);</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>    <span class="comment">// connect heater reply to update text</span></div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>    connect(&amp;heatControll, &amp;<a class="code hl_signal" href="classheating_controller.html#a1e3ad273b61534659e3c5f3ae86c3fd0">heatingController::heaterReplied</a>, <span class="keyword">this</span>, [<span class="keyword">this</span>](std::string reply) {</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>        std::cout &lt;&lt; <span class="stringliteral">&quot; full response: &quot;</span> &lt;&lt; reply &lt;&lt; std::endl;</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>    ui-&gt;heat_input_cmd-&gt;setStyleSheet(<span class="stringliteral">&quot;QLabel { background-color : green; color : black; }&quot;</span>);</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>    ui-&gt;heat_input_cmd-&gt;setText(reply.c_str());</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>    ui-&gt;heat_input_cmd-&gt;clear();</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>        }, Qt::QueuedConnection);</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span> </div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span><span class="comment">    /***********       Process   *****/</span></div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>    <span class="comment">// connect cmd button run process heating</span></div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>    connect(ui-&gt;run_heating_process, &amp;QAbstractButton::pressed, [<span class="keyword">this</span>]() {</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>        auto func = QtConcurrent::run([this]() {heatControll.on_run_heating_process_clicked();});</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>    heatControll.updateLabelHeater(ui-&gt;heating_ready_label);</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>    heatControll.updateLabelProcess(ui-&gt;heating_process_status);</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>    heatControll.updateLcdTime(ui-&gt;lcd_proc_heating_time);</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>        });</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>    <span class="comment">// connect cmd button stop process heating</span></div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>    connect(ui-&gt;stop_heating_proc, &amp;QAbstractButton::pressed, [<span class="keyword">this</span>]() {</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>        if (heatControll.getProcessStatus())</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>        {</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>            std::cout &lt;&lt; <span class="stringliteral">&quot;process already finished&quot;</span> &lt;&lt; std::endl;</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>            return;</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>        }</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>    <span class="keyword">auto</span> func = QtConcurrent::run([<span class="keyword">this</span>]() {heatControll.on_stop_heating_proc_clicked();});</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>        });</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span> </div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>    <span class="comment">// algorithms</span></div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>    <span class="comment">// on</span></div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>    connect(ui-&gt;start_heating, &amp;QAbstractButton::pressed, [<span class="keyword">this</span>]() {</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>        auto func = QtConcurrent::run(&amp;heatingController::on_start_heating_clicked, &amp;heatControll);</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>        });</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>    <span class="comment">// off</span></div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>    connect(ui-&gt;stop_heating, &amp;QAbstractButton::pressed, [<span class="keyword">this</span>]() {</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>        auto func = QtConcurrent::run(&amp;heatingController::on_stop_heating_clicked, &amp;heatControll);</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>        });</div>
 <div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span> </div>
-<div class="line"><a id="l00065" name="l00065"></a><span class="lineno"><a class="line" href="classheating_view.html#a10b7ae898f937ed2ec7a9fc8e4496086">   65</a></span><a class="code hl_function" href="classheating_view.html#a10b7ae898f937ed2ec7a9fc8e4496086">heatingView::~heatingView</a>()</div>
-<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>{</div>
-<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>}</div>
-<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span> </div>
-<div class="line"><a id="l00069" name="l00069"></a><span class="lineno"><a class="line" href="classheating_view.html#a67176c9af059b3d627d3d05e044890c3">   69</a></span><a class="code hl_class" href="classheating_controller.html">heatingController</a>* <a class="code hl_function" href="classheating_view.html#a67176c9af059b3d627d3d05e044890c3">heatingView::getController</a>()</div>
-<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>{</div>
-<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>    <span class="keywordflow">return</span> &amp;heatControll;</div>
-<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>}</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span> </div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>}</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span> </div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno"><a class="line" href="classheating_view.html#a10b7ae898f937ed2ec7a9fc8e4496086">   68</a></span><a class="code hl_function" href="classheating_view.html#a10b7ae898f937ed2ec7a9fc8e4496086">heatingView::~heatingView</a>()</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>{</div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>}</div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span> </div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno"><a class="line" href="classheating_view.html#a67176c9af059b3d627d3d05e044890c3">   72</a></span><a class="code hl_class" href="classheating_controller.html">heatingController</a>* <a class="code hl_function" href="classheating_view.html#a67176c9af059b3d627d3d05e044890c3">heatingView::getController</a>()</div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>{</div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>    <span class="keywordflow">return</span> &amp;heatControll;</div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>}</div>
 <div class="ttc" id="aclassheating_controller_html"><div class="ttname"><a href="classheating_controller.html">heatingController</a></div><div class="ttdef"><b>Definition:</b> <a href="heating_controller_8h_source.html#l00014">heatingController.h:15</a></div></div>
 <div class="ttc" id="aclassheating_controller_html_a100bb5db9638b7228af2e834bfe42036"><div class="ttname"><a href="classheating_controller.html#a100bb5db9638b7228af2e834bfe42036">heatingController::heaterConnected</a></div><div class="ttdeci">void heaterConnected()</div></div>
 <div class="ttc" id="aclassheating_controller_html_a1e3ad273b61534659e3c5f3ae86c3fd0"><div class="ttname"><a href="classheating_controller.html#a1e3ad273b61534659e3c5f3ae86c3fd0">heatingController::heaterReplied</a></div><div class="ttdeci">void heaterReplied(std::string reply)</div></div>
-<div class="ttc" id="aclassheating_view_html_a10b7ae898f937ed2ec7a9fc8e4496086"><div class="ttname"><a href="classheating_view.html#a10b7ae898f937ed2ec7a9fc8e4496086">heatingView::~heatingView</a></div><div class="ttdeci">~heatingView()</div><div class="ttdef"><b>Definition:</b> <a href="heating_view_8cpp_source.html#l00065">heatingView.cpp:65</a></div></div>
-<div class="ttc" id="aclassheating_view_html_a67176c9af059b3d627d3d05e044890c3"><div class="ttname"><a href="classheating_view.html#a67176c9af059b3d627d3d05e044890c3">heatingView::getController</a></div><div class="ttdeci">heatingController * getController()</div><div class="ttdef"><b>Definition:</b> <a href="heating_view_8cpp_source.html#l00069">heatingView.cpp:69</a></div></div>
+<div class="ttc" id="aclassheating_view_html_a10b7ae898f937ed2ec7a9fc8e4496086"><div class="ttname"><a href="classheating_view.html#a10b7ae898f937ed2ec7a9fc8e4496086">heatingView::~heatingView</a></div><div class="ttdeci">~heatingView()</div><div class="ttdef"><b>Definition:</b> <a href="heating_view_8cpp_source.html#l00068">heatingView.cpp:68</a></div></div>
+<div class="ttc" id="aclassheating_view_html_a67176c9af059b3d627d3d05e044890c3"><div class="ttname"><a href="classheating_view.html#a67176c9af059b3d627d3d05e044890c3">heatingView::getController</a></div><div class="ttdeci">heatingController * getController()</div><div class="ttdef"><b>Definition:</b> <a href="heating_view_8cpp_source.html#l00072">heatingView.cpp:72</a></div></div>
 <div class="ttc" id="aclassheating_view_html_ae36f674c774cfb79e3701412a7343329"><div class="ttname"><a href="classheating_view.html#ae36f674c774cfb79e3701412a7343329">heatingView::heatingView</a></div><div class="ttdeci">heatingView(Ui::MainWindow *uiPtr)</div><div class="ttdef"><b>Definition:</b> <a href="heating_view_8cpp_source.html#l00003">heatingView.cpp:3</a></div></div>
 <div class="ttc" id="aheating_view_8h_html"><div class="ttname"><a href="heating_view_8h.html">heatingView.h</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
@@ -169,7 +172,7 @@ $(document).ready(function(){initNavTree('heating_view_8cpp_source.html',''); in
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_5194e5fea318fda12687127c23f8aba1.html">app</a></li><li class="navelem"><a class="el" href="heating_view_8cpp.html">heatingView.cpp</a></li>
+    <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_9e8ccc4a7b50647947c687aaf0682f16.html">viewLayer</a></li><li class="navelem"><a class="el" href="heating_view_8cpp.html">heatingView.cpp</a></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.4 </li>
   </ul>
 </div>

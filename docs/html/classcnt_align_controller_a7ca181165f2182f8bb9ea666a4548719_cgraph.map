@@ -1,9 +1,5 @@
 <map id="cntAlignController::updateLabelDispenserResponse" name="cntAlignController::updateLabelDispenserResponse">
-<area shape="rect" id="node1" title=" " alt="" coords="5,123,221,165"/>
-<area shape="rect" id="node2" href="$classcnt_align_controller.html#a508bc135d13e34403efc6c53d3c382e8" title=" " alt="" coords="269,86,424,127"/>
-<area shape="rect" id="node5" href="$classcnt_align_controller.html#a5ec1fa403f029922ac201511d72c3398" title=" " alt="" coords="285,155,409,197"/>
-<area shape="rect" id="node3" href="$classwgm__processes_1_1_ialigning__process.html#a7dd10f6cfc80cf6774b3dc571f436eaf" title=" " alt="" coords="472,86,643,127"/>
-<area shape="rect" id="node4" href="$classcnt__alignment__system_1_1_icnt__aligning__controller.html#ad270931c540dd40038cbb15112395482" title=" " alt="" coords="476,5,639,61"/>
-<area shape="rect" id="node6" href="$classcnt__alignment__system_1_1_icnt__aligning__controller.html#a46cc8286c226e2cc981da4e49664e916" title=" " alt="" coords="476,152,639,208"/>
-<area shape="rect" id="node7" href="$classcnt__controller.html#a539f56aa34b3b3a0c25be1badf49b918" title=" " alt="" coords="472,233,643,274"/>
+<area shape="rect" id="node1" title=" " alt="" coords="5,39,221,80"/>
+<area shape="rect" id="node2" href="$classcnt_align_controller.html#a508bc135d13e34403efc6c53d3c382e8" title=" " alt="" coords="269,5,424,47"/>
+<area shape="rect" id="node3" href="$classcnt_align_controller.html#a5ec1fa403f029922ac201511d72c3398" title=" " alt="" coords="285,71,409,112"/>
 </map>

@@ -1,10 +1,6 @@
 <map id="coolingController::on_stop_cooling_process_clicked" name="coolingController::on_stop_cooling_process_clicked">
-<area shape="rect" id="node1" title=" " alt="" coords="5,129,175,185"/>
-<area shape="rect" id="node2" href="$classcooling_controller.html#ab0af72b22ce78343642d3de7af5999c4" title=" " alt="" coords="252,5,379,47"/>
-<area shape="rect" id="node5" href="$classwgm__processes_1_1_icooling__process.html#abc55ba9b3691a52e41937811ff6e7fee" title=" " alt="" coords="223,201,408,243"/>
-<area shape="rect" id="node6" href="$classcooling_controller.html#a9465f1b2a2df2ad1feee8d0b3750a8b2" title=" " alt="" coords="252,71,379,112"/>
-<area shape="rect" id="node7" href="$classcooling_controller.html#aa5f3c0bd33f2531e012c719fe248243e" title=" " alt="" coords="252,136,379,177"/>
-<area shape="rect" id="node8" href="$classwgm__processes_1_1_icooling__process.html#a495c7a61c0ce24aaf88a4272f6b7d986" title=" " alt="" coords="231,267,399,308"/>
-<area shape="rect" id="node3" href="$classwgm__processes_1_1_icooling__process.html#a8ee6e3dc4c20f0f3690a013cab29f01d" title=" " alt="" coords="456,35,624,76"/>
-<area shape="rect" id="node4" href="$classwafer__cooling__system_1_1_icooling__controller.html#aee0efaad7862acaa986b9bc7454dac4e" title=" " alt="" coords="465,101,615,157"/>
+<area shape="rect" id="node1" title=" " alt="" coords="5,63,175,119"/>
+<area shape="rect" id="node2" href="$classcooling_controller.html#ab0af72b22ce78343642d3de7af5999c4" title=" " alt="" coords="223,5,349,47"/>
+<area shape="rect" id="node3" href="$classcooling_controller.html#a9465f1b2a2df2ad1feee8d0b3750a8b2" title=" " alt="" coords="223,71,349,112"/>
+<area shape="rect" id="node4" href="$classcooling_controller.html#aa5f3c0bd33f2531e012c719fe248243e" title=" " alt="" coords="223,136,349,177"/>
 </map>

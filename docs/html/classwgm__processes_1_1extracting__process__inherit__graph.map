@@ -1,5 +1,5 @@
 <map id="wgm_processes::extracting_process" name="wgm_processes::extracting_process">
-<area shape="rect" id="node1" title=" " alt="" coords="8,184,189,225"/>
-<area shape="rect" id="node2" href="$classwgm__processes_1_1_iextracting__process.html" title=" " alt="" coords="7,95,191,136"/>
-<area shape="rect" id="node3" href="$classwgm__processes_1_1_iprocesses__managment.html" title="interface process managemnt for user do not modify!" alt="" coords="5,5,192,47"/>
+<area shape="rect" id="node1" title=" " alt="" coords="7,184,188,225"/>
+<area shape="rect" id="node2" href="$classwgm__processes_1_1_iextracting__process.html" title=" " alt="" coords="5,95,189,136"/>
+<area shape="rect" id="node3" href="$classwgm__processes_1_1_iprocess__manager.html" title="interface process managemnt for user do not modify!" alt="" coords="11,5,184,47"/>
 </map>
