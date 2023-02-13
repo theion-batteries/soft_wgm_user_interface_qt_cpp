@@ -11,6 +11,7 @@ project(wgm_pkg
         DESCRIPTION "wgm package installer created and maintained by sami dhiab"
         HOMEPAGE_URL "https://github.com/theionSami/soft_wgm_user_interface_qt_cpp"
         LANGUAGES CXX)
+set(OUTPUT_ON_SUCCESS TRUE)
 enable_testing()
 
 set(CMAKE_OBJECT_PATH_MAX 300)
