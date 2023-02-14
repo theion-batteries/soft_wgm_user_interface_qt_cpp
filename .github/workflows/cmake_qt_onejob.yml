@@ -9,7 +9,7 @@ on:
   workflow_call:
 env:
   BUILD_TYPE: Debug
-  BUILD_TARGET: ALL_BUILD
+  BUILD_TARGET: ALL_BUILD # wgmApp
   GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
   OWNER_REPO_INSTALLER: theion-batteries
   BRANCH_REPO_INSTALLER: dev_win_api
