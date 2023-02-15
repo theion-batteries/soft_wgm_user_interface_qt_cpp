@@ -1,12 +1,12 @@
 /**
  * @file keyence_sensor.h
  * @author sami dhiab sami@theion.de
- * @brief 
+ * @brief
  * @version 0.1
  * @date 2022-11-01
- * 
+ *
  * @copyright Copyright (c) 2022
- * 
+ *
  */
 
 #pragma once
@@ -26,7 +26,7 @@
 #include "yaml-cpp/yaml.h"
 struct keyence_server
 {
-    const char* ip = "127.0.0.1";
+    std::string ip = "192.168.0.104";
     uint16_t port = 6555;
 };
 
@@ -34,7 +34,6 @@ class keyence_sensor: public Idistance_sensor
 {
 private:
     keyence_server _keyence_struct;
-    const char* keyence_ip = "192.168.0.104";
     keyence_client* Kclient;
     std::map<u_int, std::string> keyence_cmds = {
         {1,"get1"}, {2,"get2"},
@@ -51,16 +50,16 @@ private:
 
 public:
     keyence_sensor(/* args */);
+    keyence_sensor(std::string ip, uint16_t port);
     ~keyence_sensor();
     virtual double getMesuredValue()override;
     virtual wgm_feedbacks::enum_sub_sys_feedback connect() override;
-    virtual void disconnect() override;
+    virtual wgm_feedbacks::enum_sub_sys_feedback disconnect() override;
     // keyence methods
     double keyence_client_get_value_output0();
     double keyence_client_get_value_output1();
     double keyence_client_get_value_output2();
-    void keyence_client_get_value_all();
-    void run_all_subprocesses();
+    double keyence_client_get_value_output_all() override;
     virtual bool getStatus() override;
 };
 
