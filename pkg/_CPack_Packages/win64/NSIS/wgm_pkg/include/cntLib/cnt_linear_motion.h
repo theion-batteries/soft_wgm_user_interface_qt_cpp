@@ -41,7 +41,7 @@ private:
         
     };
     std::string motion_incoming_data;
-    u_int motion_data_length = 1024;
+    const u_int motion_data_length = 5012;
     bool axisReady = false;
 private:
     std::map<u_int, std::string> axis_cmds = {

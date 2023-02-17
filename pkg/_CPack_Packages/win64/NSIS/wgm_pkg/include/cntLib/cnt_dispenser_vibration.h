@@ -13,7 +13,7 @@
 
 struct cnt_dispenser_vibration_server
 {
-    const char* ip = "192.168.0.203";
+    const std::string ip = "192.168.0.203";
     uint16_t port = 8881;
 };
 
@@ -36,7 +36,7 @@ private:
 
 public:
     sockpp::tcp_connector* _dispenser_client=nullptr;
-    cnt_dispenser_vibration(/* args */);
+    cnt_dispenser_vibration(const std::string& ip,const uint_16t port);
     virtual ~cnt_dispenser_vibration();
     wgm_feedbacks::enum_sub_sys_feedback connect() override;
     bool getStatus() override;
