@@ -92,9 +92,9 @@ void sinkingController::updateLcdDistance(QLCDNumber* Lcd)
     while (get_sensor_status()) // while connected, launch thread display
     {
         std::cout << "updating lcd distance " << std::endl;
-        Lcd->display(proc_sinking_model.sinkingProcessHandler->get_sys_ptr()->getSubSysController()->get_sensor_values());
+        //Lcd->display(proc_sinking_model.sinkingProcessHandler->get_sys_ptr()->getSubSysController()->get_sensor_values());
         std::cout << "lcd distance thread id: " << QThread::currentThreadId() << std::endl;
-        QThread::currentThread()->sleep(10);
+        QThread::currentThread()->sleep(1000);
     }
 
 }
@@ -103,9 +103,9 @@ void sinkingController::updateLcdPosition(QLCDNumber* Lcd)
     while (get_axis_status())
     {
         std::cout << "updating lcd position " << std::endl;
-        Lcd->display(proc_sinking_model.sinkingProcessHandler->get_sys_ptr()->getSubSysController()->get_axis_position());
+        //Lcd->display(proc_sinking_model.sinkingProcessHandler->get_sys_ptr()->getSubSysController()->get_axis_position());
         std::cout << "lcd position thread id: " << QThread::currentThreadId() << std::endl;
-        QThread::currentThread()->sleep(10);
+        QThread::currentThread()->sleep(1000);
     }
 }
 bool sinkingController::get_axis_status()
