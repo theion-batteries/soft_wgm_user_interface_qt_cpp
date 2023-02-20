@@ -1,0 +1,81 @@
+name: CMake_Workflow_SingleJob
+
+on: [push, pull_request] 
+  # This action can be manually triggered
+  workflow_call:
+env:
+  BUILD_TYPE: Debug
+  BUILD_TARGET: ALL_BUILD # wgmApp
+  GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+  OWNER_REPO_INSTALLER: theion-batteries
+  BRANCH_REPO_INSTALLER: dev_win_api
+  REPO_URL: https://${GITHUB_TOKEN}@github.com/${OWNER_REPO_INSTALLER}/soft_wgm_installer_update.git
+
+
+jobs:
+  build_install_deploy:
+    runs-on: windows-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+      - name: Support longpaths
+        run: git config --system core.longpaths true
+      - name: Fetch submodules
+        run: |
+          git submodule sync --recursive
+          git submodule update --init --recursive
+      - name: Checkout submodule branches
+        run: git submodule foreach --recursive git checkout dev_win_api
+      - name: vcpkg install
+        run: .\vcpkg_install_script.bat
+      - name: Install Qt
+        uses: jurplel/install-qt-action@v3
+        with:
+          version: '6.4.0'
+          host: 'windows'
+          target: 'desktop'
+          arch: 'win64_msvc2019_64'
+          dir: 'C:/'
+          install-deps: 'true'
+          modules: 'qtcharts qtwebengine'
+          archives: 'qtbase qtsvg'
+          cache: 'false'
+          cache-key-prefix: 'install-qt-action'
+          setup-python: 'true'
+          tools: 'tools_ifw tools_qtcreator,qt.tools.qtcreator'
+          set-env: 'true'
+          tools-only: 'false'
+          aqtversion: '==2.1.*'
+          py7zrversion: '==0.19.*'
+          extra: '--external 7z'
+      - name: Configure CMake
+        env:
+          CMAKE_PREFIX_PATH: ${{env.Qt6_Dir}}
+        run: cmake -B ${{github.workspace}}/build -DCMAKE_BUILD_TYPE=${{env.BUILD_TYPE}} --no-warn-unused-cli -DCMAKE_EXPORT_COMPILE_COMMANDS:BOOL=TRUE -G "Visual Studio 17 2022" -T host=x64 -A x64
+      - name: Build
+        run: cmake --build ${{github.workspace}}/build --config ${{env.BUILD_TYPE}} --target ${{env.BUILD_TARGET}} -j 10 
+      - name: pythonTests
+        working-directory: ${{github.workspace}}
+        run: .\pythonTests.bat 
+      #- name: CTest
+      #  working-directory: ${{github.workspace}}/build
+      #  run: ctest -C ${{env.BUILD_TYPE}} -j10  -T test --output-on-failure
+      - name: build_docs
+        working-directory: ${{github.workspace}}
+        run: .\generate_docs
+      - name: Install
+        working-directory: ${{github.workspace}}/build
+        run: cmake --install . --config ${{env.BUILD_TYPE}}
+      - name: Configure Git
+        run: |
+          git config --global user.email "action@github.com"
+          git config --global user.name "GitHub Actions"
+      - name: Setup Git
+        run: |
+          git config --global user.name "${{ secrets.USERNAME }}"
+          git config --global user.email "${{ secrets.EMAIL }}"
+          git config --global credential.https://github.com.${{ secrets.USERNAME }} ${{ secrets.GITHUB_TOKEN }}
+#git push origin HEAD:${BRANCH_REPO_INSTALLER}
+      #- name: run app
+      #  working-directory: ${{github.workspace}}/build/${{env.BUILD_TYPE}}
+      #  run: .\wgm_app.exe
