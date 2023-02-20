@@ -2,7 +2,7 @@ name: CMake_Workflow_SingleJob
 
 on: [push, pull_request] 
   # This action can be manually triggered
-  workflow_call:
+  # workflow_call:
 env:
   BUILD_TYPE: Debug
   BUILD_TARGET: ALL_BUILD # wgmApp
