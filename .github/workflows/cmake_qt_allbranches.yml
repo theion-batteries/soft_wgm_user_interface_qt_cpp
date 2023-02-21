@@ -23,7 +23,7 @@ jobs:
           git submodule sync --recursive
           git submodule update --init --recursive
       - name: Printing branch name
-        run: echo running on branch ${{GITHUB_REF##*/}}    
+        run: echo running on branch ${{GITHUB_REF}}    
       - name: Checkout submodule branches
         run: git submodule foreach --recursive git checkout dev-win-api
       - name: Configure CMake
