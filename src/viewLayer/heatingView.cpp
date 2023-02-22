@@ -39,22 +39,23 @@ heatingView::heatingView(Ui::MainWindow* uiPtr)
 
     /***********       Process   *****/
     // connect cmd button run process heating
-    connect(ui->run_heating_process, &QAbstractButton::pressed, [this]() {
+    connect(ui->run_heating_process, &QAbstractButton::pressed,  this,[this]() {
         auto func = QtConcurrent::run([this]() {heatControll.on_run_heating_process_clicked();});
-        heatControll.updateLabelHeater(ui->heating_ready_label);
-        heatControll.updateLabelProcess(ui->heating_process_status);
-        heatControll.updateLcdTime(ui->lcd_proc_heating_time);
-        });
+        }, Qt::QueuedConnection);
     // connect cmd button stop process heating
-    connect(ui->stop_heating_proc, &QAbstractButton::pressed, [this]() {
+    connect(ui->stop_heating_proc, &QAbstractButton::pressed,this, [this]() {
         if (heatControll.getProcessStatus())
         {
             std::cout << "process already finished" << std::endl;
             return;
         }
         auto func = QtConcurrent::run([this]() {heatControll.on_stop_heating_proc_clicked();});
-        });
-
+        }, Qt::QueuedConnection);
+    // update time and process status label 
+    connect(&heatControll, &heatingController::finished,  this,[this]() {
+        heatControll.updateLabelProcess(ui->heating_process_status);
+        heatControll.updateLcdTime(ui->lcd_proc_heating_time);
+        }, Qt::QueuedConnection);
     // algorithms
     // on
     connect(ui->start_heating, &QAbstractButton::pressed, [this]() {
