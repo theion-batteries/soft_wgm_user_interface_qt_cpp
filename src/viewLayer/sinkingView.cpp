@@ -16,6 +16,7 @@ sinkingView::sinkingView(Ui::MainWindow* uiPtr)
         auto connectAxisTask = QtConcurrent::run([this]() {
             sinkControll.on_sink_connect_motion_axis_clicked();});
         }, Qt::QueuedConnection);
+        
     connect(&sinkControll, &sinkingController::axisConnected, this, [this]() {
         sinkControll.updateLabelAxis(ui->sink_motion_ready);
     auto func = QtConcurrent::run(&sinkingController::updateLcdPosition, &sinkControll, ui->sink_axis_pos);
@@ -66,6 +67,10 @@ sinkingView::sinkingView(Ui::MainWindow* uiPtr)
         });
 
     // algorithms
+    // move down until data valid
+    connect(ui->sinking_move_home, &QAbstractButton::pressed, [this]() {
+        auto func = QtConcurrent::run(&sinkingController::on_move_down_until_sensor_data_valid_clicked, &sinkControll);
+        });
     // move down until data valid
     connect(ui->move_down_until_sensor_data_valid, &QAbstractButton::pressed, [this]() {
         auto func = QtConcurrent::run(&sinkingController::on_move_down_until_sensor_data_valid_clicked, &sinkControll);

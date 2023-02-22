@@ -109,11 +109,11 @@ cntAlignView::cntAlignView(Ui::MainWindow* uiPtr)
 
     // algorithms
     // move down to center
-    connect(ui->move_down_to_center, &QAbstractButton::pressed, [this]() {
+    connect(ui->cnt_move_down_center, &QAbstractButton::pressed, [this]() {
         auto func = QtConcurrent::run(&cntAlignController::on_move_down_to_center_clicked, &cntControll);
         });
     // move home
-    connect(ui->move_back_home, &QAbstractButton::pressed, [this]() {
+    connect(ui->cnt_move_home, &QAbstractButton::pressed, [this]() {
         auto func = QtConcurrent::run(&cntAlignController::on_move_back_home_clicked, &cntControll);
         });
     // dispenser vibrate
