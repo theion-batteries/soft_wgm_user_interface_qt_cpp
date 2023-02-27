@@ -4903,6 +4903,7 @@
     <addaction name="actionuser_manual"/>
     <addaction name="actiondevelopper_docs"/>
     <addaction name="actioncheck_update"/>
+    <addaction name="actionMeteor_docs"/>
    </widget>
    <addaction name="menuMain"/>
    <addaction name="menuEdit"/>
@@ -5041,6 +5042,11 @@
   <action name="actionopen_MeteorMonoPrint">
    <property name="text">
     <string>open MeteorMonoPrint</string>
+   </property>
+  </action>
+  <action name="actionMeteor_docs">
+   <property name="text">
+    <string>Meteor docs</string>
    </property>
   </action>
  </widget>

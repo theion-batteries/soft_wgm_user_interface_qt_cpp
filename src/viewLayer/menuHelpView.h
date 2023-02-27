@@ -36,6 +36,7 @@ public slots:
     void on_actionuser_manual_triggered();
     void on_actiondevelopper_docs_triggered();
     void on_actioncheck_update_triggered();
+    void on_actionMeteor_docs_triggered();
 
 
 };
