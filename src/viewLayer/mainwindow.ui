@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1406</width>
+    <width>1413</width>
     <height>789</height>
    </rect>
   </property>
@@ -42,7 +42,7 @@
        <bool>false</bool>
       </property>
       <property name="currentIndex">
-       <number>4</number>
+       <number>3</number>
       </property>
       <widget class="QWidget" name="Main">
        <attribute name="title">
@@ -4830,7 +4830,7 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>1406</width>
+     <width>1413</width>
      <height>26</height>
     </rect>
    </property>
@@ -4880,6 +4880,16 @@
     <property name="title">
      <string>Tools</string>
     </property>
+    <addaction name="actionopen_PrintEngineHost"/>
+    <addaction name="actionopen_MeteorPrintEngine"/>
+    <addaction name="actionopen_MetPrint"/>
+    <addaction name="actionopen_MetSim"/>
+    <addaction name="actionopen_MetViewer"/>
+    <addaction name="actionopen_MetDrop"/>
+    <addaction name="actionopen_TestApp"/>
+    <addaction name="actionopen_MeteorConfigEditor"/>
+    <addaction name="actionopen_MetViewerServer"/>
+    <addaction name="actionopen_MeteorMonoPrint"/>
    </widget>
    <widget class="QMenu" name="menuWindow">
     <property name="title">
@@ -4981,6 +4991,56 @@
   <action name="actionheat_config_yaml">
    <property name="text">
     <string>heat_config.yaml</string>
+   </property>
+  </action>
+  <action name="actionopen_MeteorPrintEngine">
+   <property name="text">
+    <string>open MeteorPrintEngine</string>
+   </property>
+  </action>
+  <action name="actionopen_MetPrint">
+   <property name="text">
+    <string>open MetPrint</string>
+   </property>
+  </action>
+  <action name="actionopen_MetSim">
+   <property name="text">
+    <string>open SimPrint</string>
+   </property>
+  </action>
+  <action name="actionopen_MetViewer">
+   <property name="text">
+    <string>open MetViewer</string>
+   </property>
+  </action>
+  <action name="actionopen_MetDrop">
+   <property name="text">
+    <string>open MetDrop</string>
+   </property>
+  </action>
+  <action name="actionopen_TestApp">
+   <property name="text">
+    <string>open TestApp</string>
+   </property>
+  </action>
+  <action name="actionopen_MeteorConfigEditor">
+   <property name="text">
+    <string>open MeteorConfigEditor</string>
+   </property>
+  </action>
+  <action name="actionopen_PrintEngineHost">
+   <property name="text">
+    <string>open PrintEngineHost(console)</string>
+   </property>
+  </action>
+  <action name="actionopen_MetViewerServer">
+   <property name="text">
+    <string>open MetViewerServer</string>
+   </property>
+  </action>
+  <action name="actionopen_MeteorMonoPrint">
+   <property name="text">
+    <string>open MeteorMonoPrint</string>
    </property>
   </action>
  </widget>
