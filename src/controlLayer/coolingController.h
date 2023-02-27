@@ -30,19 +30,21 @@ signals:
     void rotaryReplied(std::string reply);
     void phReplied(std::string reply);
 public slots:
-    void on_connect_motion_axis_ph_clicked();
-    void on_connect_rotation_axis_ph_clicked();
-    void on_connect_ph_clicked();
+    void on_connect_ph_x_y_motion_clicked();
+    void on_connect_ph_trigger_clicked();
+    void on_connect_ph_meteor_clicked();
     void on_run_cooling_process_clicked();
     void on_stop_cooling_process_clicked();
     void on_ph_move_center_clicked();
-    void on_linear_move_home_clicked();
-    void on_rotation_move_home_clicked();
-    void on_ph_print_clicked();
+    void on_ph_motion_xy_move_home_clicked();
+    void on_ph_trigger_clicked();
+    void on_ph_rotate_center_clicked();
+    void on_ph_rotate_print_clicked();
 
 
     bool get_axis_status();
     bool get_rotary_status();
+    bool get_trigger_status();
     bool get_ph_status();
     bool getProcessStatus();
     std::string sendAxisCmd(std::string Cmd);
@@ -58,11 +60,11 @@ public slots:
     
     // label update
     void updateLabelAxis(QLabel* label);
-    void updateLabelRotation(QLabel* label);
+    void updateLabelTrigger(QLabel* label);
     void updateLabelPh(QLabel* label);
     void updateLabelProcess(QLabel* label);
     void updateLabelAxisResponse(QLabel* label, QString cmd);
-    void updateLabelRotResponse(QLabel* label, QString cmd);
+    void updateLabelTrigResponse(QLabel* label, QString cmd);
     void updateLabelPhResponse(QLabel* label, QString cmd);
 private:
     coolingModel coolModel;

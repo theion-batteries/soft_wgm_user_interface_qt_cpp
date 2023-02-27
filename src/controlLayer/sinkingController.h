@@ -33,6 +33,7 @@ public slots:
     void on_sink_connect_distance_sensor_clicked();
     void on_run_sinking_process_clicked();
     void on_stop_sinking_process_clicked();
+    void on_sinking_move_home_clicked();
     void on_move_down_until_sensor_data_valid_clicked();
     void on_move_down_to_surface_contact_clicked();
     void on_deep_wafer_holder_desired_thickness_clicked();

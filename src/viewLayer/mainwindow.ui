@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1406</width>
+    <width>1413</width>
     <height>789</height>
    </rect>
   </property>
@@ -42,7 +42,7 @@
        <bool>false</bool>
       </property>
       <property name="currentIndex">
-       <number>0</number>
+       <number>3</number>
       </property>
       <widget class="QWidget" name="Main">
        <attribute name="title">
@@ -1244,6 +1244,13 @@
              </widget>
             </item>
             <item>
+             <widget class="QCommandLinkButton" name="sinking_move_home">
+              <property name="text">
+               <string>whs_move_home</string>
+              </property>
+             </widget>
+            </item>
+            <item>
              <widget class="QCommandLinkButton" name="move_down_until_sensor_data_valid">
               <property name="text">
                <string>move_down_until_sensor_data_valid</string>
@@ -2259,16 +2266,16 @@
              </widget>
             </item>
             <item>
-             <widget class="QCommandLinkButton" name="move_down_to_center">
+             <widget class="QCommandLinkButton" name="cnt_move_home">
               <property name="text">
-               <string>move_down_to_center</string>
+               <string>cnt_move_home</string>
               </property>
              </widget>
             </item>
             <item>
-             <widget class="QCommandLinkButton" name="move_back_home">
+             <widget class="QCommandLinkButton" name="cnt_move_down_center">
               <property name="text">
-               <string>move_back_home</string>
+               <string>cnt_move_down_center</string>
               </property>
              </widget>
             </item>
@@ -2840,7 +2847,7 @@
                 <item>
                  <layout class="QHBoxLayout" name="horizontalLayout_38">
                   <item>
-                   <widget class="QCommandLinkButton" name="connect_motion_axis_ph">
+                   <widget class="QCommandLinkButton" name="connect_ph_x_y_motion">
                     <property name="sizePolicy">
                      <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
                       <horstretch>0</horstretch>
@@ -2854,7 +2861,7 @@
                      </size>
                     </property>
                     <property name="text">
-                     <string>connect motion axis</string>
+                     <string>connect ph x_y motion</string>
                     </property>
                    </widget>
                   </item>
@@ -3055,7 +3062,7 @@
             <item>
              <layout class="QHBoxLayout" name="horizontalLayout_45">
               <item>
-               <widget class="QCommandLinkButton" name="connect_rotation_axis_ph">
+               <widget class="QCommandLinkButton" name="connect_ph_trigger">
                 <property name="sizePolicy">
                  <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
                   <horstretch>100</horstretch>
@@ -3069,7 +3076,7 @@
                  </size>
                 </property>
                 <property name="text">
-                 <string>connect rotation axis</string>
+                 <string>connect ph trigger</string>
                 </property>
                </widget>
               </item>
@@ -3089,7 +3096,7 @@
               <item>
                <widget class="QLabel" name="label_34">
                 <property name="text">
-                 <string>rotation_ready</string>
+                 <string>trigger_ready</string>
                 </property>
                </widget>
               </item>
@@ -3107,7 +3114,7 @@
                </spacer>
               </item>
               <item>
-               <widget class="QLabel" name="ph_rotation_ready">
+               <widget class="QLabel" name="ph_trigger_ready">
                 <property name="sizePolicy">
                  <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
                   <horstretch>0</horstretch>
@@ -3129,7 +3136,7 @@
               <item>
                <widget class="QLabel" name="label_36">
                 <property name="text">
-                 <string>rotation_input_command</string>
+                 <string>trigger_input_command</string>
                 </property>
                </widget>
               </item>
@@ -3147,7 +3154,7 @@
                </spacer>
               </item>
               <item>
-               <widget class="QLineEdit" name="ph_input_rotation_cmd">
+               <widget class="QLineEdit" name="ph_input_trigger_cmd">
                 <property name="contextMenuPolicy">
                  <enum>Qt::NoContextMenu</enum>
                 </property>
@@ -3194,7 +3201,7 @@
                    </spacer>
                   </item>
                   <item>
-                   <widget class="QLabel" name="ph_rotation_cmd_given">
+                   <widget class="QLabel" name="ph_trigger_cmd_given">
                     <property name="sizePolicy">
                      <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
                       <horstretch>0</horstretch>
@@ -3222,7 +3229,7 @@
               <item>
                <widget class="QLabel" name="label_37">
                 <property name="text">
-                 <string>rotation_response</string>
+                 <string>trigger_response</string>
                 </property>
                </widget>
               </item>
@@ -3240,7 +3247,7 @@
                </spacer>
               </item>
               <item>
-               <widget class="QLabel" name="ph_rotation_axis_response">
+               <widget class="QLabel" name="ph_trigger_response">
                 <property name="sizePolicy">
                  <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
                   <horstretch>0</horstretch>
@@ -3266,7 +3273,7 @@
             <item>
              <layout class="QHBoxLayout" name="horizontalLayout_49">
               <item>
-               <widget class="QCommandLinkButton" name="connect_ph">
+               <widget class="QCommandLinkButton" name="connect_ph_meteor">
                 <property name="sizePolicy">
                  <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
                   <horstretch>100</horstretch>
@@ -3280,7 +3287,7 @@
                  </size>
                 </property>
                 <property name="text">
-                 <string>connect printHead dev</string>
+                 <string>connect printHead meteor</string>
                 </property>
                </widget>
               </item>
@@ -3624,16 +3631,9 @@
              </widget>
             </item>
             <item>
-             <widget class="QCommandLinkButton" name="linear_move_home">
+             <widget class="QCommandLinkButton" name="ph_motion_xy_move_home">
               <property name="text">
-               <string>linear_move_home</string>
-              </property>
-             </widget>
-            </item>
-            <item>
-             <widget class="QCommandLinkButton" name="rotation_move_home">
-              <property name="text">
-               <string>rotation_move_home</string>
+               <string>ph_motion_xy_move_home</string>
               </property>
              </widget>
             </item>
@@ -3645,9 +3645,23 @@
              </widget>
             </item>
             <item>
-             <widget class="QCommandLinkButton" name="ph_print">
+             <widget class="QCommandLinkButton" name="ph_trigger">
               <property name="text">
-               <string>ph_print</string>
+               <string>ph_trigger</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QCommandLinkButton" name="ph_rotate_center">
+              <property name="text">
+               <string>ph_rotate_center</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QCommandLinkButton" name="ph_rotate_print">
+              <property name="text">
+               <string>ph_rotate_print</string>
               </property>
              </widget>
             </item>
@@ -4816,7 +4830,7 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>1406</width>
+     <width>1413</width>
      <height>26</height>
     </rect>
    </property>
@@ -4866,6 +4880,16 @@
     <property name="title">
      <string>Tools</string>
     </property>
+    <addaction name="actionopen_PrintEngineHost"/>
+    <addaction name="actionopen_MeteorPrintEngine"/>
+    <addaction name="actionopen_MetPrint"/>
+    <addaction name="actionopen_MetSim"/>
+    <addaction name="actionopen_MetViewer"/>
+    <addaction name="actionopen_MetDrop"/>
+    <addaction name="actionopen_TestApp"/>
+    <addaction name="actionopen_MeteorConfigEditor"/>
+    <addaction name="actionopen_MetViewerServer"/>
+    <addaction name="actionopen_MeteorMonoPrint"/>
    </widget>
    <widget class="QMenu" name="menuWindow">
     <property name="title">
@@ -4967,6 +4991,56 @@
   <action name="actionheat_config_yaml">
    <property name="text">
     <string>heat_config.yaml</string>
+   </property>
+  </action>
+  <action name="actionopen_MeteorPrintEngine">
+   <property name="text">
+    <string>open MeteorPrintEngine</string>
+   </property>
+  </action>
+  <action name="actionopen_MetPrint">
+   <property name="text">
+    <string>open MetPrint</string>
+   </property>
+  </action>
+  <action name="actionopen_MetSim">
+   <property name="text">
+    <string>open SimPrint</string>
+   </property>
+  </action>
+  <action name="actionopen_MetViewer">
+   <property name="text">
+    <string>open MetViewer</string>
+   </property>
+  </action>
+  <action name="actionopen_MetDrop">
+   <property name="text">
+    <string>open MetDrop</string>
+   </property>
+  </action>
+  <action name="actionopen_TestApp">
+   <property name="text">
+    <string>open TestApp</string>
+   </property>
+  </action>
+  <action name="actionopen_MeteorConfigEditor">
+   <property name="text">
+    <string>open MeteorConfigEditor</string>
+   </property>
+  </action>
+  <action name="actionopen_PrintEngineHost">
+   <property name="text">
+    <string>open PrintEngineHost(console)</string>
+   </property>
+  </action>
+  <action name="actionopen_MetViewerServer">
+   <property name="text">
+    <string>open MetViewerServer</string>
+   </property>
+  </action>
+  <action name="actionopen_MeteorMonoPrint">
+   <property name="text">
+    <string>open MeteorMonoPrint</string>
    </property>
   </action>
  </widget>

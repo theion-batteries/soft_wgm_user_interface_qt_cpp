@@ -27,6 +27,7 @@ void heatingController::on_run_heating_process_clicked()
     }
     heatModel.heatingProcessHandler->start_process();
     time_elapsed = heatModel.heatingProcessHandler->get_elapsed_time();
+    emit finished();
 
 }
 void heatingController::on_stop_heating_proc_clicked()
@@ -38,6 +39,7 @@ void heatingController::on_stop_heating_proc_clicked()
     }
     heatModel.heatingProcessHandler->stop_process();
     time_elapsed = heatModel.heatingProcessHandler->get_elapsed_time();
+    emit finished();
 
 }
 void heatingController::on_start_heating_clicked()
@@ -63,7 +65,7 @@ void heatingController::on_stop_heating_clicked()
 }
 bool heatingController::get_heating_status()
 {
-return heatModel.heatingProcessHandler->get_sys_ptr()->getSubSysStatus("controller");
+    return heatModel.heatingProcessHandler->get_sys_ptr()->getSubSysStatus("controller");
 }
 bool heatingController::getProcessStatus()
 {
@@ -77,19 +79,25 @@ std::string heatingController::sendDirectCmd(std::string Cmd)
 void heatingController::reload_heating_config_file()
 {
     std::cout << "file closed succefuly, updating parameters" << std::endl;
- heatModel.heatingProcessHandler->get_sys_ptr()->getSubSysController().reload_config_file();
+    heatModel.heatingProcessHandler->get_sys_ptr()->getSubSysController().reload_config_file();
 }
 // update simple
 // lcd update
 void heatingController::updateLcdTime(QLCDNumber* Lcd)
 {
-   Lcd->display(time_elapsed);
+    Lcd->display(time_elapsed);
     time_elapsed = 0;
 
 }
 void heatingController::updateLcdTemperature(QLCDNumber* Lcd)
 {
-    Lcd->display(heatModel.heatingProcessHandler->get_sys_ptr()->getSubSysController().get_heating_sulfur_temperature());
+    while (get_heating_status())
+    {
+        std::cout << "updating lcd temperature " << std::endl;
+        Lcd->display(heatModel.heatingProcessHandler->get_sys_ptr()->getSubSysController().get_heating_sulfur_temperature());
+        std::cout << "lcd temperature thread id: " << QThread::currentThreadId() << std::endl;
+        QThread::currentThread()->sleep(60);
+    }
 }
 // label update
 void heatingController::updateLabelHeater(QLabel* label)
@@ -99,16 +107,15 @@ void heatingController::updateLabelHeater(QLabel* label)
         label->setText("true");
         label->setStyleSheet("QLabel { background-color : green; color : black; }");
     }
-
 }
 void heatingController::updateLabelProcess(QLabel* label)
 {
-    if (getProcessStatus())
-    {
+    //if (getProcessStatus())
+    //{
         label->setText("true");
         label->setStyleSheet("QLabel { background-color : green; color : black; }");
         return;
-    }
+    //}
 }
 // response update
 void heatingController::updateLabelHeaterResponse(QLabel* label, QString cmd)

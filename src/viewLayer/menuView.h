@@ -18,6 +18,7 @@
 #include "menuEditView.h"
 #include "menuFileView.h"
 #include "menuHelpView.h"
+#include "menuToolsView.h"
 
 
 

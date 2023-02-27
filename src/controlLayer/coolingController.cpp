@@ -13,18 +13,18 @@ coolingController::~coolingController()
 }
 
 
-void coolingController::on_connect_motion_axis_ph_clicked()
+void coolingController::on_connect_ph_x_y_motion_clicked()
 {
-    coolModel.coolingProcessHandler->get_sys_ptr()->connect_motion_axis();
+    coolModel.coolingProcessHandler->get_sys_ptr()->connect_xy_motion_axis();
     emit axisConnected();
 }
 
-void coolingController::on_connect_rotation_axis_ph_clicked()
+void coolingController::on_connect_ph_trigger_clicked()
 {
-coolModel.coolingProcessHandler->get_sys_ptr()->connect_rotation_axis();
+coolModel.coolingProcessHandler->get_sys_ptr()->connect_ph_trigger();
     emit rotationConnected();
 }
-void coolingController::on_connect_ph_clicked()
+void coolingController::on_connect_ph_meteor_clicked()
 {
 coolModel.coolingProcessHandler->get_sys_ptr()->connect_ph();
     emit phConnected();
@@ -52,6 +52,8 @@ void coolingController::on_stop_cooling_process_clicked()
     coolModel.coolingProcessHandler->stop_process();
     time_elapsed = coolModel.coolingProcessHandler->get_elapsed_time();
 }
+
+/************************** Algorithms ***********************/
 void coolingController::on_ph_move_center_clicked()
 {
     if (!get_axis_status() || !get_rotary_status() || !get_ph_status())
@@ -63,37 +65,50 @@ void coolingController::on_ph_move_center_clicked()
     def->ph_rotate_to_center(def->get_rotate_to_center_param());
     def->ph_motion_move_to_center(def->get_center_target_distance());
 }
-void coolingController::on_linear_move_home_clicked()
+void coolingController::on_ph_motion_xy_move_home_clicked()
 {
     if (!get_axis_status() || !get_rotary_status() || !get_ph_status())
     {
         std::cout << "device not connected " << std::endl;
         return;
     }
-    coolModel.coolingProcessHandler->get_sys_ptr()->getSubSysController()->get_axis_ptr()->move_home();
+    coolModel.coolingProcessHandler->get_sys_ptr()->getSubSysController()->ph_motion_home_all();
 }
-void coolingController::on_rotation_move_home_clicked()
+
+
+void coolingController::on_ph_trigger_clicked()
 {
     if (!get_axis_status() || !get_rotary_status() || !get_ph_status())
     {
         std::cout << "device not connected " << std::endl;
         return;
     }
-    coolModel.coolingProcessHandler->get_sys_ptr()->getSubSysController()->get_rotary_axis_ptr()->move_home();
+    coolModel.coolingProcessHandler->get_sys_ptr()->getSubSysController()->ph_trigger_print();
 }
-void coolingController::on_ph_print_clicked()
+
+void coolingController::on_ph_rotate_center_clicked()
 {
     if (!get_axis_status() || !get_rotary_status() || !get_ph_status())
     {
         std::cout << "device not connected " << std::endl;
         return;
     }
-    coolModel.coolingProcessHandler->get_sys_ptr()->getSubSysController()->get_ph_ptr()->startPrinting();
+    coolModel.coolingProcessHandler->get_sys_ptr()->getSubSysController()->ph_rotate_center();
+}
+
+void coolingController::on_ph_rotate_print_clicked()
+{
+    if (!get_axis_status() || !get_rotary_status() || !get_ph_status())
+    {
+        std::cout << "device not connected " << std::endl;
+        return;
+    }
+    coolModel.coolingProcessHandler->get_sys_ptr()->getSubSysController()->ph_rotate_and_print();
 }
 
 
 
-
+/*********************** Lcd Label ******************/
 
 
 void coolingController::updateLcdTime(QLCDNumber* Lcd)
@@ -118,7 +133,7 @@ void coolingController::updateLcdRotationPosition(QLCDNumber* Lcd)
     while (get_rotary_status())
     {
         std::cout << "updating lcd position " << std::endl;
-        Lcd->display(coolModel.coolingProcessHandler->get_sys_ptr()->getSubSysController()->get_rotary_axis_ptr()->get_position());
+        Lcd->display(coolModel.coolingProcessHandler->get_sys_ptr()->getSubSysController()->get_xy_axis_ptr()->get_rotation_position());
         std::cout << "lcd position thread id: " << QThread::currentThreadId() << std::endl;
         QThread::currentThread()->sleep(10);
     }
@@ -129,7 +144,7 @@ void coolingController::updateLcdPhFrequency(QLCDNumber* Lcd)
     while (get_ph_status())
     {
         std::cout << "updating lcd position " << std::endl;
-        Lcd->display(coolModel.coolingProcessHandler->get_sys_ptr()->getSubSysController()->get_rotary_axis_ptr()->get_position());
+        Lcd->display(coolModel.coolingProcessHandler->get_sys_ptr()->getSubSysController()->get_xy_axis_ptr()->get_rotation_position());
         std::cout << "lcd position thread id: " << QThread::currentThreadId() << std::endl;
         QThread::currentThread()->sleep(10);
     }
@@ -140,17 +155,20 @@ void coolingController::updateLcdPhFrequency(QLCDNumber* Lcd)
 
 bool coolingController::get_axis_status()
 {
-    return coolModel.coolingProcessHandler->get_sys_ptr()->getSubSysStatus("axis_motion");
+    return coolModel.coolingProcessHandler->get_sys_ptr()->getSubSysController()->get_linear_mover_status();
 }
 
 bool coolingController::get_rotary_status()
 {
-    return coolModel.coolingProcessHandler->get_sys_ptr()->getSubSysStatus("distance_sensor");
+    return coolModel.coolingProcessHandler->get_sys_ptr()->getSubSysController()->get_rotary_mover_status();
 }
-
+bool coolingController::get_trigger_status()
+{
+    return coolModel.coolingProcessHandler->get_sys_ptr()->getSubSysController()->get_trigger_status();
+}
 bool coolingController::get_ph_status()
 {
-    return coolModel.coolingProcessHandler->get_sys_ptr()->getSubSysStatus("distance_sensor");
+    return coolModel.coolingProcessHandler->get_sys_ptr()->getSubSysController()->get_ph_status();
 }
 std::string coolingController::sendAxisCmd(std::string Cmd)
 {
@@ -179,9 +197,9 @@ void coolingController::updateLabelAxis(QLabel* label)
         return;
     }
 }
-void coolingController::updateLabelRotation(QLabel* label)
+void coolingController::updateLabelTrigger(QLabel* label)
 {
-    if (get_axis_status())
+    if (get_trigger_status())
     {
         label->setText("true");
         label->setStyleSheet("QLabel { background-color : green; color : black; }");
@@ -233,7 +251,7 @@ void coolingController::updateLabelPhResponse(QLabel* label, QString cmd)
     std::string resp = sendAxisCmd(strCmd);
     emit phReplied(resp);
 }
-void coolingController::updateLabelRotResponse(QLabel* label, QString cmd)
+void coolingController::updateLabelTrigResponse(QLabel* label, QString cmd)
 {
     if (!get_rotary_status())
     {
