@@ -13,23 +13,23 @@ coolingView::coolingView(Ui::MainWindow* uiPtr)
     ui->ph_response_status->setStyleSheet("QLabel { background-color : red; color : black; }");
     /**************** signals and slots ********************/
     /************  connect methods           ***********/
-    // connect cmd button connect axis
+    // connect cmd button connect x,y axis
     connect(ui->connect_ph_x_y_motion, &QAbstractButton::pressed, this, [this]() {
         auto connectAxisTask = QtConcurrent::run([this]() {
             coolControll.on_connect_ph_x_y_motion_clicked();});
         }, Qt::QueuedConnection);
     connect(&coolControll, &coolingController::axisConnected, this, [this]() {
         coolControll.updateLabelAxis(ui->ph_motion_ready);
-    auto func = QtConcurrent::run(&coolingController::updateLcdAxisPosition, &coolControll, ui->ph_axis_linear_value);
+    auto lin = QtConcurrent::run(&coolingController::updateLcdAxisPosition, &coolControll, ui->ph_axis_linear_value);
+    auto rot = QtConcurrent::run(&coolingController::updateLcdRotationPosition, &coolControll, ui->ph_axis_rotation_value);
         }, Qt::QueuedConnection);
 
-    // connect cmd button connect rotation
+    // connect cmd button connect trigger
     connect(ui->connect_ph_trigger, &QAbstractButton::pressed, this, [this]() {
         auto connectrotTask = QtConcurrent::run([this]() {
             coolControll.on_connect_ph_trigger_clicked();});}, Qt::QueuedConnection);
     connect(&coolControll, &coolingController::rotationConnected, this, [this]() {
         coolControll.updateLabelTrigger(ui->ph_trigger_ready);
-    auto func = QtConcurrent::run(&coolingController::updateLcdRotationPosition, &coolControll, ui->ph_axis_rotation_value);
         }, Qt::QueuedConnection);
 
     // connect cmd button connect ph

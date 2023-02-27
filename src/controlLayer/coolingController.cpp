@@ -132,9 +132,9 @@ void coolingController::updateLcdRotationPosition(QLCDNumber* Lcd)
 {
     while (get_rotary_status())
     {
-        std::cout << "updating lcd position " << std::endl;
+        std::cout << "updating lcd rotation position " << std::endl;
         Lcd->display(coolModel.coolingProcessHandler->get_sys_ptr()->getSubSysController()->get_xy_axis_ptr()->get_rotation_position());
-        std::cout << "lcd position thread id: " << QThread::currentThreadId() << std::endl;
+        std::cout << "lcd rotation position thread id: " << QThread::currentThreadId() << std::endl;
         QThread::currentThread()->sleep(10);
     }
 }
@@ -143,9 +143,9 @@ void coolingController::updateLcdPhFrequency(QLCDNumber* Lcd)
 {
     while (get_ph_status())
     {
-        std::cout << "updating lcd position " << std::endl;
+        std::cout << "updating lcd ph frequency " << std::endl;
         Lcd->display(coolModel.coolingProcessHandler->get_sys_ptr()->getSubSysController()->get_xy_axis_ptr()->get_rotation_position());
-        std::cout << "lcd position thread id: " << QThread::currentThreadId() << std::endl;
+        std::cout << "lcd ph frequency thread id: " << QThread::currentThreadId() << std::endl;
         QThread::currentThread()->sleep(10);
     }
 }
