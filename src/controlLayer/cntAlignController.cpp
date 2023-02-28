@@ -99,7 +99,7 @@ void cntAlignController::updateLcdDispenserFreq(QLCDNumber* Lcd)
         std::cout << "updating lcd dispensr freq" << std::endl;
         Lcd->display(cntModel.aligningProcessHandler->get_sys_ptr()->getSubSysController().get_dispenser_frequency());
         std::cout << "lcd Dispenser thread id: " << QThread::currentThreadId() << std::endl;
-        QThread::currentThread()->sleep(1);
+        QThread::currentThread()->sleep(100);
     }
 
 }
@@ -111,7 +111,7 @@ void cntAlignController::updateLcdPosition(QLCDNumber* Lcd)
         std::cout << "updating cnt axis lcd position " << std::endl;
         Lcd->display(cntModel.aligningProcessHandler->get_sys_ptr()->getSubSysController().get_axis_position());
         std::cout << "lcd position thread id: " << QThread::currentThreadId() << std::endl;
-        QThread::currentThread()->sleep(10);
+        QThread::currentThread()->sleep(100);
     }
 }
 // once
@@ -259,7 +259,10 @@ void cntAlignController::updateLabelHvResponse(QLabel* label, QString cmd)
 
 std::string cntAlignController::sendAxisCmd(std::string Cmd)
 {
+    // sendCMd(cmd, block = falsE) 
+    cnt_linear_motion::setModeBlocking(true);
     return cntModel.aligningProcessHandler->get_sys_ptr()->getSubSysController().sendDirectCmdAxis(Cmd);
+
 }
 
 void cntAlignController::reload_cnt_config_file()

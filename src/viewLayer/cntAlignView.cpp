@@ -54,8 +54,8 @@ cntAlignView::cntAlignView(Ui::MainWindow* uiPtr)
     // connect axis reply to update text
     connect(&cntControll, &cntAlignController::axisReplied, this, [this](std::string reply) {
         std::cout << "axis full response: " << reply << std::endl;
-    ui->cnt_input_axis_cmd->setStyleSheet("QLabel { background-color : green; color : black; }");
-    ui->cnt_input_axis_cmd->setText(reply.c_str());
+    ui->cnt_axis_response->setStyleSheet("QLabel { background-color : green; color : black; }");
+    ui->cnt_axis_response->setText(reply.c_str());
     ui->cnt_input_axis_cmd->clear();
         }, Qt::QueuedConnection);
 

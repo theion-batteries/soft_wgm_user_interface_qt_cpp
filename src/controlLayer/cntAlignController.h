@@ -8,9 +8,12 @@
 #include <QProcess>
 #include <QLabel>
 #include <QString>
+
 // mvc
 #include <atomic>
 #include "cntAlignModel.h"
+#include <algorithm>
+
 class cntAlignController : public QObject
 {
     Q_OBJECT
