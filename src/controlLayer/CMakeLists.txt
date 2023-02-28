@@ -12,9 +12,8 @@ file(GLOB PROJECT_SOURCES
        "${CMAKE_CURRENT_SOURCE_DIR}/*.cpp"
         )
 add_library(controllerLib STATIC ${PROJECT_SOURCES}
-
-
 )
+
 target_link_libraries(controllerLib PUBLIC Qt6::Core 
                                  PUBLIC Qt6::Widgets
                                  PUBLIC Qt6::Concurrent
@@ -24,7 +23,6 @@ target_link_libraries(controllerLib PUBLIC Qt6::Core
 target_include_directories(controllerLib
 PUBLIC ${CMAKE_CURRENT_SOURCE_DIR} 
 PUBLIC ${CMAKE_CURRENT_SOURCE_DIR}/../../dependencies/modelLayer/
-
 )
 
 ############################# install target lib ########################################

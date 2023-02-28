@@ -62,6 +62,7 @@ find_package(sockpp CONFIG REQUIRED)
 find_package(yaml-cpp CONFIG REQUIRED)
 add_subdirectory(dependencies)
 add_subdirectory(src)
+add_subdirectory(tests)
 
 set(CPACK_RESOURCE_FILE_LICENSE "${CMAKE_CURRENT_SOURCE_DIR}/LICENSE")
 set(CPACK_GENERATOR "NSIS")
