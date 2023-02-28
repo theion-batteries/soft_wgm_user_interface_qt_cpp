@@ -108,10 +108,10 @@ void cntAlignController::updateLcdPosition(QLCDNumber* Lcd)
 
     while (get_axis_status()) // while connected, launch thread display
     {
-        std::cout << "updating lcd position " << std::endl;
+        std::cout << "updating cnt axis lcd position " << std::endl;
         Lcd->display(cntModel.aligningProcessHandler->get_sys_ptr()->getSubSysController().get_axis_position());
         std::cout << "lcd position thread id: " << QThread::currentThreadId() << std::endl;
-        QThread::currentThread()->sleep(1);
+        QThread::currentThread()->sleep(10);
     }
 }
 // once
