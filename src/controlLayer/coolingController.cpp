@@ -21,12 +21,12 @@ void coolingController::on_connect_ph_x_y_motion_clicked()
 
 void coolingController::on_connect_ph_trigger_clicked()
 {
-coolModel.coolingProcessHandler->get_sys_ptr()->connect_ph_trigger();
+    coolModel.coolingProcessHandler->get_sys_ptr()->connect_ph_trigger();
     emit rotationConnected();
 }
 void coolingController::on_connect_ph_meteor_clicked()
 {
-coolModel.coolingProcessHandler->get_sys_ptr()->connect_ph();
+    coolModel.coolingProcessHandler->get_sys_ptr()->connect_ph();
     emit phConnected();
 }
 
@@ -121,7 +121,7 @@ void coolingController::updateLcdAxisPosition(QLCDNumber* Lcd)
 {
     while (get_axis_status()) // while connected, launch thread display
     {
-        std::cout << "updating lcd distance " << std::endl;
+        std::cout << "updating lcd linear position" << std::endl;
         Lcd->display(coolModel.coolingProcessHandler->get_sys_ptr()->getSubSysController()->get_axis_position());
         std::cout << "lcd distance thread id: " << QThread::currentThreadId() << std::endl;
         QThread::currentThread()->sleep(10);
@@ -138,17 +138,145 @@ void coolingController::updateLcdRotationPosition(QLCDNumber* Lcd)
         QThread::currentThread()->sleep(10);
     }
 }
-// TODO :
+void coolingController::updateLcdAxisVelocity(QLCDNumber* Lcd)
+{
+    while (get_axis_status()) // while connected, launch thread display
+    {
+        std::cout << "updating lcd x linear velocity " << std::endl;
+        Lcd->display(coolModel.coolingProcessHandler->get_sys_ptr()->getSubSysController()->get_axis_velocity());
+        std::cout << "lcd distance thread id: " << QThread::currentThreadId() << std::endl;
+        QThread::currentThread()->sleep(10);
+    }
+
+}
+void coolingController::updateLcdRotationVelocity(QLCDNumber* Lcd)
+{
+    while (get_rotary_status())
+    {
+        std::cout << "updating lcd y rotation velocity " << std::endl;
+        Lcd->display(coolModel.coolingProcessHandler->get_sys_ptr()->getSubSysController()->get_rotation_velocity());
+        std::cout << "lcd rotation position thread id: " << QThread::currentThreadId() << std::endl;
+        QThread::currentThread()->sleep(10);
+    }
+}
+// combined
+void coolingController::updateLcdXYPosition(QLCDNumber* LcdX, QLCDNumber* LcdY)
+{
+    while (get_axis_status())
+    {
+        auto x_y = coolModel.coolingProcessHandler->get_sys_ptr()->getSubSysController()->get_xy_axis_ptr()->get_xy_position();
+        std::cout << "updating lcd x linear position: " << x_y.first << std::endl;
+        LcdX->display(x_y.first);
+        std::cout << "updating lcd y rotation position: " << x_y.second << std::endl;
+        LcdY->display(x_y.second);
+        std::cout << "lcd update positions thread id: " << QThread::currentThreadId() << std::endl;
+        QThread::currentThread()->sleep(10);
+    }
+}
+
+void coolingController::updateLcdXYVelocity(QLCDNumber* LcdX, QLCDNumber* LcdY)
+{
+    while (get_axis_status())
+    {
+        auto x_y = coolModel.coolingProcessHandler->get_sys_ptr()->getSubSysController()->get_xy_axis_ptr()->get_xy_velocity();
+
+        std::cout << "updating lcd x linear velocity: " << x_y.first << std::endl;
+        LcdX->display(x_y.first);
+        std::cout << "updating lcd y rotation velocity: " << x_y.second << std::endl;
+        LcdY->display(x_y.second);
+        std::cout << "lcd update velocity thread id: " << QThread::currentThreadId() << std::endl;
+        QThread::currentThread()->sleep(20);
+    }
+}
+void coolingController::updateLcdXY(QLCDNumber* LcdPosX, QLCDNumber* LcdPosY, QLCDNumber* LcdVelX, QLCDNumber* LcdVelY)
+{
+    while (get_axis_status())
+    {
+        auto x_y = coolModel.coolingProcessHandler->get_sys_ptr()->getSubSysController()->get_xy_axis_ptr()->get_xy_position();
+        std::cout << "updating lcd x linear position: " << x_y.first << std::endl;
+        LcdPosX->display(x_y.first);
+        std::cout << "updating lcd y rotation position: " << x_y.second << std::endl;
+        LcdPosY->display(x_y.second);
+        std::cout << "lcd update positions thread id: " << QThread::currentThreadId() << std::endl;
+        QThread::currentThread()->sleep(5);
+        x_y = coolModel.coolingProcessHandler->get_sys_ptr()->getSubSysController()->get_xy_axis_ptr()->get_xy_velocity();
+        std::cout << "updating lcd x linear velocity: " << x_y.first << std::endl;
+        LcdVelX->display(x_y.first);
+        std::cout << "updating lcd y rotation velocity: " << x_y.second << std::endl;
+        LcdVelY->display(x_y.second);
+        std::cout << "lcd update velocity thread id: " << QThread::currentThreadId() << std::endl;
+        QThread::currentThread()->sleep(5);
+    }
+}
+
+
+
+// PH
 void coolingController::updateLcdPhFrequency(QLCDNumber* Lcd)
 {
     while (get_ph_status())
     {
         std::cout << "updating lcd ph frequency " << std::endl;
-        Lcd->display(coolModel.coolingProcessHandler->get_sys_ptr()->getSubSysController()->get_xy_axis_ptr()->get_rotation_position());
+        //Lcd->display(coolModel.coolingProcessHandler->get_sys_ptr()->getSubSysController()->get_xy_axis_ptr()->get_rotation_position());
         std::cout << "lcd ph frequency thread id: " << QThread::currentThreadId() << std::endl;
         QThread::currentThread()->sleep(10);
     }
 }
+
+void coolingController::updateLcdPhDropletVolume(QLCDNumber* Lcd)
+{
+    while (get_ph_status())
+    {
+        std::cout << "updating lcd ph Droplet Volume " << std::endl;
+        //Lcd->display(coolModel.coolingProcessHandler->get_sys_ptr()->getSubSysController()->get_xy_axis_ptr()->get_rotation_position());
+        std::cout << "lcd ph Droplet Volume thread id: " << QThread::currentThreadId() << std::endl;
+        QThread::currentThread()->sleep(10);
+    }
+}
+
+
+void coolingController::updateLcdPhLiquidTemperature(QLCDNumber* Lcd)
+{
+    while (get_ph_status())
+    {
+        std::cout << "updating lcd ph Liquid Temperature " << std::endl;
+        //Lcd->display(coolModel.coolingProcessHandler->get_sys_ptr()->getSubSysController()->get_xy_axis_ptr()->get_rotation_position());
+        std::cout << "lcd ph Liquid Temperature thread id: " << QThread::currentThreadId() << std::endl;
+        QThread::currentThread()->sleep(10);
+    }
+}
+
+void coolingController::updateLcdPhNumberActiveNuzzles(QLCDNumber* Lcd)
+{
+    while (get_ph_status())
+    {
+        std::cout << "updating lcd ph Number Active Nuzzles " << std::endl;
+        //Lcd->display(coolModel.coolingProcessHandler->get_sys_ptr()->getSubSysController()->get_xy_axis_ptr()->get_rotation_position());
+        std::cout << "lcd ph Number Active Nuzzles thread id: " << QThread::currentThreadId() << std::endl;
+        QThread::currentThread()->sleep(10);
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

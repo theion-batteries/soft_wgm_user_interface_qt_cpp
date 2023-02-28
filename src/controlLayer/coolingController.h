@@ -11,7 +11,7 @@
 // mvc
 #include <atomic>
 #include "coolingModel.h"
-class coolingController : public QObject
+class coolingController: public QObject
 {
     Q_OBJECT
 public:
@@ -52,12 +52,24 @@ public slots:
     // update simple
     // lcd update
     void updateLcdTime(QLCDNumber* Lcd);
+    // X,Y
     void updateLcdRotationPosition(QLCDNumber* Lcd);
     void updateLcdAxisPosition(QLCDNumber* Lcd);
+    void updateLcdRotationVelocity(QLCDNumber* Lcd);
+    void updateLcdAxisVelocity(QLCDNumber* Lcd);
+    // combine calls
+    void updateLcdXYPosition(QLCDNumber* LcdX,QLCDNumber* LcdY);
+    void updateLcdXYVelocity(QLCDNumber* LcdX,QLCDNumber* LcdY);
+    void updateLcdXY(QLCDNumber* LcdPosX,QLCDNumber* LcdPosY,  QLCDNumber* LcdVelX,QLCDNumber* LcdVelY);
+    // Ph
     void updateLcdPhFrequency(QLCDNumber* Lcd);
+    void updateLcdPhDropletVolume(QLCDNumber* Lcd);
+    void updateLcdPhLiquidTemperature(QLCDNumber* Lcd);
+    void updateLcdPhNumberActiveNuzzles(QLCDNumber* Lcd);
 
 
-    
+
+
     // label update
     void updateLabelAxis(QLabel* label);
     void updateLabelTrigger(QLabel* label);

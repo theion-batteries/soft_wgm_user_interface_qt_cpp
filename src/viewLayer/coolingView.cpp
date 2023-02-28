@@ -20,8 +20,10 @@ coolingView::coolingView(Ui::MainWindow* uiPtr)
         }, Qt::QueuedConnection);
     connect(&coolControll, &coolingController::axisConnected, this, [this]() {
         coolControll.updateLabelAxis(ui->ph_motion_ready);
-    auto lin = QtConcurrent::run(&coolingController::updateLcdAxisPosition, &coolControll, ui->ph_axis_linear_value);
-    auto rot = QtConcurrent::run(&coolingController::updateLcdRotationPosition, &coolControll, ui->ph_axis_rotation_value);
+    //auto pos = QtConcurrent::run(&coolingController::updateLcdXYPosition, &coolControll, ui->ph_axis_linear_value, ui->ph_axis_rotation_value);
+    //auto vel = QtConcurrent::run(&coolingController::updateLcdXYVelocity, &coolControll, ui->ph_axis_velocity_value, ui->ph_axis_rotation_velocity_value);
+    auto all = QtConcurrent::run(&coolingController::updateLcdXY, &coolControll, ui->ph_axis_linear_value, ui->ph_axis_rotation_value, ui->ph_axis_velocity_value, ui->ph_axis_rotation_velocity_value);
+
         }, Qt::QueuedConnection);
 
     // connect cmd button connect trigger
@@ -39,7 +41,10 @@ coolingView::coolingView(Ui::MainWindow* uiPtr)
     connect(&coolControll, &coolingController::phConnected, this, [this]() {
         coolControll.updateLabelPh(ui->ph_connected_status);
     std::cout << "main thread id: " << QThread::currentThreadId() << std::endl;
-    auto func = QtConcurrent::run(&coolingController::updateLcdPhFrequency, &coolControll, ui->ph_ejet_frequency);
+    auto func1 = QtConcurrent::run(&coolingController::updateLcdPhFrequency, &coolControll, ui->ph_ejet_frequency);
+    auto func2 = QtConcurrent::run(&coolingController::updateLcdPhDropletVolume, &coolControll, ui->ph_droplet_volume);
+    auto func3 = QtConcurrent::run(&coolingController::updateLcdPhLiquidTemperature, &coolControll, ui->ph_liquid_temperature);
+    auto func4 = QtConcurrent::run(&coolingController::updateLcdPhNumberActiveNuzzles, &coolControll, ui->ph_number_active_nuzzles);
         }, Qt::QueuedConnection);
 
 /*****************  manual commands section *******************/
