@@ -53,7 +53,7 @@ void cntAlignController::on_stop_cnt_proc_clicked()
 }
 void cntAlignController::on_move_down_to_center_clicked()
 {
-    if (!get_axis_status() || !get_dispenser_status() ||!get_hv_status())
+    if (!get_axis_status() )
     {
         std::cout << "device not connected " << std::endl;
         return;
@@ -63,7 +63,7 @@ void cntAlignController::on_move_down_to_center_clicked()
 }
 void cntAlignController::on_move_back_home_clicked()
 {
-    if (!get_axis_status() || !get_dispenser_status() ||!get_hv_status())
+    if (!get_axis_status() )
     {
         std::cout << "device not connected " << std::endl;
         return;
@@ -72,7 +72,7 @@ void cntAlignController::on_move_back_home_clicked()
 }
 void cntAlignController::on_dispenser_vibrate_clicked()
 {
-    if (!get_axis_status() || !get_dispenser_status() ||!get_hv_status())
+    if (!get_dispenser_status())
     {
         std::cout << "device not connected " << std::endl;
         return;
@@ -81,7 +81,7 @@ void cntAlignController::on_dispenser_vibrate_clicked()
 }
 void cntAlignController::on_high_voltage_pulse_clicked()
 {
-    if (!get_axis_status() || !get_dispenser_status() ||!get_hv_status())
+    if (!get_hv_status())
     {
         std::cout << "device not connected " << std::endl;
         return;
@@ -237,7 +237,7 @@ void cntAlignController::updateLabelDispenserResponse(QLabel* label, QString cmd
     label->clear();
     std::cout << "user cmd: " << cmd.toStdString() << std::endl;
     auto strCmd = cmd.toStdString();
-    std::string resp = sendAxisCmd(strCmd);
+    std::string resp = sendDispenserCmd(strCmd);
     emit dispenserReplied(resp);
 
 }
@@ -252,17 +252,27 @@ void cntAlignController::updateLabelHvResponse(QLabel* label, QString cmd)
     label->clear();
     std::cout << "user cmd: " << cmd.toStdString() << std::endl;
     auto strCmd = cmd.toStdString();
-    std::string resp = sendAxisCmd(strCmd);
+    std::string resp = sendHvCmd(strCmd);
     emit hvReplied(resp);
 
 }
 
 std::string cntAlignController::sendAxisCmd(std::string Cmd)
 {
-    // sendCMd(cmd, block = falsE) 
     cnt_linear_motion::setModeBlocking(true);
     return cntModel.aligningProcessHandler->get_sys_ptr()->getSubSysController().sendDirectCmdAxis(Cmd);
+}
 
+std::string cntAlignController::sendDispenserCmd(std::string Cmd)
+{
+    cnt_dispenser_vibration::setModeBlocking(true);
+    return cntModel.aligningProcessHandler->get_sys_ptr()->getSubSysController().sendDirectCmdDispenser(Cmd);
+}
+
+std::string cntAlignController::sendHvCmd(std::string Cmd)
+{
+    cnt_hvac_gbs::setModeBlocking(true);
+    return cntModel.aligningProcessHandler->get_sys_ptr()->getSubSysController().sendDirectCmdHvac(Cmd);
 }
 
 void cntAlignController::reload_cnt_config_file()

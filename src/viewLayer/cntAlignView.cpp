@@ -68,8 +68,8 @@ cntAlignView::cntAlignView(Ui::MainWindow* uiPtr)
    // connect dispenser reply to update text
     connect(&cntControll, &cntAlignController::dispenserReplied, this, [this](std::string reply) {
         std::cout << "axis full response: " << reply << std::endl;
-    ui->cnt_input_dispenser->setStyleSheet("QLabel { background-color : green; color : black; }");
-    ui->cnt_input_dispenser->setText(reply.c_str());
+    ui->cnt_dispenser_response->setStyleSheet("QLabel { background-color : green; color : black; }");
+    ui->cnt_dispenser_response->setText(reply.c_str());
     ui->cnt_input_dispenser->clear();
         }, Qt::QueuedConnection);
 
@@ -82,8 +82,8 @@ cntAlignView::cntAlignView(Ui::MainWindow* uiPtr)
    // connect hv reply to update text
     connect(&cntControll, &cntAlignController::hvReplied, this, [this](std::string reply) {
         std::cout << "axis full response: " << reply << std::endl;
-    ui->cnt_input_hv_cmd->setStyleSheet("QLabel { background-color : green; color : black; }");
-    ui->cnt_input_hv_cmd->setText(reply.c_str());
+    ui->cnt_hv_response->setStyleSheet("QLabel { background-color : green; color : black; }");
+    ui->cnt_hv_response->setText(reply.c_str());
     ui->cnt_input_hv_cmd->clear();
         }, Qt::QueuedConnection);
 
