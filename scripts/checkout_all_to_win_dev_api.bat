@@ -6,7 +6,7 @@ if "%1"=="" (
 )
 
 set branch_name=%1
-
+cd ..
 echo switching to "%branch_name%" branch in parent/root repository...
 git checkout  %branch_name%
 

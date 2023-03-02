@@ -29,7 +29,7 @@ jobs:
           git config --global user.email "${{ secrets.EMAIL }}"
           git config --global credential.https://github.com.${{ secrets.USERNAME }} ${{ secrets.GITHUB_TOKEN }}
       - name: vcpkg install
-        run: .\vcpkg_install_script.bat
+        run: .\scripts\vcpkg_install_script.bat
       - name: Install Qt
         uses: jurplel/install-qt-action@v3
         with:

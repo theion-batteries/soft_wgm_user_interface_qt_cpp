@@ -29,7 +29,7 @@ jobs:
     needs: build
     steps:
       - name: vcpkg install
-        run: .\vcpkg_install_script.bat
+        run: .\scripts\vcpkg_install_script.bat
 
   deploy:
     runs-on: windows-latest

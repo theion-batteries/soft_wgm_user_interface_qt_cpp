@@ -1,3 +1,4 @@
+cd ..
 REM start whs servers
 start "Server Axis" /B python dependencies/software_wgm_v2_cpp/dependencies/soft_wafer_holder_system_controller/tests/server_axis.py
 start "Server Keyence" /B python dependencies/software_wgm_v2_cpp/dependencies/soft_wafer_holder_system_controller/tests/server_keyence.py

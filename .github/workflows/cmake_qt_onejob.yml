@@ -31,7 +31,7 @@ jobs:
       - name: Checkout submodule branches
         run: git submodule foreach --recursive git checkout dev_win_api
       - name: vcpkg install
-        run: .\vcpkg_install_script.bat
+        run: .\scripts\vcpkg_install_script.bat
       - name: Install Qt
         uses: jurplel/install-qt-action@v3
         with:
@@ -60,13 +60,13 @@ jobs:
         run: cmake --build ${{github.workspace}}/build --config ${{env.BUILD_TYPE}} --target ${{env.BUILD_TARGET}} -j 10 
       - name: pythonTests
         working-directory: ${{github.workspace}}
-        run: .\pythonTests.bat 
+        run: .\scripts\pythonTests.bat 
       #- name: CTest
       #  working-directory: ${{github.workspace}}/build
       #  run: ctest -C ${{env.BUILD_TYPE}} -j10  -T test --output-on-failure
       - name: build_docs
         working-directory: ${{github.workspace}}
-        run: .\generate_docs
+        run: .\scripts\generate_docs
       - name: Install
         working-directory: ${{github.workspace}}/build
         run: cmake --install . --config ${{env.BUILD_TYPE}}
@@ -94,4 +94,4 @@ jobs:
 #git push origin HEAD:${BRANCH_REPO_INSTALLER}
       #- name: run app
       #  working-directory: ${{github.workspace}}/build/${{env.BUILD_TYPE}}
-      #  run: .\wgm_app.exe
+      #  run: .\scripts\wgm_app.exe

@@ -1,2 +1,3 @@
+cd ..
 cd docs
 doxygen 

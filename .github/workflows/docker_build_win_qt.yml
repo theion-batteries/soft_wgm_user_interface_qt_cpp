@@ -15,4 +15,4 @@ jobs:
     steps:
     - uses: actions/checkout@v3
     - name: Build and Push the Docker image
-      run: .\docker_push_qt_win_img.bat
+      run: .\scripts\docker_push_qt_win_img.bat

@@ -1,3 +1,4 @@
+cd ..
 git clone git://code.qt.io/qt/qt5.git qt6
 cd qt6
 git switch v6.4.0

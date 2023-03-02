@@ -1,3 +1,4 @@
+cd ..
 cd dependencies/
 git clone https://github.com/Microsoft/vcpkg.git
 cd vcpkg
