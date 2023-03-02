@@ -12,7 +12,7 @@ git checkout  %branch_name%
 
 echo.
 echo switching to "%branch_name%" branch in all submodules...
-git submodule foreach git checkout  %branch_name%
+git submodule foreach --recursive git checkout  %branch_name%
 
 echo.
 echo All "%branch_name%" branches created successfully!
