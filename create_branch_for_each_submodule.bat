@@ -1,7 +1,7 @@
 @echo off
 
 if "%1"=="" (
-    echo Usage: create-refactor-branches.bat BRANCH_NAME
+    echo Usage: create_branch_for_each_submodule.bat BRANCH_NAME
     exit /b 1
 )
 
