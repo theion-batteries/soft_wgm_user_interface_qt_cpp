@@ -20,7 +20,7 @@ void sinkingController::on_sink_connect_distance_sensor_clicked()
 
 void sinkingController::on_sink_connect_motion_axis_clicked()
 {
-proc_sinking_model.sinkingProcessHandler->get_sys_ptr()->connect_motion_axis();
+    proc_sinking_model.sinkingProcessHandler->get_sys_ptr()->connect_motion_axis();
     emit axisConnected();
 }
 
@@ -129,6 +129,7 @@ bool sinkingController::get_sensor_status()
 
 std::string sinkingController::sendAxisCmd(std::string Cmd)
 {
+    linear_motion::setModeBlocking(true);
     return proc_sinking_model.sinkingProcessHandler->get_sys_ptr()->getSubSysController()->sendDirectCmdAxis(Cmd);
 }
 

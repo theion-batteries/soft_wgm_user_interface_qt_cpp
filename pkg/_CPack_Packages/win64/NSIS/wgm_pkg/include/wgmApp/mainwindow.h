@@ -43,6 +43,7 @@ private:
     menuDebugView* debugView;
     menuFileView* fileView;
     menuHelpView* helpView;
+    menuToolsView* toolsView;
 };
 #endif // MAINWINDOW_H
 

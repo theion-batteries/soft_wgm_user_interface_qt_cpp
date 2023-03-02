@@ -8,9 +8,12 @@
 #include <QProcess>
 #include <QLabel>
 #include <QString>
+
 // mvc
 #include <atomic>
 #include "cntAlignModel.h"
+#include <algorithm>
+
 class cntAlignController : public QObject
 {
     Q_OBJECT
@@ -47,6 +50,8 @@ public slots:
     bool get_hv_status();
     bool getProcessStatus();
     std::string sendAxisCmd(std::string Cmd);
+    std::string sendDispenserCmd(std::string Cmd);
+    std::string sendHvCmd(std::string Cmd);
     void reload_cnt_config_file();
     // update simple
     // lcd update
