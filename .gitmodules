@@ -10,3 +10,6 @@
 	path = pkg/soft_wgm_installer_update
 	url = https://github.com/theion-batteries/soft_wgm_installer_update.git
 	branch = dev_win_api
+[submodule "dependencies/soft_test_industrial_camera"]
+	path = dependencies/soft_test_industrial_camera
+	url = https://github.com/theion-batteries/soft_test_industrial_camera.git
