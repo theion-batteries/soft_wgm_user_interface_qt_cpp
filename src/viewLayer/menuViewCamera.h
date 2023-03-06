@@ -17,12 +17,12 @@
 
 // mvc
 #include <iostream>
-class menuHelpView : public QObject
+class menuViewCamera : public QObject
 {
     Q_OBJECT
 public:
-    menuHelpView(Ui::MainWindow* uiPtr);
-    ~menuHelpView();
+    menuViewCamera(Ui::MainWindow* uiPtr);
+    ~menuViewCamera();
 signals:
     void triggered();
     void finished();

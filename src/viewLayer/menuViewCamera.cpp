@@ -1,6 +1,6 @@
-#include "menuHelpView.h"
+#include "menuViewCamera.h"
 
-menuHelpView::menuHelpView(Ui::MainWindow* uiPtr)
+menuViewCamera::menuViewCamera(Ui::MainWindow* uiPtr)
 {
     ui = uiPtr;
     /**************** signals and slots ********************/
@@ -22,13 +22,13 @@ menuHelpView::menuHelpView(Ui::MainWindow* uiPtr)
         on_actionMeteor_docs_triggered();
         });
 }
-menuHelpView::~menuHelpView()
+menuViewCamera::~menuViewCamera()
 {
 }
 
 
 
-void  menuHelpView::on_actionuser_manual_triggered()
+void  menuViewCamera::on_actionuser_manual_triggered()
 {
     QString  link = "https://github.com/theion-batteries/soft_wgm_installer_update/blob/dev_win_api/wgm_application_user_manual.pdf";
     std::cout << "opening user manual inside browser " <<std::endl;
@@ -36,7 +36,7 @@ void  menuHelpView::on_actionuser_manual_triggered()
     
 }
 
-void  menuHelpView::on_actiondevelopper_docs_triggered()
+void  menuViewCamera::on_actiondevelopper_docs_triggered()
 {
     QString  link = "https://theionsami.github.io/soft_wgm_user_interface_qt_cpp/html/index.html";
     std::cout << "opening developper documentation inside browser "<<std::endl;
@@ -45,14 +45,14 @@ void  menuHelpView::on_actiondevelopper_docs_triggered()
 
 }
 
-void  menuHelpView::on_actioncheck_update_triggered()
+void  menuViewCamera::on_actioncheck_update_triggered()
 {
     QString  link = "https://github.com/theionSami/soft_wgm_user_interface_qt_cpp/releases";
     std::cout << "checking latest update inside browser " <<std::endl;
     checkUpdateProc.start("cmd", QStringList() << "/c" << "start" << link);
     
 }
-void  menuHelpView::on_actionMeteor_docs_triggered()
+void  menuViewCamera::on_actionMeteor_docs_triggered()
 {
     QString  path = "C:/Program Files/Meteor Inkjet/Meteor/Doc/PrinterInterfaceCLS.chm";
     std::cout << "openin meteor documentation " <<std::endl;
