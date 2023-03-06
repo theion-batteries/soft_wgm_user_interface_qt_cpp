@@ -13,3 +13,4 @@
 [submodule "dependencies/soft_test_industrial_camera"]
 	path = dependencies/soft_test_industrial_camera
 	url = https://github.com/theion-batteries/soft_test_industrial_camera.git
+	branch = dev_win_api
