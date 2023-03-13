@@ -157,10 +157,6 @@ coolingView::coolingView(Ui::MainWindow *uiPtr)
     connect(ui->ph_motion_rotate_print, &QAbstractButton::pressed, [this]()
             { auto func = QtConcurrent::run(&coolingController::on_ph_rotate_print_clicked, &coolControll); });
 
-    // print
-    connect(ui->ph_motion_move_home_all, &QAbstractButton::pressed, [this]()
-            { auto func = QtConcurrent::run(&coolingController::on_ph_motion_xy_move_home_clicked, &coolControll); });
-
 
 }
 
