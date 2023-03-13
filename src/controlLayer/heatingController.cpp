@@ -4,12 +4,12 @@
 
 heatingController::heatingController()
 {
-    std::cout << "heating controller constructed" << std::endl;
+    std::cout << "heating controller constructed" << "\n";
 }
 
 heatingController::~heatingController()
 {
-    std::cout << "heating controller desctructed" << std::endl;
+    std::cout << "heating controller desctructed" << "\n";
 }
 
 void heatingController::on_connect_heating_dev_clicked()
@@ -22,7 +22,7 @@ void heatingController::on_run_heating_process_clicked()
 {
     if (!get_heating_status())
     {
-        std::cout << "device not connected " << std::endl;
+        std::cout << "device not connected " << "\n";
         return;
     }
     heatModel.heatingProcessHandler->start_process();
@@ -34,7 +34,7 @@ void heatingController::on_stop_heating_proc_clicked()
 {
     if (!get_heating_status())
     {
-        std::cout << "device not connected " << std::endl;
+        std::cout << "device not connected " << "\n";
         return;
     }
     heatModel.heatingProcessHandler->stop_process();
@@ -47,7 +47,7 @@ void heatingController::on_start_heating_clicked()
 
     if (!get_heating_status())
     {
-        std::cout << "device not connected " << std::endl;
+        std::cout << "device not connected " << "\n";
         return;
     }
     auto heaterDef = heatModel.heatingProcessHandler->get_sys_ptr();
@@ -57,7 +57,7 @@ void heatingController::on_stop_heating_clicked()
 {
     if (!get_heating_status())
     {
-        std::cout << "device not connected " << std::endl;
+        std::cout << "device not connected " << "\n";
         return;
     }
     auto heaterDef = heatModel.heatingProcessHandler->get_sys_ptr();
@@ -69,7 +69,7 @@ bool heatingController::get_heating_status()
 }
 bool heatingController::getProcessStatus()
 {
-    std::cout << "getting process status" << std::endl;
+    std::cout << "getting process status" << "\n";
     return heatModel.heatingProcessHandler->is_proc_success();
 }
 std::string heatingController::sendDirectCmd(std::string Cmd)
@@ -78,7 +78,7 @@ std::string heatingController::sendDirectCmd(std::string Cmd)
 }
 void heatingController::reload_heating_config_file()
 {
-    std::cout << "file closed succefuly, updating parameters" << std::endl;
+    std::cout << "file closed succefuly, updating parameters" << "\n";
     heatModel.heatingProcessHandler->get_sys_ptr()->getSubSysController().reload_config_file();
 }
 // update simple
@@ -93,9 +93,9 @@ void heatingController::updateLcdTemperature(QLCDNumber* Lcd)
 {
     while (get_heating_status())
     {
-        std::cout << "updating lcd temperature " << std::endl;
+        std::cout << "updating lcd temperature " << "\n";
         Lcd->display(heatModel.heatingProcessHandler->get_sys_ptr()->getSubSysController().get_heating_sulfur_temperature());
-        std::cout << "lcd temperature thread id: " << QThread::currentThreadId() << std::endl;
+        std::cout << "lcd temperature thread id: " << QThread::currentThreadId() << "\n";
         QThread::currentThread()->sleep(60);
     }
 }
@@ -122,11 +122,11 @@ void heatingController::updateLabelHeaterResponse(QLabel* label, QString cmd)
 {
     if (!get_heating_status())
     {
-        std::cout << "device not connected " << std::endl;
+        std::cout << "device not connected " << "\n";
         return;
     }
     label->clear();
-    std::cout << "user cmd: " << cmd.toStdString() << std::endl;
+    std::cout << "user cmd: " << cmd.toStdString() << "\n";
     auto strCmd = cmd.toStdString();
     std::string resp = sendDirectCmd(strCmd);
     emit heaterReplied(resp);

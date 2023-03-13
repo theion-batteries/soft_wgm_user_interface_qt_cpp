@@ -30,7 +30,7 @@ void  menuEditView::on_actionwhs_config_triggered()
 {
 #ifdef WHS_CONFIG
 
-    std::cout << "opening whs config yaml file in notepad: " << WHS_CONFIG<<std::endl;
+    std::cout << "opening whs config yaml file in notepad: " << WHS_CONFIG<<"\n";
     whs_config_editor.start("C:\\Windows\\system32\\notepad.exe", { WHS_CONFIG });
 
 
@@ -41,7 +41,7 @@ void  menuEditView::on_actioncnt_config_triggered()
 {
 #ifdef CNT_CONFIG
 
-    std::cout << "opening CNT config yaml file in notepad: " << CNT_CONFIG<<std::endl;
+    std::cout << "opening CNT config yaml file in notepad: " << CNT_CONFIG<<"\n";
     cnt_config_editor.start("C:\\Windows\\system32\\notepad.exe", { CNT_CONFIG });
 
 
@@ -52,7 +52,7 @@ void  menuEditView::on_actionph_config_yaml_triggered()
 {
 #ifdef PH_CONFIG
 
-    std::cout << "opening PH config yaml file in notepad: " << PH_CONFIG<<std::endl;
+    std::cout << "opening PH config yaml file in notepad: " << PH_CONFIG<<"\n";
     ph_config_editor.start("C:\\Windows\\system32\\notepad.exe", { PH_CONFIG });
 
 
@@ -63,7 +63,7 @@ void  menuEditView::on_actionheat_config_yaml_triggered()
 {
 #ifdef HEAT_CONFIG
 
-    std::cout << "opening HEat config yaml file in notepad: " << HEAT_CONFIG<<std::endl;
+    std::cout << "opening HEat config yaml file in notepad: " << HEAT_CONFIG<<"\n";
     heat_config_editor.start("C:\\Windows\\system32\\notepad.exe", { HEAT_CONFIG });
 
 

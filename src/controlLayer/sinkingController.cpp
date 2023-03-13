@@ -4,12 +4,12 @@
 
 sinkingController::sinkingController()
 {
-    std::cout << "sinking controller constructed" << std::endl;
+    std::cout << "sinking controller constructed" << "\n";
 }
 
 sinkingController::~sinkingController()
 {
-    std::cout << "sinking controller desctructed" << std::endl;
+    std::cout << "sinking controller desctructed" << "\n";
 }
 
 void sinkingController::on_sink_connect_distance_sensor_clicked()
@@ -28,7 +28,7 @@ void sinkingController::on_run_sinking_process_clicked()
 {
     if (!get_axis_status() || !get_sensor_status())
     {
-        std::cout << "device not connected " << std::endl;
+        std::cout << "device not connected " << "\n";
         return;
     }
     proc_sinking_model.sinkingProcessHandler->start_process();
@@ -39,7 +39,7 @@ void sinkingController::on_stop_sinking_process_clicked()
 {
     if (!get_axis_status() || !get_sensor_status())
     {
-        std::cout << "device not connected " << std::endl;
+        std::cout << "device not connected " << "\n";
         return;
     }
     proc_sinking_model.sinkingProcessHandler->stop_process();
@@ -49,7 +49,7 @@ void sinkingController::on_sinking_move_home_clicked()
 {
     if (!get_axis_status())
     {
-        std::cout << "device not connected " << std::endl;
+        std::cout << "device not connected " << "\n";
         return;
     }
     proc_sinking_model.sinkingProcessHandler->get_sys_ptr()->getSubSysController()->extract_move_home();
@@ -58,7 +58,7 @@ void sinkingController::on_move_down_until_sensor_data_valid_clicked()
 {
     if (!get_axis_status() || !get_sensor_status())
     {
-        std::cout << "device not connected " << std::endl;
+        std::cout << "device not connected " << "\n";
         return;
     }
     proc_sinking_model.sinkingProcessHandler->get_sys_ptr()->getSubSysController()->move_down_until_data_availble();
@@ -67,7 +67,7 @@ void sinkingController::on_move_down_to_surface_contact_clicked()
 {
     if (!get_axis_status() || !get_sensor_status())
     {
-        std::cout << "device not connected " << std::endl;
+        std::cout << "device not connected " << "\n";
         return;
     }
     proc_sinking_model.sinkingProcessHandler->get_sys_ptr()->getSubSysController()->move_down_to_surface();
@@ -76,7 +76,7 @@ void sinkingController::on_deep_wafer_holder_desired_thickness_clicked()
 {
     if (!get_axis_status() || !get_sensor_status())
     {
-        std::cout << "device not connected " << std::endl;
+        std::cout << "device not connected " << "\n";
         return;
     }
     proc_sinking_model.sinkingProcessHandler->get_sys_ptr()->getSubSysController()->deep_wafer_holder_desired_thickness();
@@ -85,7 +85,7 @@ void sinkingController::on_monitor_and_calibrate_clicked()
 {
     if (!get_axis_status() || !get_sensor_status())
     {
-        std::cout << "device not connected " << std::endl;
+        std::cout << "device not connected " << "\n";
         return;
     }
     proc_sinking_model.sinkingProcessHandler->get_sys_ptr()->getSubSysController()->monitor_and_calibrate();
@@ -100,9 +100,9 @@ void sinkingController::updateLcdDistance(QLCDNumber* Lcd)
 {
     while (get_sensor_status()) // while connected, launch thread display
     {
-        std::cout << "updating lcd distance " << std::endl;
+        std::cout << "updating lcd distance " << "\n";
         Lcd->display(proc_sinking_model.sinkingProcessHandler->get_sys_ptr()->getSubSysController()->get_sensor_values());
-        std::cout << "lcd distance thread id: " << QThread::currentThreadId() << std::endl;
+        std::cout << "lcd distance thread id: " << QThread::currentThreadId() << "\n";
         QThread::currentThread()->sleep(1000);
     }
 
@@ -111,9 +111,9 @@ void sinkingController::updateLcdPosition(QLCDNumber* Lcd)
 {
     while (get_axis_status())
     {
-        std::cout << "updating lcd position " << std::endl;
+        std::cout << "updating lcd position " << "\n";
         Lcd->display(proc_sinking_model.sinkingProcessHandler->get_sys_ptr()->getSubSysController()->get_axis_position());
-        std::cout << "lcd position thread id: " << QThread::currentThreadId() << std::endl;
+        std::cout << "lcd position thread id: " << QThread::currentThreadId() << "\n";
         QThread::currentThread()->sleep(1000);
     }
 }
@@ -135,13 +135,13 @@ std::string sinkingController::sendAxisCmd(std::string Cmd)
 
 void sinkingController::reload_whs_config_file()
 {
-    std::cout << "file closed succefuly, updating parameters" << std::endl;
+    std::cout << "file closed succefuly, updating parameters" << "\n";
     proc_sinking_model.sinkingProcessHandler->get_sys_ptr()->getSubSysController()->reload_config_file();
 }
 
 bool sinkingController::getProcessStatus()
 {
-    std::cout << "getting process status" << std::endl;
+    std::cout << "getting process status" << "\n";
     return proc_sinking_model.sinkingProcessHandler->is_proc_success();
 }
 
@@ -177,11 +177,11 @@ void sinkingController::updateLabelAxisResponse(QLabel* label, QString cmd)
 {
     if (!get_axis_status())
     {
-        std::cout << "device not connected " << std::endl;
+        std::cout << "device not connected " << "\n";
         return;
     }
     label->clear();
-    std::cout << "user cmd: " << cmd.toStdString() << std::endl;
+    std::cout << "user cmd: " << cmd.toStdString() << "\n";
     auto strCmd = cmd.toStdString();
     std::string resp = sendAxisCmd(strCmd);
     emit axisReplied(resp);

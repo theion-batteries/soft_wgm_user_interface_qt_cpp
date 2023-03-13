@@ -41,7 +41,7 @@ sinkingView::sinkingView(Ui::MainWindow* uiPtr)
         
     // connect axis reply to update text
     connect(&sinkControll, &sinkingController::axisReplied, this, [this](std::string reply) {
-        std::cout << "axis full response: " << reply << std::endl;
+        std::cout << "axis full response: " << reply << "\n";
     ui->sink_axis_response->setStyleSheet("QLabel { background-color : green; color : black; }");
     ui->sink_axis_response->setText(reply.c_str());
     ui->sink_input_axis_cmd->clear();
@@ -60,7 +60,7 @@ sinkingView::sinkingView(Ui::MainWindow* uiPtr)
     connect(ui->stop_sinking_process, &QAbstractButton::pressed, [this]() {
         if (sinkControll.getProcessStatus())
         {
-            std::cout << "process already finished" << std::endl;
+            std::cout << "process already finished" << "\n";
             return;
         }
     auto func = QtConcurrent::run([this]() {sinkControll.on_stop_sinking_process_clicked();});

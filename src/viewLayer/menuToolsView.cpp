@@ -43,56 +43,56 @@ void  menuToolsView::on_actionopen_MeteorPrintEngine_triggered()
 {
     QString path = "C:/Program Files/Meteor Inkjet/Meteor/Monitor.exe";
     QProcess::startDetached(path);
-    std::cout << "Opening Meteor PrintEngine" << std::endl;
+    std::cout << "Opening Meteor PrintEngine" << "\n";
 }
 void  menuToolsView::on_actionopen_MetDrop_triggered()
 {
     QString path = "C:/Program Files/Meteor Inkjet/Meteor/MetDrop/MetDrop.exe";
     QProcess::startDetached(path);
-    std::cout << "Opening MetDrop " << std::endl;
+    std::cout << "Opening MetDrop " << "\n";
 }
 void  menuToolsView::on_actionopen_MetSim_triggered()
 {
     QString path = "C:/Program Files/Meteor Inkjet/Meteor/SimPrint/SimPrint.exe";
     QProcess::startDetached(path);
-    std::cout << "Opening MetSim " << std::endl;
+    std::cout << "Opening MetSim " << "\n";
 }
 void  menuToolsView::on_actionopen_MetViewer_triggered()
 {
     QString path = "C:/Program Files/Meteor Inkjet/Meteor/MetViewer/MetViewer.exe";
     QProcess::startDetached(path);
-    std::cout << "Opening MetViewer " << std::endl;
+    std::cout << "Opening MetViewer " << "\n";
 }
 void  menuToolsView::on_actionopen_MetViewer_server_triggered()
 {
     QString path = "C:/Program Files/Meteor Inkjet/Meteor/Metdrop/MetViewerServer.exe";
     QProcess::startDetached(path);
-    std::cout << "Opening MetViewer " << std::endl;
+    std::cout << "Opening MetViewer " << "\n";
 }
 
 void  menuToolsView::on_actionopen_MeteorMonoPrint_triggered()
 {
     QString path = "C:/Program Files/Meteor Inkjet/Meteor/Api/amd64/MeteorMonoPrint.exe";
     QProcess::startDetached(path);
-    std::cout << "Opening MonoPrint " << std::endl;
+    std::cout << "Opening MonoPrint " << "\n";
 }
 void  menuToolsView::on_actionopen_PrintEngineHost_triggered()
 {
     QString path = "C:/Program Files/Meteor Inkjet/Meteor/Api/amd64/PrintEngineHost.exe";
     QProcess::startDetached(path);
-    std::cout << "Opening PrintEngineHost" << std::endl;
+    std::cout << "Opening PrintEngineHost" << "\n";
 }
 
 void  menuToolsView::on_actionopen_TestApp_triggered()
 {
     QString path = "C:/Program Files/Meteor Inkjet/Meteor/TestApp/TestApp.exe";
     QProcess::startDetached(path);
-    std::cout << "Opening TestApp" << std::endl;
+    std::cout << "Opening TestApp" << "\n";
 }
 
 void  menuToolsView::on_actionopen_MetPrint_triggered()
 {
     QString path = "C:/Program Files/Meteor Inkjet/Meteor/DFE/MetPrint/MetPrint.exe";
     QProcess::startDetached(path);
-    std::cout << "Opening MetPrint" << std::endl;
+    std::cout << "Opening MetPrint" << "\n";
 }

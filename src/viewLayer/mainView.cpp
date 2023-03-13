@@ -9,13 +9,13 @@ mainView::mainView(Ui::MainWindow* uiPtr)
     /**************** signals and slots ********************/
       // connect select item
     connect(ui->processList, &QListWidget::itemSelectionChanged, this, [this]() {
-        std::cout << "process: " << ui->processList->currentItem()->text().toStdString() << " with id: " << ui->processList->currentRow() << " selected " << std::endl;
+        std::cout << "process: " << ui->processList->currentItem()->text().toStdString() << " with id: " << ui->processList->currentRow() << " selected " << "\n";
         }, Qt::QueuedConnection);
     // connect double clik item
     connect(ui->processList, &QListWidget::itemDoubleClicked, this, [this](QListWidgetItem* item) {
                 mainControll.updateLcdTime(ui->time_processes);
 
-        std::cout << "process: " << ui->processList->currentItem()->text().toStdString() << " with id: " << ui->processList->currentRow() << " is double clicked and will be executed next.." << std::endl;
+        std::cout << "process: " << ui->processList->currentItem()->text().toStdString() << " with id: " << ui->processList->currentRow() << " is double clicked and will be executed next.." << "\n";
     auto func = QtConcurrent::run([this]() {mainControll.execute_process(ui->processList->currentRow());});
         }, Qt::QueuedConnection); // needed for multithreading
     // connect finsihed to update time and bar
@@ -30,12 +30,12 @@ mainView::mainView(Ui::MainWindow* uiPtr)
 
         if (ui->processList->currentItem() == nullptr)
         {
-            std::cout << "no process selected " << std::endl;
+            std::cout << "no process selected " << "\n";
             return;
         }
     if (ui->processList->currentItem()->isSelected()) // if item selected, execute it
     {
-        std::cout << "process: " << ui->processList->currentItem()->text().toStdString() << " with id: " << ui->processList->currentRow() << " will be executed" << std::endl;
+        std::cout << "process: " << ui->processList->currentItem()->text().toStdString() << " with id: " << ui->processList->currentRow() << " will be executed" << "\n";
         auto func = QtConcurrent::run([this]() {mainControll.execute_process(ui->processList->currentRow());});
     }
         }, Qt::QueuedConnection);
@@ -46,12 +46,12 @@ mainView::mainView(Ui::MainWindow* uiPtr)
 
         if (ui->processList->currentItem() == nullptr)
         {
-            std::cout << "no process selected " << std::endl;
+            std::cout << "no process selected " << "\n";
             return;
         }
     if (ui->processList->currentItem()->isSelected()) // if item selected, execute it
     {
-        std::cout << "process: " << ui->processList->currentItem()->text().toStdString() << " with id: " << ui->processList->currentRow() << " will be aborted" << std::endl;
+        std::cout << "process: " << ui->processList->currentItem()->text().toStdString() << " with id: " << ui->processList->currentRow() << " will be aborted" << "\n";
         auto func = QtConcurrent::run([this]() {mainControll.abort_current_process(ui->processList->currentRow());});
     }
         }, Qt::QueuedConnection);
@@ -72,7 +72,7 @@ mainView::mainView(Ui::MainWindow* uiPtr)
     connect(&mainControll, &mainController::valueChanged, this, [this](int proc_id) {
         auto numberOfPRoc = ui->processList->count();
     auto progress = ((proc_id+1) * 100)/numberOfPRoc;
-    std::cout << " current progress: " << progress << "%" << std::endl;
+    std::cout << " current progress: " << progress << "%" << "\n";
     ui->progressBar->setValue(progress);
         });
     // connect finsihed to bar

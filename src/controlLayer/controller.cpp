@@ -2,7 +2,7 @@
 
 controller::controller(/* args */)
 {
-    std::cout << "controller constructed" << std::endl;
+    std::cout << "controller constructed" << "\n";
 }
 
 

@@ -57,7 +57,7 @@ void menuFileView::on_actionlogin_triggered()
         tr("please enter password:"), QLineEdit::Password,
         NULL, &ok);
     // debug
-    std::cout << "searching database for matching user and password" << std::endl;
+    std::cout << "searching database for matching user and password" << "\n";
     if (wgm_user::user::login(username.toStdString(), password.toStdString()))
     {
         msgBox.setText("user login success");

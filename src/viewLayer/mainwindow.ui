@@ -42,7 +42,7 @@
        <bool>false</bool>
       </property>
       <property name="currentIndex">
-       <number>3</number>
+       <number>4</number>
       </property>
       <widget class="QWidget" name="Main">
        <attribute name="title">
@@ -3638,30 +3638,44 @@
              </widget>
             </item>
             <item>
-             <widget class="QCommandLinkButton" name="ph_move_center">
+             <widget class="QCommandLinkButton" name="ph_motion_move_offset50">
               <property name="text">
-               <string>ph_move_center</string>
+               <string>ph_motion_move_offset50</string>
               </property>
              </widget>
             </item>
             <item>
-             <widget class="QCommandLinkButton" name="ph_trigger">
+             <widget class="QCommandLinkButton" name="ph_motion_rotate_90">
               <property name="text">
-               <string>ph_trigger</string>
+               <string>ph_motion_rotate_90°</string>
               </property>
              </widget>
             </item>
             <item>
-             <widget class="QCommandLinkButton" name="ph_rotate_center">
+             <widget class="QCommandLinkButton" name="ph_motion_move_offset135">
               <property name="text">
-               <string>ph_rotate_center</string>
+               <string>ph_motion_move_offset135</string>
               </property>
              </widget>
             </item>
             <item>
-             <widget class="QCommandLinkButton" name="ph_rotate_print">
+             <widget class="QCommandLinkButton" name="ph_motion_rotate_print">
               <property name="text">
-               <string>ph_rotate_print</string>
+               <string>ph_motion_rotate_print</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QCommandLinkButton" name="ph_motion_move_home_all">
+              <property name="text">
+               <string>ph_motion_move_home_all</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QCommandLinkButton" name="ph_motion_move_offset2">
+              <property name="text">
+               <string>ph_motion_move_offset2</string>
               </property>
              </widget>
             </item>
@@ -4831,7 +4845,7 @@
      <x>0</x>
      <y>0</y>
      <width>1413</width>
-     <height>26</height>
+     <height>22</height>
     </rect>
    </property>
    <widget class="QMenu" name="menuMain">

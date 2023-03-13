@@ -4,12 +4,12 @@
 
 mainController::mainController()
 {
-    std::cout << "main controller constructed" << std::endl;
+    std::cout << "main controller constructed" << "\n";
 }
 
 mainController::~mainController()
 {
-    std::cout << "main controller desctructed" << std::endl;
+    std::cout << "main controller desctructed" << "\n";
 }
 
 void mainController::on_execute_process_clicked()

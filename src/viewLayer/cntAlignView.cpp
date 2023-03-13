@@ -39,7 +39,7 @@ cntAlignView::cntAlignView(Ui::MainWindow* uiPtr)
             cntControll.on_cnt_connect_hv_clicked();});}, Qt::QueuedConnection);
     connect(&cntControll, &cntAlignController::hvConnected, this, [this]() {
         cntControll.updateLabelAxis(ui->cnt_hv_ready);
-    std::cout << "main thread id: " << QThread::currentThreadId() << std::endl;
+    std::cout << "main thread id: " << QThread::currentThreadId() << "\n";
     auto func = QtConcurrent::run(&cntAlignController::updateLcdOutputVoltage, &cntControll, ui->cnt_lcd_hv_voltage_out);
         }, Qt::QueuedConnection);
 
@@ -53,7 +53,7 @@ cntAlignView::cntAlignView(Ui::MainWindow* uiPtr)
         }, Qt::QueuedConnection);
     // connect axis reply to update text
     connect(&cntControll, &cntAlignController::axisReplied, this, [this](std::string reply) {
-        std::cout << "axis full response: " << reply << std::endl;
+        std::cout << "axis full response: " << reply << "\n";
     ui->cnt_axis_response->setStyleSheet("QLabel { background-color : green; color : black; }");
     ui->cnt_axis_response->setText(reply.c_str());
     ui->cnt_input_axis_cmd->clear();
@@ -67,7 +67,7 @@ cntAlignView::cntAlignView(Ui::MainWindow* uiPtr)
         }, Qt::QueuedConnection);
    // connect dispenser reply to update text
     connect(&cntControll, &cntAlignController::dispenserReplied, this, [this](std::string reply) {
-        std::cout << "axis full response: " << reply << std::endl;
+        std::cout << "axis full response: " << reply << "\n";
     ui->cnt_dispenser_response->setStyleSheet("QLabel { background-color : green; color : black; }");
     ui->cnt_dispenser_response->setText(reply.c_str());
     ui->cnt_input_dispenser->clear();
@@ -81,7 +81,7 @@ cntAlignView::cntAlignView(Ui::MainWindow* uiPtr)
         }, Qt::QueuedConnection);
    // connect hv reply to update text
     connect(&cntControll, &cntAlignController::hvReplied, this, [this](std::string reply) {
-        std::cout << "axis full response: " << reply << std::endl;
+        std::cout << "axis full response: " << reply << "\n";
     ui->cnt_hv_response->setStyleSheet("QLabel { background-color : green; color : black; }");
     ui->cnt_hv_response->setText(reply.c_str());
     ui->cnt_input_hv_cmd->clear();
@@ -101,7 +101,7 @@ cntAlignView::cntAlignView(Ui::MainWindow* uiPtr)
     connect(ui->stop_cnt_proc, &QAbstractButton::pressed, [this]() {
         if (cntControll.getProcessStatus())
         {
-            std::cout << "process already finished" << std::endl;
+            std::cout << "process already finished" << "\n";
             return;
         }
     auto func = QtConcurrent::run([this]() {cntControll.on_stop_cnt_proc_clicked();});

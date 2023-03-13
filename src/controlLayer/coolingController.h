@@ -1,4 +1,4 @@
-#pragma once 
+#pragma once
 // qt
 #include <QObject>
 #include <QDebug>
@@ -11,7 +11,7 @@
 // mvc
 #include <atomic>
 #include "coolingModel.h"
-class coolingController: public QObject
+class coolingController : public QObject
 {
     Q_OBJECT
 public:
@@ -40,7 +40,8 @@ public slots:
     void on_ph_trigger_clicked();
     void on_ph_rotate_center_clicked();
     void on_ph_rotate_print_clicked();
-
+    void on_ph_move_offset_clicked(const double pos);
+    void on_ph_rotate_clicked(const double pos);
 
     bool get_axis_status();
     bool get_rotary_status();
@@ -51,35 +52,32 @@ public slots:
     void reload_ph_config_file();
     // update simple
     // lcd update
-    void updateLcdTime(QLCDNumber* Lcd);
+    void updateLcdTime(QLCDNumber *Lcd);
     // X,Y
-    void updateLcdRotationPosition(QLCDNumber* Lcd);
-    void updateLcdAxisPosition(QLCDNumber* Lcd);
-    void updateLcdRotationVelocity(QLCDNumber* Lcd);
-    void updateLcdAxisVelocity(QLCDNumber* Lcd);
+    void updateLcdRotationPosition(QLCDNumber *Lcd);
+    void updateLcdAxisPosition(QLCDNumber *Lcd);
+    void updateLcdRotationVelocity(QLCDNumber *Lcd);
+    void updateLcdAxisVelocity(QLCDNumber *Lcd);
     // combine calls
-    void updateLcdXYPosition(QLCDNumber* LcdX,QLCDNumber* LcdY);
-    void updateLcdXYVelocity(QLCDNumber* LcdX,QLCDNumber* LcdY);
-    void updateLcdXY(QLCDNumber* LcdPosX,QLCDNumber* LcdPosY,  QLCDNumber* LcdVelX,QLCDNumber* LcdVelY);
+    void updateLcdXYPosition(QLCDNumber *LcdX, QLCDNumber *LcdY);
+    void updateLcdXYVelocity(QLCDNumber *LcdX, QLCDNumber *LcdY);
+    void updateLcdXY(QLCDNumber *LcdPosX, QLCDNumber *LcdPosY, QLCDNumber *LcdVelX, QLCDNumber *LcdVelY);
     // Ph
-    void updateLcdPhFrequency(QLCDNumber* Lcd);
-    void updateLcdPhDropletVolume(QLCDNumber* Lcd);
-    void updateLcdPhLiquidTemperature(QLCDNumber* Lcd);
-    void updateLcdPhNumberActiveNuzzles(QLCDNumber* Lcd);
-
-
-
+    void updateLcdPhFrequency(QLCDNumber *Lcd);
+    void updateLcdPhDropletVolume(QLCDNumber *Lcd);
+    void updateLcdPhLiquidTemperature(QLCDNumber *Lcd);
+    void updateLcdPhNumberActiveNuzzles(QLCDNumber *Lcd);
 
     // label update
-    void updateLabelAxis(QLabel* label);
-    void updateLabelTrigger(QLabel* label);
-    void updateLabelPh(QLabel* label);
-    void updateLabelProcess(QLabel* label);
-    void updateLabelAxisResponse(QLabel* label, QString cmd);
-    void updateLabelTrigResponse(QLabel* label, QString cmd);
-    void updateLabelPhResponse(QLabel* label, QString cmd);
+    void updateLabelAxis(QLabel *label);
+    void updateLabelTrigger(QLabel *label);
+    void updateLabelPh(QLabel *label);
+    void updateLabelProcess(QLabel *label);
+    void updateLabelAxisResponse(QLabel *label, QString cmd);
+    void updateLabelTrigResponse(QLabel *label, QString cmd);
+    void updateLabelPhResponse(QLabel *label, QString cmd);
+
 private:
     coolingModel coolModel;
     double time_elapsed;
-
 };

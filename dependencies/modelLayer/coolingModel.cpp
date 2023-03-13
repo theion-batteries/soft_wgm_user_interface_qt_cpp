@@ -2,7 +2,7 @@
 
 coolingModel::coolingModel()
 {
-    std::cout << "cooling Model constructed" << std::endl;
+    std::cout << "cooling Model constructed" << "\n";
     coolingProcessHandler = new wgm_processes::cooling_process();
 }
 

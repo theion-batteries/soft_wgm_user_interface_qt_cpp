@@ -2,7 +2,7 @@
 
 heatingModel::heatingModel()
 {
-    std::cout << "heating model constructed" << std::endl;
+    std::cout << "heating model constructed" << "\n";
     heatingProcessHandler = new wgm_processes::heating_process();
 }
 

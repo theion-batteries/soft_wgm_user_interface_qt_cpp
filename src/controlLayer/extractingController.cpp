@@ -4,13 +4,13 @@
 
 extractingController::extractingController()
 {
-    std::cout << "extracting controller constructed" << std::endl;
+    std::cout << "extracting controller constructed" << "\n";
     extractModel = new extractingModel( new wgm_processes::sinking_process() );
 }
 
 extractingController::~extractingController()
 {
-    std::cout << "extracting controller desctructed" << std::endl;
+    std::cout << "extracting controller desctructed" << "\n";
     delete extractModel;
 }
 
@@ -31,7 +31,7 @@ void extractingController::on_run_extracting_process_clicked()
 {
     if (!get_axis_status() || !get_sensor_status())
     {
-        std::cout << "device not connected " << std::endl;
+        std::cout << "device not connected " << "\n";
         return;
     }
     extractModel->extractingProcessHandler->start_process();
@@ -42,7 +42,7 @@ void extractingController::on_stop_extracting_process_clicked()
 {
     if (!get_axis_status() || !get_sensor_status())
     {
-        std::cout << "device not connected " << std::endl;
+        std::cout << "device not connected " << "\n";
         return;
     }
     extractModel->extractingProcessHandler->stop_process();
@@ -52,7 +52,7 @@ void extractingController::on_extract_move_home_clicked()
 {
     if (!get_axis_status() || !get_sensor_status())
     {
-        std::cout << "device not connected " << std::endl;
+        std::cout << "device not connected " << "\n";
         return;
     }
     extractModel->extractingProcessHandler->get_sys_ptr()->getSubSysController()->extract_move_home();
@@ -68,9 +68,9 @@ void extractingController::updateLcdDistance(QLCDNumber* Lcd)
 {
     while (get_sensor_status()) // while connected, launch thread display
     {
-        std::cout << "updating lcd distance " << std::endl;
+        std::cout << "updating lcd distance " << "\n";
         Lcd->display(extractModel->extractingProcessHandler->get_sys_ptr()->getSubSysController()->get_sensor_values());
-        std::cout << "lcd distance thread id: " << QThread::currentThreadId() << std::endl;
+        std::cout << "lcd distance thread id: " << QThread::currentThreadId() << "\n";
         QThread::currentThread()->sleep(10);
     }
 
@@ -79,9 +79,9 @@ void extractingController::updateLcdPosition(QLCDNumber* Lcd)
 {
     while (get_axis_status())
     {
-        std::cout << "updating lcd position " << std::endl;
+        std::cout << "updating lcd position " << "\n";
         Lcd->display(extractModel->extractingProcessHandler->get_sys_ptr()->getSubSysController()->get_axis_position());
-        std::cout << "lcd position thread id: " << QThread::currentThreadId() << std::endl;
+        std::cout << "lcd position thread id: " << QThread::currentThreadId() << "\n";
         QThread::currentThread()->sleep(10);
     }
 }
@@ -102,13 +102,13 @@ std::string extractingController::sendAxisCmd(std::string Cmd)
 
 void extractingController::reload_whs_config_file()
 {
-    std::cout << "file closed succefuly, updating parameters" << std::endl;
+    std::cout << "file closed succefuly, updating parameters" << "\n";
     extractModel->extractingProcessHandler->get_sys_ptr()->getSubSysController()->reload_config_file();
 }
 
 bool extractingController::getProcessStatus()
 {
-    std::cout << "getting process status" << std::endl;
+    std::cout << "getting process status" << "\n";
     return extractModel->extractingProcessHandler->is_proc_success();
 }
 
@@ -144,11 +144,11 @@ void extractingController::updateLabelAxisResponse(QLabel* label, QString cmd)
 {
     if (!get_axis_status())
     {
-        std::cout << "device not connected " << std::endl;
+        std::cout << "device not connected " << "\n";
         return;
     }
     label->clear();
-    std::cout << "user cmd: " << cmd.toStdString() << std::endl;
+    std::cout << "user cmd: " << cmd.toStdString() << "\n";
     auto strCmd = cmd.toStdString();
     std::string resp = sendAxisCmd(strCmd);
     emit axisReplied(resp);

@@ -40,7 +40,7 @@ void table::generateTable()
 }
 void table::printTable()
 {
-    std::cout << "table: " << TableToSend << std::endl;
+    std::cout << "table: " << TableToSend << "\n";
 }
 
 std::string table::createRow(std::string Val1, std::string Val2, ...)
@@ -52,12 +52,12 @@ std::string table::createRow(std::string Val1, std::string Val2, ...)
 
 Idatabase::Idatabase(/* args */)
 {
-    std::cout << "creating database interface" << std::endl;
+    std::cout << "creating database interface" << "\n";
 }
 
 Idatabase::~Idatabase()
 {
-    std::cout << "deleting database interface" << std::endl;
+    std::cout << "deleting database interface" << "\n";
     closeDBhandle();
 }
 void Idatabase::createDBfile(std::string fileName)
@@ -68,11 +68,11 @@ void Idatabase::createDBfile(std::string fileName)
     rc = sqlite3_open((fileName + extension).c_str(), &dbHandler);
 
     if (rc) {
-        std::cout << "Can't create database: " << sqlite3_errmsg(dbHandler) << std::endl;
+        std::cout << "Can't create database: " << sqlite3_errmsg(dbHandler) << "\n";
     }
     else {
-        std::cout << "created database successfully. the databse will be stored here:" << std::endl;
-        std::cout << cwd << "/" << fileName << extension << std::endl;
+        std::cout << "created database successfully. the databse will be stored here:" << "\n";
+        std::cout << cwd << "/" << fileName << extension << "\n";
     }
 }
 
@@ -83,10 +83,10 @@ void Idatabase::openDBfile(std::string fileName)
     rc = sqlite3_open((fileName + extension).c_str(), &dbHandler);
 
     if (rc) {
-        std::cout << "Can't open database: " << sqlite3_errmsg(dbHandler) << std::endl;
+        std::cout << "Can't open database: " << sqlite3_errmsg(dbHandler) << "\n";
     }
     else {
-        std::cout << "opened database successfully" << std::endl;
+        std::cout << "opened database successfully" << "\n";
     }
 }
 void Idatabase::createDBTable(table& newtable)
@@ -97,12 +97,12 @@ void Idatabase::createDBTable(table& newtable)
     rc = sqlite3_exec(dbHandler, (create_cmd + newtable.TableToSend).c_str(), NULL, 0, &zErrMsg);
     if (rc != SQLITE_OK) {
         fprintf(stderr, "SQL error: %s\n", zErrMsg);
-        std::cout << zErrMsg << std::endl;
+        std::cout << zErrMsg << "\n";
 
         sqlite3_free(zErrMsg);
     }
     else {
-        std::cout << "Table: " << newtable.TableToSend << " created successfully" << std::endl;
+        std::cout << "Table: " << newtable.TableToSend << " created successfully" << "\n";
     }
 
 
@@ -119,7 +119,7 @@ void Idatabase::queryDBTable(std::string table)
     rc = sqlite3_exec(dbHandler, (query_cmd + table + ";").c_str(), queryDBCallback, 0, &zErrMsg);
     if (rc != SQLITE_OK) {
         fprintf(stderr, "SQL error: %s\n", zErrMsg);
-        std::cout << zErrMsg << std::endl;
+        std::cout << zErrMsg << "\n";
 
         sqlite3_free(zErrMsg);
     }
@@ -137,12 +137,12 @@ void Idatabase::insertDBTableRow(std::string table, std::string row)
     rc = sqlite3_exec(dbHandler, (insert_cmd + table + values + row).c_str(), NULL, 0, &zErrMsg);
     if (rc != SQLITE_OK) {
         fprintf(stderr, "SQL error: %s\n", zErrMsg);
-        std::cout << zErrMsg << std::endl;
+        std::cout << zErrMsg << "\n";
         sqlite3_free(zErrMsg);
     }
     else {
 
-        std::cout << "row: " << row << " inserted successfully" << std::endl;
+        std::cout << "row: " << row << " inserted successfully" << "\n";
 
     }
 
@@ -155,14 +155,14 @@ void Idatabase::deleteDBTableRow(std::string table, std::string rowIndex, std::s
     char* zErrMsg = 0;
     rc = sqlite3_exec(dbHandler, (delete_cmd + table + where + key + " =" + rowIndex + ";").c_str(), NULL, 0, &zErrMsg);
     if (rc != SQLITE_OK) {
-        std::cout << zErrMsg << std::endl;
+        std::cout << zErrMsg << "\n";
 
-        std::cerr << "Error DELETE" << std::endl;
+        std::cerr << "Error DELETE" << "\n";
         sqlite3_free(zErrMsg);
     }
     else
     {
-        std::cout << "row " << rowIndex << " deleted Successfully!" << std::endl;
+        std::cout << "row " << rowIndex << " deleted Successfully!" << "\n";
     }
 
 }
@@ -174,14 +174,14 @@ void Idatabase::selectDBTableColumn(std::string table, std::string Column)
     char* zErrMsg = 0;
     rc = sqlite3_exec(dbHandler, (select_cmd + Column + from + table).c_str(), queryDBCallback, 0, &zErrMsg);
     if (rc != SQLITE_OK) {
-        std::cerr << "Error SELECT" << std::endl;
-        std::cout << zErrMsg << std::endl;
+        std::cerr << "Error SELECT" << "\n";
+        std::cout << zErrMsg << "\n";
 
         sqlite3_free(zErrMsg);
     }
     else
     {
-        std::cout << "column " << Column << " selected Successfully!" << std::endl;
+        std::cout << "column " << Column << " selected Successfully!" << "\n";
     }
 }
 
@@ -205,14 +205,14 @@ table& Idatabase::getTableHandle()
 int Idatabase::getLastInsertRowID()
 {
     auto id = static_cast<int> (sqlite3_last_insert_rowid(dbHandler));
-    std::cout << "last row id: " << id << std::endl;
+    std::cout << "last row id: " << id << "\n";
     return id;
 }
 
 int Idatabase::getLastRowID()
 {
     queryDBTable(this->tableHandler->Table_name);
-    std::cout << "last row id: " << LastID << std::endl;
+    std::cout << "last row id: " << LastID << "\n";
     return LastID;
 }
 
@@ -227,15 +227,15 @@ bool Idatabase::searchDBRowValues(std::string table, std::string col1, std::stri
     std::string AND = " AND ";
     std::string semicol = " ;";
     auto query = select_cmd + col1 + comma + col2 + from + table + where + col1 + equal + "'" + val1 + "'" + AND + col2 + equal + "'" + val2 + "'" + semicol;
-    std::cout << query << std::endl;
+    std::cout << query << "\n";
     Records records;
     int rc;
     char* zErrMsg = 0;
     rc = sqlite3_exec(dbHandler, (query).c_str(), select_callback, &records, &zErrMsg);
     if (rc != SQLITE_OK) {
-        std::cout << zErrMsg << std::endl;
+        std::cout << zErrMsg << "\n";
 
-        std::cerr << "Error SELECT command" << std::endl;
+        std::cerr << "Error SELECT command" << "\n";
         sqlite3_free(zErrMsg);
         return false;
     }
@@ -243,14 +243,14 @@ bool Idatabase::searchDBRowValues(std::string table, std::string col1, std::stri
     {
         if (records.size() == 0)
         {
-            std::cout << "record not found" << std::endl;
+            std::cout << "record not found" << "\n";
             return false;
         }
-        std::cout << "row with name " << val1 << " selected Successfully!" << std::endl;
+        std::cout << "row with name " << val1 << " selected Successfully!" << "\n";
         std::cout << records.size() << " records returned.\n";
         auto c = 0;
         for (auto& record : records) {
-            std::cout << "record: " << record[c] << std::endl;
+            std::cout << "record: " << record[c] << "\n";
             c++;
         }
         return true;

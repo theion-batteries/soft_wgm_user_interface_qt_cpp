@@ -5,7 +5,7 @@
 #include <string>
 sinkingModel::sinkingModel()
 {
-    std::cout << "model sinking constructed" << std::endl;
+    std::cout << "model sinking constructed" << "\n";
     sinkingProcessHandler = new wgm_processes::sinking_process();
 }
 

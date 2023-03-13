@@ -2,7 +2,7 @@
 
 cntAlignModel::cntAlignModel()
 {
-    std::cout << "aligning model constructed" << std::endl;
+    std::cout << "aligning model constructed" << "\n";
     aligningProcessHandler = new wgm_processes::aligning_process();
 }
 

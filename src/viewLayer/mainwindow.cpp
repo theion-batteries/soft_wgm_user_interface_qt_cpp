@@ -23,26 +23,26 @@ MainWindow::MainWindow(QWidget* parent)
     /********************* connect tab with menu **************************/
     connect(editView->getWhsConfigProc(), &QProcess::finished,
         [this]() {
-            std::cout<<"process exit succefully"<<std::endl;
+            std::cout<<"process exit succefully"<<"\n";
             sinkView->getController()->reload_whs_config_file();
          });
 
     /********************* connect tab with menu **************************/
     connect(editView->getCntConfigProc(), &QProcess::finished,
         [this]() {
-            std::cout<<"process exit succefully"<<std::endl;
+            std::cout<<"process exit succefully"<<"\n";
             cntView->getController()->reload_cnt_config_file();
          });
   /********************* connect tab with menu **************************/
     connect(editView->getPhConfigProc(), &QProcess::finished,
         [this]() {
-            std::cout<<"process exit succefully"<<std::endl;
+            std::cout<<"process exit succefully"<<"\n";
             coolView->getController()->reload_ph_config_file();
          });
   /********************* connect tab with menu **************************/
     connect(editView->getHeatConfigProc(), &QProcess::finished,
         [this]() {
-            std::cout<<"process exit succefully"<<std::endl;
+            std::cout<<"process exit succefully"<<"\n";
             heatView->getController()->reload_heating_config_file();
          });
 }

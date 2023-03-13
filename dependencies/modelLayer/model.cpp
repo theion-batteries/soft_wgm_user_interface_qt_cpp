@@ -2,7 +2,7 @@
 
 model::model()
 {
-    std::cout << "model constructed" << std::endl;
+    std::cout << "model constructed" << "\n";
     processManager = new wgm_processes::process_manager();
 }
 

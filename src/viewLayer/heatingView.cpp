@@ -31,7 +31,7 @@ heatingView::heatingView(Ui::MainWindow* uiPtr)
         }, Qt::QueuedConnection);
     // connect heater reply to update text
     connect(&heatControll, &heatingController::heaterReplied, this, [this](std::string reply) {
-        std::cout << " full response: " << reply << std::endl;
+        std::cout << " full response: " << reply << "\n";
         ui->heat_cmd_response->setStyleSheet("QLabel { background-color : green; color : black; }");
         ui->heat_cmd_response->setText(reply.c_str());
         ui->heat_input_cmd->clear();
@@ -46,7 +46,7 @@ heatingView::heatingView(Ui::MainWindow* uiPtr)
     connect(ui->stop_heating_proc, &QAbstractButton::pressed,this, [this]() {
         if (heatControll.getProcessStatus())
         {
-            std::cout << "process already finished" << std::endl;
+            std::cout << "process already finished" << "\n";
             return;
         }
         auto func = QtConcurrent::run([this]() {heatControll.on_stop_heating_proc_clicked();});
