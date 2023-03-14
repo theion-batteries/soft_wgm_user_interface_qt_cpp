@@ -139,7 +139,7 @@ coolingView::coolingView(Ui::MainWindow *uiPtr)
 
     // rotate to 90 degree
     connect(ui->ph_motion_rotate_90, &QAbstractButton::pressed, [this]()
-            { auto func = QtConcurrent::run(&coolingController::on_ph_rotate_clicked, &coolControll, 90); });
+            { auto func = QtConcurrent::run(&coolingController::on_ph_rotate_clicked, &coolControll, 180); });
 
     // move home
     connect(ui->ph_motion_xy_move_home, &QAbstractButton::pressed, [this]()
