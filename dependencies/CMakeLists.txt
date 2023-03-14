@@ -1,4 +1,5 @@
 add_subdirectory(database)
 add_subdirectory(software_wgm_v2_cpp) # Core
 add_subdirectory(modelLayer)
+add_subdirectory(soft_test_industrial_camera)
 

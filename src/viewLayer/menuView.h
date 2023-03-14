@@ -24,12 +24,18 @@
 
 class menuView: public QObject
 {
-   // Q_OBJECT
+    Q_OBJECT
 public:
     menuView(Ui::MainWindow* uiPtr);
     ~menuView();
 private:
     Ui::MainWindow* ui;
+signals:
+    void triggered();
+
+public slots:
+    void on_actionopen_monitor_camera_triggered();
+
 };
 
 

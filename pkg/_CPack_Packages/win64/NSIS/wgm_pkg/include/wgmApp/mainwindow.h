@@ -39,6 +39,7 @@ private:
     coolingView* coolView;
     mainView* managerView;
     /********** menu View *********************/
+    menuView* mView;
     menuEditView* editView;
     menuDebugView* debugView;
     menuFileView* fileView;
