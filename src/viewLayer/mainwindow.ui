@@ -3638,16 +3638,9 @@
              </widget>
             </item>
             <item>
-             <widget class="QCommandLinkButton" name="ph_motion_move_offset50">
+             <widget class="QCommandLinkButton" name="ph_motion_rotate_180">
               <property name="text">
-               <string>ph_motion_move_offset50</string>
-              </property>
-             </widget>
-            </item>
-            <item>
-             <widget class="QCommandLinkButton" name="ph_motion_rotate_90">
-              <property name="text">
-               <string>ph_motion_rotate_90°</string>
+               <string>ph_motion_rotate_180°</string>
               </property>
              </widget>
             </item>

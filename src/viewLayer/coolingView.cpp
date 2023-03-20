@@ -134,11 +134,9 @@ coolingView::coolingView(Ui::MainWindow *uiPtr)
 
     // algorithms
     // move down to center
-    connect(ui->ph_motion_move_offset50, &QAbstractButton::pressed, [this]()
-            { auto func = QtConcurrent::run(&coolingController::on_ph_move_offset_clicked, &coolControll, 50); });
 
     // rotate to 90 degree
-    connect(ui->ph_motion_rotate_90, &QAbstractButton::pressed, [this]()
+    connect(ui->ph_motion_rotate_180, &QAbstractButton::pressed, [this]()
             { auto func = QtConcurrent::run(&coolingController::on_ph_rotate_clicked, &coolControll, 180); });
 
     // move home
