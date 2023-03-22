@@ -29,8 +29,6 @@ void menuDebugView::on_actionopen_debug_console_triggered()
         // Set std::cout stream buffer to conout's buffer (aka redirect/fdreopen)
         std::cout.rdbuf(conout.rdbuf());
         std::cerr.rdbuf(conout.rdbuf());
-
-
     }
 
 

@@ -32,7 +32,7 @@ void cntAlignController::on_cnt_connect_hv_clicked()
 }
 void cntAlignController::on_run_cnt_aligning_process_clicked()
 {
-    if (!get_axis_status() || !get_dispenser_status() ||!get_hv_status())
+    if (!get_axis_status() || !get_dispenser_status() /*||!get_hv_status() */)
     {
         std::cout << "device not connected " << "\n";
         return;
@@ -43,7 +43,7 @@ void cntAlignController::on_run_cnt_aligning_process_clicked()
 
 void cntAlignController::on_stop_cnt_proc_clicked()
 {
-    if (!get_axis_status() || !get_dispenser_status() ||!get_hv_status())
+    if (!get_axis_status() || !get_dispenser_status() /*||!get_hv_status()*/)
     {
         std::cout << "device not connected " << "\n";
         return;
