@@ -69,7 +69,7 @@ sinkingView::sinkingView(Ui::MainWindow* uiPtr)
     // algorithms
     // move down until data valid
     connect(ui->sinking_move_home, &QAbstractButton::pressed, [this]() {
-        auto func = QtConcurrent::run(&sinkingController::on_move_down_until_sensor_data_valid_clicked, &sinkControll);
+        auto func = QtConcurrent::run(&sinkingController::on_sinking_move_home_clicked, &sinkControll);
         });
     // move down until data valid
     connect(ui->move_down_until_sensor_data_valid, &QAbstractButton::pressed, [this]() {
