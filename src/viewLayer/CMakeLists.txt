@@ -76,7 +76,6 @@ copy_dlls_keyence_target_destination(wgmApp)
 copy_dlls_meteor_target_destination(wgmApp)
 copy_dlls_yaml_target_destination(wgmApp)
 
-add_dependencies(wgmApp build_install_camera)
 install(TARGETS wgmApp
 RUNTIME DESTINATION ${CMAKE_INSTALL_BINDIR}
 

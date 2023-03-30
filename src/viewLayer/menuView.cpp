@@ -16,7 +16,7 @@ menuView::~menuView()
 
 void  menuView::on_actionopen_monitor_camera_triggered()
 {
-    QString  path = "C:/Program Files/wgm_pkg/utils/camStream.exe";
-    std::cout << "starting camera stream " << std::endl;
-    QProcess::startDetached(path, QStringList());
+   // QString  path = "C:/Program Files/wgm_pkg/utils/camStream.exe";
+   // std::cout << "starting camera stream " << std::endl;
+   // QProcess::startDetached(path, QStringList());
 }
